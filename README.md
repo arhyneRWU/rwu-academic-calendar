@@ -207,6 +207,12 @@ see duplicate events.
    make it small and legible.
 3. `rwu-calendar validate`, then commit `data/`. CI rebuilds and publishes.
 
+## Working on this
+
+Read [`HANDOFF.md`](HANDOFF.md) first. It records the decisions that are not
+obvious from the code — why the scraper is a check rather than a build step,
+why there is no event-type dropdown, and the six things that will bite you.
+
 ## Licence
 
 Code MIT (`LICENSE`). The calendar dates themselves are facts about a public
