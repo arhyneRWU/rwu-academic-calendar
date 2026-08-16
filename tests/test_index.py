@@ -163,7 +163,9 @@ class TestContent:
         """Dependency-free: no CDN, no fonts, no external scripts. The one
         inline script is progressive enhancement for the copy buttons."""
         assert '<script src' not in page.lower()
-        assert page.lower().count('<script') == 1
+        # three inline blocks: the embedded meeting grid, the schedule
+        # builder, and the copy buttons. All same-origin, none fetched.
+        assert page.lower().count('<script') == 3
         for bad in ('http://', 'cdn.', 'fonts.googleapis', '<link rel="stylesheet"'):
             assert bad not in page, bad
 

@@ -234,6 +234,41 @@ def _next_milestone(ay: AcademicYear, today: _dt.date) -> str:
     return (f'<p class="next"><strong>Next:</strong> {d:%A %-d %B %Y} ({when}) — {what}</p>')
 
 
+def meeting_grid(ay: AcademicYear) -> dict:
+    """For each term, every teaching date mapped to the weekday it *runs as*.
+
+    This is what makes a personal schedule builder correct without
+    reimplementing day-swap rules in JavaScript. The browser only has to ask
+    "is this date's effective weekday one I teach?" -- all the reasoning
+    happened here, in tested Python.
+
+    A Tuesday that runs Monday's timetable appears as ``monday``, so a T/Th
+    course correctly skips it and an M/W course correctly gains it.
+    """
+    out = {}
+    for t in ay.terms:
+        if not (t.classes_begin and t.classes_end):
+            continue
+        days = {}
+        d = t.classes_begin
+        while d <= t.classes_end:
+            eff = t.effective_weekday(d)
+            if eff:
+                days[d.isoformat()] = eff
+            d += _dt.timedelta(days=1)
+        if not days:
+            continue
+        swaps = {e.date.isoformat(): e.observes_schedule_of for e in t.day_swaps()}
+        out[t.id] = {
+            'label': f'{t.term.title()} {t.classes_begin:%Y}',
+            'begin': t.classes_begin.isoformat(),
+            'end': t.classes_end.isoformat(),
+            'days': days,
+            'swaps': swaps,
+        }
+    return out
+
+
 def _term_cards(ay: AcademicYear, today: _dt.date) -> str:
     """Term dates at a glance. These are what people come to the page for, so
     they are set large and plain rather than buried in a table."""
@@ -350,6 +385,170 @@ every year. These are the alternatives — paste them the same way.</p>
 </details>
 """
 
+_BUILDER_HTML = """
+<h2 id="builder">Build your own class schedule</h2>
+<p>Enter your courses and get a calendar file with every meeting on it — holidays
+removed and day swaps applied, ending with the term. Nothing is uploaded; the
+file is made in your browser.</p>
+
+<form id="sched" autocomplete="off">
+<p><label><strong>Term</strong> <select id="term"></select></label></p>
+<div id="courses"></div>
+<p>
+<button type="button" id="add" class="btn alt">+ Add another course</button>
+<button type="submit" class="btn">Download my schedule</button>
+</p>
+</form>
+<div id="preview" class="preview" hidden></div>
+<p class="tip">Times are saved as local wall-clock time, so an 11:00 class stays
+at 11:00 across the November clock change. This is a one-time download, not a
+subscription: a course's meeting pattern is fixed once the term starts, and the
+file expires with the term. For holidays that <em>do</em> want to stay live,
+subscribe to the feed above.</p>
+"""
+
+_BUILDER_JS = """
+<script>
+(() => {
+  const GRID = JSON.parse(document.getElementById('grid').textContent);
+  const DAYS = [['monday','Mon'],['tuesday','Tue'],['wednesday','Wed'],
+                ['thursday','Thu'],['friday','Fri']];
+  const termSel = document.getElementById('term');
+  const courses = document.getElementById('courses');
+  const preview = document.getElementById('preview');
+
+  for (const [id, t] of Object.entries(GRID)) {
+    termSel.add(new Option(t.label, id));
+  }
+
+  let n = 0;
+  function addCourse(name = '', days = [], start = '', end = '') {
+    const i = n++;
+    const row = document.createElement('div');
+    row.className = 'course';
+    row.innerHTML = `
+      <div class="crow">
+        <label class="grow">Course<input type="text" name="name" placeholder="e.g. BIO 320 Marine Biology" value="${name}"></label>
+        <label>Room<input type="text" name="room" placeholder="optional"></label>
+      </div>
+      <div class="crow">
+        <fieldset class="days"><legend>Meets on</legend>${
+          DAYS.map(([v, l]) => `<label class="day"><input type="checkbox" name="day" value="${v}"${days.includes(v) ? ' checked' : ''}>${l}</label>`).join('')
+        }</fieldset>
+        <label>Start<input type="time" name="start" value="${start}"></label>
+        <label>End<input type="time" name="end" value="${end}"></label>
+        <button type="button" class="rm" title="Remove this course">Remove</button>
+      </div>`;
+    row.querySelector('.rm').addEventListener('click', () => {
+      row.remove(); if (!courses.children.length) addCourse(); update();
+    });
+    row.addEventListener('input', update);
+    courses.append(row);
+    return row;
+  }
+
+  function read() {
+    return [...courses.children].map(row => ({
+      name: row.querySelector('[name=name]').value.trim(),
+      room: row.querySelector('[name=room]').value.trim(),
+      days: [...row.querySelectorAll('[name=day]:checked')].map(c => c.value),
+      start: row.querySelector('[name=start]').value,
+      end: row.querySelector('[name=end]').value,
+    }));
+  }
+
+  // The whole day-swap correction lives here, and it is one comparison:
+  // GRID[term].days[date] is the weekday that date RUNS AS, not the weekday
+  // it falls on.
+  function meetings(termId, days) {
+    const t = GRID[termId];
+    return Object.entries(t.days)
+      .filter(([, eff]) => days.includes(eff))
+      .map(([d]) => d).sort();
+  }
+
+  const fmt = s => new Date(s + 'T12:00:00').toLocaleDateString(undefined,
+      { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+  const cap = s => s[0].toUpperCase() + s.slice(1);
+
+  function update() {
+    const t = GRID[termSel.value];
+    const rows = read().filter(c => c.days.length && c.name);
+    if (!rows.length) { preview.hidden = true; return; }
+    preview.hidden = false;
+    preview.innerHTML = '<h3>What you will get</h3>' + rows.map(c => {
+      const m = meetings(termSel.value, c.days);
+      const swapped = Object.entries(t.swaps)
+        .map(([d, eff]) => {
+          const falls = new Date(d + 'T12:00:00')
+              .toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase();
+          const E = cap(eff), F = cap(falls);
+          if (c.days.includes(eff) && !c.days.includes(falls))
+            return `<li class="gain">Gains ${fmt(d)} — that ${F} runs a ${E} schedule</li>`;
+          if (!c.days.includes(eff) && c.days.includes(falls))
+            return `<li class="lose">Skips ${fmt(d)} — that ${F} runs a ${E} schedule</li>`;
+          return '';
+        }).filter(Boolean).join('');
+      return `<div class="pv"><strong>${c.name}</strong> — <strong>${m.length}</strong>
+        meetings, ${fmt(m[0])} to ${fmt(m[m.length - 1])}
+        <ul class="notes">${swapped}</ul></div>`;
+    }).join('');
+  }
+
+  const pad = v => String(v).padStart(2, '0');
+  const esc = s => String(s).replace(/([\\\\;,])/g, '\\\\$1').replace(/\\n/g, '\\\\n');
+  const stamp = d => d.replace(/-/g, '');
+
+  function ics(termId, rows) {
+    const out = ['BEGIN:VCALENDAR', 'VERSION:2.0',
+      'PRODID:-//arhyneRWU//RWU Academic Calendar (unofficial)//EN',
+      'CALSCALE:GREGORIAN',
+      'X-WR-CALNAME:' + esc('My schedule — ' + GRID[termId].label)];
+    rows.forEach((c, ci) => {
+      for (const d of meetings(termId, c.days)) {
+        const s = stamp(d) + 'T' + c.start.replace(':', '') + '00';
+        const e = stamp(d) + 'T' + c.end.replace(':', '') + '00';
+        out.push('BEGIN:VEVENT',
+          `UID:${termId}-${ci}-${stamp(d)}@rwu-academic-calendar`,
+          'DTSTAMP:20000101T000000Z',
+          `DTSTART:${s}`, `DTEND:${e}`,
+          `SUMMARY:${esc(c.name)}`);
+        if (c.room) out.push(`LOCATION:${esc(c.room)}`);
+        out.push('DESCRIPTION:' + esc(
+          'Generated from the unofficial RWU academic calendar. '
+          + 'Holidays removed and day swaps applied. Verify against the '
+          + 'official calendar.'),
+          'END:VEVENT');
+      }
+    });
+    out.push('END:VCALENDAR');
+    // RFC 5545 wants CRLF line endings.
+    return out.join('\\r\\n') + '\\r\\n';
+  }
+
+  document.getElementById('add').addEventListener('click', () => { addCourse(); update(); });
+  termSel.addEventListener('change', update);
+
+  document.getElementById('sched').addEventListener('submit', ev => {
+    ev.preventDefault();
+    const rows = read().filter(c => c.name && c.days.length && c.start && c.end);
+    if (!rows.length) { alert('Add a course name, at least one day, and a start and end time.'); return; }
+    const bad = rows.find(c => c.end <= c.start);
+    if (bad) { alert(`"${bad.name}" ends at or before it starts.`); return; }
+    const blob = new Blob([ics(termSel.value, rows)], { type: 'text/calendar' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `my-schedule-${termSel.value}.ics`;
+    document.body.append(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  });
+
+  addCourse();
+  update();
+})();
+</script>
+"""
+
 _COPY_JS = """
 <script>
 // Progressive enhancement only: the URL above is already visible and
@@ -381,6 +580,7 @@ def to_index_html(years: list[AcademicYear], today: _dt.date | None = None) -> b
     cur_ics = f'{current.academic_year}.ics' if current else PRIMARY_FEED
     hero_terms = _term_cards(current, today) if current else ''
     retired = _retired_rows(others, today)
+    grid = json.dumps(meeting_grid(current) if current else {}, separators=(',', ':'))
 
     html = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
@@ -452,6 +652,37 @@ and JSON for the Roger Williams University academic calendar.">
          padding: .3rem .8rem; border-radius: 6px; border: 1px solid var(--line);
          background: transparent; color: inherit; }}
  .copy:hover {{ border-color: var(--accent); color: var(--accent); }}
+ .course {{ border: 1px solid var(--line); border-radius: 8px; padding: .8rem 1rem;
+           margin: .75rem 0; }}
+ .crow {{ display: flex; flex-wrap: wrap; gap: .75rem; align-items: flex-end;
+         margin-bottom: .5rem; }}
+ .crow:last-child {{ margin-bottom: 0; }}
+ .crow label {{ display: flex; flex-direction: column; gap: .2rem;
+               font-size: .8rem; font-weight: 700; color: #8889;
+               text-transform: uppercase; letter-spacing: .04em; }}
+ .crow label.grow {{ flex: 1 1 16rem; }}
+ input[type=text], input[type=time], select {{ font: inherit; padding: .4rem .5rem;
+   border: 1px solid var(--line); border-radius: 6px; background: transparent;
+   color: inherit; text-transform: none; letter-spacing: normal; }}
+ fieldset.days {{ border: 1px solid var(--line); border-radius: 6px;
+                 padding: .2rem .6rem .4rem; margin: 0; display: flex; gap: .6rem; }}
+ fieldset.days legend {{ font-size: .8rem; font-weight: 700; color: #8889;
+                        text-transform: uppercase; letter-spacing: .04em;
+                        padding: 0 .3rem; }}
+ label.day {{ flex-direction: row !important; align-items: center; gap: .25rem;
+             text-transform: none !important; color: inherit !important;
+             font-weight: 600 !important; font-size: .95rem !important; }}
+ .rm {{ font: inherit; font-size: .85rem; cursor: pointer; padding: .4rem .7rem;
+       border-radius: 6px; border: 1px solid var(--line); background: transparent;
+       color: #8889; }}
+ .rm:hover {{ color: var(--warn); border-color: var(--warn); }}
+ .preview {{ border: 1px solid var(--line); border-left: 4px solid var(--accent);
+            border-radius: 0 8px 8px 0; padding: .8rem 1.1rem; margin: 1rem 0; }}
+ .preview h3 {{ margin: 0 0 .5rem; font-size: 1rem; }}
+ .pv {{ margin: .5rem 0; }}
+ .notes {{ margin: .2rem 0 0; padding-left: 1.2rem; font-size: .9rem; }}
+ .notes .lose {{ color: #b45309; }}
+ .notes .gain {{ color: #16a34a; }}
  ul.feeds {{ padding-left: 1.2rem; }}
  footer {{ margin-top: 3rem; color: #8889; font-size: .92em; }}
 </style></head><body>
@@ -479,6 +710,8 @@ university. Verify against the official calendar before relying on it.</p>
 If a button does nothing, paste this link into your calendar app instead:</p>
 {_urlbox(FEED_URL)}
 </div>
+
+{_BUILDER_HTML}
 
 <h2>Add it to your phone</h2>
 {_HOWTO}
@@ -519,6 +752,8 @@ no longer what this page leads with.</p>
 <a href="{REPO_URL}">Source and documentation on GitHub</a> ·
 Last extracted from rwu.edu: {current.retrieved if current else '—'}
 </footer>
+<script type="application/json" id="grid">{grid}</script>
+{_BUILDER_JS}
 {_COPY_JS}
 </body></html>
 """
