@@ -249,6 +249,10 @@ def _next_milestone(ay: AcademicYear, today: _dt.date) -> str:
     return (f'<p class="next"><strong>Next:</strong> {d:%A %-d %B %Y} ({when}) — {what}</p>')
 
 
+_WD_CODE = {'monday': 'M', 'tuesday': 'T', 'wednesday': 'W',
+            'thursday': 'R', 'friday': 'F'}
+
+
 def _slug(session: str | None) -> str:
     if not session:
         return 'main'
@@ -281,14 +285,23 @@ def meeting_grid(ay: AcademicYear) -> dict:
         sessions = t.sessions()
         multi = len(sessions) > 1
         for key, (begin, end) in sorted(sessions.items(), key=lambda kv: kv[1]):
-            days = {}
+            days, nc = {}, {e.date: e for e in t.events if e.no_classes}
             d = begin
             while d <= end:
-                eff = t.effective_weekday(d)
-                if eff:
-                    days[d.isoformat()] = eff
+                if d.weekday() < 5:
+                    eff = t.effective_weekday(d)
+                    ev = nc.get(d)
+                    # Three characters: the weekday this date RUNS AS ('-' if
+                    # no class), whether classes meet, and whether RWU said
+                    # offices were closed ('.' = the page did not say, which is
+                    # 33 of 92 no-class days and must not be read as "open").
+                    days[d.isoformat()] = (
+                        (_WD_CODE[eff] if eff else '-')
+                        + ('N' if ev else '.')
+                        + ('.' if ev is None or ev.offices_closed is None
+                           else 'C' if ev.offices_closed else 'O'))
                 d += _dt.timedelta(days=1)
-            if not days:
+            if not any(v[0] != '-' for v in days.values()):
                 continue
             # One entry per session, so a student in summer's 4-week session is
             # never offered dates from the 10-week one.
@@ -441,71 +454,97 @@ every year. These are the alternatives — paste them the same way.</p>
 """
 
 _BUILDER_HTML = """
-<h2 id="builder">Build your own class schedule</h2>
-<p>Enter your courses and get a calendar file with every meeting on it — holidays
-removed and day swaps applied, ending with the term. Nothing is uploaded; the
-file is made in your browser.</p>
+<h2 id="builder">Build your own schedule</h2>
+<p>Classes, office hours, lab or committee meetings, clubs, practices — anything
+that repeats. You get one calendar file with every occurrence worked out against
+the academic calendar. Nothing is uploaded; the file is made in your browser.</p>
 
 <form id="sched" autocomplete="off">
 <p><label><strong>Term</strong> <select id="term"></select></label></p>
 <div id="courses"></div>
 <p>
-<button type="button" id="add" class="btn alt">+ Add another course</button>
+<button type="button" id="add" class="btn alt">+ Add another item</button>
 <button type="submit" class="btn">Download my schedule</button>
 </p>
 </form>
 <div id="preview" class="preview" hidden></div>
-<p class="tip">Times are saved as local wall-clock time, so an 11:00 class stays
-at 11:00 across the November clock change. This is a one-time download, not a
-subscription: a course's meeting pattern is fixed once the term starts, and the
-file expires with the term. For holidays that <em>do</em> want to stay live,
-subscribe to the feed above.</p>
+<p class="tip">Times are saved as local wall-clock time, so an 11:00 meeting
+stays at 11:00 across the November clock change. This is a one-time download,
+not a subscription: it is built from your own entries, which no server here
+knows about. For the academic calendar itself, subscribe to a feed above.</p>
 """
 
-_BUILDER_JS = """
+_BUILDER_JS = r"""
 <script>
 (() => {
   const GRID = JSON.parse(document.getElementById('grid').textContent);
   const DAYS = [['monday','Mon'],['tuesday','Tue'],['wednesday','Wed'],
                 ['thursday','Thu'],['friday','Fri']];
+  const CODE = {monday:'M', tuesday:'T', wednesday:'W', thursday:'R', friday:'F'};
+  const BYDAY = {monday:'MO', tuesday:'TU', wednesday:'WE', thursday:'TH', friday:'FR'};
+  const ALARMS = [['','No reminder'],['PT5M','5 min before'],['PT10M','10 min before'],
+    ['PT15M','15 min before'],['PT30M','30 min before'],['PT1H','1 hour before'],
+    ['PT2H','2 hours before'],['P1D','1 day before']];
+  const REPEATS = [['weekly','Every week'],['biweekly','Every other week'],
+                   ['dates','Only on dates I list']];
   const termSel = document.getElementById('term');
   const courses = document.getElementById('courses');
   const preview = document.getElementById('preview');
 
-  for (const [id, t] of Object.entries(GRID)) {
-    termSel.add(new Option(t.label, id));
-  }
+  for (const [id, t] of Object.entries(GRID)) termSel.add(new Option(t.label, id));
 
-  const ALARMS = [['', 'No reminder'], ['PT5M', '5 min before'],
-    ['PT10M', '10 min before'], ['PT15M', '15 min before'],
-    ['PT30M', '30 min before'], ['PT1H', '1 hour before'],
-    ['PT2H', '2 hours before'], ['P1D', '1 day before']];
+  const pad = v => String(v).padStart(2, '0');
+  const iso = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+  const dateOf = s => new Date(s + 'T12:00:00');
+  const actual = s => 'SMTWRFS'[dateOf(s).getDay()];   // Sun..Sat
+  const cap = s => s[0].toUpperCase() + s.slice(1);
+  const h = s => String(s).replace(/[&<>"']/g, c => (
+    {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const mondayOf = s => { const d = dateOf(s); d.setDate(d.getDate() - ((d.getDay()+6)%7)); return d; };
+  const weeksApart = (a, b) => Math.round((mondayOf(a) - mondayOf(b)) / 604800000);
 
-  let n = 0;
-  function addCourse(alarm = 'PT15M') {
+  function addItem(prev) {
     const row = document.createElement('div');
     row.className = 'course';
     row.innerHTML = `
       <div class="crow">
-        <label class="grow">Course<input type="text" name="name" placeholder="e.g. BIO 320 Marine Biology"></label>
+        <label class="grow">Name<input type="text" name="name" placeholder="e.g. BIO 320 Lecture, Office hours, Dept meeting"></label>
         <label>Room<input type="text" name="room" placeholder="optional"></label>
       </div>
       <div class="crow">
         <fieldset class="days"><legend>Meets on</legend>${
-          DAYS.map(([v, l]) => `<label class="day"><input type="checkbox" name="day" value="${v}">${l}</label>`).join('')
+          DAYS.map(([v,l]) => `<label class="day"><input type="checkbox" name="day" value="${v}">${l}</label>`).join('')
         }</fieldset>
         <label>Start<input type="time" name="start"></label>
         <label>End<input type="time" name="end"></label>
         <label>Remind<select name="alarm">${
-          ALARMS.map(([v, l]) => `<option value="${v}"${v === alarm ? ' selected' : ''}>${l}</option>`).join('')
+          ALARMS.map(([v,l]) => `<option value="${v}"${v===(prev?prev.alarm:'PT15M')?' selected':''}>${l}</option>`).join('')
         }</select></label>
-        <button type="button" class="rm" title="Remove this course">Remove</button>
+        <button type="button" class="rm" title="Remove this item">Remove</button>
+      </div>
+      <div class="crow rules">
+        <label>Repeats<select name="repeat">${
+          REPEATS.map(([v,l]) => `<option value="${v}">${l}</option>`).join('')
+        }</select></label>
+        <label class="chk"><input type="checkbox" name="swaps" checked>
+          Follows the class timetable
+          <span class="why" title="RWU moves one day each term onto another weekday's timetable. Tick this for classes and office hours; untick it for meetings and clubs, which keep their own day.">?</span></label>
+        <label class="chk"><input type="checkbox" name="skip" checked>
+          Skips holidays and breaks</label>
+      </div>
+      <div class="crow datebox" hidden>
+        <label class="grow">Dates, one per line as YYYY-MM-DD
+          <textarea name="dates" rows="3" placeholder="2026-09-15&#10;2026-10-20"></textarea></label>
       </div>`;
     row.querySelector('.rm').addEventListener('click', () => {
-      row.remove(); if (!courses.children.length) addCourse(); update();
+      row.remove(); if (!courses.children.length) addItem(); update();
     });
+    const rep = row.querySelector('[name=repeat]'), box = row.querySelector('.datebox');
+    const sync = () => { box.hidden = rep.value !== 'dates';
+                         row.querySelector('.days').disabled = rep.value === 'dates'; };
+    rep.addEventListener('change', sync);
     row.addEventListener('input', update);
-    row.addEventListener('change', update);
+    row.addEventListener('change', () => { sync(); update(); });
     courses.append(row);
     return row;
   }
@@ -518,70 +557,106 @@ _BUILDER_JS = """
       start: row.querySelector('[name=start]').value,
       end: row.querySelector('[name=end]').value,
       alarm: row.querySelector('[name=alarm]').value,
+      repeat: row.querySelector('[name=repeat]').value,
+      swaps: row.querySelector('[name=swaps]').checked,
+      skip: row.querySelector('[name=skip]').checked,
+      dates: row.querySelector('[name=dates]').value,
     }));
   }
-
   const alarmLabel = v => (ALARMS.find(a => a[0] === v) || ALARMS[0])[1];
 
-  // The preview is built with innerHTML, so anything the user typed must be
-  // escaped on the way in. Without this a course named
-  // `<img src=x onerror=...>` executes -- self-inflicted, but still an
-  // injection flaw, and the fix is one function.
-  const h = s => String(s).replace(/[&<>"']/g, c => (
-    { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-
-  // The whole day-swap correction lives here, and it is one comparison:
-  // GRID[term].days[date] is the weekday that date RUNS AS, not the weekday
-  // it falls on.
-  function meetings(termId, days) {
-    const t = GRID[termId];
-    return Object.entries(t.days)
-      .filter(([, eff]) => days.includes(eff))
-      .map(([d]) => d).sort();
+  // Each grid entry is three characters: the weekday this date RUNS AS ('-' if
+  // no class meets), whether classes meet, and RWU's stated office status
+  // ('.' means the page did not say -- never read that as "open").
+  function keeps(c, date, code) {
+    if (c.skip && code[1] === 'N') return false;
+    const want = c.days.map(d => CODE[d]);
+    if (c.swaps && code[0] !== '-') return want.includes(code[0]);
+    return want.includes(actual(date));
   }
 
-  const fmt = s => new Date(s + 'T12:00:00').toLocaleDateString(undefined,
-      { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
-  const cap = s => s[0].toUpperCase() + s.slice(1);
+  function badDates(c) {
+    if (c.repeat !== 'dates') return [];
+    const t = GRID[termSel.value];
+    return c.dates.split(/[\s,]+/).filter(Boolean).filter(
+      s => !/^\d{4}-\d{2}-\d{2}$/.test(s) || !(s in t.days));
+  }
+
+  function occurrences(termId, c) {
+    const t = GRID[termId];
+    if (c.repeat === 'dates') {
+      return c.dates.split(/[\s,]+/).filter(Boolean)
+        .filter(s => /^\d{4}-\d{2}-\d{2}$/.test(s) && s in t.days).sort();
+    }
+    let hits = Object.entries(t.days).filter(([d, code]) => keeps(c, d, code))
+                     .map(([d]) => d).sort();
+    if (c.repeat === 'biweekly' && hits.length) {
+      const anchor = hits[0];
+      hits = hits.filter(d => weeksApart(d, anchor) % 2 === 0);
+    }
+    return hits;
+  }
+
+  function series(termId, c) {
+    const meetings = occurrences(termId, c);
+    if (!meetings.length) return null;
+    if (c.repeat === 'dates') return {meetings, byRule: [], exdate: [], rdate: meetings};
+    const step = c.repeat === 'biweekly' ? 2 : 1;
+    const last = meetings[meetings.length - 1], byRule = [];
+    for (const d = dateOf(meetings[0]); iso(d) <= last; d.setDate(d.getDate() + 1)) {
+      const s = iso(d);
+      if (!c.days.map(x => CODE[x]).includes(actual(s))) continue;
+      if (step === 2 && weeksApart(s, meetings[0]) % 2 !== 0) continue;
+      byRule.push(s);
+    }
+    const inRule = new Set(byRule), isMeeting = new Set(meetings);
+    return {meetings, byRule, step,
+            exdate: byRule.filter(d => !isMeeting.has(d)),
+            rdate: meetings.filter(d => !inRule.has(d))};
+  }
+
+  const fmt = s => dateOf(s).toLocaleDateString(undefined,
+      {weekday:'short', day:'numeric', month:'short', year:'numeric'});
 
   function update() {
     const t = GRID[termSel.value];
-    const rows = read().filter(c => c.days.length && c.name);
+    const rows = read().filter(c => c.name && (c.repeat === 'dates' || c.days.length));
     if (!rows.length) { preview.hidden = true; return; }
     preview.hidden = false;
     preview.innerHTML = '<h3>What you will get</h3>' + rows.map(c => {
-      const m = meetings(termSel.value, c.days);
-      const swapped = Object.entries(t.swaps)
-        .map(([d, eff]) => {
-          const falls = new Date(d + 'T12:00:00')
-              .toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase();
-          const E = cap(eff), F = cap(falls);
-          if (c.days.includes(eff) && !c.days.includes(falls))
-            return `<li class="gain">Gains ${fmt(d)} — that ${F} runs a ${E} schedule</li>`;
-          if (!c.days.includes(eff) && c.days.includes(falls))
-            return `<li class="lose">Skips ${fmt(d)} — that ${F} runs a ${E} schedule</li>`;
-          return '';
-        }).filter(Boolean).join('');
-      const rem = c.alarm
-        ? `reminder ${alarmLabel(c.alarm).replace(' before', '')} before`
-        : 'no reminder';
-      return `<div class="pv"><strong>${h(c.name)}</strong> — <strong>${m.length}</strong>
-        meetings, ${fmt(m[0])} to ${fmt(m[m.length - 1])}, ${rem}
-        <ul class="notes">${swapped}</ul></div>`;
+      const bad = badDates(c);
+      if (bad.length) return `<div class="pv"><strong>${h(c.name)}</strong>
+        <ul class="notes"><li class="lose">Not usable: ${h(bad.slice(0,4).join(', '))}
+        — use YYYY-MM-DD, and only dates inside ${h(t.label)}.</li></ul></div>`;
+      const s = series(termSel.value, c);
+      if (!s) return `<div class="pv"><strong>${h(c.name)}</strong>
+        <ul class="notes"><li class="lose">No occurrences in ${h(t.label)}.</li></ul></div>`;
+      const notes = [];
+      for (const [d, eff] of Object.entries(t.swaps)) {
+        if (!(d in t.days)) continue;
+        const falls = actual(d), want = c.days.map(x => CODE[x]);
+        if (!c.swaps) continue;
+        if (want.includes(CODE[eff]) && !want.includes(falls))
+          notes.push(`<li class="gain">Gains ${fmt(d)} — that ${cap(dateOf(d).toLocaleDateString('en-US',{weekday:'long'}).toLowerCase())} runs a ${cap(eff)} schedule</li>`);
+        else if (!want.includes(CODE[eff]) && want.includes(falls))
+          notes.push(`<li class="lose">Skips ${fmt(d)} — it runs a ${cap(eff)} schedule</li>`);
+      }
+      // Where RWU says offices were open on a no-class day, say so: it is the
+      // one case where a meeting might legitimately still happen.
+      if (c.skip) for (const [d, code] of Object.entries(t.days)) {
+        if (code[1] === 'N' && code[2] === 'O' && c.days.map(x => CODE[x]).includes(actual(d)))
+          notes.push(`<li>Skips ${fmt(d)} — no classes, but RWU says offices are open. Untick “Skips holidays and breaks” if this still meets.</li>`);
+      }
+      const rem = c.alarm ? `reminder ${alarmLabel(c.alarm).replace(' before','')} before` : 'no reminder';
+      return `<div class="pv"><strong>${h(c.name)}</strong> — <strong>${s.meetings.length}</strong>
+        ${s.meetings.length === 1 ? 'date' : 'dates'}, ${fmt(s.meetings[0])} to
+        ${fmt(s.meetings[s.meetings.length-1])}, ${rem}
+        <ul class="notes">${notes.join('')}</ul></div>`;
     }).join('');
   }
 
-  const pad = v => String(v).padStart(2, '0');
-  const esc = s => String(s).replace(/([\\\\;,])/g, '\\\\$1').replace(/\\n/g, '\\\\n');
+  const esc = s => String(s).replace(/([\;,])/g, '\\$1').replace(/\n/g, '\\n');
   const stamp = d => d.replace(/-/g, '');
-  const WD = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
-  const BYDAY = {monday:'MO', tuesday:'TU', wednesday:'WE', thursday:'TH', friday:'FR'};
-  const isoOf = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
-
-  // Stable, content-derived UID. The old scheme keyed on the row's array
-  // index, so reordering or deleting a row changed the UID of every row after
-  // it -- and re-importing then appended duplicates of events the calendar
-  // already had. Same class of bug the server-side feeds were built to avoid.
   const uid = s => {
     let a = 0x811c9dc5, b = 0x01000193;
     for (let i = 0; i < s.length; i++) {
@@ -591,89 +666,61 @@ _BUILDER_JS = """
     return ((a >>> 0).toString(16) + (b >>> 0).toString(16)).padStart(16, '0');
   };
 
-  // A weekly series plus the exceptions the academic calendar forces.
-  //
-  // RRULE expands on the weekday a date FALLS ON. The grid knows the weekday
-  // it RUNS AS. Every disagreement between those two is precisely a holiday
-  // (drop it) or a day swap (drop it for one course, add it for another), so
-  // deriving EXDATE/RDATE as set differences cannot drift from the grid.
-  function series(termId, days) {
-    const t = GRID[termId];
-    const meetings = Object.entries(t.days)
-      .filter(([, eff]) => days.includes(eff)).map(([d]) => d).sort();
-    if (!meetings.length) return null;
-    const last = meetings[meetings.length - 1];
-    const byRule = [];
-    for (const d = new Date(meetings[0] + 'T12:00:00'); isoOf(d) <= last; d.setDate(d.getDate() + 1)) {
-      if (days.includes(WD[d.getDay()])) byRule.push(isoOf(d));
-    }
-    const inRule = new Set(byRule), isMeeting = new Set(meetings);
-    return {
-      meetings,
-      byRule,
-      exdate: byRule.filter(d => !isMeeting.has(d)),
-      rdate: meetings.filter(d => !inRule.has(d)),
-    };
-  }
-
   function ics(termId, rows) {
-    const out = ['BEGIN:VCALENDAR', 'VERSION:2.0',
-      'PRODID:-//arhyneRWU//RWU Academic Calendar (unofficial)//EN',
-      'CALSCALE:GREGORIAN',
-      'X-WR-CALNAME:' + esc('My schedule \u2014 ' + GRID[termId].label)];
+    const out = ['BEGIN:VCALENDAR','VERSION:2.0',
+      'PRODID:-//arhyneRWU//RWU Academic Calendar (unofficial)//EN','CALSCALE:GREGORIAN',
+      'X-WR-CALNAME:' + esc('My schedule — ' + GRID[termId].label)];
     for (const c of rows) {
-      const s = series(termId, c.days);
+      const s = series(termId, c);
       if (!s) continue;
-      const at = t => stamp(t) + 'T' + c.start.replace(':', '') + '00';
-      const dtstart = s.byRule.length ? s.byRule[0] : s.meetings[0];
+      const at = d => stamp(d) + 'T' + c.start.replace(':','') + '00';
+      const first = s.byRule.length ? s.byRule[0] : s.meetings[0];
       out.push('BEGIN:VEVENT',
-        `UID:${uid(termId + '|' + c.name + '|' + c.days.join(',') + '|' + c.start)}@rwu-academic-calendar`,
+        `UID:${uid(termId+'|'+c.name+'|'+c.days.join(',')+'|'+c.start+'|'+c.repeat)}@rwu-academic-calendar`,
         'DTSTAMP:20000101T000000Z',
-        `DTSTART:${at(dtstart)}`,
-        `DTEND:${stamp(dtstart)}T${c.end.replace(':', '')}00`);
+        `DTSTART:${at(first)}`,
+        `DTEND:${stamp(first)}T${c.end.replace(':','')}00`);
       if (s.byRule.length) {
-        out.push('RRULE:FREQ=WEEKLY;BYDAY=' + c.days.map(d => BYDAY[d]).join(',')
-                 + ';UNTIL=' + at(s.byRule[s.byRule.length - 1]));
+        out.push('RRULE:FREQ=WEEKLY' + (s.step === 2 ? ';INTERVAL=2' : '')
+          + ';BYDAY=' + c.days.map(d => BYDAY[d]).join(',')
+          + ';UNTIL=' + at(s.byRule[s.byRule.length-1]));
       }
-      // One VEVENT per series, so a calendar app shows it as an editable
-      // series rather than dozens of unrelated events.
       if (s.exdate.length) out.push('EXDATE:' + s.exdate.map(at).join(','));
-      if (s.rdate.length) out.push('RDATE:' + s.rdate.map(at).join(','));
+      // With an RRULE, DTSTART is generated by the rule and must not be
+      // repeated. With no RRULE it is only implicitly an occurrence, and
+      // parsers disagree about that -- so list every date explicitly.
+      const extra = s.byRule.length ? s.rdate.filter(d => d !== first) : s.rdate;
+      if (extra.length) out.push('RDATE:' + extra.map(at).join(','));
       out.push(`SUMMARY:${esc(c.name)}`);
       if (c.room) out.push(`LOCATION:${esc(c.room)}`);
       out.push('DESCRIPTION:' + esc(
-        'Generated from the unofficial RWU academic calendar. '
-        + 'Holidays removed and day swaps applied. Verify against the '
+        'Generated from the unofficial RWU academic calendar. Verify against the '
         + 'official calendar.'));
       if (c.alarm) {
-        // TRIGGER is negative and relative to DTSTART, so the alarm moves
-        // with each occurrence rather than being pinned to a wall-clock time.
-        out.push('BEGIN:VALARM', 'ACTION:DISPLAY',
-          `TRIGGER:-${c.alarm}`,
-          `DESCRIPTION:${esc(c.name + (c.room ? ' \u2014 ' + c.room : ''))}`,
-          'END:VALARM');
+        out.push('BEGIN:VALARM','ACTION:DISPLAY',`TRIGGER:-${c.alarm}`,
+          `DESCRIPTION:${esc(c.name + (c.room ? ' — ' + c.room : ''))}`,'END:VALARM');
       }
       out.push('END:VEVENT');
     }
     out.push('END:VCALENDAR');
-    // RFC 5545 wants CRLF line endings.
-    return out.join('\\r\\n') + '\\r\\n';
+    return out.join('\r\n') + '\r\n';   // RFC 5545 wants CRLF
   }
 
   document.getElementById('add').addEventListener('click', () => {
-    const prev = [...courses.children].pop();
-    addCourse(prev ? prev.querySelector('[name=alarm]').value : 'PT15M');
-    update();
+    addItem(read().pop()); update();
   });
   termSel.addEventListener('change', update);
 
   document.getElementById('sched').addEventListener('submit', ev => {
     ev.preventDefault();
-    const rows = read().filter(c => c.name && c.days.length && c.start && c.end);
-    if (!rows.length) { alert('Add a course name, at least one day, and a start and end time.'); return; }
+    const rows = read().filter(c => c.name && c.start && c.end
+                                 && (c.repeat === 'dates' ? c.dates.trim() : c.days.length));
+    if (!rows.length) { alert('Add a name, a start and end time, and either meeting days or a list of dates.'); return; }
     const bad = rows.find(c => c.end <= c.start);
     if (bad) { alert(`"${bad.name}" ends at or before it starts.`); return; }
-    const blob = new Blob([ics(termSel.value, rows)], { type: 'text/calendar' });
+    const wrong = rows.find(c => badDates(c).length);
+    if (wrong) { alert(`"${wrong.name}" has dates this tool cannot use. See the preview.`); return; }
+    const blob = new Blob([ics(termSel.value, rows)], {type: 'text/calendar'});
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
     a.download = `my-schedule-${termSel.value}.ics`;
@@ -681,8 +728,7 @@ _BUILDER_JS = """
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   });
 
-  addCourse();
-  update();
+  addItem(); update();
 })();
 </script>
 """
@@ -833,6 +879,18 @@ def to_index_html(years: list[AcademicYear], today: _dt.date | None = None) -> b
  .notes {{ margin: .2rem 0 0; padding-left: 1.2rem; font-size: .9rem; }}
  .notes .lose {{ color: #b45309; }}
  .notes .gain {{ color: #16a34a; }}
+ .rules {{ align-items: center; }}
+ .chk {{ flex-direction: row !important; align-items: center; gap: .35rem;
+        text-transform: none !important; color: inherit !important;
+        font-weight: 600 !important; font-size: .92rem !important; }}
+ .why {{ display: inline-flex; align-items: center; justify-content: center;
+        width: 1.1em; height: 1.1em; border-radius: 50%; font-size: .75rem;
+        border: 1px solid var(--line); color: #8889; cursor: help; }}
+ textarea {{ font: inherit; font-size: .95rem; padding: .4rem .5rem; width: 100%;
+            border: 1px solid var(--line); border-radius: 6px;
+            background: transparent; color: inherit; text-transform: none;
+            letter-spacing: normal; }}
+ fieldset.days[disabled] {{ opacity: .4; }}
  ul.feeds {{ padding-left: 1.2rem; }}
  footer {{ margin-top: 3rem; color: #8889; font-size: .92em; }}
 </style></head><body>

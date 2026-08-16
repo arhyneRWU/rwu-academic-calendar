@@ -155,7 +155,10 @@ class TestRecurringSeriesContract:
 
     @staticmethod
     def _sets(fall, days):
-        meetings = sorted(d for d, eff in fall['days'].items() if eff in days)
+        code = {'monday': 'M', 'tuesday': 'T', 'wednesday': 'W',
+                'thursday': 'R', 'friday': 'F'}
+        want = {code[d] for d in days}
+        meetings = sorted(d for d, c in fall['days'].items() if c[0] in want)
         first, last = meetings[0], meetings[-1]
         by_rule, d = [], dt.date.fromisoformat(first)
         names = ('monday', 'tuesday', 'wednesday', 'thursday', 'friday',
@@ -203,7 +206,7 @@ class TestGeneratedPageIsSyntacticallySane:
         assert r"out.join('\r\n')" in page
 
     def test_emits_a_recurring_series(self, page):
-        for needle in ('RRULE:FREQ=WEEKLY;BYDAY=', 'EXDATE:', 'RDATE:', 'UNTIL='):
+        for needle in ("'RRULE:FREQ=WEEKLY'", 'EXDATE:', 'RDATE:', 'UNTIL='):
             assert needle in page, needle
 
     def test_uid_is_content_derived_not_row_index(self, page):
