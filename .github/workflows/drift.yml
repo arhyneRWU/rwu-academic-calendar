@@ -1,0 +1,67 @@
+# The scraper runs here as a CHECK, never as part of a build.
+#
+# If rwu.edu publishes a correction or redesigns the page, this job notices and
+# opens an issue. The published feeds keep serving the last reviewed data until
+# a human runs `rwu-calendar extract` and reads the diff.
+name: drift check
+
+on:
+  schedule:
+    - cron: '17 11 * * 1'      # Mondays, 11:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -e .
+
+      - id: check
+        continue-on-error: true
+        run: |
+          set +e
+          rwu-calendar drift > drift.txt 2>&1
+          echo "status=$?" >> "$GITHUB_OUTPUT"
+          cat drift.txt
+
+      - if: steps.check.outputs.status != '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('drift.txt', 'utf8');
+            const status = '${{ steps.check.outputs.status }}';
+            const title = status === '2'
+              ? 'Academic calendar drift detected'
+              : 'Drift check failed (the page may have been redesigned)';
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'open', labels: 'drift',
+            });
+            const text = [
+              status === '2'
+                ? 'The live RWU page no longer matches `data/`.'
+                : 'The extractor errored against the live page. Layout change?',
+              '',
+              'Review, then run `rwu-calendar extract`, read the diff, and commit `data/`.',
+              '', '```', body.slice(0, 55000), '```',
+            ].join('\n');
+            if (existing.data.length) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: existing.data[0].number, body: text,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo,
+                title, body: text, labels: ['drift'],
+              });
+            }
