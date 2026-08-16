@@ -53,6 +53,25 @@ curl -s https://arhynerwu.github.io/rwu-academic-calendar/no-class-days.json
 }
 ```
 
+## Stability — this JSON is a contract
+
+Tools already consume `no-class-days.json`. It is treated as a published
+interface, not an implementation detail:
+
+- **Keys are never renamed or removed.** New keys may be added at any time, so
+  parse permissively and ignore what you don't recognise.
+- **Dates are always `YYYY-MM-DD` strings**, never timestamps.
+- **Term ids are stable** — `fall-2026` resolves to the same term forever.
+- **`no_classes` is always a real boolean**, never null or absent.
+- **`day_swaps` and `no_class_dates` never overlap.** Do not union them; a swap
+  day holds classes.
+- **Retired academic years keep serving.** Nothing is ever unpublished.
+
+`tests/test_json_contract.py` enforces all of the above, so a change that would
+break a consumer fails CI rather than shipping quietly. If a breaking change
+ever becomes unavoidable, the old key ships alongside the new one for at least
+a full academic year.
+
 ## The one thing to get right: day swaps are not days off
 
 Every fall and spring term has exactly one **day swap** — a day that holds
