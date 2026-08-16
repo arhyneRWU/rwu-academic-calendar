@@ -143,3 +143,18 @@ class TestEmbedding:
 
     def test_states_it_is_a_download_not_a_subscription(self, page):
         assert 'not a\nsubscription' in page or 'not a subscription' in page
+
+    def test_reminder_options_are_offered(self, page):
+        assert 'id="alarm"' in page
+        for v in ('PT5M', 'PT15M', 'PT30M', 'PT1H', 'P1D'):
+            assert f'value="{v}"' in page, v
+        assert 'No reminder' in page
+
+    def test_reminder_defaults_to_fifteen_minutes(self, page):
+        assert 'value="PT15M" selected' in page
+
+    def test_alarm_trigger_is_negative_and_relative_to_the_event(self, page):
+        """A positive or absolute TRIGGER fires after the class, or at a fixed
+        wall-clock time that ignores which meeting it belongs to."""
+        assert 'TRIGGER:-${alarm}' in page
+        assert 'BEGIN:VALARM' in page and 'ACTION:DISPLAY' in page

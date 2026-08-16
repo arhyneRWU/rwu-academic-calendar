@@ -392,7 +392,19 @@ removed and day swaps applied, ending with the term. Nothing is uploaded; the
 file is made in your browser.</p>
 
 <form id="sched" autocomplete="off">
-<p><label><strong>Term</strong> <select id="term"></select></label></p>
+<p class="crow">
+<label><strong>Term</strong> <select id="term"></select></label>
+<label><strong>Remind me</strong> <select id="alarm">
+<option value="">No reminder</option>
+<option value="PT5M">5 minutes before</option>
+<option value="PT10M">10 minutes before</option>
+<option value="PT15M" selected>15 minutes before</option>
+<option value="PT30M">30 minutes before</option>
+<option value="PT1H">1 hour before</option>
+<option value="PT2H">2 hours before</option>
+<option value="P1D">1 day before</option>
+</select></label>
+</p>
 <div id="courses"></div>
 <p>
 <button type="button" id="add" class="btn alt">+ Add another course</button>
@@ -492,14 +504,22 @@ _BUILDER_JS = """
       return `<div class="pv"><strong>${c.name}</strong> — <strong>${m.length}</strong>
         meetings, ${fmt(m[0])} to ${fmt(m[m.length - 1])}
         <ul class="notes">${swapped}</ul></div>`;
-    }).join('');
+    }).join('') + reminderNote();
+  }
+
+  function reminderNote() {
+    const sel = document.getElementById('alarm');
+    const txt = sel.options[sel.selectedIndex].text;
+    return sel.value
+      ? `<p class="tip">Each meeting carries a reminder <strong>${txt.replace(' before', '')}</strong> before it starts.</p>`
+      : '<p class="tip">No reminders on these events.</p>';
   }
 
   const pad = v => String(v).padStart(2, '0');
   const esc = s => String(s).replace(/([\\\\;,])/g, '\\\\$1').replace(/\\n/g, '\\\\n');
   const stamp = d => d.replace(/-/g, '');
 
-  function ics(termId, rows) {
+  function ics(termId, rows, alarm) {
     const out = ['BEGIN:VCALENDAR', 'VERSION:2.0',
       'PRODID:-//arhyneRWU//RWU Academic Calendar (unofficial)//EN',
       'CALSCALE:GREGORIAN',
@@ -517,8 +537,16 @@ _BUILDER_JS = """
         out.push('DESCRIPTION:' + esc(
           'Generated from the unofficial RWU academic calendar. '
           + 'Holidays removed and day swaps applied. Verify against the '
-          + 'official calendar.'),
-          'END:VEVENT');
+          + 'official calendar.'));
+        if (alarm) {
+          // TRIGGER is negative and relative to DTSTART, so the alarm moves
+          // with the event rather than being pinned to a wall-clock time.
+          out.push('BEGIN:VALARM', 'ACTION:DISPLAY',
+            `TRIGGER:-${alarm}`,
+            `DESCRIPTION:${esc(c.name + (c.room ? ' — ' + c.room : ''))}`,
+            'END:VALARM');
+        }
+        out.push('END:VEVENT');
       }
     });
     out.push('END:VCALENDAR');
@@ -528,6 +556,7 @@ _BUILDER_JS = """
 
   document.getElementById('add').addEventListener('click', () => { addCourse(); update(); });
   termSel.addEventListener('change', update);
+  document.getElementById('alarm').addEventListener('change', update);
 
   document.getElementById('sched').addEventListener('submit', ev => {
     ev.preventDefault();
@@ -535,7 +564,8 @@ _BUILDER_JS = """
     if (!rows.length) { alert('Add a course name, at least one day, and a start and end time.'); return; }
     const bad = rows.find(c => c.end <= c.start);
     if (bad) { alert(`"${bad.name}" ends at or before it starts.`); return; }
-    const blob = new Blob([ics(termSel.value, rows)], { type: 'text/calendar' });
+    const alarm = document.getElementById('alarm').value;
+    const blob = new Blob([ics(termSel.value, rows, alarm)], { type: 'text/calendar' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
     a.download = `my-schedule-${termSel.value}.ics`;
