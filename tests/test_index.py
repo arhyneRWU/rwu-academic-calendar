@@ -95,7 +95,7 @@ class TestSubscribeLinks:
     def test_leads_with_the_no_class_feed_not_the_full_one(self, page):
         """The full feed carries every add/drop deadline and buries a phone."""
         assert emit.PRIMARY_FEED == 'rwu-no-class-days.ics'
-        hero = page.split('class="hero"')[1].split('<h2>Add it')[0]
+        hero = page.split('class="hero"')[1].split('<h2 id="builder"')[0]
         assert emit.PRIMARY_FEED in hero
         assert 'rwu-academic-calendar.ics' not in hero
 
@@ -130,7 +130,7 @@ class TestInstructions:
                 assert 'class="urlbox"' in b, b[:120]
 
     def test_hero_also_shows_the_pasteable_url(self, page):
-        hero = page.split('class="hero"')[1].split('<h2>Add it')[0]
+        hero = page.split('class="hero"')[1].split('<h2 id="builder"')[0]
         assert f'{emit.SITE_URL}/{emit.PRIMARY_FEED}' in hero
 
     def test_copy_button_is_hidden_until_javascript_enables_it(self, page):
@@ -171,3 +171,74 @@ class TestContent:
 
     def test_is_deterministic_for_a_given_date(self, years):
         assert emit.to_index_html(years, TODAY) == emit.to_index_html(years, TODAY)
+
+
+class TestReadmeLinks:
+    """The README's quick links deep-link into the page. If an anchor is
+    renamed, those links land at the top with no sign anything is wrong."""
+
+    ANCHORS = ('id="builder"', 'id="add-it-to-your-phone"')
+
+    @pytest.mark.parametrize('anchor', ANCHORS)
+    def test_anchor_exists(self, page, anchor):
+        assert anchor in page
+
+    def test_readme_links_all_resolve_to_a_real_anchor(self, page):
+        import re
+        from pathlib import Path
+        readme = (Path(__file__).resolve().parents[1] / 'README.md').read_text()
+        frags = set(re.findall(r'rwu-academic-calendar/#([\w-]+)', readme))
+        assert frags, 'README should deep-link into the site'
+        for f in frags:
+            assert f'id="{f}"' in page, f
+
+
+class TestSecurity:
+    """The builder takes free text and renders it. That is the only untrusted
+    input on the whole site, so it gets its own tests."""
+
+    def test_user_input_is_escaped_before_reaching_innerhtml(self, page):
+        """Regression: an early version interpolated the course name straight
+        into the preview's innerHTML, so a course called
+        `<img src=x onerror=...>` executed. Self-inflicted, but a real
+        injection flaw."""
+        assert '${h(c.name)}' in page
+        assert '${c.name}' not in page.split('preview.innerHTML')[1].split('function ics')[0]
+
+    def test_an_escape_helper_exists_and_covers_the_dangerous_characters(self, page):
+        helper = page.split('const h = s =>')[1][:260]
+        for ch in ('&amp;', '&lt;', '&gt;', '&quot;', '&#39;'):
+            assert ch in helper, ch
+
+    def test_ics_output_escapes_per_rfc5545(self, page):
+        """Backslash, semicolon, comma and newline are structural in ICS; an
+        unescaped comma in a course name splits the field."""
+        assert 'const esc =' in page
+
+    def test_page_makes_no_third_party_requests(self, page):
+        assert '<script src' not in page.lower()
+        assert '<iframe' not in page.lower()
+        for bad in ('cdn.', 'fonts.googleapis', 'googletagmanager',
+                    'google-analytics', 'plausible', 'http://'):
+            assert bad not in page, bad
+
+    def test_no_cookies_or_storage(self, page):
+        for api in ('localStorage', 'sessionStorage', 'document.cookie', 'indexedDB'):
+            assert api not in page, api
+
+    def test_builder_never_issues_a_network_request(self, page):
+        """The claim on the page is that nothing leaves the browser. If a
+        fetch ever appears, that claim becomes false."""
+        for api in ('fetch(', 'XMLHttpRequest', 'navigator.sendBeacon', 'WebSocket'):
+            assert api not in page, api
+
+    def test_privacy_section_and_policy_link_are_present(self, page):
+        assert 'id="privacy"' in page
+        assert 'SECURITY.md' in page
+
+    def test_security_policy_file_exists(self):
+        from pathlib import Path
+        p = Path(__file__).resolve().parents[1] / 'SECURITY.md'
+        assert p.exists()
+        text = p.read_text()
+        assert 'Reporting a vulnerability' in text

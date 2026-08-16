@@ -392,19 +392,7 @@ removed and day swaps applied, ending with the term. Nothing is uploaded; the
 file is made in your browser.</p>
 
 <form id="sched" autocomplete="off">
-<p class="crow">
-<label><strong>Term</strong> <select id="term"></select></label>
-<label><strong>Remind me</strong> <select id="alarm">
-<option value="">No reminder</option>
-<option value="PT5M">5 minutes before</option>
-<option value="PT10M">10 minutes before</option>
-<option value="PT15M" selected>15 minutes before</option>
-<option value="PT30M">30 minutes before</option>
-<option value="PT1H">1 hour before</option>
-<option value="PT2H">2 hours before</option>
-<option value="P1D">1 day before</option>
-</select></label>
-</p>
+<p><label><strong>Term</strong> <select id="term"></select></label></p>
 <div id="courses"></div>
 <p>
 <button type="button" id="add" class="btn alt">+ Add another course</button>
@@ -433,28 +421,36 @@ _BUILDER_JS = """
     termSel.add(new Option(t.label, id));
   }
 
+  const ALARMS = [['', 'No reminder'], ['PT5M', '5 min before'],
+    ['PT10M', '10 min before'], ['PT15M', '15 min before'],
+    ['PT30M', '30 min before'], ['PT1H', '1 hour before'],
+    ['PT2H', '2 hours before'], ['P1D', '1 day before']];
+
   let n = 0;
-  function addCourse(name = '', days = [], start = '', end = '') {
-    const i = n++;
+  function addCourse(alarm = 'PT15M') {
     const row = document.createElement('div');
     row.className = 'course';
     row.innerHTML = `
       <div class="crow">
-        <label class="grow">Course<input type="text" name="name" placeholder="e.g. BIO 320 Marine Biology" value="${name}"></label>
+        <label class="grow">Course<input type="text" name="name" placeholder="e.g. BIO 320 Marine Biology"></label>
         <label>Room<input type="text" name="room" placeholder="optional"></label>
       </div>
       <div class="crow">
         <fieldset class="days"><legend>Meets on</legend>${
-          DAYS.map(([v, l]) => `<label class="day"><input type="checkbox" name="day" value="${v}"${days.includes(v) ? ' checked' : ''}>${l}</label>`).join('')
+          DAYS.map(([v, l]) => `<label class="day"><input type="checkbox" name="day" value="${v}">${l}</label>`).join('')
         }</fieldset>
-        <label>Start<input type="time" name="start" value="${start}"></label>
-        <label>End<input type="time" name="end" value="${end}"></label>
+        <label>Start<input type="time" name="start"></label>
+        <label>End<input type="time" name="end"></label>
+        <label>Remind<select name="alarm">${
+          ALARMS.map(([v, l]) => `<option value="${v}"${v === alarm ? ' selected' : ''}>${l}</option>`).join('')
+        }</select></label>
         <button type="button" class="rm" title="Remove this course">Remove</button>
       </div>`;
     row.querySelector('.rm').addEventListener('click', () => {
       row.remove(); if (!courses.children.length) addCourse(); update();
     });
     row.addEventListener('input', update);
+    row.addEventListener('change', update);
     courses.append(row);
     return row;
   }
@@ -466,8 +462,18 @@ _BUILDER_JS = """
       days: [...row.querySelectorAll('[name=day]:checked')].map(c => c.value),
       start: row.querySelector('[name=start]').value,
       end: row.querySelector('[name=end]').value,
+      alarm: row.querySelector('[name=alarm]').value,
     }));
   }
+
+  const alarmLabel = v => (ALARMS.find(a => a[0] === v) || ALARMS[0])[1];
+
+  // The preview is built with innerHTML, so anything the user typed must be
+  // escaped on the way in. Without this a course named
+  // `<img src=x onerror=...>` executes -- self-inflicted, but still an
+  // injection flaw, and the fix is one function.
+  const h = s => String(s).replace(/[&<>"']/g, c => (
+    { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
   // The whole day-swap correction lives here, and it is one comparison:
   // GRID[term].days[date] is the weekday that date RUNS AS, not the weekday
@@ -501,25 +507,20 @@ _BUILDER_JS = """
             return `<li class="lose">Skips ${fmt(d)} — that ${F} runs a ${E} schedule</li>`;
           return '';
         }).filter(Boolean).join('');
-      return `<div class="pv"><strong>${c.name}</strong> — <strong>${m.length}</strong>
-        meetings, ${fmt(m[0])} to ${fmt(m[m.length - 1])}
+      const rem = c.alarm
+        ? `reminder ${alarmLabel(c.alarm).replace(' before', '')} before`
+        : 'no reminder';
+      return `<div class="pv"><strong>${h(c.name)}</strong> — <strong>${m.length}</strong>
+        meetings, ${fmt(m[0])} to ${fmt(m[m.length - 1])}, ${rem}
         <ul class="notes">${swapped}</ul></div>`;
-    }).join('') + reminderNote();
-  }
-
-  function reminderNote() {
-    const sel = document.getElementById('alarm');
-    const txt = sel.options[sel.selectedIndex].text;
-    return sel.value
-      ? `<p class="tip">Each meeting carries a reminder <strong>${txt.replace(' before', '')}</strong> before it starts.</p>`
-      : '<p class="tip">No reminders on these events.</p>';
+    }).join('');
   }
 
   const pad = v => String(v).padStart(2, '0');
   const esc = s => String(s).replace(/([\\\\;,])/g, '\\\\$1').replace(/\\n/g, '\\\\n');
   const stamp = d => d.replace(/-/g, '');
 
-  function ics(termId, rows, alarm) {
+  function ics(termId, rows) {
     const out = ['BEGIN:VCALENDAR', 'VERSION:2.0',
       'PRODID:-//arhyneRWU//RWU Academic Calendar (unofficial)//EN',
       'CALSCALE:GREGORIAN',
@@ -538,11 +539,11 @@ _BUILDER_JS = """
           'Generated from the unofficial RWU academic calendar. '
           + 'Holidays removed and day swaps applied. Verify against the '
           + 'official calendar.'));
-        if (alarm) {
+        if (c.alarm) {
           // TRIGGER is negative and relative to DTSTART, so the alarm moves
           // with the event rather than being pinned to a wall-clock time.
           out.push('BEGIN:VALARM', 'ACTION:DISPLAY',
-            `TRIGGER:-${alarm}`,
+            `TRIGGER:-${c.alarm}`,
             `DESCRIPTION:${esc(c.name + (c.room ? ' — ' + c.room : ''))}`,
             'END:VALARM');
         }
@@ -554,9 +555,14 @@ _BUILDER_JS = """
     return out.join('\\r\\n') + '\\r\\n';
   }
 
-  document.getElementById('add').addEventListener('click', () => { addCourse(); update(); });
+  // A new row inherits the last row's reminder, so setting it once is enough
+  // when every course wants the same thing -- without forcing that on anyone.
+  document.getElementById('add').addEventListener('click', () => {
+    const prev = [...courses.children].pop();
+    addCourse(prev ? prev.querySelector('[name=alarm]').value : 'PT15M');
+    update();
+  });
   termSel.addEventListener('change', update);
-  document.getElementById('alarm').addEventListener('change', update);
 
   document.getElementById('sched').addEventListener('submit', ev => {
     ev.preventDefault();
@@ -564,8 +570,7 @@ _BUILDER_JS = """
     if (!rows.length) { alert('Add a course name, at least one day, and a start and end time.'); return; }
     const bad = rows.find(c => c.end <= c.start);
     if (bad) { alert(`"${bad.name}" ends at or before it starts.`); return; }
-    const alarm = document.getElementById('alarm').value;
-    const blob = new Blob([ics(termSel.value, rows, alarm)], { type: 'text/calendar' });
+    const blob = new Blob([ics(termSel.value, rows)], { type: 'text/calendar' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
     a.download = `my-schedule-${termSel.value}.ics`;
@@ -743,7 +748,7 @@ If a button does nothing, paste this link into your calendar app instead:</p>
 
 {_BUILDER_HTML}
 
-<h2>Add it to your phone</h2>
+<h2 id="add-it-to-your-phone">Add it to your phone</h2>
 {_HOWTO}
 <p class="tip">Events are all-day and marked <code>TRANSPARENT</code>, so they
 will not make you look busy to anyone checking your availability.</p>
@@ -767,6 +772,24 @@ software: term boundaries, no-class dates, day swaps, precomputed class days.</l
 <li><a href="rwu-academic-calendar.json"><code>rwu-academic-calendar.json</code></a>
 — every event with its classification.</li>
 </ul>
+
+<h2 id="privacy">Privacy &amp; security</h2>
+<p><strong>Nothing you type here leaves your browser.</strong> The schedule
+builder runs entirely on this page: your course names, rooms and times are
+turned into a calendar file by the browser itself and handed straight to you as
+a download. Nothing is uploaded, stored, or sent anywhere.</p>
+<ul>
+<li>No analytics, telemetry or tracking of any kind.</li>
+<li>No cookies, no local storage.</li>
+<li>No third-party requests — no CDN, no web fonts, no embedded widgets.
+This page loads nothing from any other host.</li>
+<li>No form that submits anywhere. There is no server to submit to.</li>
+</ul>
+<p>You can check all of this yourself: view the page source, or open your
+browser's network tab and watch it stay empty while you use the builder.</p>
+<p>The full policy — threat model, dependency posture, and how to report a
+problem — is in
+<a href="{REPO_URL}/blob/main/SECURITY.md"><code>SECURITY.md</code></a>.</p>
 
 <h2>Retired academic years</h2>
 <p>A year retires when its spring term ends — the point it stops being the one

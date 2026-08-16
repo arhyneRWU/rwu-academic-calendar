@@ -1,5 +1,13 @@
 # RWU Academic Calendar — unofficial machine-readable feeds
 
+### ➡️ **[Open the calendar site](https://arhynerwu.github.io/rwu-academic-calendar/)**
+
+| | |
+|---|---|
+| 📅 **[Add to your phone](https://arhynerwu.github.io/rwu-academic-calendar/#add-it-to-your-phone)** | Subscribe to holidays, breaks and day swaps — step-by-step for iPhone, Google and Outlook |
+| 🗓️ **[Build your class schedule](https://arhynerwu.github.io/rwu-academic-calendar/#builder)** | Enter your courses, get an `.ics` with every meeting, holidays removed and day swaps applied |
+| 🔗 **[Subscribe now](webcal://arhynerwu.github.io/rwu-academic-calendar/rwu-no-class-days.ics)** | One tap on a phone. Or paste `https://arhynerwu.github.io/rwu-academic-calendar/rwu-no-class-days.ics` |
+
 > [!IMPORTANT]
 > **This is not an official Roger Williams University publication.** It is
 > derived, by scraping, from RWU's [public academic calendar page][src] and is
