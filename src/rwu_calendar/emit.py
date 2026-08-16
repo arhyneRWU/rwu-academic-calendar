@@ -18,7 +18,7 @@ from pathlib import Path
 
 from icalendar import Calendar, Event as IcsEvent
 
-from .model import AcademicYear, Event
+from .model import AcademicYear, Event, Term, link
 
 PRODID = '-//arhyneRWU//RWU Academic Calendar (unofficial)//EN'
 _DISCLAIMER = ('UNOFFICIAL. Derived from the public RWU academic calendar page; '
@@ -26,16 +26,48 @@ _DISCLAIMER = ('UNOFFICIAL. Derived from the public RWU academic calendar page; 
                'Verify against the official calendar before relying on it.')
 
 
-def _uid(ay: str, term: str, e: Event) -> str:
+def _uid(ay: str, term: str, date: _dt.date, label: str) -> str:
     """Stable per (year, term, date, label).
 
     A UID that changes between builds makes every subscribed calendar append a
     duplicate on each poll until it is unusable. This is *the* classic ICS bug,
     so the UID is derived from content and never from build time.
+
+    ``session`` is deliberately *not* part of the key. It once was, to stop
+    summer's six overlapping sessions colliding -- but the honest fix is one
+    event per calendar day carrying every session that shares it, which is what
+    :func:`to_ics` now emits. Keying on session instead put Memorial Day in a
+    subscriber's calendar four times over.
     """
-    key = f'{ay}|{term}|{e.session or ""}|{e.date.isoformat()}|{e.label}'
+    key = f'{ay}|{term}|{date.isoformat()}|{label}'
     h = hashlib.sha1(key.encode()).hexdigest()[:16]
     return f'{h}@rwu-academic-calendar.arhyneRWU.github.io'
+
+
+def _merge(evs: list[Event]) -> Event:
+    """Collapse rows that share a date and label into the one day they describe.
+
+    Fields are unioned rather than taken from the first row: RWU's summer table
+    repeats each holiday once per session, and in 2024 one of those copies read
+    "All University office Closed" (singular) while its siblings read "Offices".
+    Taking the first row would have made the office status a coin toss.
+    """
+    first = evs[0]
+    if len(evs) == 1:
+        return first
+    kinds: list[str] = []
+    for e in evs:
+        for k in e.kinds:
+            if k not in kinds:
+                kinds.append(k)
+    offices = next((e.offices_closed for e in evs if e.offices_closed is not None), None)
+    observes = next((e.observes_schedule_of for e in evs if e.observes_schedule_of), None)
+    return Event(date=first.date, label=first.label, kinds=kinds,
+                 no_classes=any(e.no_classes for e in evs),
+                 offices_closed=offices, observes_schedule_of=observes,
+                 span_id=first.span_id, source_text=first.source_text,
+                 stated_day=first.stated_day, session=first.session,
+                 owner_term=first.owner_term)
 
 
 def _summary(e: Event) -> str:
@@ -59,11 +91,24 @@ def to_ics(years: list[AcademicYear], name: str,
 
     for ay in years:
         for t in ay.terms:
+            # One VEVENT per calendar day, not per source row. Summer's six
+            # overlapping sessions each repeat the same holidays verbatim, so
+            # emitting a row per event put Memorial Day in every subscriber's
+            # calendar four times and Juneteenth three. The sessions that share
+            # a date are listed in the description instead.
+            groups: dict[tuple, list[Event]] = {}
             for e in t.events:
                 if predicate and not predicate(e):
                     continue
+                groups.setdefault((e.date, e.label), []).append(e)
+            for (date, label), evs in sorted(groups.items(), key=lambda kv: kv[0]):
+                e = _merge(evs)
                 ev = IcsEvent()
-                ev.add('uid', _uid(ay.academic_year, t.id, e))
+                # Keyed on the term the event was *printed* under, so a holiday
+                # that two terms both claim (MLK, in Winter and Spring) has one
+                # identity. Subscribe to both feeds and your calendar shows it
+                # once.
+                ev.add('uid', _uid(ay.academic_year, e.owner_term or t.id, date, label))
                 ev.add('dtstamp', stamp)
                 ev.add('dtstart', e.date)                       # all-day
                 ev.add('dtend', e.date + _dt.timedelta(days=1))  # DTEND is exclusive
@@ -71,8 +116,9 @@ def to_ics(years: list[AcademicYear], name: str,
                 ev.add('transp', 'TRANSPARENT')
                 desc = [f'Term: {t.id}', f'Academic year: {ay.academic_year}',
                         f'Categories: {", ".join(e.kinds)}']
-                if e.session:
-                    desc.append(f'Session: {e.session}')
+                sessions = sorted({x.session for x in evs if x.session})
+                for s in sessions:
+                    desc.append(f'Session: {s}')
                 if e.no_classes:
                     desc.append('No classes.')
                 if e.observes_schedule_of:
@@ -143,7 +189,7 @@ def to_no_class_json(years: list[AcademicYear]) -> dict:
                 'classes_end': t.classes_end.isoformat() if t.classes_end else None,
                 'no_class_dates': [
                     {'date': e.date.isoformat(), 'label': e.label}
-                    for e in sorted(t.events, key=lambda x: x.date) if e.no_classes
+                    for e in t.no_class_events()
                 ],
                 'day_swaps': [
                     {'date': e.date.isoformat(), 'observes_schedule_of': e.observes_schedule_of,
@@ -285,7 +331,7 @@ def meeting_grid(ay: AcademicYear) -> dict:
         sessions = t.sessions()
         multi = len(sessions) > 1
         for key, (begin, end) in sorted(sessions.items(), key=lambda kv: kv[1]):
-            days, nc = {}, {e.date: e for e in t.events if e.no_classes}
+            days, nc = {}, {e.date: e for e in t.no_class_events()}
             d = begin
             while d <= end:
                 if d.weekday() < 5:
@@ -367,13 +413,18 @@ def _term_feed_rows(ay: AcademicYear, today: _dt.date) -> str:
     return ''.join(out)
 
 
-def _retired_rows(years: list[AcademicYear], today: _dt.date) -> str:
+def _year_rows(years: list[AcademicYear], today: _dt.date) -> str:
     out = []
     for ay in sorted(years, key=lambda a: a.academic_year, reverse=True):
         end = retires_on(ay)
+        # A year with no fall or spring term -- which is what a half-extracted
+        # new year looks like, because RWU publishes the summer table first --
+        # has no retirement date at all. Formatting None here used to take the
+        # whole build down with a TypeError.
+        when = f'{end:%-d %b %Y}' if end else '&mdash;'
         out.append(
             f'<tr><td><strong>{_e(ay.academic_year)}</strong></td>'
-            f'<td>{end:%-d %b %Y}</td>'
+            f'<td>{when}</td>'
             f'<td><a href="{_e(ay.academic_year)}.ics">.ics</a></td>'
             f'<td><a href="{_e(webcal(ay.academic_year + ".ics"))}">subscribe</a></td>'
             f'<td><a href="{_e(ay.academic_year)}.json">.json</a></td></tr>')
@@ -575,18 +626,26 @@ _BUILDER_JS = r"""
     return want.includes(actual(date));
   }
 
+  // A listed date is usable if it is a real date inside the term. It does NOT
+  // have to appear in t.days: the grid holds weekdays only, so testing
+  // membership there rejected every Saturday and Sunday -- and told the user
+  // their perfectly valid date was "not inside" a term it was plainly inside.
+  // Clubs, practices and weekend labs are half of what this builder is for.
+  const usable = (s, t) => /^\d{4}-\d{2}-\d{2}$/.test(s) && iso(dateOf(s)) === s
+                           && s >= t.begin && s <= t.end;
+
   function badDates(c) {
     if (c.repeat !== 'dates') return [];
     const t = GRID[termSel.value];
-    return c.dates.split(/[\s,]+/).filter(Boolean).filter(
-      s => !/^\d{4}-\d{2}-\d{2}$/.test(s) || !(s in t.days));
+    return c.dates.split(/[\s,]+/).filter(Boolean).filter(s => !usable(s, t));
   }
 
   function occurrences(termId, c) {
     const t = GRID[termId];
     if (c.repeat === 'dates') {
-      return c.dates.split(/[\s,]+/).filter(Boolean)
-        .filter(s => /^\d{4}-\d{2}-\d{2}$/.test(s) && s in t.days).sort();
+      // Listed dates are taken literally, holidays included: naming a date is
+      // a stronger statement than any checkbox.
+      return c.dates.split(/[\s,]+/).filter(Boolean).filter(s => usable(s, t)).sort();
     }
     let hits = Object.entries(t.days).filter(([d, code]) => keeps(c, d, code))
                      .map(([d]) => d).sort();
@@ -627,7 +686,7 @@ _BUILDER_JS = r"""
       const bad = badDates(c);
       if (bad.length) return `<div class="pv"><strong>${h(c.name)}</strong>
         <ul class="notes"><li class="lose">Not usable: ${h(bad.slice(0,4).join(', '))}
-        — use YYYY-MM-DD, and only dates inside ${h(t.label)}.</li></ul></div>`;
+        — use YYYY-MM-DD, between ${fmt(t.begin)} and ${fmt(t.end)}.</li></ul></div>`;
       const s = series(termSel.value, c);
       if (!s) return `<div class="pv"><strong>${h(c.name)}</strong>
         <ul class="notes"><li class="lose">No occurrences in ${h(t.label)}.</li></ul></div>`;
@@ -655,8 +714,30 @@ _BUILDER_JS = r"""
     }).join('');
   }
 
-  const esc = s => String(s).replace(/([\;,])/g, '\\$1').replace(/\n/g, '\\n');
+  // Backslash MUST be escaped, and MUST be escaped first -- otherwise a room
+  // like "C\D" emits \D, which is not a defined iCalendar escape and is
+  // anyone's guess to parse. Doing it after the others would double-escape
+  // the backslashes this function just added.
+  const esc = s => String(s).replace(/\\/g, '\\\\')
+                            .replace(/([;,])/g, '\\$1').replace(/\n/g, '\\n');
   const stamp = d => d.replace(/-/g, '');
+
+  // RFC 5545: no content line over 75 octets. Folded lines continue with a
+  // single leading space. Measured in UTF-8 bytes and split on code points, so
+  // an em dash in a course name cannot be cut in half.
+  const enc = new TextEncoder();
+  function fold(line) {
+    if (enc.encode(line).length <= 75) return line;
+    const parts = [];
+    let cur = '', len = 0;
+    for (const ch of line) {
+      const n = enc.encode(ch).length;
+      if (len + n > (parts.length ? 74 : 75)) { parts.push(cur); cur = ''; len = 0; }
+      cur += ch; len += n;
+    }
+    parts.push(cur);
+    return parts.join('\r\n ');
+  }
   const uid = s => {
     let a = 0x811c9dc5, b = 0x01000193;
     for (let i = 0; i < s.length; i++) {
@@ -670,13 +751,23 @@ _BUILDER_JS = r"""
     const out = ['BEGIN:VCALENDAR','VERSION:2.0',
       'PRODID:-//arhyneRWU//RWU Academic Calendar (unofficial)//EN','CALSCALE:GREGORIAN',
       'X-WR-CALNAME:' + esc('My schedule — ' + GRID[termId].label)];
+    // Two rows can legitimately agree on name, days and start time -- the same
+    // office hour held in two rooms, say. They used to hash to one UID, and a
+    // calendar app importing two events with one identity keeps one of them.
+    // The suffix is applied to later duplicates only, so the ordinary case
+    // keeps the stable content-derived UID that makes re-import update in
+    // place instead of appending.
+    const used = new Map();
     for (const c of rows) {
       const s = series(termId, c);
       if (!s) continue;
       const at = d => stamp(d) + 'T' + c.start.replace(':','') + '00';
       const first = s.byRule.length ? s.byRule[0] : s.meetings[0];
+      const key = uid(termId+'|'+c.name+'|'+c.days.join(',')+'|'+c.start+'|'+c.repeat);
+      const n = (used.get(key) || 0) + 1;
+      used.set(key, n);
       out.push('BEGIN:VEVENT',
-        `UID:${uid(termId+'|'+c.name+'|'+c.days.join(',')+'|'+c.start+'|'+c.repeat)}@rwu-academic-calendar`,
+        `UID:${key}${n > 1 ? '-' + n : ''}@rwu-academic-calendar`,
         'DTSTAMP:20000101T000000Z',
         `DTSTART:${at(first)}`,
         `DTEND:${stamp(first)}T${c.end.replace(':','')}00`);
@@ -703,7 +794,7 @@ _BUILDER_JS = r"""
       out.push('END:VEVENT');
     }
     out.push('END:VCALENDAR');
-    return out.join('\r\n') + '\r\n';   // RFC 5545 wants CRLF
+    return out.map(fold).join('\r\n') + '\r\n';   // RFC 5545 wants CRLF
   }
 
   document.getElementById('add').addEventListener('click', () => {
@@ -763,13 +854,34 @@ def to_index_html(years: list[AcademicYear], today: _dt.date | None = None) -> b
 
     cur_ics = f'{current.academic_year}.ics' if current else PRIMARY_FEED
     hero_terms = _term_cards(current, today) if current else ''
-    retired = _retired_rows(others, today)
+    # Split, rather than "everything that is not current". A newly extracted
+    # year is not the current one either, and listing next year's calendar
+    # under "Retired academic years" -- with a retirement date in the future --
+    # is exactly the sort of thing nobody notices until someone trusts it.
+    retired = _year_rows([ay for ay in others if is_retired(ay, today)], today)
+    ahead = [ay for ay in others if not is_retired(ay, today)]
+    upcoming = f"""
+<h2>Published ahead of time</h2>
+<p>Already extracted, not yet the year to plan against. These become the
+featured year once the current one's spring term ends.</p>
+<div class="wrap"><table>
+<tr><th>Academic year</th><th>Retires</th><th>Download</th><th>Subscribe</th>
+<th>JSON</th></tr>
+{_year_rows(ahead, today)}
+</table></div>""" if ahead else ''
     term_feeds = _term_feed_rows(current, today) if current else ''
-    grid = json.dumps(meeting_grid(current) if current else {}, separators=(',', ':'))
+    # `json.dumps` does not escape '/', so an upstream label containing
+    # "</script>" would close the block it is embedded in and the rest would be
+    # parsed as markup. Nothing on RWU's page does today; the labels are still
+    # scraped text, and this is the same sink class as the stored XSS in
+    # SECURITY.md. < is valid JSON and parses back to '<'.
+    grid = (json.dumps(meeting_grid(current) if current else {}, separators=(',', ':'))
+            .replace('<', '\\u003c'))
 
     html = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,">   <!-- an empty icon, declared so no /favicon.ico is requested -->
 <title>RWU Academic Calendar — unofficial feeds</title>
 <meta name="description" content="Unofficial subscribable calendar feeds (ICS) and JSON for the Roger Williams University academic calendar.">
 <style>
@@ -992,6 +1104,7 @@ no longer what this page leads with.</p>
 <th>JSON</th></tr>
 {retired}
 </table></div>
+{upcoming}
 
 <footer>
 <a href="{REPO_URL}">Source and documentation on GitHub</a> ·
@@ -1011,10 +1124,22 @@ def _term_title(t) -> str:
 
 
 def _only_term(ay: AcademicYear, term_id: str) -> AcademicYear:
-    """A one-term copy of an academic year, for the per-term feeds."""
+    """A one-term copy of an academic year, for the per-term feeds.
+
+    Carries in any no-class day RWU filed under a sibling term but which falls
+    inside this one -- MLK Day, printed under Spring and landing in Winter.
+    Without this the winter feed is a term with no holiday in it, which is the
+    single most useful thing a term feed can tell you.
+    """
     out = AcademicYear(ay.academic_year, ay.source_url, ay.retrieved)
-    out.terms = [t for t in ay.terms if t.id == term_id]
-    return out
+    for t in ay.terms:
+        if t.id != term_id:
+            continue
+        copy = Term(id=t.id, term=t.term, academic_year=t.academic_year,
+                    events=sorted(t.events + t.inherited_no_class_events(),
+                                  key=lambda e: (e.date, e.label)))
+        out.terms = [copy]
+    return link(out)
 
 
 def build(years: list[AcademicYear], outdir: str | Path,

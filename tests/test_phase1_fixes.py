@@ -203,7 +203,7 @@ class TestGeneratedPageIsSyntacticallySane:
         assert '\r' not in page
 
     def test_the_ics_line_ending_is_an_escape_not_a_real_newline(self, page):
-        assert r"out.join('\r\n')" in page
+        assert r"out.map(fold).join('\r\n')" in page
 
     def test_emits_a_recurring_series(self, page):
         for needle in ("'RRULE:FREQ=WEEKLY'", 'EXDATE:', 'RDATE:', 'UNTIL='):

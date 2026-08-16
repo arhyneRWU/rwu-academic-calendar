@@ -232,9 +232,15 @@ class TestPhase2Controls:
     def test_pasted_dates_must_be_strict_iso_and_inside_the_term(self, page):
         """`new Date(freeText)` is locale-dependent -- 03/04/2026 is March in
         one browser and April in another -- so only YYYY-MM-DD is accepted,
-        and only if the term actually has that date."""
+        and only inside the term's own span.
+
+        Deliberately NOT `s in t.days`: the grid holds weekdays only, so that
+        test rejected every Saturday and Sunday while telling the user the date
+        was not inside a term it plainly was inside. Weekend practices, labs
+        and club meetings are half of what the list mode is for."""
         assert r'/^\d{4}-\d{2}-\d{2}$/' in page
-        assert "s in t.days" in page
+        assert 's >= t.begin && s <= t.end' in page
+        assert 'iso(dateOf(s)) === s' in page, 'must still reject 2026-02-31'
 
     def test_a_rule_less_event_lists_every_date_including_the_first(self, page):
         """Without an RRULE, parsers disagree about whether DTSTART is itself

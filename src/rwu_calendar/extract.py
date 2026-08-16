@@ -19,7 +19,7 @@ import html
 import re
 import urllib.request
 
-from .model import AcademicYear, Event, Term, classify
+from .model import AcademicYear, Event, Term, classify, link
 
 SOURCE_URL = 'https://www.rwu.edu/academics/resources-units/academic-calendar'
 
@@ -242,5 +242,5 @@ def extract(page_html: str, retrieved: str | None = None,
             t.events = sorted(unique, key=lambda e: (e.date, e.label))
         ay.terms = [terms[k] for k in TERMS if k in terms] + \
                    [v for k, v in terms.items() if k not in TERMS]
-        years.append(ay)
+        years.append(link(ay))
     return years

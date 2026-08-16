@@ -73,6 +73,12 @@ pattern-match the prose; use `Term.effective_weekday()` or the grid.
 | **No event-type dropdown** | Three adversarial reviewers: nobody can tell "academic" from "staff/admin" meeting, and the failure is silent, surfacing months later at an empty room |
 | Two plain checkboxes instead | "Follows the class timetable" / "Skips holidays and breaks" — answerable about your own commitment |
 
+> **Update 2026-08-16, later the same day.** A full code review found ten
+> defects, all fixed and recorded in [`LEDGER.md`](LEDGER.md) — read that
+> alongside this file. Two were wrong answers being served: MLK Day missing
+> from Winter 2027, and the recommended phone feed showing Memorial Day four
+> times. Gotchas 8 and 9 below come from it.
+
 ## Things that will bite you
 
 **1. `offices_closed` is unknown on 33 of 92 no-class days.** Every Spring Break
@@ -115,6 +121,22 @@ two real bugs the test suite missed — the CR/LF syntax error, and a dates-only
 event silently losing its first date because `DTSTART` is only *implicitly* an
 occurrence when there is no `RRULE`.
 
+**8. A term does not own its January.** RWU publishes one table per term, and
+some dates fall under two of them: MLK Day is printed under Spring, where
+spring has not started, while the date lands inside the Winter intersession.
+Winter therefore held no record of it and the builder put a Monday class on the
+holiday. `Term.inherited_no_class_events()` fills that gap and stamps
+`owner_term` so the borrowed copy keeps one UID across both feeds. If you add a
+new construction path for `AcademicYear`, **call `model.link()`** or
+inheritance silently returns nothing and the bug comes back.
+
+**9. Feeds emit one VEVENT per calendar day, not per source row.** Summer's six
+sessions repeat every holiday verbatim, so a row-per-event feed showed Memorial
+Day four times in every subscriber's calendar. `emit._merge` collapses rows
+sharing a date and label, and unions their fields rather than taking the first
+— in 2024 one copy read "office Closed" (singular) while its siblings read
+"Offices", so first-wins made the office status a coin toss.
+
 ## Deliberately not built
 
 - **"Nth weekday of the month"** — no defensible default when the first
@@ -134,8 +156,10 @@ occurrence when there is no `RRULE`.
    ticking the wrong one produces a calendar that *looks* right.
 2. Consider surfacing `Term.sessions()` in the summer UI copy — the six
    session names are long and currently shown verbatim in the dropdown.
-3. Winter/summer terms have no `check_coverage` expectations (only fall/spring
-   do), so a parser regression there is less likely to be caught.
+3. ~~Winter/summer terms have no `check_coverage` expectations.~~ **Closed
+   2026-08-16.** It was not theoretical: that gap hid both the missing MLK Day
+   and the missing Independence Day. `validate.check_federal_holidays` now
+   checks every term by date rather than by RWU's wording.
 4. The wetlab repo's `docs/WORK-IN-PROGRESS.md` still says the inbound calendar
    feed is "nothing exists, being built in a separate project". That's stale —
    this is that project, and it's done. Updating it is worktree work in a repo

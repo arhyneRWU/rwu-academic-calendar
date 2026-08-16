@@ -79,6 +79,11 @@ interface, not an implementation detail:
 - **`no_classes` is always a real boolean**, never null or absent.
 - **`day_swaps` and `no_class_dates` never overlap.** Do not union them; a swap
   day holds classes.
+- **`no_class_dates` covers the term's whole span**, including a holiday RWU
+  printed under a different term. Winter 2027 lists MLK Day even though RWU
+  prints it in the Spring table; Spring lists it too. A date can therefore
+  appear under two terms, and in the ICS feeds it carries the *same UID* in
+  both, so subscribing to both shows one event.
 - **Retired academic years keep serving.** Nothing is ever unpublished.
 
 `tests/test_json_contract.py` enforces all of the above, so a change that would
@@ -168,6 +173,19 @@ against the real weekday of that date catches transcription errors on both
 sides. As of the 2026-08-16 extraction it finds **seven genuine errors on RWU's
 page** — for example 2027-03-25 is a Thursday but is printed as Wednesday, and
 2025-12-29 is a Monday printed as Friday.
+
+Two checks exist because RWU's calendar is a set of *per-term tables*, and
+some dates belong to two of them:
+
+- **Cross-term holidays.** MLK Day is printed under Spring, where it falls
+  before spring classes begin — while the date itself lands inside the Winter
+  intersession. A term now inherits any no-class day a sibling term printed
+  that falls inside its own teaching span, and `validate` reports each one.
+- **Federal holidays, by date.** Matching RWU's prose could never catch a
+  holiday they simply did not print. `check_federal_holidays` asks the
+  calendar instead, for every term, observing weekend holidays on the adjacent
+  weekday. Across four years it finds one gap: RWU's Summer 2026 table has no
+  Independence Day row. That is reported, not invented — see `LEDGER.md`.
 
 `offices_closed` deserves a specific warning: it is only set where RWU's own
 label says so. **33 of 92 no-class days never state office status** — every

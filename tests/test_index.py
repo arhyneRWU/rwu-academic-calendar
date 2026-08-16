@@ -319,16 +319,26 @@ class TestPerTermFeeds:
         assert dates, 'winter feed is empty'
         assert all(dt.date(2026, 12, 1) < d < dt.date(2027, 2, 1) for d in dates), dates
 
-    def test_term_feeds_partition_the_year_feed(self, years, tmp_path):
-        """Every event in the year feed appears in exactly one term feed."""
+    def test_term_feeds_cover_the_year_feed_and_nothing_more(self, years, tmp_path):
+        """The term feeds add up to the year feed.
+
+        Not a strict partition, and deliberately so: a holiday RWU printed
+        under one term can fall inside another -- MLK Day is printed under
+        Spring 2027 and lands in the Winter intersession -- and the borrowing
+        term's feed has to carry it, or the winter feed is a term with no
+        holiday in it. What must hold is that the borrowed copy keeps the
+        *same UID*, so someone subscribed to both feeds sees one event.
+        """
         from icalendar import Calendar
         emit.build(years, tmp_path, TODAY)
         uids = lambda n: {str(c['uid']) for c in
                           Calendar.from_ical((tmp_path / n).read_bytes()).walk('VEVENT')}
         year = uids('2026-2027.ics')
-        parts = [uids(f'{t}.ics') for t in ('fall-2026', 'winter-2027', 'spring-2027')]
-        assert set().union(*parts) == year
-        assert sum(len(p) for p in parts) == len(year), 'a UID appears in two term feeds'
+        parts = {t: uids(f'{t}.ics') for t in ('fall-2026', 'winter-2027', 'spring-2027')}
+        assert set().union(*parts.values()) == year, 'a term feed invented a UID'
+        shared = parts['winter-2027'] & parts['spring-2027']
+        assert len(shared) == 1, 'exactly one borrowed holiday (MLK Day)'
+        assert sum(len(p) for p in parts.values()) == len(year) + len(shared)
 
     def test_page_offers_a_subscribe_link_per_term(self, page):
         block = page.split('One term at a time')[1].split('<h2>All feeds')[0]

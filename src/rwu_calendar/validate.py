@@ -131,9 +131,93 @@ def check_offices_coverage(years: list[AcademicYear]) -> list[Problem]:
     return out
 
 
+def _nth_weekday(year: int, month: int, weekday: int, n: int) -> _dt.date:
+    d = _dt.date(year, month, 1)
+    d += _dt.timedelta(days=(weekday - d.weekday()) % 7)
+    return d + _dt.timedelta(weeks=n - 1)
+
+
+def _last_weekday(year: int, month: int, weekday: int) -> _dt.date:
+    d = _dt.date(year, month, 28) + _dt.timedelta(days=4)
+    d = d.replace(day=1) - _dt.timedelta(days=1)          # last day of month
+    return d - _dt.timedelta(days=(d.weekday() - weekday) % 7)
+
+
+def _observed(d: _dt.date) -> _dt.date:
+    """A fixed-date holiday on a weekend is observed on the adjacent weekday."""
+    if d.weekday() == 5:
+        return d - _dt.timedelta(days=1)
+    if d.weekday() == 6:
+        return d + _dt.timedelta(days=1)
+    return d
+
+
+def federal_holidays(year: int) -> dict[_dt.date, str]:
+    """The ones RWU closes for, as dates rather than as prose."""
+    return {
+        _nth_weekday(year, 1, 0, 3): 'Martin Luther King Jr. Day',
+        _last_weekday(year, 5, 0): 'Memorial Day',
+        _observed(_dt.date(year, 6, 19)): 'Juneteenth',
+        _observed(_dt.date(year, 7, 4)): 'Independence Day',
+        _nth_weekday(year, 9, 0, 1): 'Labor Day',
+        _nth_weekday(year, 11, 3, 4): 'Thanksgiving',
+    }
+
+
+def check_federal_holidays(years: list[AcademicYear]) -> list[Problem]:
+    """Report teaching weekdays that are federal holidays but not marked.
+
+    ``check_coverage`` only ever looked at fall and spring, matching on label
+    text. That is why two real gaps sat in the data unnoticed: MLK Day inside
+    the Winter intersession (printed under Spring, so winter never saw it), and
+    no Independence Day at all in Summer 2026. Dates are checkable; prose is
+    not, so this asks the calendar arithmetic instead of RWU's wording.
+
+    Reported at ``source`` level, never fatal. RWU genuinely may hold classes,
+    and a wrong red build teaches people to ignore the build.
+    """
+    out = []
+    for ay in years:
+        for t in ay.terms:
+            a, b = t.classes_begin, t.classes_end
+            if not (a and b):
+                continue
+            off = set(t.no_class_dates())
+            for y in range(a.year, b.year + 1):
+                for d, name in sorted(federal_holidays(y).items()):
+                    if a <= d <= b and d.weekday() < 5 and d not in off:
+                        out.append(Problem(
+                            'source', f'{ay.academic_year}/{t.id}',
+                            f'{d} is {name} and falls on a {WEEKDAYS[d.weekday()].title()} '
+                            f'inside this term, but is not marked as a no-class day'))
+    return out
+
+
+def check_cross_term(years: list[AcademicYear]) -> list[Problem]:
+    """Report no-class days a term had to borrow from a sibling.
+
+    RWU prints one table per term, but January belongs to two of them: the MLK
+    holiday is printed under Spring, where it falls before classes begin, while
+    the date itself lands inside the Winter intersession. Winter therefore held
+    no record of it and the builder scheduled a Monday class on the holiday.
+    ``Term.inherited_no_class_events`` fixes the answer; this makes the
+    borrowing visible, because a *new* one appearing is worth a human look.
+    """
+    out = []
+    for ay in years:
+        for t in ay.terms:
+            for e in t.inherited_no_class_events():
+                out.append(Problem(
+                    'source', f'{ay.academic_year}/{t.id}',
+                    f'{e.date} {e.label[:50]!r} is printed under another term but '
+                    f'falls inside this one; treating it as a no-class day here'))
+    return out
+
+
 def run_all(years: list[AcademicYear]) -> list[Problem]:
     return (check_structure(years) + check_coverage(years)
-            + check_weekdays(years) + check_offices_coverage(years))
+            + check_weekdays(years) + check_offices_coverage(years)
+            + check_cross_term(years) + check_federal_holidays(years))
 
 
 def errors(problems: list[Problem]) -> list[Problem]:

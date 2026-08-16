@@ -10,7 +10,7 @@ from pathlib import Path
 
 import yaml
 
-from .model import AcademicYear, Event, Term
+from .model import AcademicYear, Event, Term, link
 
 
 def _event_to_yaml(e: Event) -> dict:
@@ -76,7 +76,7 @@ def from_yaml(text: str) -> AcademicYear:
                 stated_day=e.get('stated_day', ''), session=e.get('session'),
             ))
         ay.terms.append(term)
-    return ay
+    return link(ay)
 
 
 def load_dir(path: str | Path) -> list[AcademicYear]:

@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import datetime as _dt
 import re
-from dataclasses import dataclass, field, asdict
+from dataclasses import dataclass, field, replace
 from typing import Optional
 
 TERMS = ('fall', 'winter', 'spring', 'summer')
@@ -42,14 +42,19 @@ class Event:
     #: May 20 - June 12"), which share dates *and* labels. Without this,
     #: (date, label) is not unique and ICS UIDs collide.
     session: Optional[str] = None
+    #: Set only on the copies handed out by
+    #: :meth:`Term.inherited_no_class_events`: the id of the term this event was
+    #: actually printed under. Feeds key their UID on it, so MLK Day carries one
+    #: identity whether it reaches you through the winter feed or the spring
+    #: one -- subscribe to both and you see one event, not two.
+    owner_term: Optional[str] = None
 
-    def to_dict(self) -> dict:
-        d = asdict(self)
-        d['date'] = self.date.isoformat()
-        return {k: v for k, v in d.items() if v not in (None, '', [], False)} | {
-            'date': d['date'], 'label': self.label, 'kinds': self.kinds,
-            'no_classes': self.no_classes,
-        }
+    # No ``to_dict`` here on purpose. There was one; it filtered on
+    # ``v not in (None, '', [], False)``, which silently dropped
+    # ``offices_closed=False`` -- an explicit "offices are open" -- and made it
+    # indistinguishable from "the page did not say". Nothing used it.
+    # ``serialize._event_to_yaml`` and ``emit.to_json`` are the two serialisers,
+    # and both test ``is not None``.
 
 
 @dataclass
@@ -58,6 +63,12 @@ class Term:
     term: str
     academic_year: str
     events: list[Event] = field(default_factory=list)
+    #: Back-reference to the owning year, set by :func:`link`. Needed because
+    #: January belongs to two term tables at once: RWU prints the MLK holiday
+    #: under Spring, where it lands before classes begin and does nothing,
+    #: while the date itself falls inside the Winter intersession. See
+    #: :meth:`inherited_no_class_events`.
+    year: Optional['AcademicYear'] = field(default=None, repr=False, compare=False)
 
     @property
     def classes_begin(self) -> Optional[_dt.date]:
@@ -67,8 +78,43 @@ class Term:
     def classes_end(self) -> Optional[_dt.date]:
         return max((e.date for e in self.events if 'term_end' in e.kinds), default=None)
 
+    def inherited_no_class_events(self) -> list[Event]:
+        """No-class days RWU printed under a *sibling* term that nevertheless
+        fall inside this term's teaching span.
+
+        RWU's calendar is a set of per-term tables, but January is claimed by
+        two of them. "Dr. Martin Luther King, Jr. Holiday, JAN 18 MON" is
+        printed in the Spring 2027 table, where it sits nine days before spring
+        classes begin and therefore changes nothing -- while 18 January 2027
+        falls squarely inside the Winter intersession (4-22 January), which
+        held no record of it at all. The result was a winter feed with no
+        holiday in it and a schedule builder that put a Monday class on MLK
+        Day.
+
+        A term's own events always win; this only fills gaps.
+        """
+        a, b = self.classes_begin, self.classes_end
+        if not (self.year and a and b):
+            return []
+        seen = {e.date for e in self.events if e.no_classes}
+        out = []
+        for sibling in self.year.terms:
+            if sibling is self:
+                continue
+            for e in sibling.events:
+                if e.no_classes and a <= e.date <= b and e.date not in seen:
+                    seen.add(e.date)
+                    out.append(replace(e, owner_term=sibling.id))
+        return sorted(out, key=lambda e: e.date)
+
+    def no_class_events(self) -> list[Event]:
+        """Every event that stops classes on a date inside this term."""
+        own = [e for e in self.events if e.no_classes]
+        return sorted(own + self.inherited_no_class_events(),
+                      key=lambda e: (e.date, e.label))
+
     def no_class_dates(self) -> list[_dt.date]:
-        return sorted({e.date for e in self.events if e.no_classes})
+        return sorted({e.date for e in self.no_class_events()})
 
     def class_days(self) -> list[_dt.date]:
         """Weekdays between the first and last day of classes, minus no-class days.
@@ -148,6 +194,19 @@ class AcademicYear:
     source_url: str
     retrieved: str
     terms: list[Term] = field(default_factory=list)
+
+
+def link(ay: AcademicYear) -> AcademicYear:
+    """Give every term a back-reference to its year, and return the year.
+
+    Idempotent, and cheap enough to call anywhere a year is built or copied.
+    Anything that constructs an :class:`AcademicYear` must call this, or
+    :meth:`Term.inherited_no_class_events` silently returns nothing and the
+    cross-term holidays go missing again.
+    """
+    for t in ay.terms:
+        t.year = ay
+    return ay
 
 
 # --------------------------------------------------------------------------
