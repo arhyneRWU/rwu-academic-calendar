@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import datetime as _dt
 import hashlib
+import html
 import json
 from pathlib import Path
 
@@ -169,6 +170,19 @@ REPO_URL = 'https://github.com/arhyneRWU/rwu-academic-calendar'
 PRIMARY_FEED = 'rwu-no-class-days.ics'
 
 
+def _e(v) -> str:
+    """Escape a value on its way into HTML.
+
+    Everything the page renders that is not a literal ultimately derives from
+    rwu.edu. ``_txt()`` in the extractor strips tags and *then* unescapes
+    entities, so a label written upstream as ``&lt;img src=x onerror=...&gt;``
+    comes back as live markup. That is correct for the JSON and ICS feeds,
+    whose serializers encode it safely -- but HTML has no such protection, so
+    it is escaped here, at the sink.
+    """
+    return html.escape(str(v), quote=True)
+
+
 def webcal(name: str) -> str:
     """A ``webcal://`` URL, which phones open in the subscribe dialog directly
     rather than downloading the file and leaving the user to find it."""
@@ -229,8 +243,8 @@ def _next_milestone(ay: AcademicYear, today: _dt.date) -> str:
     d, e, _t = best
     away = (d - today).days
     when = 'today' if away == 0 else 'tomorrow' if away == 1 else f'in {away} days'
-    what = (f'runs a {e.observes_schedule_of.title()} schedule'
-            if e.observes_schedule_of else e.label)
+    what = (f'runs a {_e(e.observes_schedule_of.title())} schedule'
+            if e.observes_schedule_of else _e(e.label))
     return (f'<p class="next"><strong>Next:</strong> {d:%A %-d %B %Y} ({when}) — {what}</p>')
 
 
@@ -288,7 +302,7 @@ def _term_cards(ay: AcademicYear, today: _dt.date) -> str:
         else:
             state = '<span class="pill done">finished</span>'
         out.append(f"""<div class="card">
-<h3>{t.term.title()} {t.classes_begin:%Y} {state}</h3>
+<h3>{_e(t.term.title())} {t.classes_begin:%Y} {state}</h3>
 <p class="dates">{t.classes_begin:%a %-d %b %Y} <span class="dash">→</span>
 {t.classes_end:%a %-d %b %Y}</p>
 <dl>
@@ -304,11 +318,11 @@ def _retired_rows(years: list[AcademicYear], today: _dt.date) -> str:
     for ay in sorted(years, key=lambda a: a.academic_year, reverse=True):
         end = retires_on(ay)
         out.append(
-            f'<tr><td><strong>{ay.academic_year}</strong></td>'
+            f'<tr><td><strong>{_e(ay.academic_year)}</strong></td>'
             f'<td>{end:%-d %b %Y}</td>'
-            f'<td><a href="{ay.academic_year}.ics">.ics</a></td>'
-            f'<td><a href="{webcal(ay.academic_year + ".ics")}">subscribe</a></td>'
-            f'<td><a href="{ay.academic_year}.json">.json</a></td></tr>')
+            f'<td><a href="{_e(ay.academic_year)}.ics">.ics</a></td>'
+            f'<td><a href="{_e(webcal(ay.academic_year + ".ics"))}">subscribe</a></td>'
+            f'<td><a href="{_e(ay.academic_year)}.json">.json</a></td></tr>')
     return ''.join(out)
 
 
@@ -621,8 +635,7 @@ def to_index_html(years: list[AcademicYear], today: _dt.date | None = None) -> b
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>RWU Academic Calendar — unofficial feeds</title>
-<meta name="description" content="Unofficial subscribable calendar feeds (ICS)
-and JSON for the Roger Williams University academic calendar.">
+<meta name="description" content="Unofficial subscribable calendar feeds (ICS) and JSON for the Roger Williams University academic calendar.">
 <style>
  :root {{ color-scheme: light dark; --line:#8886; --accent:#2563eb; --warn:#c33; }}
  @media (prefers-color-scheme: dark) {{ :root {{ --accent:#7aa2f7; }} }}
@@ -640,6 +653,16 @@ and JSON for the Roger Williams University academic calendar.">
  .warn {{ border-left: 4px solid var(--warn); padding: .75rem 1rem;
          background: color-mix(in srgb, var(--warn) 8%, transparent);
          border-radius: 0 4px 4px 0; }}
+ .banner {{ display: block; text-decoration: none; color: inherit;
+           border: 2px solid var(--accent); border-radius: 12px;
+           padding: 1.1rem 1.4rem; margin: 1.5rem 0;
+           background: color-mix(in srgb, var(--accent) 9%, transparent); }}
+ .banner:hover {{ background: color-mix(in srgb, var(--accent) 16%, transparent); }}
+ .banner-kicker {{ display: block; text-transform: uppercase; letter-spacing: .08em;
+                  font-size: .7rem; font-weight: 700; color: var(--accent); }}
+ .banner-title {{ display: block; font-size: 1.45rem; font-weight: 700;
+                 margin: .15rem 0 .35rem; }}
+ .banner-sub {{ display: block; font-size: .95rem; }}
  .hero {{ border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem 1.5rem;
          margin: 1.5rem 0; }}
  .hero h2 {{ margin: 0 0 .5rem; border: 0; padding: 0; font-size: 1.9rem; }}
@@ -726,20 +749,29 @@ and JSON for the Roger Williams University academic calendar.">
 <p class="sub">Subscribable calendar feeds and JSON, derived from RWU's public
 academic calendar page.</p>
 
+<a class="banner" href="#builder">
+<span class="banner-kicker">Most people want this</span>
+<span class="banner-title">Build your own class schedule &rarr;</span>
+<span class="banner-sub">Enter your courses and times, get a calendar with every
+meeting already worked out against the academic calendar — holidays removed, day
+swaps applied, reminders optional, ending with the term.</span>
+</a>
+
 <p class="warn"><strong>Not an official Roger Williams University
 publication.</strong> Derived by scraping the
-<a href="{src}">public academic calendar page</a>; not endorsed by the
+<a href="{_e(src)}">public academic calendar page</a>; not endorsed by the
 university. Verify against the official calendar before relying on it.</p>
 
 <div class="hero">
 <p class="eyebrow">Current academic year</p>
-<h2>{current.academic_year if current else 'Calendar'}</h2>
+<h2>{_e(current.academic_year) if current else 'Calendar'}</h2>
 {_next_milestone(current, today) if current else ''}
 <div class="cards">{hero_terms}</div>
 <div class="btns">
 <a class="btn" href="{webcal(PRIMARY_FEED)}">Subscribe on this device</a>
 <a class="btn alt" href="{webcal(cur_ics)}">Subscribe: {current.academic_year if current else ''} only</a>
 <a class="btn alt" href="{PRIMARY_FEED}">Download .ics</a>
+<a class="btn alt" href="#builder">Build my class schedule</a>
 </div>
 <p class="tip">Holidays, breaks and day swaps — add once and it stays current.
 If a button does nothing, paste this link into your calendar app instead:</p>
@@ -803,7 +835,7 @@ no longer what this page leads with.</p>
 
 <footer>
 <a href="{REPO_URL}">Source and documentation on GitHub</a> ·
-Last extracted from rwu.edu: {current.retrieved if current else '—'}
+Last extracted from rwu.edu: {_e(current.retrieved) if current else '—'}
 </footer>
 <script type="application/json" id="grid">{grid}</script>
 {_BUILDER_JS}

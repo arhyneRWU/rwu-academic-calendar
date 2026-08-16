@@ -9,10 +9,13 @@ description = "Unofficial machine-readable (ICS + JSON) Roger Williams Universit
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
-dependencies = ["icalendar>=6.0", "PyYAML>=6.0"]
+# Upper bounds are deliberate. CI installs these with `issues: write`
+# and Pages deploy rights, so an unbounded range means a compromised
+# upstream release runs with those permissions unreviewed.
+dependencies = ["icalendar>=6.0,<7", "PyYAML>=6.0,<7"]
 
 [project.optional-dependencies]
-dev = ["pytest>=8"]
+dev = ["pytest>=8,<9"]
 
 [project.scripts]
 rwu-calendar = "rwu_calendar.cli:main"

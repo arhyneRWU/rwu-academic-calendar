@@ -35,7 +35,32 @@ stay empty.
 | **Malicious calendar content** | Event text comes from RWU's public calendar page and is escaped per RFC 5545 when written to `.ics`. |
 | **Availability** | GitHub Pages. If it is down, nothing else breaks — subscribers keep their last successful sync. |
 
-### The XSS finding, and why it is documented rather than quietly fixed
+### Findings from the 2026-08-16 review
+
+Two injection issues were found and fixed. Both are recorded here rather than
+quietly patched, because "low severity" is a judgement someone else should be
+able to check.
+
+**1. Stored XSS via the upstream page.** The extractor's text cleaner strips
+HTML tags and *then* unescapes entities, so a label written on rwu.edu as
+`&lt;img src=x onerror=...&gt;` came back as live markup — and the landing
+page interpolated that label into its "what happens next" line without
+escaping. Confirmed end to end before fixing. Exploiting it requires control of
+RWU's own page, and the extracted text is committed to `data/*.yaml` and
+reviewed before it publishes, so there are two barriers in front of it. Fixed
+by escaping every non-constant value at the HTML sink; the feeds were never
+affected, since JSON and ICS serializers encode their own output.
+
+**2. Self-XSS in the schedule builder.** Described below.
+
+Also hardened in the same pass, none of them exploitable as configured:
+dependency ranges given upper bounds (CI installs them with `issues: write`
+and Pages deploy rights); the drift workflow's Actions expression moved out of
+the `script:` body into `env:`; and the scraped drift report now fenced with
+more backticks than it contains, so upstream text cannot inject markdown into
+an issue.
+
+### The self-XSS finding, and why it is documented rather than quietly fixed
 
 An early version of the schedule builder interpolated the course name straight
 into the preview's `innerHTML`. A course named

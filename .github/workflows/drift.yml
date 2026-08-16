@@ -34,11 +34,17 @@ jobs:
 
       - if: steps.check.outputs.status != '0'
         uses: actions/github-script@v7
+        env:
+          # Passed through env, never interpolated into the script body. The
+          # value is our own exit code today, but `${{ }}` inside `script:` is
+          # the standard Actions script-injection sink and should not be the
+          # pattern here.
+          DRIFT_STATUS: ${{ steps.check.outputs.status }}
         with:
           script: |
             const fs = require('fs');
             const body = fs.readFileSync('drift.txt', 'utf8');
-            const status = '${{ steps.check.outputs.status }}';
+            const status = process.env.DRIFT_STATUS;
             const title = status === '2'
               ? 'Academic calendar drift detected'
               : 'Drift check failed (the page may have been redesigned)';
@@ -46,13 +52,20 @@ jobs:
               owner: context.repo.owner, repo: context.repo.repo,
               state: 'open', labels: 'drift',
             });
+            const longest = (body.match(/`+/g) || []).reduce((a, b) => Math.max(a, b.length), 0);
+            const fence = '`'.repeat(Math.max(3, longest + 1));
             const text = [
               status === '2'
                 ? 'The live RWU page no longer matches `data/`.'
                 : 'The extractor errored against the live page. Layout change?',
               '',
               'Review, then run `rwu-calendar extract`, read the diff, and commit `data/`.',
-              '', '```', body.slice(0, 55000), '```',
+              '',
+              // drift.txt contains text scraped from rwu.edu. A backtick run in
+              // that text would close a three-backtick fence and let upstream
+              // content inject markdown into the issue, so fence with more
+              // backticks than the body contains.
+              fence, body.slice(0, 55000), fence,
             ].join('\n');
             if (existing.data.length) {
               await github.rest.issues.createComment({

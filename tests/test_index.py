@@ -242,3 +242,48 @@ class TestSecurity:
         assert p.exists()
         text = p.read_text()
         assert 'Reporting a vulnerability' in text
+
+
+class TestUpstreamContentIsUntrusted:
+    """Everything this page renders derives from rwu.edu. `_txt()` strips tags
+    and *then* unescapes entities, so a label written upstream as
+    `&lt;img src=x onerror=...&gt;` comes back as live markup. The JSON and ICS
+    feeds encode it safely; HTML has no such protection, so it is escaped at
+    the sink.
+    """
+
+    PAYLOAD = '&lt;img src=x onerror=alert(1)&gt;'
+
+    @pytest.fixture(scope='class')
+    def poisoned_page(self):
+        from rwu_calendar.extract import extract
+        page = f"""
+<h3>Academic Calendar 2026-2027</h3>
+<table>
+<tr><td>Important Fall Term Dates Fall 2026</td><td>Month</td><td>Date</td><td>Day</td></tr>
+<tr><td>First Day of Classes {self.PAYLOAD}</td><td>AUG</td><td>26</td><td>WED</td></tr>
+<tr><td>Last Day of Fall Classes</td><td>DEC</td><td>2</td><td>WED</td></tr>
+</table>
+"""
+        years = extract(page, retrieved='2026-08-16')
+        return emit.to_index_html(years, dt.date(2026, 8, 16)).decode()
+
+    def test_entity_encoded_markup_upstream_does_not_become_live_markup(self, poisoned_page):
+        assert '<img src=x onerror=alert(1)>' not in poisoned_page
+
+    def test_the_label_still_renders_as_visible_text(self, poisoned_page):
+        """Escaped, not dropped -- a label that looks odd should be visible so
+        someone notices it, not silently swallowed."""
+        assert '&lt;img src=x onerror=alert(1)&gt;' in poisoned_page
+
+    def test_source_url_cannot_break_out_of_its_href(self):
+        from rwu_calendar.model import AcademicYear, Term, Event
+        ay = AcademicYear('2026-2027', '"><script>alert(1)</script>', '2026-08-16')
+        t = Term(id='fall-2026', term='fall', academic_year='2026-2027')
+        t.events = [
+            Event(date=dt.date(2026, 8, 26), label='First Day of Classes', kinds=['term_start']),
+            Event(date=dt.date(2026, 12, 2), label='Last Day of Fall Classes', kinds=['term_end']),
+        ]
+        ay.terms = [t]
+        out = emit.to_index_html([ay], dt.date(2026, 8, 16)).decode()
+        assert '<script>alert(1)</script>' not in out
