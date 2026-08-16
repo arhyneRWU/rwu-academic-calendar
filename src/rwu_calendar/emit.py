@@ -18,7 +18,7 @@ from pathlib import Path
 
 from icalendar import Calendar, Event as IcsEvent
 
-from .model import AcademicYear, Event, Term, link
+from .model import TERMS, AcademicYear, Event, Term, link
 
 PRODID = '-//arhyneRWU//RWU Academic Calendar (unofficial)//EN'
 _DISCLAIMER = ('UNOFFICIAL. Derived from the public RWU academic calendar page; '
@@ -396,6 +396,35 @@ def _term_cards(ay: AcademicYear, today: _dt.date) -> str:
     return ''.join(out)
 
 
+def missing_terms(ay: AcademicYear) -> list[str]:
+    """Terms of this academic year that RWU has not published yet.
+
+    RWU releases the four tables at different times -- Summer 2027 is simply
+    not on the page as of August 2026. The term picker and the builder's
+    dropdown then show three options and no explanation, and someone planning
+    a summer course finds a silent absence rather than an answer.
+    """
+    y1, y2 = (int(p) for p in ay.academic_year.split('-'))
+    have = {t.term for t in ay.terms if t.events}
+    return [f'{term.title()} {y1 if term == "fall" else y2}'
+            for term in TERMS if term not in have]
+
+
+def _missing_note(ay: AcademicYear) -> str:
+    missing = missing_terms(ay)
+    if not missing:
+        return ''
+    which = ', '.join(missing[:-1]) + ' and ' + missing[-1] if len(missing) > 1 \
+        else missing[0]
+    verb = 'has' if len(missing) == 1 else 'have'
+    return (f'<p class="tip"><strong>{_e(which)}</strong> {verb} not been '
+            f'published by RWU yet, so {"it is" if len(missing) == 1 else "they are"} '
+            f'not listed above and {"does" if len(missing) == 1 else "do"} not appear '
+            f'in the schedule builder. Nothing is broken — the dates do not exist '
+            f'anywhere public yet. They appear here within a week of RWU posting '
+            f'them.</p>')
+
+
 def _term_feed_rows(ay: AcademicYear, today: _dt.date) -> str:
     out = []
     for t in ay.terms:
@@ -512,13 +541,34 @@ the academic calendar. Nothing is uploaded; the file is made in your browser.</p
 
 <form id="sched" autocomplete="off">
 <p><label><strong>Term</strong> <select id="term"></select></label></p>
+
+<!-- These two checkboxes carry the whole correctness model, and ticking the
+     wrong one produces a calendar that looks entirely right. The explanation
+     used to live in a title= tooltip, which needs a mouse hover: on a phone,
+     where most people meet this, it did not exist at all. A <details> works on
+     touch and keyboard, is read out by screen readers, and needs no script. -->
+<details class="explain" open>
+<summary>What do “Follows the class timetable” and “Skips holidays” mean?</summary>
+<p><strong>Follows the class timetable</strong> — every fall and spring term,
+RWU moves one day onto a <em>different weekday's</em> timetable: Tuesday 13
+October 2026 runs Monday's schedule. Leave this ticked for <strong>classes and
+office hours</strong>, which move with it. Untick it for <strong>meetings,
+clubs and practices</strong>, which keep their own day and ignore the swap.</p>
+<p><strong>Skips holidays and breaks</strong> — leave it ticked and no
+occurrence lands on a no-class day. Untick it if the thing still meets over a
+break, as some labs, teams and research groups do.</p>
+<p class="tip">Not sure? Leave both ticked — that is right for anything that
+follows the university's class schedule. Check the preview below before you
+download: it names every date you gain and every date you lose.</p>
+</details>
+
 <div id="courses"></div>
 <p>
 <button type="button" id="add" class="btn alt">+ Add another item</button>
 <button type="submit" class="btn">Download my schedule</button>
 </p>
 </form>
-<div id="preview" class="preview" hidden></div>
+<div id="preview" class="preview" aria-live="polite" hidden></div>
 <p class="tip">Times are saved as local wall-clock time, so an 11:00 meeting
 stays at 11:00 across the November clock change. This is a one-time download,
 not a subscription: it is built from your own entries, which no server here
@@ -578,8 +628,7 @@ _BUILDER_JS = r"""
           REPEATS.map(([v,l]) => `<option value="${v}">${l}</option>`).join('')
         }</select></label>
         <label class="chk"><input type="checkbox" name="swaps" checked>
-          Follows the class timetable
-          <span class="why" title="RWU moves one day each term onto another weekday's timetable. Tick this for classes and office hours; untick it for meetings and clubs, which keep their own day.">?</span></label>
+          Follows the class timetable</label>
         <label class="chk"><input type="checkbox" name="skip" checked>
           Skips holidays and breaks</label>
       </div>
@@ -878,6 +927,21 @@ featured year once the current one's spring term ends.</p>
     grid = (json.dumps(meeting_grid(current) if current else {}, separators=(',', ':'))
             .replace('<', '\\u003c'))
 
+    # When every extracted year has retired, `pick_current` falls back to the
+    # most recent one -- correct, but the page then presents a finished year
+    # under "Current academic year" and looks maintained when it is not. A
+    # calendar that is quietly a year out of date is worse than one that is
+    # obviously missing, so say it at the top, above everything.
+    stale = bool(current and is_retired(current, today))
+    eyebrow = 'Most recent academic year' if stale else 'Current academic year'
+    stale_banner = (f"""
+<p class="warn"><strong>This calendar is out of date.</strong> The most recent
+data here covers <strong>{_e(current.academic_year)}</strong>, whose spring term
+ended {retires_on(current):%-d %B %Y}. Nothing newer has been published to this
+site yet, so <strong>do not plan against it</strong> — check the
+<a href="{_e(src)}">official calendar</a> instead. (Last extracted from rwu.edu:
+{_e(current.retrieved)}.)</p>""" if stale else '')
+
     html = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -995,9 +1059,10 @@ featured year once the current one's spring term ends.</p>
  .chk {{ flex-direction: row !important; align-items: center; gap: .35rem;
         text-transform: none !important; color: inherit !important;
         font-weight: 600 !important; font-size: .92rem !important; }}
- .why {{ display: inline-flex; align-items: center; justify-content: center;
-        width: 1.1em; height: 1.1em; border-radius: 50%; font-size: .75rem;
-        border: 1px solid var(--line); color: #8889; cursor: help; }}
+ details.explain {{ margin: 1rem 0; background: #8881; }}
+ details.explain summary {{ font-weight: 600; }}
+ details.explain p {{ font-size: .93rem; margin: .6rem 0; }}
+ details.explain p:last-child {{ margin-bottom: 0; }}
  textarea {{ font: inherit; font-size: .95rem; padding: .4rem .5rem; width: 100%;
             border: 1px solid var(--line); border-radius: 6px;
             background: transparent; color: inherit; text-transform: none;
@@ -1010,6 +1075,7 @@ featured year once the current one's spring term ends.</p>
 <h1>RWU Academic Calendar</h1>
 <p class="sub">Subscribable calendar feeds and JSON, derived from RWU's public
 academic calendar page.</p>
+{stale_banner}
 
 <a class="banner" href="#builder">
 <span class="banner-kicker">Most people want this</span>
@@ -1025,7 +1091,7 @@ publication.</strong> Derived by scraping the
 university. Verify against the official calendar before relying on it.</p>
 
 <div class="hero">
-<p class="eyebrow">Current academic year</p>
+<p class="eyebrow">{eyebrow}</p>
 <h2>{_e(current.academic_year) if current else 'Calendar'}</h2>
 {_next_milestone(current, today) if current else ''}
 <div class="cards">{hero_terms}</div>
@@ -1063,6 +1129,7 @@ add Fall and Spring and skip Winter entirely.</p>
 <tr><th>Term</th><th>Add to calendar</th><th>Download</th><th>Data</th></tr>
 {term_feeds}
 </table></div>
+{_missing_note(current) if current else ''}
 <p class="tip">Whole year in one: <code>{SITE_URL}/{current.academic_year if current else ''}.ics</code></p>
 
 <h2>All feeds</h2>

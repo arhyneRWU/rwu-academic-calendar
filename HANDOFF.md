@@ -151,9 +151,12 @@ sharing a date and label, and unions their fields rather than taking the first
 
 ## Open / next
 
-1. **Have someone else try the builder** before sharing the link widely. The
-   two checkboxes are better than the dropdown but still the weakest link:
-   ticking the wrong one produces a calendar that *looks* right.
+1. **Have someone else try the builder** before sharing the link widely. Still
+   the top item, and the only one that cannot be closed by writing code: the
+   two checkboxes are better than the dropdown but remain the weakest link,
+   and ticking the wrong one produces a calendar that *looks* right. Their
+   explanation is now a `<details>` that works on a phone — it used to be a
+   hover-only tooltip, i.e. absent exactly where most students would meet it.
 2. Consider surfacing `Term.sessions()` in the summer UI copy — the six
    session names are long and currently shown verbatim in the dropdown.
 3. ~~Winter/summer terms have no `check_coverage` expectations.~~ **Closed

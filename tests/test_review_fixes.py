@@ -253,6 +253,93 @@ class TestFederalHolidaysAreCheckedByDate:
         assert validate.errors(validate.run_all(years)) == []
 
 
+class TestTheTrickyControlsAreExplainedOnAPhone:
+    """The two checkboxes carry the whole correctness model, and ticking the
+    wrong one yields a calendar that looks entirely right. Their explanation
+    lived in a `title=` tooltip, which needs a mouse hover -- so on a phone,
+    where most students meet this, it did not exist."""
+
+    def test_the_hover_only_tooltip_is_gone(self, page):
+        assert 'class="why"' not in page
+        assert 'cursor: help' not in page
+
+    def test_a_real_disclosure_replaces_it(self, page):
+        assert page.count('<details class="explain" open>') == 1
+
+    def test_it_explains_both_checkboxes_not_just_the_first(self, page):
+        """"Skips holidays and breaks" never had an explanation at all."""
+        block = page[page.index('<details class="explain"'):]
+        block = block[:block.index('</details>')]
+        assert 'Follows the class timetable</strong>' in block
+        assert 'Skips holidays and breaks</strong>' in block
+
+    def test_it_says_what_to_do_when_unsure(self, page):
+        assert 'Leave both ticked' in page
+
+    def test_the_preview_is_announced_as_it_changes(self, page):
+        assert 'id="preview" class="preview" aria-live="polite"' in page
+
+
+class TestTheSiteAdmitsWhenItIsStale:
+    """`pick_current` falls back to the most recent year once all have
+    retired -- right, but the page then shows a finished year under "Current
+    academic year" and looks maintained. A calendar quietly a year out of date
+    is worse than one obviously missing."""
+
+    def test_nothing_is_claimed_today(self, page):
+        assert 'This calendar is out of date' not in page
+        assert 'Current academic year' in page
+
+    def test_it_says_so_once_the_featured_year_has_retired(self, years):
+        p = emit.to_index_html(years, dt.date(2028, 1, 1)).decode()
+        assert 'This calendar is out of date' in p
+        assert 'Most recent academic year' in p
+        assert 'do not plan against it' in p
+
+    def test_the_warning_names_the_date_and_points_at_the_official_page(self, years):
+        p = emit.to_index_html(years, dt.date(2028, 1, 1)).decode()
+        warn = p[p.index('This calendar is out of date'):]
+        warn = warn[:warn.index('</p>')]
+        assert '5 May 2027' in warn, 'names when the data ran out'
+        assert 'rwu.edu' in warn, 'points somewhere useful'
+
+    def test_the_boundary_is_the_day_after_spring_ends(self, years):
+        assert 'out of date' not in emit.to_index_html(years, dt.date(2027, 5, 5)).decode()
+        assert 'out of date' in emit.to_index_html(years, dt.date(2027, 5, 6)).decode()
+
+
+class TestUnpublishedTermsAreNamed:
+    """RWU releases the four term tables at different times. The picker showed
+    three options and no explanation, so someone planning a summer course
+    found a silent absence instead of an answer."""
+
+    def test_summer_2027_is_identified_as_missing(self, years):
+        ay = emit.pick_current(years, TODAY)
+        assert emit.missing_terms(ay) == ['Summer 2027']
+
+    def test_the_page_says_so(self, page):
+        assert 'Summer 2027</strong> has not been published by RWU yet' in page
+        assert 'Nothing is broken' in page
+
+    def test_the_academic_year_maps_to_the_right_calendar_year(self, years):
+        """Fall 2026 and Summer 2027 both live in academic year 2026-2027."""
+        ay = AcademicYear('2026-2027', 'u', 'r')
+        assert emit.missing_terms(ay) == ['Fall 2026', 'Winter 2027',
+                                          'Spring 2027', 'Summer 2027']
+
+    def test_a_complete_year_says_nothing(self, years):
+        ay = next(a for a in years if a.academic_year == '2025-2026')
+        assert emit.missing_terms(ay) == []
+        assert emit._missing_note(ay) == ''
+
+    def test_the_wording_agrees_with_itself_for_one_and_for_many(self, years):
+        one = emit._missing_note(emit.pick_current(years, TODAY))
+        assert 'has not been published' in one and 'it is not listed' in one
+        many = emit._missing_note(AcademicYear('2026-2027', 'u', 'r'))
+        assert 'have not been published' in many and 'they are not listed' in many
+        assert 'Spring 2027 and Summer 2027' in many
+
+
 class TestPageHardening:
     def test_the_grid_cannot_close_its_own_script_block(self, years):
         ay = next(a for a in years if a.academic_year == '2026-2027')

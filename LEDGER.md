@@ -8,11 +8,31 @@ fix.
 browser for builder bugs, against real `data/` for extraction bugs. A passing
 unit test alone is `fixed`, not `verified`.
 
-## Open
+## Open — needs a human, not a commit
 
-| # | Severity | What | Where |
-|---|---|---|---|
-| — | | nothing open | |
+| # | What | Why it is not code |
+|---|---|---|
+| H1 | **One colleague and one student should use the builder before the link is shared widely.** Ten minutes each. | Testing proves the `.ics` is correct *given the inputs*. It cannot prove a person ticks the right boxes, and a wrong tick yields a calendar that looks entirely right — you find out in October at an empty room. |
+| H2 | **Tell the Registrar this exists.** | It carries RWU's name, is published from a personal account, and is aimed at RWU students. The disclaimer is prominent and scraping a public page is fine, but a conversation had beforehand beats one had during a mid-semester divergence. The weekly drift job is the good thing to point at. |
+| H3 | The drift job's **issue-opening branch has never fired** — only the no-drift path is proven (run 31950932130, green). | Needs real divergence, or a deliberate edit to `data/` to force it. Straightforward code, but unwatched. |
+
+## Production readiness — 2026-08-16
+
+Asked and answered: the feeds were ready, the builder was not. Three gaps
+found by checking rather than remembering, all now closed.
+
+| # | What | State |
+|---|---|---|
+| P1 | The `?` explaining "Follows the class timetable" was a `title=` tooltip, so it needed a **mouse hover** — on a phone, where most students meet the builder, the explanation of its trickiest control did not exist. Screen readers skipped it too. | **verified** — replaced with a `<details>` open by default that explains *both* checkboxes (the second never had any explanation) and says what to do when unsure. Keyboard-focusable, taps open and shut, no script. Checked at 375px. |
+| P2 | Once every extracted year retires, `pick_current` falls back to the newest — right, but the page then showed a finished year under "Current academic year" and looked maintained. | **verified** — a warning above the fold naming the date the data ran out and pointing at the official calendar; the eyebrow becomes "Most recent academic year". Boundary tested either side of 2027-05-05. |
+| P3 | RWU publishes the four term tables at different times, so the picker showed three terms and no explanation. Someone planning a summer course found a silent absence. | **verified** — names the absent term ("Summer 2027 has not been published by RWU yet… Nothing is broken"). Wording agrees with itself for one term and for several. |
+
+Also added while in there: `aria-live="polite"` on the preview, so the
+gains-and-losses list is announced as it changes rather than only seen.
+
+**Checked and already fine:** mobile layout at 375px (no horizontal scroll,
+nothing overflowing), `lang`, a single `h1`, no heading skips, every input
+labelled, no unlabelled buttons.
 
 ## Not a defect — recorded so it is not rediscovered
 
