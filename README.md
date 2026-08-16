@@ -17,8 +17,8 @@ subscribe to and JSON your programs can read.
 
 | Feed | URL |
 |---|---|
-| Everything | `https://arhyneRWU.github.io/rwu-academic-calendar/rwu-academic-calendar.ics` |
-| No-class days + day swaps only | `https://arhyneRWU.github.io/rwu-academic-calendar/rwu-no-class-days.ics` |
+| Everything | `https://arhynerwu.github.io/rwu-academic-calendar/rwu-academic-calendar.ics` |
+| No-class days + day swaps only | `https://arhynerwu.github.io/rwu-academic-calendar/rwu-no-class-days.ics` |
 | One academic year | `…/2026-2027.ics` |
 
 Add by URL in Google Calendar (*Other calendars → From URL*), Apple Calendar
@@ -34,7 +34,7 @@ web*).
 | `2026-2027.json` | One academic year. |
 
 ```bash
-curl -s https://arhyneRWU.github.io/rwu-academic-calendar/no-class-days.json
+curl -s https://arhynerwu.github.io/rwu-academic-calendar/no-class-days.json
 ```
 
 ```jsonc
