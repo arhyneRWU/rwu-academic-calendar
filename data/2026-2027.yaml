@@ -250,7 +250,7 @@ terms:
 - id: winter-2027
   term: winter
   classes_begin: &id003 2027-01-04
-  classes_end: null
+  classes_end: &id004 2027-01-22
   events:
   - date: 2027-01-01
     label: New Years Day Holiday - All University Offices Closed
@@ -285,9 +285,10 @@ terms:
     kinds:
     - add_drop
     source_text: 18-Jan
-  - date: 2027-01-22
+  - date: *id004
     label: Lat day of classes - All final Exams Held
     kinds:
+    - term_end
     - finals
     source_text: 22-Jan
   - date: 2027-01-26
@@ -297,8 +298,8 @@ terms:
     source_text: 26-Jan
 - id: spring-2027
   term: spring
-  classes_begin: &id004 2027-01-27
-  classes_end: &id005 2027-05-05
+  classes_begin: &id005 2027-01-27
+  classes_end: &id006 2027-05-05
   events:
   - date: 2027-01-18
     label: Dr. Martin Luther King, Jr. Holiday
@@ -329,7 +330,7 @@ terms:
     span_id: 20262027-spring-2
     source_text: JAN 25/26
     stated_day: MON/TUE
-  - date: *id004
+  - date: *id005
     label: First Day of Classes
     kinds:
     - term_start
@@ -478,7 +479,7 @@ terms:
     no_classes: true
     source_text: APR 14
     stated_day: WED
-  - date: *id005
+  - date: *id006
     label: Last Day of Classes
     kinds:
     - term_end

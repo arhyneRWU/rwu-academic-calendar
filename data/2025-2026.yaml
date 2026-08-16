@@ -741,6 +741,7 @@ terms:
   - date: 2026-06-12
     label: Lat day of classes - All final Exams Held
     kinds:
+    - term_end
     - finals
     source_text: June 12
     session: 4 Week Session, May 20, 2026 - June 12, 2026
@@ -774,6 +775,7 @@ terms:
   - date: 2026-06-22
     label: Lat day of classes - All final Exams Held
     kinds:
+    - term_end
     - finals
     source_text: June 22
     session: 5 Week Session, May 20, 2026 - June 22, 2026

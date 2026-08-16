@@ -735,6 +735,7 @@ terms:
   - date: 2025-06-13
     label: Lat day of classes - All final Exams Held
     kinds:
+    - term_end
     - finals
     source_text: June 13
     session: Important Summer I term Dates 4 Week Session, May 21, 2025 - June 13, 2025

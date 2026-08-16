@@ -163,6 +163,12 @@ sides. As of the 2026-08-16 extraction it finds **seven genuine errors on RWU's
 page** — for example 2027-03-25 is a Thursday but is printed as Wednesday, and
 2025-12-29 is a Monday printed as Friday.
 
+`offices_closed` deserves a specific warning: it is only set where RWU's own
+label says so. **33 of 92 no-class days never state office status** — every
+Spring Break day, every Reading Day, every SASH day. Absent means *the page
+did not say*, not *offices were open*. `rwu-calendar validate` reports the
+gap per term. Do not build a rule on this field without handling the unknowns.
+
 These are reported, not corrected and not fatal: the dates are taken as
 authoritative and the printed weekday is treated as the typo. Run
 `rwu-calendar validate` to see the current list.
@@ -177,6 +183,12 @@ python3 -m venv .venv && ./.venv/bin/pip install -e '.[dev]'
 ./.venv/bin/rwu-calendar drift       # compare live page against data/; exit 2 on drift
 ./.venv/bin/pytest
 ```
+
+The generated schedule is a **recurring series** (`RRULE` + `EXDATE` for
+holidays + `RDATE` for day swaps), not dozens of separate events, so your
+calendar app lets you edit or delete the whole thing at once. Event UIDs are
+derived from the course itself, not its position in the form, so regenerating
+after editing a row updates in place instead of creating duplicates.
 
 Builds are byte-deterministic — `DTSTAMP` is fixed and UIDs are content-derived —
 so rebuilding without a data change produces an empty diff, and subscribers never

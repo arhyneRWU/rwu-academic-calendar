@@ -87,6 +87,41 @@ class Term:
             d += _dt.timedelta(days=1)
         return out
 
+    def sessions(self) -> dict[Optional[str], tuple[_dt.date, _dt.date]]:
+        """Per-session ``(begin, end)`` spans.
+
+        Summer is not one term but up to six *overlapping* sessions -- in 2026,
+        four starting 20 May and ending anywhere from 12 June to 24 July, plus
+        two more starting 13 July. ``classes_begin``/``classes_end`` take the
+        min and max across all of them, so the term span for summer 2026 is
+        20 May to 14 August: correct for "the summer term", badly wrong for any
+        one student, who would be handed meetings for up to nine weeks after
+        their own session ended.
+
+        Terms with a single session return one entry keyed ``None``.
+        """
+        out: dict[Optional[str], tuple[_dt.date, _dt.date]] = {}
+        keys = {e.session for e in self.events}
+        for key in keys:
+            evs = [e for e in self.events if e.session == key]
+            begin = min((e.date for e in evs if 'term_start' in e.kinds), default=None)
+            end = max((e.date for e in evs if 'term_end' in e.kinds), default=None)
+            if begin and end:
+                out[key] = (begin, end)
+        if not out and self.classes_begin and self.classes_end:
+            out[None] = (self.classes_begin, self.classes_end)
+        return out
+
+    def class_days_in(self, begin: _dt.date, end: _dt.date) -> list[_dt.date]:
+        """Teaching weekdays in an arbitrary span, minus no-class days."""
+        skip = set(self.no_class_dates())
+        out, d = [], begin
+        while d <= end:
+            if d.weekday() < 5 and d not in skip:
+                out.append(d)
+            d += _dt.timedelta(days=1)
+        return out
+
     def day_swaps(self) -> list[Event]:
         return [e for e in self.events if 'day_swap' in e.kinds]
 
@@ -170,16 +205,23 @@ def classify(label: str) -> tuple[list[str], dict]:
             kinds.append('break')
         if 'reading day' in low:
             kinds.append('reading_day')
-        if 'offices closed' in low:
+        # RWU writes "All University Offices Closed" and, in at least one
+        # 2024 row, "All University office Closed" -- singular. Matching only
+        # the plural turned an explicit statement into a null.
+        if re.search(r'offices?\s+closed', low):
             extra['offices_closed'] = True
-        elif 'offices open' in low:
+        elif re.search(r'offices?\s+open', low):
             extra['offices_closed'] = False
 
     # -- term boundaries --------------------------------------------------
     if re.search(r'first day of class', low):
         kinds.append('term_start')
-    # "Last Day of Fall 2023 Classes" -- the year sits inside the phrase
-    if re.search(r'last day of\s+(?:fall|spring|winter|summer)?\s*\d{0,4}\s*class', low):
+    # "Last Day of Fall 2023 Classes" -- the year sits inside the phrase.
+    # `las?t` also catches RWU's real typo "Lat day of classes" in Winter 2027,
+    # which otherwise leaves that whole term with no end date and drops it out
+    # of the schedule builder silently. validate.check_structure now fails on a
+    # term that has events but no boundary, so the next typo is loud.
+    if re.search(r'\blas?t day of\s+(?:fall|spring|winter|summer)?\s*\d{0,4}\s*class', low):
         kinds.append('term_end')
 
     # -- everything else --------------------------------------------------

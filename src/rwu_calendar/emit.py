@@ -13,6 +13,7 @@ import datetime as _dt
 import hashlib
 import html
 import json
+import re
 from pathlib import Path
 
 from icalendar import Calendar, Event as IcsEvent
@@ -248,6 +249,22 @@ def _next_milestone(ay: AcademicYear, today: _dt.date) -> str:
     return (f'<p class="next"><strong>Next:</strong> {d:%A %-d %B %Y} ({when}) — {what}</p>')
 
 
+def _slug(session: str | None) -> str:
+    if not session:
+        return 'main'
+    return re.sub(r'[^a-z0-9]+', '-', session.lower()).strip('-')[:40]
+
+
+def _session_label(session: str | None) -> str:
+    """"Important Summer I term Dates 4 Week Session, May 21 - June 13" is not
+    a thing to put in a dropdown. Keep the part that identifies the session."""
+    if not session:
+        return ''
+    m = re.search(r'(\d+\s*week\s*session.*)', session, re.I)
+    text = m.group(1) if m else session
+    return re.sub(r'\s+', ' ', text).strip().rstrip(',')
+
+
 def meeting_grid(ay: AcademicYear) -> dict:
     """For each term, every teaching date mapped to the weekday it *runs as*.
 
@@ -261,25 +278,32 @@ def meeting_grid(ay: AcademicYear) -> dict:
     """
     out = {}
     for t in ay.terms:
-        if not (t.classes_begin and t.classes_end):
-            continue
-        days = {}
-        d = t.classes_begin
-        while d <= t.classes_end:
-            eff = t.effective_weekday(d)
-            if eff:
-                days[d.isoformat()] = eff
-            d += _dt.timedelta(days=1)
-        if not days:
-            continue
-        swaps = {e.date.isoformat(): e.observes_schedule_of for e in t.day_swaps()}
-        out[t.id] = {
-            'label': f'{t.term.title()} {t.classes_begin:%Y}',
-            'begin': t.classes_begin.isoformat(),
-            'end': t.classes_end.isoformat(),
-            'days': days,
-            'swaps': swaps,
-        }
+        sessions = t.sessions()
+        multi = len(sessions) > 1
+        for key, (begin, end) in sorted(sessions.items(), key=lambda kv: kv[1]):
+            days = {}
+            d = begin
+            while d <= end:
+                eff = t.effective_weekday(d)
+                if eff:
+                    days[d.isoformat()] = eff
+                d += _dt.timedelta(days=1)
+            if not days:
+                continue
+            # One entry per session, so a student in summer's 4-week session is
+            # never offered dates from the 10-week one.
+            gid = f'{t.id}::{_slug(key)}' if multi else t.id
+            label = f'{t.term.title()} {begin:%Y}'
+            if multi:
+                label += f' \u2014 {_session_label(key)}'
+            out[gid] = {
+                'label': label,
+                'begin': begin.isoformat(),
+                'end': end.isoformat(),
+                'days': days,
+                'swaps': {e.date.isoformat(): e.observes_schedule_of
+                          for e in t.day_swaps() if begin <= e.date <= end},
+            }
     return out
 
 
@@ -533,44 +557,92 @@ _BUILDER_JS = """
   const pad = v => String(v).padStart(2, '0');
   const esc = s => String(s).replace(/([\\\\;,])/g, '\\\\$1').replace(/\\n/g, '\\\\n');
   const stamp = d => d.replace(/-/g, '');
+  const WD = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+  const BYDAY = {monday:'MO', tuesday:'TU', wednesday:'WE', thursday:'TH', friday:'FR'};
+  const isoOf = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+
+  // Stable, content-derived UID. The old scheme keyed on the row's array
+  // index, so reordering or deleting a row changed the UID of every row after
+  // it -- and re-importing then appended duplicates of events the calendar
+  // already had. Same class of bug the server-side feeds were built to avoid.
+  const uid = s => {
+    let a = 0x811c9dc5, b = 0x01000193;
+    for (let i = 0; i < s.length; i++) {
+      a ^= s.charCodeAt(i); a = Math.imul(a, 0x01000193);
+      b ^= s.charCodeAt(s.length - 1 - i); b = Math.imul(b, 0x85ebca6b);
+    }
+    return ((a >>> 0).toString(16) + (b >>> 0).toString(16)).padStart(16, '0');
+  };
+
+  // A weekly series plus the exceptions the academic calendar forces.
+  //
+  // RRULE expands on the weekday a date FALLS ON. The grid knows the weekday
+  // it RUNS AS. Every disagreement between those two is precisely a holiday
+  // (drop it) or a day swap (drop it for one course, add it for another), so
+  // deriving EXDATE/RDATE as set differences cannot drift from the grid.
+  function series(termId, days) {
+    const t = GRID[termId];
+    const meetings = Object.entries(t.days)
+      .filter(([, eff]) => days.includes(eff)).map(([d]) => d).sort();
+    if (!meetings.length) return null;
+    const last = meetings[meetings.length - 1];
+    const byRule = [];
+    for (const d = new Date(meetings[0] + 'T12:00:00'); isoOf(d) <= last; d.setDate(d.getDate() + 1)) {
+      if (days.includes(WD[d.getDay()])) byRule.push(isoOf(d));
+    }
+    const inRule = new Set(byRule), isMeeting = new Set(meetings);
+    return {
+      meetings,
+      byRule,
+      exdate: byRule.filter(d => !isMeeting.has(d)),
+      rdate: meetings.filter(d => !inRule.has(d)),
+    };
+  }
 
   function ics(termId, rows) {
     const out = ['BEGIN:VCALENDAR', 'VERSION:2.0',
       'PRODID:-//arhyneRWU//RWU Academic Calendar (unofficial)//EN',
       'CALSCALE:GREGORIAN',
-      'X-WR-CALNAME:' + esc('My schedule — ' + GRID[termId].label)];
-    rows.forEach((c, ci) => {
-      for (const d of meetings(termId, c.days)) {
-        const s = stamp(d) + 'T' + c.start.replace(':', '') + '00';
-        const e = stamp(d) + 'T' + c.end.replace(':', '') + '00';
-        out.push('BEGIN:VEVENT',
-          `UID:${termId}-${ci}-${stamp(d)}@rwu-academic-calendar`,
-          'DTSTAMP:20000101T000000Z',
-          `DTSTART:${s}`, `DTEND:${e}`,
-          `SUMMARY:${esc(c.name)}`);
-        if (c.room) out.push(`LOCATION:${esc(c.room)}`);
-        out.push('DESCRIPTION:' + esc(
-          'Generated from the unofficial RWU academic calendar. '
-          + 'Holidays removed and day swaps applied. Verify against the '
-          + 'official calendar.'));
-        if (c.alarm) {
-          // TRIGGER is negative and relative to DTSTART, so the alarm moves
-          // with the event rather than being pinned to a wall-clock time.
-          out.push('BEGIN:VALARM', 'ACTION:DISPLAY',
-            `TRIGGER:-${c.alarm}`,
-            `DESCRIPTION:${esc(c.name + (c.room ? ' — ' + c.room : ''))}`,
-            'END:VALARM');
-        }
-        out.push('END:VEVENT');
+      'X-WR-CALNAME:' + esc('My schedule \u2014 ' + GRID[termId].label)];
+    for (const c of rows) {
+      const s = series(termId, c.days);
+      if (!s) continue;
+      const at = t => stamp(t) + 'T' + c.start.replace(':', '') + '00';
+      const dtstart = s.byRule.length ? s.byRule[0] : s.meetings[0];
+      out.push('BEGIN:VEVENT',
+        `UID:${uid(termId + '|' + c.name + '|' + c.days.join(',') + '|' + c.start)}@rwu-academic-calendar`,
+        'DTSTAMP:20000101T000000Z',
+        `DTSTART:${at(dtstart)}`,
+        `DTEND:${stamp(dtstart)}T${c.end.replace(':', '')}00`);
+      if (s.byRule.length) {
+        out.push('RRULE:FREQ=WEEKLY;BYDAY=' + c.days.map(d => BYDAY[d]).join(',')
+                 + ';UNTIL=' + at(s.byRule[s.byRule.length - 1]));
       }
-    });
+      // One VEVENT per series, so a calendar app shows it as an editable
+      // series rather than dozens of unrelated events.
+      if (s.exdate.length) out.push('EXDATE:' + s.exdate.map(at).join(','));
+      if (s.rdate.length) out.push('RDATE:' + s.rdate.map(at).join(','));
+      out.push(`SUMMARY:${esc(c.name)}`);
+      if (c.room) out.push(`LOCATION:${esc(c.room)}`);
+      out.push('DESCRIPTION:' + esc(
+        'Generated from the unofficial RWU academic calendar. '
+        + 'Holidays removed and day swaps applied. Verify against the '
+        + 'official calendar.'));
+      if (c.alarm) {
+        // TRIGGER is negative and relative to DTSTART, so the alarm moves
+        // with each occurrence rather than being pinned to a wall-clock time.
+        out.push('BEGIN:VALARM', 'ACTION:DISPLAY',
+          `TRIGGER:-${c.alarm}`,
+          `DESCRIPTION:${esc(c.name + (c.room ? ' \u2014 ' + c.room : ''))}`,
+          'END:VALARM');
+      }
+      out.push('END:VEVENT');
+    }
     out.push('END:VCALENDAR');
     // RFC 5545 wants CRLF line endings.
     return out.join('\\r\\n') + '\\r\\n';
   }
 
-  // A new row inherits the last row's reminder, so setting it once is enough
-  // when every course wants the same thing -- without forcing that on anyone.
   document.getElementById('add').addEventListener('click', () => {
     const prev = [...courses.children].pop();
     addCourse(prev ? prev.querySelector('[name=alarm]').value : 'PT15M');

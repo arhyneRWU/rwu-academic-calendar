@@ -76,7 +76,12 @@ def check_structure(years: list[AcademicYear]) -> list[Problem]:
                 if e.observes_schedule_of and e.no_classes:
                     out.append(Problem('error', where,
                                        f'{e.date} is both a day swap and a no-class day'))
-            if t.term in ('fall', 'spring'):
+            # Every term with events needs both boundaries, not just fall and
+            # spring. Winter 2027 sat in the data for weeks with classes_end
+            # None -- RWU typed "Lat day of classes" -- which silently dropped
+            # the entire term out of the schedule builder with no error
+            # anywhere. Checking only fall/spring is what let that through.
+            if t.events:
                 if not t.classes_begin:
                     out.append(Problem('error', where, 'no first day of classes found'))
                 if not t.classes_end:
@@ -104,8 +109,31 @@ def check_coverage(years: list[AcademicYear]) -> list[Problem]:
     return out
 
 
+def check_offices_coverage(years: list[AcademicYear]) -> list[Problem]:
+    """Report how many no-class days never state whether offices are open.
+
+    Reported, not fatal: RWU simply does not say for Spring Break, Reading Day
+    or SASH. It matters because `offices_closed` looks like a usable rule input
+    -- "a staff meeting happens on Fall Break" -- and is only trustworthy where
+    the page actually said so. Anything built on it must handle the unknowns
+    explicitly rather than treating absent as open.
+    """
+    out = []
+    for ay in years:
+        for t in ay.terms:
+            nc = [e for e in t.events if e.no_classes]
+            unknown = [e for e in nc if e.offices_closed is None]
+            if unknown:
+                out.append(Problem(
+                    'source', f'{ay.academic_year}/{t.id}',
+                    f'{len(unknown)} of {len(nc)} no-class days do not state office '
+                    f'status (e.g. {unknown[0].date} {unknown[0].label[:40]!r})'))
+    return out
+
+
 def run_all(years: list[AcademicYear]) -> list[Problem]:
-    return check_structure(years) + check_coverage(years) + check_weekdays(years)
+    return (check_structure(years) + check_coverage(years)
+            + check_weekdays(years) + check_offices_coverage(years))
 
 
 def errors(problems: list[Problem]) -> list[Problem]:

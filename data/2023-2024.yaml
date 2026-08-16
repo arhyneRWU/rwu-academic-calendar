@@ -813,6 +813,7 @@ terms:
     - no_classes
     - holiday
     no_classes: true
+    offices_closed: true
     source_text: June 19, Wed.
     stated_day: Wed.
     session: 'Important Summer I term Dates: 10 Week Session, May 22, 2024 - July 26, 2024'
