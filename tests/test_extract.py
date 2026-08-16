@@ -102,7 +102,8 @@ class TestSummerSessions:
     up as colliding ICS UIDs and duplicated events in every subscriber."""
 
     @pytest.fixture(scope='class')
-    def summer(self):
+    @staticmethod
+    def summer():
         years = extract(SUMMER_PAGE, retrieved='2026-08-16')
         return next(t for t in years[0].terms if t.term == 'summer')
 
@@ -123,7 +124,8 @@ class TestSummerSessions:
 
 class TestExtractIntegration:
     @pytest.fixture(scope='class')
-    def years(self):
+    @staticmethod
+    def years():
         return extract(PAGE, retrieved='2026-08-16')
 
     def test_one_academic_year(self, years):

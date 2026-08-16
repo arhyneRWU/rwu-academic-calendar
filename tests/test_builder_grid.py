@@ -119,7 +119,8 @@ class TestAgainstTheModel:
 
 class TestEmbedding:
     @pytest.fixture(scope='class')
-    def page(self, years):
+    @staticmethod
+    def page(years):
         return emit.to_index_html(years, TODAY).decode()
 
     def test_grid_is_embedded_as_valid_json(self, page, grid):

@@ -244,6 +244,9 @@ class TestSecurity:
         assert 'Reporting a vulnerability' in text
 
 
+PAYLOAD = '&lt;img src=x onerror=alert(1)&gt;'
+
+
 class TestUpstreamContentIsUntrusted:
     """Everything this page renders derives from rwu.edu. `_txt()` strips tags
     and *then* unescapes entities, so a label written upstream as
@@ -252,16 +255,16 @@ class TestUpstreamContentIsUntrusted:
     the sink.
     """
 
-    PAYLOAD = '&lt;img src=x onerror=alert(1)&gt;'
 
     @pytest.fixture(scope='class')
-    def poisoned_page(self):
+    @staticmethod
+    def poisoned_page():
         from rwu_calendar.extract import extract
         page = f"""
 <h3>Academic Calendar 2026-2027</h3>
 <table>
 <tr><td>Important Fall Term Dates Fall 2026</td><td>Month</td><td>Date</td><td>Day</td></tr>
-<tr><td>First Day of Classes {self.PAYLOAD}</td><td>AUG</td><td>26</td><td>WED</td></tr>
+<tr><td>First Day of Classes {PAYLOAD}</td><td>AUG</td><td>26</td><td>WED</td></tr>
 <tr><td>Last Day of Fall Classes</td><td>DEC</td><td>2</td><td>WED</td></tr>
 </table>
 """
