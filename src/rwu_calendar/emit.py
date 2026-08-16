@@ -277,15 +277,34 @@ def _retired_rows(years: list[AcademicYear], today: _dt.date) -> str:
     return ''.join(out)
 
 
+FEED_URL = f'{SITE_URL}/{PRIMARY_FEED}'
+
+
+def _urlbox(url: str, label: str = 'This is the link to paste:') -> str:
+    """Show the literal URL wherever we tell someone to paste one.
+
+    Saying "paste the link" and leaving them to work out *which* link is the
+    fastest way to lose a non-technical user, so every step that needs a URL
+    carries the whole thing, selectable, with a copy button.
+    """
+    return (f'<div class="urlbox"><span class="urllabel">{label}</span>'
+            f'<code class="url">{url}</code>'
+            f'<button class="copy" type="button" hidden data-url="{url}">Copy</button>'
+            f'</div>')
+
+
 _HOWTO = f"""
 <details open><summary><strong>iPhone / iPad</strong></summary>
 <ol>
-<li>Tap the <strong>Subscribe on this device</strong> button above — iOS opens the
-subscribe sheet. Tap <strong>Subscribe</strong>, then <strong>Add</strong>.</li>
+<li>Tap <a href="{webcal(PRIMARY_FEED)}"><strong>Subscribe on this
+device</strong></a> — iOS opens the subscribe sheet. Tap
+<strong>Subscribe</strong>, then <strong>Add</strong>. That is the whole thing;
+you can stop here.</li>
 <li>If nothing happens, add it by hand: <em>Settings → Apps → Calendar →
-Calendar Accounts → Add Account → Other → Add Subscribed Calendar</em>, and paste
-the <code>https://</code> link.</li>
+Calendar Accounts → Add Account → Other → Add Subscribed Calendar</em>, then
+paste the link below into <em>Server</em>.</li>
 </ol>
+{_urlbox(FEED_URL)}
 <p class="tip">Refresh interval lives in <em>Settings → Apps → Calendar →
 Sync</em>.</p>
 </details>
@@ -298,8 +317,10 @@ syncs to your phone automatically.</p>
 <li>Open <a href="https://calendar.google.com">calendar.google.com</a>.</li>
 <li>Beside <em>Other calendars</em>, click <strong>+</strong> →
 <strong>From URL</strong>.</li>
-<li>Paste the <code>https://</code> link and click <strong>Add calendar</strong>.</li>
+<li>Paste the link below into <em>URL of calendar</em>, then click
+<strong>Add calendar</strong>.</li>
 </ol>
+{_urlbox(FEED_URL)}
 <p class="tip">Google refreshes subscribed calendars on its own schedule —
 typically every 8–24 hours — and there is no way to force it sooner.</p>
 </details>
@@ -307,16 +328,46 @@ typically every 8–24 hours — and there is no way to force it sooner.</p>
 <details><summary><strong>Outlook</strong></summary>
 <ol>
 <li><em>Add calendar → Subscribe from web</em>.</li>
-<li>Paste the <code>https://</code> link, name it, and click
-<strong>Import</strong>.</li>
+<li>Paste the link below, give it a name, and click <strong>Import</strong>.</li>
 </ol>
+{_urlbox(FEED_URL)}
 </details>
 
 <details><summary><strong>Something else (Thunderbird, Fantastical, code)</strong></summary>
-<p>Any client that speaks iCalendar can subscribe to the <code>https://</code>
-link. If you are writing code, use the JSON instead — see
+<p>Any client that speaks iCalendar can subscribe to this link:</p>
+{_urlbox(FEED_URL)}
+<p>Writing code? Use the JSON instead — see
 <a href="{REPO_URL}#consume-as-json">the README</a>.</p>
+{_urlbox(f'{SITE_URL}/no-class-days.json', 'JSON for programs:')}
 </details>
+
+<details><summary><strong>I want a different feed</strong></summary>
+<p>The links above are the recommended feed: holidays, breaks and day swaps for
+every year. These are the alternatives — paste them the same way.</p>
+{_urlbox(f'{SITE_URL}/rwu-academic-calendar.ics',
+         'Everything, including add/drop and grades deadlines:')}
+{_urlbox(f'{SITE_URL}/2026-2027.ics', 'One academic year only (2026-2027):')}
+</details>
+"""
+
+_COPY_JS = """
+<script>
+// Progressive enhancement only: the URL above is already visible and
+// selectable, so the button stays hidden unless the clipboard API exists.
+if (navigator.clipboard) {
+  for (const b of document.querySelectorAll('.copy')) {
+    b.hidden = false;
+    b.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(b.dataset.url);
+        const was = b.textContent;
+        b.textContent = 'Copied';
+        setTimeout(() => { b.textContent = was; }, 1500);
+      } catch (e) { /* selection still works */ }
+    });
+  }
+}
+</script>
 """
 
 
@@ -389,6 +440,18 @@ and JSON for the Roger Williams University academic calendar.">
  summary {{ cursor: pointer; }}
  details[open] summary {{ margin-bottom: .5rem; }}
  .tip {{ color: #8889; font-size: .92em; }}
+ .urlbox {{ display: flex; flex-wrap: wrap; align-items: center; gap: .5rem;
+           border: 1px dashed var(--line); border-radius: 8px;
+           padding: .6rem .8rem; margin: .75rem 0;
+           background: color-mix(in srgb, var(--accent) 5%, transparent); }}
+ .urllabel {{ flex: 1 0 100%; font-size: .8rem; font-weight: 700; color: #8889;
+             text-transform: uppercase; letter-spacing: .04em; }}
+ .urlbox .url {{ flex: 1 1 20rem; background: transparent; padding: 0;
+                font-size: .95rem; user-select: all; }}
+ .copy {{ font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer;
+         padding: .3rem .8rem; border-radius: 6px; border: 1px solid var(--line);
+         background: transparent; color: inherit; }}
+ .copy:hover {{ border-color: var(--accent); color: var(--accent); }}
  ul.feeds {{ padding-left: 1.2rem; }}
  footer {{ margin-top: 3rem; color: #8889; font-size: .92em; }}
 </style></head><body>
@@ -413,8 +476,8 @@ university. Verify against the official calendar before relying on it.</p>
 <a class="btn alt" href="{PRIMARY_FEED}">Download .ics</a>
 </div>
 <p class="tip">Holidays, breaks and day swaps — add once and it stays current.
-If a button does nothing, copy this link instead:<br>
-<code>{SITE_URL}/{PRIMARY_FEED}</code></p>
+If a button does nothing, paste this link into your calendar app instead:</p>
+{_urlbox(FEED_URL)}
 </div>
 
 <h2>Add it to your phone</h2>
@@ -456,6 +519,7 @@ no longer what this page leads with.</p>
 <a href="{REPO_URL}">Source and documentation on GitHub</a> ·
 Last extracted from rwu.edu: {current.retrieved if current else '—'}
 </footer>
+{_COPY_JS}
 </body></html>
 """
     return html.encode()

@@ -111,6 +111,38 @@ class TestInstructions:
     def test_each_platform_has_instructions(self, page, platform):
         assert platform in page
 
+    def test_every_instruction_block_shows_the_literal_url(self, page):
+        """"Paste the link" is useless if the link is not right there. Each
+        <details> block that tells someone to paste must carry the whole URL,
+        not a reference to one somewhere else on the page."""
+        howto = page.split('Add it to your phone')[1].split('<h2>')[0]
+        blocks = howto.split('<details')[1:]
+        assert len(blocks) >= 4
+        for b in blocks:
+            assert 'class="urlbox"' in b, b[:90]
+            assert emit.SITE_URL in b, b[:90]
+
+    def test_no_step_says_paste_the_link_without_showing_one(self, page):
+        """Guards the exact regression: prose telling the user to paste,
+        inside a block with no URL in it."""
+        for b in page.split('<details')[1:]:
+            if 'paste' in b.lower():
+                assert 'class="urlbox"' in b, b[:120]
+
+    def test_hero_also_shows_the_pasteable_url(self, page):
+        hero = page.split('class="hero"')[1].split('<h2>Add it')[0]
+        assert f'{emit.SITE_URL}/{emit.PRIMARY_FEED}' in hero
+
+    def test_copy_button_is_hidden_until_javascript_enables_it(self, page):
+        """Without a clipboard API the button would do nothing, so it must not
+        be visible. The URL itself is always readable and selectable."""
+        assert 'class="copy" type="button" hidden' in page
+        assert 'navigator.clipboard' in page
+
+    def test_alternative_feeds_are_also_given_as_pasteable_urls(self, page):
+        assert f'{emit.SITE_URL}/rwu-academic-calendar.ics' in page
+        assert f'{emit.SITE_URL}/no-class-days.json' in page
+
     def test_warns_that_google_cannot_add_a_url_from_mobile(self, page):
         assert 'cannot add a calendar by URL' in page
 
@@ -128,8 +160,10 @@ class TestContent:
         assert 'Not an official Roger Williams University' in page
 
     def test_no_external_asset_requests(self, page):
-        """A strict, dependency-free page: no CDN, no fonts, no scripts."""
-        assert '<script' not in page.lower()
+        """Dependency-free: no CDN, no fonts, no external scripts. The one
+        inline script is progressive enhancement for the copy buttons."""
+        assert '<script src' not in page.lower()
+        assert page.lower().count('<script') == 1
         for bad in ('http://', 'cdn.', 'fonts.googleapis', '<link rel="stylesheet"'):
             assert bad not in page, bad
 
