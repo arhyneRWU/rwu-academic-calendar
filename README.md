@@ -28,6 +28,12 @@ subscribe to and JSON your programs can read.
 | Everything | `https://arhynerwu.github.io/rwu-academic-calendar/rwu-academic-calendar.ics` |
 | No-class days + day swaps only | `https://arhynerwu.github.io/rwu-academic-calendar/rwu-no-class-days.ics` |
 | One academic year | `…/2026-2027.ics` |
+| **One term only** | `…/fall-2026.ics` · `…/spring-2027.ics` · `…/winter-2027.ics` |
+
+Per-term feeds exist because the year feed is all or nothing. If you don't
+teach in January, subscribe to Fall and Spring and skip Winter — each term is
+its own live subscription. Every term id in `no-class-days.json` has a matching
+`<term-id>.ics` and `<term-id>.json`.
 
 Add by URL in Google Calendar (*Other calendars → From URL*), Apple Calendar
 (*File → New Calendar Subscription*), or Outlook (*Add calendar → Subscribe from

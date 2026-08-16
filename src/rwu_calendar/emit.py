@@ -337,6 +337,23 @@ def _term_cards(ay: AcademicYear, today: _dt.date) -> str:
     return ''.join(out)
 
 
+def _term_feed_rows(ay: AcademicYear, today: _dt.date) -> str:
+    out = []
+    for t in ay.terms:
+        if not t.classes_begin:
+            continue
+        state = ('in session' if t.classes_begin <= today <= t.classes_end
+                 else 'upcoming' if today < t.classes_begin else 'finished')
+        out.append(
+            f'<tr><td><strong>{_e(_term_title(t))}</strong><br>'
+            f'<span class="tiny">{t.classes_begin:%-d %b} \u2013 '
+            f'{t.classes_end:%-d %b %Y} \u00b7 {state}</span></td>'
+            f'<td><a class="btn small" href="{_e(webcal(t.id + ".ics"))}">Subscribe</a></td>'
+            f'<td><a href="{_e(t.id)}.ics">.ics</a></td>'
+            f'<td><a href="{_e(t.id)}.json">.json</a></td></tr>')
+    return ''.join(out)
+
+
 def _retired_rows(years: list[AcademicYear], today: _dt.date) -> str:
     out = []
     for ay in sorted(years, key=lambda a: a.academic_year, reverse=True):
@@ -701,6 +718,7 @@ def to_index_html(years: list[AcademicYear], today: _dt.date | None = None) -> b
     cur_ics = f'{current.academic_year}.ics' if current else PRIMARY_FEED
     hero_terms = _term_cards(current, today) if current else ''
     retired = _retired_rows(others, today)
+    term_feeds = _term_feed_rows(current, today) if current else ''
     grid = json.dumps(meeting_grid(current) if current else {}, separators=(',', ':'))
 
     html = f"""<!doctype html>
@@ -735,6 +753,8 @@ def to_index_html(years: list[AcademicYear], today: _dt.date | None = None) -> b
  .banner-title {{ display: block; font-size: 1.45rem; font-weight: 700;
                  margin: .15rem 0 .35rem; }}
  .banner-sub {{ display: block; font-size: .95rem; }}
+ .tiny {{ font-size: .8rem; color: #8889; white-space: nowrap; }}
+ .btn.small {{ padding: .3rem .8rem; font-size: .85rem; }}
  .hero {{ border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem 1.5rem;
          margin: 1.5rem 0; }}
  .hero h2 {{ margin: 0 0 .5rem; border: 0; padding: 0; font-size: 1.9rem; }}
@@ -865,6 +885,16 @@ these <code>[Monday schedule]</code>, and the JSON gives them a typed
 Software that models only "no classes" will put a Tuesday class on a day that is
 actually running Monday's timetable.</p>
 
+<h2 id="terms">One term at a time</h2>
+<p>The whole-year feed carries every term. If you don't teach in January, take
+just the terms you want — each one is its own live subscription, so you can
+add Fall and Spring and skip Winter entirely.</p>
+<div class="wrap"><table>
+<tr><th>Term</th><th>Add to calendar</th><th>Download</th><th>Data</th></tr>
+{term_feeds}
+</table></div>
+<p class="tip">Whole year in one: <code>{SITE_URL}/{current.academic_year if current else ''}.ics</code></p>
+
 <h2>All feeds</h2>
 <ul class="feeds">
 <li><a href="{PRIMARY_FEED}"><code>{PRIMARY_FEED}</code></a> — no-class days and
@@ -917,6 +947,18 @@ Last extracted from rwu.edu: {_e(current.retrieved) if current else '—'}
     return html.encode()
 
 
+def _term_title(t) -> str:
+    year = t.classes_begin.year if t.classes_begin else t.academic_year
+    return f'{t.term.title()} {year}'
+
+
+def _only_term(ay: AcademicYear, term_id: str) -> AcademicYear:
+    """A one-term copy of an academic year, for the per-term feeds."""
+    out = AcademicYear(ay.academic_year, ay.source_url, ay.retrieved)
+    out.terms = [t for t in ay.terms if t.id == term_id]
+    return out
+
+
 def build(years: list[AcademicYear], outdir: str | Path,
           today: _dt.date | None = None) -> list[Path]:
     out = Path(outdir)
@@ -939,6 +981,13 @@ def build(years: list[AcademicYear], outdir: str | Path,
         slug = ay.academic_year
         w(f'{slug}.ics', to_ics([ay], f'RWU Academic Calendar {slug} (unofficial)'))
         w(f'{slug}.json', to_json([ay]))
+        # One feed per term as well. A whole-year feed is all or nothing, and
+        # someone who does not teach in January should not have to carry the
+        # Winter intersession in their calendar to get Fall and Spring.
+        for t in ay.terms:
+            single = _only_term(ay, t.id)
+            w(f'{t.id}.ics', to_ics([single], f'RWU {_term_title(t)} (unofficial)'))
+            w(f'{t.id}.json', to_json([single]))
     w('index.html', to_index_html(years, today))
     w('.nojekyll', b'')     # Pages would otherwise skip nothing here, but be explicit
     return written

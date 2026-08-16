@@ -290,3 +290,51 @@ class TestUpstreamContentIsUntrusted:
         ay.terms = [t]
         out = emit.to_index_html([ay], dt.date(2026, 8, 16)).decode()
         assert '<script>alert(1)</script>' not in out
+
+
+class TestPerTermFeeds:
+    """A whole-year feed is all or nothing. Someone who doesn't teach in
+    January should not have to carry the Winter intersession to get Fall
+    and Spring."""
+
+    @pytest.fixture(scope='module')
+    def built(self, years, tmp_path_factory):
+        out = tmp_path_factory.mktemp('feeds')
+        return {p.name for p in emit.build(years, out, TODAY)}
+
+    def test_one_feed_per_term_in_both_formats(self, built):
+        for tid in ('fall-2026', 'winter-2027', 'spring-2027',
+                    'fall-2025', 'summer-2026'):
+            assert f'{tid}.ics' in built, tid
+            assert f'{tid}.json' in built, tid
+
+    def test_whole_year_feeds_still_exist(self, built):
+        assert {'2026-2027.ics', '2026-2027.json'} <= built
+
+    def test_a_term_feed_contains_only_that_term(self, years, tmp_path):
+        from icalendar import Calendar
+        emit.build(years, tmp_path, TODAY)
+        cal = Calendar.from_ical((tmp_path / 'winter-2027.ics').read_bytes())
+        dates = [c['dtstart'].dt for c in cal.walk('VEVENT')]
+        assert dates, 'winter feed is empty'
+        assert all(dt.date(2026, 12, 1) < d < dt.date(2027, 2, 1) for d in dates), dates
+
+    def test_term_feeds_partition_the_year_feed(self, years, tmp_path):
+        """Every event in the year feed appears in exactly one term feed."""
+        from icalendar import Calendar
+        emit.build(years, tmp_path, TODAY)
+        uids = lambda n: {str(c['uid']) for c in
+                          Calendar.from_ical((tmp_path / n).read_bytes()).walk('VEVENT')}
+        year = uids('2026-2027.ics')
+        parts = [uids(f'{t}.ics') for t in ('fall-2026', 'winter-2027', 'spring-2027')]
+        assert set().union(*parts) == year
+        assert sum(len(p) for p in parts) == len(year), 'a UID appears in two term feeds'
+
+    def test_page_offers_a_subscribe_link_per_term(self, page):
+        block = page.split('One term at a time')[1].split('<h2>All feeds')[0]
+        for tid in ('fall-2026', 'winter-2027', 'spring-2027'):
+            assert emit.webcal(f'{tid}.ics') in block, tid
+            assert f'{tid}.json' in block, tid
+
+    def test_term_picker_sits_above_the_all_feeds_list(self, page):
+        assert page.index('One term at a time') < page.index('<h2>All feeds')
