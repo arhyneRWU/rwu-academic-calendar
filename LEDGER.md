@@ -18,8 +18,10 @@ unit test alone is `fixed`, not `verified`.
 
 ## Builder clarity and cross-platform import — 2026-08-17
 
-Two complaints — "it's just iPhone I think" and "the courses added is
-strange" — turned out to be four bugs, three of them CSS.
+Three complaints — "it's just iPhone I think", "the courses added is
+strange", and "it feels like you're restricted to just scheduled classes" —
+turned out to be five bugs, three of them CSS and one a default that stopped
+being right the moment the catalog picker existed.
 
 | # | What | State |
 |---|---|---|
@@ -27,6 +29,7 @@ strange" — turned out to be four bugs, three of them CSS.
 | U2 | **The "Dates, one per line" textarea was visible on every row, always.** It is marked `hidden`, but the browser's `[hidden] {display:none}` loses to any author rule setting `display`, and `.crow` sets `display:flex`. Nothing in the markup looked wrong. | **verified** — `[hidden] {display:none !important}` |
 | U3 | **Horizontal scroll on a phone**, 852px against a 375 viewport — but only *after* choosing a subject. A flex item defaults to `min-width:auto` and will not shrink below its content, and the picker's longest option is a whole section line. An earlier mobile check passed because it never loaded a subject. | **verified** — `min-width: 0`; re-checked at 375px with a subject loaded |
 | U4 | **`DTSTAMP` frozen at `20000101`.** Correct for the published feeds, where a fixed stamp keeps rebuilds diffing clean — wrong for a personal download, because a client comparing timestamps reads a re-import as no newer than what it holds and declines to update. That silently broke the one thing content-derived UIDs exist for. | **verified** — real stamp plus `SEQUENCE:0` |
+| U5 | **The builder opened with a blank, class-shaped row and a `+ Add another item` button.** Sitting directly under the catalog picker with no heading of its own, it read as *the other way to add a course*, and "another item" inherited that meaning — so office hours, meetings, clubs and work shifts looked out of scope until you clicked and read the placeholder. The catalog dropdown now handles classes, which makes a class-shaped default actively wrong. | **verified** — two labelled boxes (*Your classes* from the catalog, *Anything else that repeats* with examples), no row built until someone asks for one, and an empty-state line so an empty list does not look broken. Checked at 375px with a catalog course added, and both submit paths re-run in the browser |
 
 **And the actual reason it felt iPhone-only:** the file was always a valid
 `.ics` that any app can read. But the page's only instructions were for

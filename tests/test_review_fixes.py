@@ -466,3 +466,45 @@ class TestPageHardening:
     def test_the_page_still_fetches_nothing(self, page):
         for bad in ('http://', 'cdn.', '<script src', '<iframe'):
             assert bad not in page, bad
+
+
+class TestTheBuilderDoesNotDefaultToAClass:
+    """The blank row used to sit under the catalog picker with no heading, so
+    it read as a second way to add a *course*, and "+ Add another item"
+    inherited that reading. Now the catalog owns classes and a labelled
+    section owns everything else."""
+
+    def test_no_item_is_built_before_the_user_asks_for_one(self, page):
+        js = page[page.index('function addItem'):]
+        # The load-time call and the re-add on removing the last row are both
+        # gone; a row exists only because someone added one.
+        assert 'addItem(); update();' not in js
+        assert 'if (!courses.children.length) addItem()' not in js
+
+    def test_an_empty_list_says_so_instead_of_looking_broken(self, page):
+        assert 'id="empty"' in page and 'Nothing added yet' in page
+        assert "document.getElementById('empty').hidden = courses.children.length > 0" in page
+
+    def test_the_section_heading_is_what_says_non_classes_belong_here(self, page):
+        block = page[page.index('class="manual"'):]
+        block = block[:block.index('</div>')]
+        assert 'Anything else that repeats' in block
+        for example in ('Office hours', 'committee meetings', 'club', 'work'):
+            assert example in block, example
+
+    def test_hand_entering_a_class_stays_obviously_available(self, page):
+        # Terms with no course data pulled have no catalog picker at all.
+        assert "a class the catalog doesn't list" in page
+
+    def test_the_button_no_longer_says_another(self, page):
+        assert '+ Add an item' in page and 'Add another item' not in page
+
+    def test_the_name_placeholder_leads_with_something_that_is_not_a_class(self, page):
+        ph = page[page.index('placeholder="e.g.'):]
+        ph = ph[:ph.index('"', len('placeholder="'))]
+        assert 'Office hours' in ph
+        assert ph.index('Office hours') < ph.index('BIO')
+
+    def test_submitting_an_empty_builder_explains_both_ways_in(self, page):
+        assert 'Nothing to download yet' in page
+        assert 'Add a class from the catalog, or add an item of your own' in page

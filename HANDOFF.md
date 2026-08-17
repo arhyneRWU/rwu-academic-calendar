@@ -82,6 +82,7 @@ pattern-match the prose; use `Term.effective_weekday()` or the grid.
 | **No event-type dropdown** | Three adversarial reviewers: nobody can tell "academic" from "staff/admin" meeting, and the failure is silent, surfacing months later at an empty room |
 | Two plain checkboxes instead | "Follows the class timetable" / "Skips holidays and breaks" — answerable about your own commitment |
 | Course data: **five fields, no people** | Instructor names, seat counts and enrolment are in the payload and are not taken. A meeting pattern is a fact about a room and a clock |
+| Classes come from the catalog; **no blank class row by default** | Once the picker existed, opening with a class-shaped form made everything else — office hours, meetings, clubs, shifts — look out of scope. A labelled section says what belongs there; a button cannot |
 | Courses committed, refreshed **weekly** | Same rule as the calendar; nightly would be standing load on a production student system for no real gain |
 
 ## Things that will bite you

@@ -541,7 +541,7 @@ that repeats. You get one calendar file with every occurrence worked out against
 the academic calendar. Nothing is uploaded; the file is made in your browser.</p>
 
 <ol class="steps">
-<li>Pick your term</li><li>Add your courses</li><li>Download and import</li>
+<li>Pick your term</li><li>Add your classes and anything else</li><li>Download and import</li>
 </ol>
 
 <form id="sched" autocomplete="off">
@@ -570,7 +570,7 @@ download: it names every date you gain and every date you lose.</p>
 <!-- Only shown for terms whose course data has been pulled; hidden by
      default so the builder is unchanged when there is none. -->
 <div id="catalog" class="catalog" hidden>
-<p><strong>Add a course from the catalog</strong>
+<p><strong>Your classes</strong> — pick them from RWU's catalog
 <span class="tiny" id="catalog-stamp"></span></p>
 <div class="crow">
 <label>Subject <select id="cat-subject"></select></label>
@@ -582,11 +582,25 @@ The <em>dates</em> come from the academic calendar above, so holidays and the
 day swap are already handled. Check anything that moved during add/drop.</p>
 </div>
 
+<!-- This section exists because the blank row used to sit under the
+     catalog picker with no heading, so it read as "the other way to add a
+     course" and the button's "another item" inherited that meaning. The
+     heading, not the button, is what says office hours and clubs belong
+     here. The last clause matters for terms with no course data pulled:
+     hand-entering a class has to stay obviously available. -->
+<div class="manual">
+<p><strong>Anything else that repeats</strong></p>
+<p class="tip">Office hours, lab or committee meetings, club practices, work
+shifts, a class the catalog doesn't list — anything with days and a time.</p>
+<p><button type="button" id="add" class="btn alt">+ Add an item</button></p>
+</div>
+
+<h3 class="listhead">Your schedule so far</h3>
 <div id="courses"></div>
-<p>
-<button type="button" id="add" class="btn alt">+ Add another item</button>
-<button type="submit" class="btn">Download my schedule</button>
-</p>
+<p class="tip" id="empty">Nothing added yet — add a class above, or an item of
+your own.</p>
+
+<p><button type="submit" class="btn">Download my schedule</button></p>
 </form>
 <div id="preview" class="preview" aria-live="polite" hidden></div>
 
@@ -676,7 +690,7 @@ _BUILDER_JS = r"""
         ${fromCatalog ? '<span class="it-tag">from catalog</span>' : ''}
       </summary>
       <div class="crow">
-        <label class="grow">Name<input type="text" name="name" placeholder="e.g. BIO 320 Lecture, Office hours, Dept meeting"></label>
+        <label class="grow">Name<input type="text" name="name" placeholder="e.g. Office hours, Dept meeting, Crew practice, BIO 320 Lab"></label>
         <label>Room<input type="text" name="room" placeholder="optional"></label>
       </div>
       <div class="crow">
@@ -705,7 +719,7 @@ _BUILDER_JS = r"""
       </details>
       <button type="button" class="rm" title="Remove this item">Remove</button>`;
     row.querySelector('.rm').addEventListener('click', () => {
-      row.remove(); if (!courses.children.length) addItem(); update();
+      row.remove(); update();
     });
     const rep = row.querySelector('[name=repeat]'), box = row.querySelector('.datebox');
     const sync = () => { box.hidden = rep.value !== 'dates';
@@ -837,6 +851,7 @@ _BUILDER_JS = r"""
     const t = GRID[termSel.value];
     const all = read();
     refreshItems(all);
+    document.getElementById('empty').hidden = courses.children.length > 0;
     const rows = all.filter(c => c.name && (c.repeat === 'dates' || c.days.length));
     if (!rows.length) { preview.hidden = true; return; }
     preview.hidden = false;
@@ -1062,7 +1077,12 @@ _BUILDER_JS = r"""
     ev.preventDefault();
     const rows = read().filter(c => c.name && c.start && c.end
                                  && (c.repeat === 'dates' ? c.dates.trim() : c.days.length));
-    if (!rows.length) { alert('Add a name, a start and end time, and either meeting days or a list of dates.'); return; }
+    if (!rows.length) {
+      alert(courses.children.length
+        ? 'Add a name, a start and end time, and either meeting days or a list of dates.'
+        : 'Nothing to download yet. Add a class from the catalog, or add an item of your own.');
+      return;
+    }
     const bad = rows.find(c => c.end <= c.start);
     if (bad) { alert(`"${bad.name}" ends at or before it starts.`); return; }
     const wrong = rows.find(c => badDates(c).length);
@@ -1076,7 +1096,7 @@ _BUILDER_JS = r"""
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   });
 
-  addItem(); update();
+  update();
 })();
 </script>
 """
@@ -1315,9 +1335,12 @@ site yet, so <strong>do not plan against it</strong> — check the
  .chk {{ flex-direction: row !important; align-items: center; gap: .35rem;
         text-transform: none !important; color: inherit !important;
         font-weight: 600 !important; font-size: .92rem !important; }}
- .catalog {{ border: 1px solid var(--line); border-radius: 8px;
+ .catalog, .manual {{ border: 1px solid var(--line); border-radius: 8px;
             padding: .8rem 1rem; margin: 1rem 0; }}
- .catalog p {{ margin: 0 0 .5rem; }}
+ .catalog p, .manual p {{ margin: 0 0 .5rem; }}
+ .manual p:last-child {{ margin: 0; }}
+ .listhead {{ font-size: .95rem; text-transform: uppercase;
+              letter-spacing: .04em; color: #8889; margin: 1.5rem 0 .5rem; }}
  .catalog .crow {{ align-items: end; }}
  .catalog select {{ max-width: 100%; width: 100%; }}
  #cat-section {{ min-width: 0; }}
