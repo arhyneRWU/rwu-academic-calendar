@@ -1,0 +1,31 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "EMS",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "EMS.121.41C",
+   "title": "EMT Basic",
+   "days": [
+    "monday",
+    "wednesday"
+   ],
+   "start": "18:00",
+   "end": "22:00",
+   "room": "One Empire Plaza 346"
+  },
+  {
+   "section": "EMS.121.41C",
+   "title": "EMT Basic",
+   "days": [
+    "saturday"
+   ],
+   "start": "09:00",
+   "end": "16:00",
+   "room": "One Empire Plaza 346"
+  }
+ ]
+}

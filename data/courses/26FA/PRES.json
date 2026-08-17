@@ -1,0 +1,105 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "PRES",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "PRES.101.02",
+   "title": "Intro to Pres Studies",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Humanities Building 100"
+  },
+  {
+   "section": "PRES.320.01",
+   "title": "American Cultural Landscapes",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Cummings School Architecture 202"
+  },
+  {
+   "section": "PRES.331.01",
+   "title": "Historic Cnst Material&Assemb",
+   "days": [
+    "wednesday"
+   ],
+   "start": "08:00",
+   "end": "10:50",
+   "room": "Cummings School Architecture 202"
+  },
+  {
+   "section": "PRES.341.01",
+   "title": "Bldg & Site Doc Resrch Methods",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Cummings School Architecture 202"
+  },
+  {
+   "section": "PRES.341L.51",
+   "title": "Bldg&Site Doc Res Method La",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 202"
+  },
+  {
+   "section": "PRES.520.01",
+   "title": "American Cultural Landscapes",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Cummings School Architecture 202"
+  },
+  {
+   "section": "PRES.531.01",
+   "title": "Historic Cnst Material&Assemb",
+   "days": [
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "10:50",
+   "room": "Cummings School Architecture 202"
+  },
+  {
+   "section": "PRES.541.01",
+   "title": "Bldg & Site Doc Research Meth",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Cummings School Architecture 202"
+  },
+  {
+   "section": "PRES.541L.51",
+   "title": "Bldg & Site Doc Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 202"
+  }
+ ]
+}

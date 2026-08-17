@@ -1,0 +1,138 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "ANSOC",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "ANSOC.100.01",
+   "title": "Intro to Cultural Anth",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "College of Arts and Sciences 220"
+  },
+  {
+   "section": "ANSOC.100.02",
+   "title": "Intro to Cultural Anth",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "College of Arts and Sciences 220"
+  },
+  {
+   "section": "ANSOC.100.03",
+   "title": "Intro to Cultural Anth",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "College of Arts and Sciences 120"
+  },
+  {
+   "section": "ANSOC.105.01",
+   "title": "Introduction to Sociology",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "ANSOC.105.02",
+   "title": "Introduction to Sociology",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "ANSOC.105.03",
+   "title": "Introduction to Sociology",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "ANSOC.105.04",
+   "title": "Introduction to Sociology",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "ANSOC.255.01",
+   "title": "Soc Persp Social Problems",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "ANSOC.279.01",
+   "title": "SpTp: Popular Culture & Media",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "College of Arts and Sciences 125"
+  },
+  {
+   "section": "ANSOC.300.01",
+   "title": "Qualitative Methods",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "ANSOC.310.01",
+   "title": "Applied Anthropology",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "College of Arts and Sciences 220"
+  }
+ ]
+}

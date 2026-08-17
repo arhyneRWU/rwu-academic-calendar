@@ -1,0 +1,32 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "ASL",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "ASL.101.01",
+   "title": "American Sign Lang I",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "18:20",
+   "room": "Gabelli School of Business G13"
+  },
+  {
+   "section": "ASL.379.01",
+   "title": "SpTp:Deaf Culture",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "18:20",
+   "room": ""
+  }
+ ]
+}

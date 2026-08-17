@@ -1,0 +1,62 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "AQS",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "AQS.262.01",
+   "title": "Aquarium Sys Dsgn & Life Suppt",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Marine & Natural Sciences Bldg 200"
+  },
+  {
+   "section": "AQS.262L.51",
+   "title": "Aqu Sys Dsgn & Life Suprt Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Marine & Natural Sciences Bldg 107"
+  },
+  {
+   "section": "AQS.262L.52",
+   "title": "Aqu Sys Dsgn & Life Suprt Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "Marine & Natural Sciences Bldg 107"
+  },
+  {
+   "section": "AQS.318.01",
+   "title": "Aquatic Animal Health and Lab",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "AQS.318L.51",
+   "title": "Aquatic Animal Health Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 107"
+  }
+ ]
+}

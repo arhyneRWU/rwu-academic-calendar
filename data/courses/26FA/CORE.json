@@ -1,0 +1,137 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "CORE",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "CORE.423.01",
+   "title": "Kicks: Art Pltcs Cltr Sneakers",
+   "days": [
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "CORE.465.01",
+   "title": "Beyond Belief:Science/Religio",
+   "days": [
+    "monday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "CORE.468.01",
+   "title": "Language and Society",
+   "days": [
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "CORE.468.02",
+   "title": "Language and Society",
+   "days": [
+    "wednesday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "CORE.472.01",
+   "title": "War Propaganda",
+   "days": [
+    "monday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "CORE.479.01",
+   "title": "SpTp:Pnshmnt/Reform:Abolition",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "College of Arts and Sciences 126"
+  },
+  {
+   "section": "CORE.479.02",
+   "title": "SpTp:AI Deep Dive",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Humanities Building 102"
+  },
+  {
+   "section": "CORE.479.03",
+   "title": "SpTp:The Public Bible",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "CORE.479.04",
+   "title": "SpTp:The Cats Class",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Humanities Building 318"
+  },
+  {
+   "section": "CORE.479.05",
+   "title": "How not to kill your planet?",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "School of Engineering 201"
+  },
+  {
+   "section": "CORE.479.07",
+   "title": "Sptp:Cult and Food Latin Amer",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "Humanities Building 102"
+  },
+  {
+   "section": "CORE.479.08",
+   "title": "SpTp:Sprhrs,Poltcs,Idnty,Cult",
+   "days": [
+    "monday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": ""
+  }
+ ]
+}

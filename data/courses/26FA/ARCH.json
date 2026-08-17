@@ -1,0 +1,1024 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "ARCH",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "ARCH.101.01",
+   "title": "Foundations of Arch",
+   "days": [
+    "tuesday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "College of Arts and Sciences 157"
+  },
+  {
+   "section": "ARCH.101.02",
+   "title": "Foundations of Arch",
+   "days": [
+    "tuesday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "College of Arts and Sciences 157"
+  },
+  {
+   "section": "ARCH.101R.01",
+   "title": "Fds of Arch/Recitation",
+   "days": [
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Cummings School Architecture 103"
+  },
+  {
+   "section": "ARCH.101R.02",
+   "title": "Fds of Arch/Recitation",
+   "days": [
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Cummings School Architecture 105"
+  },
+  {
+   "section": "ARCH.101R.03",
+   "title": "Fds of Arch/Recitation",
+   "days": [
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "10:20",
+   "room": "Cummings School Architecture 103"
+  },
+  {
+   "section": "ARCH.101R.04",
+   "title": "Fds of Arch/Recitation",
+   "days": [
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "10:20",
+   "room": "Cummings School Architecture 105"
+  },
+  {
+   "section": "ARCH.101R.05",
+   "title": "Fds of Arch/Recitation",
+   "days": [
+    "friday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Cummings School Architecture 103"
+  },
+  {
+   "section": "ARCH.101R.06",
+   "title": "Fds of Arch/Recitation",
+   "days": [
+    "friday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Cummings School Architecture 105"
+  },
+  {
+   "section": "ARCH.113.01",
+   "title": "Arch Dsgn Core Studio I",
+   "days": [
+    "monday",
+    "wednesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.113.02",
+   "title": "Arch Dsgn Core Studio I",
+   "days": [
+    "monday",
+    "wednesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.113.03",
+   "title": "Arch Dsgn Core Studio I",
+   "days": [
+    "monday",
+    "wednesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.113.04",
+   "title": "Arch Dsgn Core Studio I",
+   "days": [
+    "monday",
+    "wednesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.113.05",
+   "title": "Arch Dsgn Core Studio I",
+   "days": [
+    "monday",
+    "wednesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.113.06",
+   "title": "Arch Dsgn Core Studio I",
+   "days": [
+    "monday",
+    "wednesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.113.07",
+   "title": "Arch Dsgn Core Studio I",
+   "days": [
+    "monday",
+    "wednesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.113.08",
+   "title": "Arch Dsgn Core Studio I",
+   "days": [
+    "monday",
+    "wednesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.113.09",
+   "title": "Arch Dsgn Core Studio I",
+   "days": [
+    "monday",
+    "wednesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.213.01",
+   "title": "Arch Dsgn Core Std III",
+   "days": [
+    "monday",
+    "wednesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.213.02",
+   "title": "Arch Dsgn Core Std III",
+   "days": [
+    "monday",
+    "wednesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.213.03",
+   "title": "Arch Dsgn Core Std III",
+   "days": [
+    "monday",
+    "wednesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.213.04",
+   "title": "Arch Dsgn Core Std III",
+   "days": [
+    "monday",
+    "wednesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.213.05",
+   "title": "Arch Dsgn Core Std III",
+   "days": [
+    "monday",
+    "wednesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.213.06",
+   "title": "Arch Dsgn Core Std III",
+   "days": [
+    "monday",
+    "wednesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.213.07",
+   "title": "Arch Dsgn Core Std III",
+   "days": [
+    "monday",
+    "wednesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.213.08",
+   "title": "Arch Dsgn Core Std III",
+   "days": [
+    "monday",
+    "wednesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.231.01",
+   "title": "Cnst. Materials & Assemblies I",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Cummings School Architecture 132"
+  },
+  {
+   "section": "ARCH.281.01",
+   "title": "Architectural Analysis I",
+   "days": [
+    "monday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": "Cummings School Architecture 205"
+  },
+  {
+   "section": "ARCH.282.01",
+   "title": "Architectural Analysis II",
+   "days": [
+    "monday"
+   ],
+   "start": "08:00",
+   "end": "10:50",
+   "room": "Cummings School Architecture 205"
+  },
+  {
+   "section": "ARCH.282.02",
+   "title": "Architectural Analysis II",
+   "days": [
+    "tuesday"
+   ],
+   "start": "08:00",
+   "end": "10:50",
+   "room": "Cummings School Architecture 205"
+  },
+  {
+   "section": "ARCH.282.03",
+   "title": "Architectural Analysis II",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 205"
+  },
+  {
+   "section": "ARCH.282.04",
+   "title": "Architectural Analysis II",
+   "days": [
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "10:50",
+   "room": "Cummings School Architecture 205"
+  },
+  {
+   "section": "ARCH.282.05",
+   "title": "Architectural Analysis II",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:30",
+   "end": "20:20",
+   "room": "Cummings School Architecture 205"
+  },
+  {
+   "section": "ARCH.313.01",
+   "title": "Arch Dsgn Core Studio V",
+   "days": [
+    "tuesday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.313.02",
+   "title": "Arch Dsgn Core Studio V",
+   "days": [
+    "tuesday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.313.03",
+   "title": "Arch Dsgn Core Studio V",
+   "days": [
+    "tuesday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.313.04",
+   "title": "Arch Dsgn Core Studio V",
+   "days": [
+    "tuesday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.313.05",
+   "title": "Arch Dsgn Core Studio V",
+   "days": [
+    "tuesday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.321.01",
+   "title": "Site and Environment",
+   "days": [
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "College of Arts and Sciences 157"
+  },
+  {
+   "section": "ARCH.321.02",
+   "title": "Site and Environment",
+   "days": [
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "College of Arts and Sciences 157"
+  },
+  {
+   "section": "ARCH.321.03",
+   "title": "Site and Environment",
+   "days": [
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "College of Arts and Sciences 157"
+  },
+  {
+   "section": "ARCH.321R.01",
+   "title": "The Site Recitation",
+   "days": [
+    "tuesday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Cummings School Architecture 103"
+  },
+  {
+   "section": "ARCH.321R.02",
+   "title": "The Site Recitation",
+   "days": [
+    "tuesday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Cummings School Architecture 105"
+  },
+  {
+   "section": "ARCH.321R.03",
+   "title": "The Site Recitation",
+   "days": [
+    "tuesday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Cummings School Architecture 105"
+  },
+  {
+   "section": "ARCH.321R.05",
+   "title": "The Site Recitation",
+   "days": [
+    "tuesday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Cummings School Architecture 103"
+  },
+  {
+   "section": "ARCH.321R.06",
+   "title": "The Site Recitation",
+   "days": [
+    "monday"
+   ],
+   "start": "11:30",
+   "end": "12:50",
+   "room": "Cummings School Architecture 105"
+  },
+  {
+   "section": "ARCH.321R.07",
+   "title": "The Site Recitation",
+   "days": [
+    "tuesday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Cummings School Architecture 105"
+  },
+  {
+   "section": "ARCH.322.01",
+   "title": "Theory of Architecture",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "Cummings School Architecture 132"
+  },
+  {
+   "section": "ARCH.322.02",
+   "title": "Theory of Architecture",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Cummings School Architecture 132"
+  },
+  {
+   "section": "ARCH.327.01",
+   "title": "Hist of Amer Arch Urb & Landsc",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "College of Arts and Sciences 157"
+  },
+  {
+   "section": "ARCH.333.01",
+   "title": "Enironmental Systems I",
+   "days": [
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Cummings School Architecture 132"
+  },
+  {
+   "section": "ARCH.333.02",
+   "title": "Enironmental Systems I",
+   "days": [
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Cummings School Architecture 132"
+  },
+  {
+   "section": "ARCH.335.01",
+   "title": "Structure Form and Order",
+   "days": [
+    "monday",
+    "wednesday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "College of Arts and Sciences 157"
+  },
+  {
+   "section": "ARCH.413.01",
+   "title": "Adv Arch Design Studio",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "18:20",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.413.02",
+   "title": "Adv Arch Design Studio",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "18:20",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.413.03",
+   "title": "Adv Arch Design Studio",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "18:20",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.413.04",
+   "title": "Adv Arch Design Studio",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "18:20",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.416.01",
+   "title": "Adv Topical Dsgn Std:Urban",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "18:20",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.484.01",
+   "title": "Cont Est & Scheduling",
+   "days": [
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "College of Arts and Sciences 162"
+  },
+  {
+   "section": "ARCH.511.01",
+   "title": "Grad Core Arch Design Studio I",
+   "days": [
+    "monday",
+    "wednesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.512.01",
+   "title": "Grad Core Arch Dsgn Stu II:",
+   "days": [
+    "tuesday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.513.01",
+   "title": "Integrated Project Design Stud",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "18:20",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.515.01",
+   "title": "Grad Arch Design Stud",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "18:20",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.515.02",
+   "title": "Grad Arch Design Stud",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "18:20",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.515.03",
+   "title": "Grad Arch Design Stud",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "18:20",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.515.04",
+   "title": "Grad Arch Design Stud",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "16:20",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.521.01",
+   "title": "Site and Environment",
+   "days": [
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "College of Arts and Sciences 157"
+  },
+  {
+   "section": "ARCH.521R.01",
+   "title": "Site & Environment Recitation",
+   "days": [
+    "tuesday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Cummings School Architecture 103"
+  },
+  {
+   "section": "ARCH.522.01",
+   "title": "Environmental Dsgn Rsrch",
+   "days": [
+    "wednesday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "College of Arts and Sciences 157"
+  },
+  {
+   "section": "ARCH.522R.01",
+   "title": "Environmental Dsgn Rsch Recit",
+   "days": [
+    "friday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Cummings School Architecture 203"
+  },
+  {
+   "section": "ARCH.522R.02",
+   "title": "Environmental Dsgn Rsch Recit",
+   "days": [
+    "friday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Cummings School Architecture 203"
+  },
+  {
+   "section": "ARCH.526.01",
+   "title": "Theory of Architecture",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "Cummings School Architecture 132"
+  },
+  {
+   "section": "ARCH.534.01",
+   "title": "Cnst. Material & Assemblies I",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Cummings School Architecture 132"
+  },
+  {
+   "section": "ARCH.535.01",
+   "title": "Cnst Materials & Assemblies II",
+   "days": [
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 132"
+  },
+  {
+   "section": "ARCH.536.01",
+   "title": "Structure, Form and Order",
+   "days": [
+    "monday",
+    "wednesday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "College of Arts and Sciences 157"
+  },
+  {
+   "section": "ARCH.537.01",
+   "title": "Design of Structures I",
+   "days": [
+    "wednesday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "Cummings School Architecture 132"
+  },
+  {
+   "section": "ARCH.537R.01",
+   "title": "Dsgn of Structures I-Recitatio",
+   "days": [
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "Cummings School Architecture 205"
+  },
+  {
+   "section": "ARCH.537R.02",
+   "title": "Dsgn of Structures I-Recitatio",
+   "days": [
+    "friday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Cummings School Architecture 205"
+  },
+  {
+   "section": "ARCH.537R.03",
+   "title": "Dsgn of Structures I-Recitatio",
+   "days": [
+    "friday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Cummings School Architecture 205"
+  },
+  {
+   "section": "ARCH.540.01",
+   "title": "Environmental Systems I",
+   "days": [
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Cummings School Architecture 132"
+  },
+  {
+   "section": "ARCH.540.02",
+   "title": "Environmental Systems I",
+   "days": [
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "ARCH.541.01",
+   "title": "Environmental Systems II",
+   "days": [
+    "wednesday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Cummings School Architecture 132"
+  },
+  {
+   "section": "ARCH.541R.01",
+   "title": "Environmental Syst II Recitat",
+   "days": [
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "Cummings School Architecture 203"
+  },
+  {
+   "section": "ARCH.541R.02",
+   "title": "Environmental Syst II Recitat",
+   "days": [
+    "friday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Cummings School Architecture 203"
+  },
+  {
+   "section": "ARCH.542.01",
+   "title": "Professional Practice",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 132"
+  },
+  {
+   "section": "ARCH.542.02",
+   "title": "Professional Practice",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 132"
+  },
+  {
+   "section": "ARCH.544.01",
+   "title": "Architectural Analysis I",
+   "days": [
+    "monday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": "Cummings School Architecture 205"
+  },
+  {
+   "section": "ARCH.545.01",
+   "title": "Architectual Analysis II",
+   "days": [
+    "monday"
+   ],
+   "start": "08:00",
+   "end": "10:50",
+   "room": "Cummings School Architecture 205"
+  },
+  {
+   "section": "ARCH.545.02",
+   "title": "Architectual Analysis II",
+   "days": [
+    "tuesday"
+   ],
+   "start": "08:00",
+   "end": "10:50",
+   "room": "Cummings School Architecture 205"
+  },
+  {
+   "section": "ARCH.572.01",
+   "title": "Urban Dsgn Theory Indus Rev",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Cummings School Architecture 206"
+  },
+  {
+   "section": "ARCH.579.02",
+   "title": "SpTp: Architecture in Film",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 206"
+  },
+  {
+   "section": "ARCH.586.01",
+   "title": "Comp Apps for Prof Practice",
+   "days": [
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 205"
+  },
+  {
+   "section": "ARCH.613.01",
+   "title": "Grad Thesis Dsgn Std",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "18:20",
+   "room": "Cummings School Architecture 100"
+  },
+  {
+   "section": "ARCH.641.01",
+   "title": "Gr Thesis Research Sem",
+   "days": [
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Cummings School Architecture 103"
+  },
+  {
+   "section": "ARCH.641.02",
+   "title": "Gr Thesis Research Sem",
+   "days": [
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Cummings School Architecture 105"
+  }
+ ]
+}

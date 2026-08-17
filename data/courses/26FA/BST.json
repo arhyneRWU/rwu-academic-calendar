@@ -1,0 +1,30 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "BST",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "BST.100.41C",
+   "title": "Intro to Bldg. Science & Tech",
+   "days": [
+    "tuesday"
+   ],
+   "start": "18:15",
+   "end": "21:30",
+   "room": "One Empire Plaza 215"
+  },
+  {
+   "section": "BST.110.41C",
+   "title": "Construction Documents",
+   "days": [
+    "thursday"
+   ],
+   "start": "18:15",
+   "end": "21:30",
+   "room": "One Empire Plaza 215"
+  }
+ ]
+}

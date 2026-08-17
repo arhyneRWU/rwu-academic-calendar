@@ -1,0 +1,70 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "PA",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "PA.501.31",
+   "title": "Foundations of PA:Legal/Inst",
+   "days": [
+    "wednesday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "One Empire Plaza 232"
+  },
+  {
+   "section": "PA.503.31",
+   "title": "Data Management & Analysis",
+   "days": [
+    "wednesday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "One Empire Plaza 230"
+  },
+  {
+   "section": "PA.506.31",
+   "title": "Public Personnel Management",
+   "days": [
+    "thursday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "One Empire Plaza 216"
+  },
+  {
+   "section": "PA.514.31",
+   "title": "Urban Admin and Management",
+   "days": [
+    "tuesday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "One Empire Plaza 216"
+  },
+  {
+   "section": "PA.590.31",
+   "title": "Research in Public Admin",
+   "days": [
+    "tuesday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "One Empire Plaza 216"
+  },
+  {
+   "section": "PA.CNTEN.01",
+   "title": "Continuous Enrollment Status",
+   "days": [
+    "tuesday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "One Empire Plaza 216"
+  }
+ ]
+}

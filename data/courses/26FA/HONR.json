@@ -1,0 +1,144 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "HONR",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "HONR.110.01",
+   "title": "HONR:Kids These Days",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "Gabelli School of Business 301"
+  },
+  {
+   "section": "HONR.110.02",
+   "title": "HONR:Kids These Days",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "Gabelli School of Business G13"
+  },
+  {
+   "section": "HONR.110.03",
+   "title": "HONR:The Role of Art in Scty",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "Stonewall 103"
+  },
+  {
+   "section": "HONR.110.04",
+   "title": "HONR:The Role of Art Scty",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Stonewall 103"
+  },
+  {
+   "section": "HONR.110.05",
+   "title": "HONR:Curiosity Complex World",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Gabelli School of Business G05"
+  },
+  {
+   "section": "HONR.110.06",
+   "title": "HONR:1st Byte:Decoding Digitl",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "School of Engineering 210"
+  },
+  {
+   "section": "HONR.110.07",
+   "title": "HONR:Kids These Days",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "Gabelli School of Business 301"
+  },
+  {
+   "section": "HONR.120.01",
+   "title": "Honors Creativity and the Arts",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "18:00",
+   "room": ""
+  },
+  {
+   "section": "HONR.130.01",
+   "title": "Honors Global Perspectives",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "College of Arts and Sciences 227"
+  },
+  {
+   "section": "HONR.140.01",
+   "title": "Honors Systems Thinking",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Stonewall 103"
+  },
+  {
+   "section": "HONR.150.01",
+   "title": "Honors Humanities & Soc Inq.",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Stonewall 103"
+  },
+  {
+   "section": "HONR.300.01",
+   "title": "Honors:Community Engagmnt Sem",
+   "days": [
+    "wednesday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "Stonewall 103"
+  }
+ ]
+}

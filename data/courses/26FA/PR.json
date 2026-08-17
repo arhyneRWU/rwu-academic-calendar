@@ -1,0 +1,86 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "PR",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "PR.111.01",
+   "title": "Writing for Mass Media",
+   "days": [
+    "wednesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "Humanities Building 104"
+  },
+  {
+   "section": "PR.200.01",
+   "title": "Intro to Public Relations",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "College of Arts and Sciences 125"
+  },
+  {
+   "section": "PR.200.02",
+   "title": "Intro to Public Relations",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "College of Arts and Sciences 125"
+  },
+  {
+   "section": "PR.350.01",
+   "title": "Strategic Pr Tools",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Humanities Building 222"
+  },
+  {
+   "section": "PR.350.02",
+   "title": "Strategic Pr Tools",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "Humanities Building 329"
+  },
+  {
+   "section": "PR.379.01",
+   "title": "Special Topics in Public Relat",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "Humanities Building 222"
+  },
+  {
+   "section": "PR.402.01",
+   "title": "Media Relations",
+   "days": [
+    "wednesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "Humanities Building 102"
+  }
+ ]
+}

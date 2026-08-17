@@ -1,0 +1,81 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "CIS",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "CIS.105.01",
+   "title": "Data Analys/Analys w Excel",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "School of Engineering 122"
+  },
+  {
+   "section": "CIS.105.02",
+   "title": "Data Analys/Analys w Excel",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "School of Engineering 122"
+  },
+  {
+   "section": "CIS.105.03",
+   "title": "Data Analys/Analys w Excel",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "Gabelli School of Business 208"
+  },
+  {
+   "section": "CIS.105.04",
+   "title": "Data Analys/Analys w Excel",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "School of Engineering 128"
+  },
+  {
+   "section": "CIS.105.05",
+   "title": "Data Analys/Analys w Excel",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "14:50",
+   "room": "Gabelli School of Business 208"
+  },
+  {
+   "section": "CIS.350.01",
+   "title": "Geographical Analysis Data",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "Gabelli School of Business G12"
+  }
+ ]
+}

@@ -113,16 +113,34 @@ class TestOnlyFiveFieldsAreKept:
         got = courses._read_section(section)[0].to_json()
         assert set(got) == {'section', 'title', 'days', 'start', 'end', 'room'}
 
-    @pytest.mark.parametrize('banned', [
-        'faculty', 'instructor', 'seat', 'capacity', 'available', 'enroll', 'waitlist'])
-    def test_no_published_section_mentions_people_or_enrolment(self, banned):
-        """Checked against the `sections` payload, not the whole file: the
-        file's own `note` says the words "instructor" and "seat counts" while
-        promising not to collect them, and a test that cannot tell a promise
-        from a leak is worthless."""
+    def test_every_published_section_has_exactly_the_six_keys(self):
+        """The structural guarantee, and the one that actually matters: a field
+        we never store cannot leak. Checked across the real committed data, not
+        just one parsed fixture."""
         for p in sorted(DATA.glob('*/*.json')):
-            blob = json.dumps(json.loads(p.read_text(encoding='utf-8'))['sections']).lower()
-            assert banned not in blob, f'{p.name} leaked {banned!r}'
+            for s in json.loads(p.read_text(encoding='utf-8'))['sections']:
+                assert set(s) == {'section', 'title', 'days', 'start', 'end', 'room'}, p.name
+
+    @pytest.mark.parametrize('banned', [
+        'faculty', 'instructor', 'seat', 'capacity', 'available', 'waitlist'])
+    def test_no_identifier_or_room_names_a_person(self, banned):
+        """Titles are excluded on purpose: they are RWU's own prose, and
+        'Continuous Enrollment Status' is a real course name. Matching on it
+        made this test fail for a reason that had nothing to do with privacy,
+        which is how a blunt test gets deleted instead of fixed."""
+        for p in sorted(DATA.glob('*/*.json')):
+            for s in json.loads(p.read_text(encoding='utf-8'))['sections']:
+                for field in ('section', 'room'):
+                    assert banned not in s[field].lower(), f'{p.name}: {s[field]!r}'
+
+    def test_no_section_carries_a_seat_count(self):
+        """Roger Central renders these as '12 / 24 / 0'. If one ever appears in
+        our data, something started reading the enrolment block."""
+        import re
+        for p in sorted(DATA.glob('*/*.json')):
+            for s in json.loads(p.read_text(encoding='utf-8'))['sections']:
+                blob = json.dumps(s)
+                assert not re.search(r'\d+\s*/\s*\d+\s*/\s*\d+', blob), f'{p.name}: {blob}'
 
     def test_the_note_states_the_promise(self):
         for p in sorted(DATA.glob('*/*.json')):
@@ -136,6 +154,54 @@ class TestOnlyFiveFieldsAreKept:
         for p in sorted(DATA.glob('*/*.json')):
             for s in json.loads(p.read_text(encoding='utf-8'))['sections']:
                 assert not any(k in s for k in ('start_date', 'end_date', 'dates'))
+
+
+class TestTheSectionLookupKey:
+    """`courseId` must be the course's numeric `Id`. The obvious
+    `SUBJECT_NUMBER` form is accepted for some courses and silently returns an
+    empty result for others -- `BIO_101` works, `HIST_100` returns nothing with
+    no error. Keying on it collected 417 patterns, looked completely
+    successful, and dropped most of the catalog."""
+
+    class _FakeCatalog(courses.Catalog):
+        def __init__(self):
+            super().__init__(delay=0)
+            self.sent = []
+            self._token = 'x'
+
+        def _post(self, path, payload):
+            self.sent.append((path, payload))
+            return {'SectionsRetrieved': {'TermsAndSections': []}}
+
+    def test_it_sends_the_numeric_id(self):
+        cat = self._FakeCatalog()
+        cat.sections({'Id': 3213, 'SubjectCode': 'HIST', 'Number': '100',
+                      'MatchingSectionIds': ['132523']}, '26/FA')
+        _path, payload = cat.sent[0]
+        assert payload['courseId'] == '3213'
+        assert payload['courseId'] != 'HIST_100'
+
+    def test_a_course_with_no_id_is_skipped_rather_than_guessed(self):
+        cat = self._FakeCatalog()
+        assert cat.sections({'SubjectCode': 'HIST', 'Number': '100',
+                             'MatchingSectionIds': ['1']}, '26/FA') == []
+        assert cat.sent == []
+
+    def test_no_sections_means_no_request(self):
+        cat = self._FakeCatalog()
+        assert cat.sections({'Id': 1, 'MatchingSectionIds': []}, '26/FA') == []
+        assert cat.sent == []
+
+    def test_a_subject_with_courses_but_no_patterns_is_called_out(self):
+        """The warning that would have caught the wrong key on the first run,
+        instead of after the data was committed."""
+        class Cat(self._FakeCatalog):
+            def connect(self): pass
+            def courses(self, subject, term):
+                yield {'Id': 1, 'Number': '100', 'MatchingSectionIds': ['9']}
+        lines = []
+        courses.pull('26/FA', ['HIST'], catalog=Cat(), progress=lines.append)
+        assert any('NO patterns' in x for x in lines), lines
 
 
 class TestTermMapping:
@@ -175,6 +241,55 @@ class TestStorage:
 
     def test_available_is_empty_when_nothing_has_been_pulled(self, tmp_path):
         assert courses.available(tmp_path / 'nope') == {}
+
+
+class TestTransientFailures:
+    """A term is ~850 requests over a quarter of an hour, so a dropped
+    connection in the middle is ordinary. The first long run died outright on
+    `[Errno 60] Operation timed out` at subject six."""
+
+    def _catalog(self, monkeypatch, outcomes):
+        monkeypatch.setattr(courses.time, 'sleep', lambda s: None)
+        cat = courses.Catalog(delay=0)
+        cat._token = 'x'
+        calls = []
+
+        class Opener:
+            def open(self, req, timeout=None):
+                calls.append(1)
+                out = outcomes[len(calls) - 1]
+                if isinstance(out, Exception):
+                    raise out
+                class R:
+                    def __enter__(self_): return self_
+                    def __exit__(self_, *a): return False
+                    def read(self_): return out
+                return R()
+        cat._opener = Opener()
+        return cat, calls
+
+    def test_a_timeout_is_retried(self, monkeypatch):
+        import urllib.error
+        cat, calls = self._catalog(monkeypatch, [
+            urllib.error.URLError('timed out'), urllib.error.URLError('again'), b'{"ok":1}'])
+        got = cat._open(courses.urllib.request.Request('https://x/'))
+        assert got == b'{"ok":1}'
+        assert len(calls) == 3
+
+    def test_it_gives_up_eventually_rather_than_looping(self, monkeypatch):
+        import urllib.error
+        cat, calls = self._catalog(monkeypatch, [urllib.error.URLError('nope')] * 8)
+        with pytest.raises(RuntimeError, match='after 4 attempts'):
+            cat._open(courses.urllib.request.Request('https://x/'))
+        assert len(calls) == 4
+
+    def test_a_4xx_is_not_retried(self, monkeypatch):
+        import urllib.error
+        err = urllib.error.HTTPError('https://x/', 404, 'gone', {}, None)
+        cat, calls = self._catalog(monkeypatch, [err])
+        with pytest.raises(urllib.error.HTTPError):
+            cat._open(courses.urllib.request.Request('https://x/'))
+        assert len(calls) == 1, 'a 404 means the same thing every time'
 
 
 class TestPoliteness:

@@ -1,0 +1,31 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "SPMGT",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "SPMGT.370.01",
+   "title": "Sports Management Principles",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "SPMGT.370.02",
+   "title": "Sports Management Principles",
+   "days": [
+    "wednesday"
+   ],
+   "start": "15:00",
+   "end": "17:50",
+   "room": ""
+  }
+ ]
+}

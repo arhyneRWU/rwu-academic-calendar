@@ -1,0 +1,84 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "CW",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "CW.110.01",
+   "title": "Form in Poetry",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "ELS 112"
+  },
+  {
+   "section": "CW.110.02",
+   "title": "Form in Poetry",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "ELS 112"
+  },
+  {
+   "section": "CW.120.01",
+   "title": "Narrative in Prose",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Humanities Building 102"
+  },
+  {
+   "section": "CW.230.01",
+   "title": "Nonfiction Seminar",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "Humanities Building 102"
+  },
+  {
+   "section": "CW.320.01",
+   "title": "Fiction Studio",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "ELS 112"
+  },
+  {
+   "section": "CW.340.01",
+   "title": "Screenwriting Studio",
+   "days": [
+    "wednesday"
+   ],
+   "start": "09:00",
+   "end": "11:50",
+   "room": "Humanities Building 318"
+  },
+  {
+   "section": "CW.450.01",
+   "title": "Literary Publishing",
+   "days": [
+    "monday"
+   ],
+   "start": "09:00",
+   "end": "11:50",
+   "room": "Humanities Building 318"
+  }
+ ]
+}

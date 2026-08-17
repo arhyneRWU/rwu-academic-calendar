@@ -1,0 +1,96 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "FSI",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "FSI.101.01",
+   "title": "Survey of Forensics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "School of Engineering 204"
+  },
+  {
+   "section": "FSI.101.02",
+   "title": "Survey of Forensics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "School of Engineering 204"
+  },
+  {
+   "section": "FSI.226.01",
+   "title": "Forensic Science",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "School of Engineering 204"
+  },
+  {
+   "section": "FSI.226L.51",
+   "title": "Forensic Science Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "School of Engineering 204"
+  },
+  {
+   "section": "FSI.302.01",
+   "title": "Quality Assurance",
+   "days": [
+    "wednesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "School of Engineering 204"
+  },
+  {
+   "section": "FSI.303.01",
+   "title": "Forensic Pathology",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "School of Engineering 204"
+  },
+  {
+   "section": "FSI.401.01",
+   "title": "Forensic Science Capstone",
+   "days": [
+    "monday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "School of Engineering 204"
+  },
+  {
+   "section": "FSI.479.01",
+   "title": "SpTp: Traces",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "School of Engineering 204"
+  }
+ ]
+}

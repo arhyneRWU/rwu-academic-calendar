@@ -1,0 +1,85 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "LS",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "LS.101.01",
+   "title": "The American Legal System",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "College of Arts and Sciences 127"
+  },
+  {
+   "section": "LS.101.02",
+   "title": "The American Legal System",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "College of Arts and Sciences 125"
+  },
+  {
+   "section": "LS.101.03",
+   "title": "The American Legal System",
+   "days": [
+    "monday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "College of Arts and Sciences 221"
+  },
+  {
+   "section": "LS.207.01",
+   "title": "Law and Family",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "College of Arts and Sciences 123"
+  },
+  {
+   "section": "LS.209.01",
+   "title": "Legal Methods I",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "College of Arts and Sciences 121"
+  },
+  {
+   "section": "LS.209.02",
+   "title": "Legal Methods I",
+   "days": [
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "LS.279.01",
+   "title": "SpTp:Therapeutic Jurisprdence",
+   "days": [
+    "monday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  }
+ ]
+}

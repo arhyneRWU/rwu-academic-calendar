@@ -1,0 +1,544 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "PSYCH",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "PSYCH.100.01",
+   "title": "Intro to Psychology",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.100.03",
+   "title": "Intro to Psychology",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "Humanities Building 100"
+  },
+  {
+   "section": "PSYCH.100.04",
+   "title": "Intro to Psychology",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "Humanities Building 100"
+  },
+  {
+   "section": "PSYCH.100.05",
+   "title": "Intro to Psychology",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Gabelli School of Business G05"
+  },
+  {
+   "section": "PSYCH.100.06",
+   "title": "Intro to Psychology",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Humanities Building 100"
+  },
+  {
+   "section": "PSYCH.100.HON01",
+   "title": "Honr Intro to Psychology",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Stonewall 103"
+  },
+  {
+   "section": "PSYCH.205.01",
+   "title": "Psychology and Work",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "College of Arts and Sciences 127"
+  },
+  {
+   "section": "PSYCH.210.01",
+   "title": "Lifespan Development",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "College of Arts and Sciences 125"
+  },
+  {
+   "section": "PSYCH.230.01",
+   "title": "Psych of Men and Masculinities",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "College of Arts and Sciences 127"
+  },
+  {
+   "section": "PSYCH.240.01",
+   "title": "Quantitative Analysis",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "Humanities Building 100"
+  },
+  {
+   "section": "PSYCH.240.02",
+   "title": "Quantitative Analysis",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "Humanities Building 100"
+  },
+  {
+   "section": "PSYCH.255.01",
+   "title": "Social Psychology",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.261.01",
+   "title": "Intro to Neuroscience",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "College of Arts and Sciences 125"
+  },
+  {
+   "section": "PSYCH.270.01",
+   "title": "Positive Psycholgy",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.279.01",
+   "title": "SpTp: Serial Offending",
+   "days": [
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.280.01",
+   "title": "Intro to Psychopathology",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "College of Arts and Sciences 225"
+  },
+  {
+   "section": "PSYCH.280.02",
+   "title": "Intro to Psychopathology",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "College of Arts and Sciences 225"
+  },
+  {
+   "section": "PSYCH.310.01",
+   "title": "Appl Soc Psychology",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.310.02",
+   "title": "Appl Soc Psychology",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.311.01",
+   "title": "Psychology of the Family",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "College of Arts and Sciences 123"
+  },
+  {
+   "section": "PSYCH.312.01",
+   "title": "Psych of Adolescence",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Gabelli School of Business G06"
+  },
+  {
+   "section": "PSYCH.320.01",
+   "title": "Forensic Psychology",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "College of Arts and Sciences 122"
+  },
+  {
+   "section": "PSYCH.326.01",
+   "title": "Health Psychology",
+   "days": [
+    "monday"
+   ],
+   "start": "12:00",
+   "end": "14:50",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.340.01",
+   "title": "Research Methods",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "Humanities Building 222"
+  },
+  {
+   "section": "PSYCH.340.02",
+   "title": "Research Methods",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "Humanities Building 100"
+  },
+  {
+   "section": "PSYCH.356.01",
+   "title": "Counseling:Theory and Skills",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.365.01",
+   "title": "Sensation & Perception",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "08:50",
+   "room": "College of Arts and Sciences 120"
+  },
+  {
+   "section": "PSYCH.367.01",
+   "title": "Evolutionary Psychology",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "College of Arts and Sciences 120"
+  },
+  {
+   "section": "PSYCH.369.01",
+   "title": "Contemp Issues Psych & Law",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Marine & Natural Sciences Bldg 212"
+  },
+  {
+   "section": "PSYCH.369.02",
+   "title": "Contemp Issues Psych & Law",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Marine & Natural Sciences Bldg 212"
+  },
+  {
+   "section": "PSYCH.392.01",
+   "title": "Art Therapy",
+   "days": [
+    "tuesday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": "College of Arts and Sciences 121"
+  },
+  {
+   "section": "PSYCH.419.01",
+   "title": "Psychology of Religion",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.440.01",
+   "title": "Experimental Psych",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "School of Engineering 122"
+  },
+  {
+   "section": "PSYCH.440.02",
+   "title": "Experimental Psych",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 211"
+  },
+  {
+   "section": "PSYCH.440L.51",
+   "title": "Experimental Psych Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 211"
+  },
+  {
+   "section": "PSYCH.440L.52",
+   "title": "Experimental Psych Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 211"
+  },
+  {
+   "section": "PSYCH.446.01",
+   "title": "\"The Science of Parenting",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "School of Engineering 128"
+  },
+  {
+   "section": "PSYCH.446.02",
+   "title": "Seminar in Psychology",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.499.91",
+   "title": "Applied Pract in Psych",
+   "days": [
+    "tuesday"
+   ],
+   "start": "18:00",
+   "end": "18:50",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.500.01",
+   "title": "Methods and Evaluation",
+   "days": [
+    "monday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.503.01",
+   "title": "Forensic Psych",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "College of Arts and Sciences 225"
+  },
+  {
+   "section": "PSYCH.506.01",
+   "title": "Assessment in Criminal Law",
+   "days": [
+    "monday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.506.02",
+   "title": "Assessment in Criminal Law",
+   "days": [
+    "monday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.514.01",
+   "title": "Helping Relationships",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.514.02",
+   "title": "Helping Relationships",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.518.01",
+   "title": "Psych Trauma:Trtmnt&Intrvntn",
+   "days": [
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "College of Arts and Sciences 220"
+  },
+  {
+   "section": "PSYCH.521.01",
+   "title": "Adlt Psychopathology",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.532.01",
+   "title": "Multicultrl Compt/Psych Pract",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.579.01",
+   "title": "SpTp:Prof Orient to Counselin",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "College of Arts and Sciences 120"
+  }
+ ]
+}

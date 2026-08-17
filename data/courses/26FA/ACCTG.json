@@ -1,0 +1,134 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "ACCTG",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "ACCTG.201.01",
+   "title": "Acctg I:Financial",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "Gabelli School of Business 106"
+  },
+  {
+   "section": "ACCTG.201.02",
+   "title": "Acctg I:Financial",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Gabelli School of Business 106"
+  },
+  {
+   "section": "ACCTG.201.03",
+   "title": "Acctg I:Financial",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Gabelli School of Business 205"
+  },
+  {
+   "section": "ACCTG.201.04",
+   "title": "Acctg I:Financial",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Gabelli School of Business 205"
+  },
+  {
+   "section": "ACCTG.201.05",
+   "title": "Acctg I:Financial",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "Gabelli School of Business G01"
+  },
+  {
+   "section": "ACCTG.202.01",
+   "title": "Acctg II:Managerial",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "08:50",
+   "room": "Gabelli School of Business 206"
+  },
+  {
+   "section": "ACCTG.304.01",
+   "title": "Interm Accounting I",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Gabelli School of Business 206"
+  },
+  {
+   "section": "ACCTG.307.01",
+   "title": "Accounting Info Sys",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "Gabelli School of Business 206"
+  },
+  {
+   "section": "ACCTG.308.02",
+   "title": "Federal Income Tax I",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Gabelli School of Business 106"
+  },
+  {
+   "section": "ACCTG.406.01",
+   "title": "Advanced Accounting",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "Gabelli School of Business G01"
+  },
+  {
+   "section": "ACCTG.505.01",
+   "title": "Financial and Managerial Acctg",
+   "days": [
+    "tuesday"
+   ],
+   "start": "09:00",
+   "end": "11:50",
+   "room": "One Empire Plaza 232"
+  }
+ ]
+}

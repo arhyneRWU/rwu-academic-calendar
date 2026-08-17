@@ -208,6 +208,70 @@
    "room": "Marine & Natural Sciences Bldg 103"
   },
   {
+   "section": "BIO.105.01",
+   "title": "Life Science for Elem Ed",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "18:20",
+   "room": ""
+  },
+  {
+   "section": "BIO.105L.52",
+   "title": "Life Sci for Elem Educ Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": ""
+  },
+  {
+   "section": "BIO.200.01",
+   "title": "Genetics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "Gabelli School of Business 105"
+  },
+  {
+   "section": "BIO.200L.51",
+   "title": "Genetics Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 207"
+  },
+  {
+   "section": "BIO.200L.61",
+   "title": "Genetics Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Marine & Natural Sciences Bldg 207"
+  },
+  {
+   "section": "BIO.204.02",
+   "title": "Intro to Marine Biology",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "Marine & Natural Sciences Bldg 200"
+  },
+  {
    "section": "BIO.215.01",
    "title": "Human Anat & Phys I",
    "days": [
@@ -314,6 +378,18 @@
    "room": "Marine & Natural Sciences Bldg 107"
   },
   {
+   "section": "BIO.332.01",
+   "title": "Fisheries Science",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "College of Arts and Sciences 125"
+  },
+  {
    "section": "BIO.340.01",
    "title": "Biotechnology",
    "days": [
@@ -400,6 +476,27 @@
    "start": "13:00",
    "end": "13:50",
    "room": "Marine & Natural Sciences Bldg 212"
+  },
+  {
+   "section": "BIO.375L.51",
+   "title": "Soil Ecology Lab",
+   "days": [
+    "monday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Marine & Natural Sciences Bldg 107"
+  },
+  {
+   "section": "BIO.379.01",
+   "title": "SpTp:Ocean Acidification",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
   },
   {
    "section": "BIO.390.01",

@@ -1,0 +1,40 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "STEM",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "STEM.201.01",
+   "title": "Coding for STEM",
+   "days": [
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "12:50",
+   "room": "School of Education 009"
+  },
+  {
+   "section": "STEM.511.91",
+   "title": "Adv Stem Robotics Explorations",
+   "days": [
+    "saturday"
+   ],
+   "start": "09:00",
+   "end": "16:00",
+   "room": ""
+  },
+  {
+   "section": "STEM.511.91",
+   "title": "Adv Stem Robotics Explorations",
+   "days": [
+    "saturday"
+   ],
+   "start": "09:00",
+   "end": "16:00",
+   "room": ""
+  }
+ ]
+}

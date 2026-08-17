@@ -1,0 +1,247 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "ENVS",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "ENVS.101.01",
+   "title": "Issues in Env Science",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "ENVS.101.02",
+   "title": "Issues in Env Science",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Sailing Center 203"
+  },
+  {
+   "section": "ENVS.103.01",
+   "title": "The Dynamic Earth and Lab",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Humanities Building 217"
+  },
+  {
+   "section": "ENVS.103.02",
+   "title": "The Dynamic Earth and Lab",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "Humanities Building 217"
+  },
+  {
+   "section": "ENVS.103L.51",
+   "title": "The Dynamic Earth Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 107"
+  },
+  {
+   "section": "ENVS.103L.52",
+   "title": "The Dynamic Earth Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "08:00",
+   "end": "10:50",
+   "room": "Marine & Natural Sciences Bldg 107"
+  },
+  {
+   "section": "ENVS.103L.61",
+   "title": "The Dynamic Earth Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "Marine & Natural Sciences Bldg 107"
+  },
+  {
+   "section": "ENVS.104.01",
+   "title": "Prin of Oceanography and Lab",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "College of Arts and Sciences 222"
+  },
+  {
+   "section": "ENVS.104.02",
+   "title": "Prin of Oceanography and Lab",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "College of Arts and Sciences 222"
+  },
+  {
+   "section": "ENVS.104.03",
+   "title": "Prin of Oceanography and Lab",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "ENVS.104L.51",
+   "title": "Prin of Oceanography Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 103"
+  },
+  {
+   "section": "ENVS.104L.52",
+   "title": "Prin of Oceanography Lab",
+   "days": [
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "10:50",
+   "room": "Marine & Natural Sciences Bldg 103"
+  },
+  {
+   "section": "ENVS.104L.53",
+   "title": "Prin of Oceanography Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "10:50",
+   "room": "Marine & Natural Sciences Bldg 103"
+  },
+  {
+   "section": "ENVS.104L.61",
+   "title": "Prin of Oceanography Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Marine & Natural Sciences Bldg 103"
+  },
+  {
+   "section": "ENVS.104L.62",
+   "title": "Prin of Oceanography Lab",
+   "days": [
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Marine & Natural Sciences Bldg 103"
+  },
+  {
+   "section": "ENVS.104L.63",
+   "title": "Prin of Oceanography Lab",
+   "days": [
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 103"
+  },
+  {
+   "section": "ENVS.203.01",
+   "title": "Human Envr Change & Sustain",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "School of Engineering 201"
+  },
+  {
+   "section": "ENVS.310.01",
+   "title": "Biogeochemistry",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "School of Engineering 201"
+  },
+  {
+   "section": "ENVS.375.01",
+   "title": "Soil Ecology",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 212"
+  },
+  {
+   "section": "ENVS.375L.51",
+   "title": "Soil Ecology Lab",
+   "days": [
+    "monday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Marine & Natural Sciences Bldg 107"
+  },
+  {
+   "section": "ENVS.379.01",
+   "title": "SpTp:Environmental GIS",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "Marine & Natural Sciences Bldg 211"
+  },
+  {
+   "section": "ENVS.379L.51",
+   "title": "SpTp:Environmental GIS Lab",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "Marine & Natural Sciences Bldg 211"
+  }
+ ]
+}

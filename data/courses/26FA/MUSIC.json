@@ -1,0 +1,131 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "MUSIC",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "MUSIC.110.01",
+   "title": "Intro to Theory & Musicianship",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "College of Arts and Sciences 152"
+  },
+  {
+   "section": "MUSIC.110.02",
+   "title": "Intro to Theory & Musicianship",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "08:50",
+   "room": "College of Arts and Sciences 152"
+  },
+  {
+   "section": "MUSIC.130.01",
+   "title": "Performance Studio",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "College of Arts and Sciences 152"
+  },
+  {
+   "section": "MUSIC.151.01",
+   "title": "Instrumental Ensemble",
+   "days": [
+    "monday"
+   ],
+   "start": "19:00",
+   "end": "22:00",
+   "room": "College of Arts and Sciences 152"
+  },
+  {
+   "section": "MUSIC.151.02",
+   "title": "Instrumental Ensemble",
+   "days": [
+    "wednesday"
+   ],
+   "start": "19:00",
+   "end": "22:00",
+   "room": "College of Arts and Sciences 152"
+  },
+  {
+   "section": "MUSIC.211.01",
+   "title": "Western Music Survey",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "College of Arts and Sciences 152"
+  },
+  {
+   "section": "MUSIC.220.01",
+   "title": "Intro to Ele Dig & Comp Music",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "College of Arts and Sciences 128"
+  },
+  {
+   "section": "MUSIC.270.01",
+   "title": "Music Theory & Comp II",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "College of Arts and Sciences 152"
+  },
+  {
+   "section": "MUSIC.271.01",
+   "title": "Aural Skills II",
+   "days": [
+    "wednesday"
+   ],
+   "start": "17:00",
+   "end": "17:50",
+   "room": "College of Arts and Sciences 152"
+  },
+  {
+   "section": "MUSIC.320.01",
+   "title": "Electronic Music Production",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "College of Arts and Sciences 128"
+  },
+  {
+   "section": "MUSIC.361.01",
+   "title": "Jazz Styles and History",
+   "days": [
+    "monday"
+   ],
+   "start": "15:30",
+   "end": "18:20",
+   "room": "College of Arts and Sciences 152"
+  }
+ ]
+}

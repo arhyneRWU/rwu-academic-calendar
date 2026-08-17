@@ -1,0 +1,45 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "PHIL",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "PHIL.100.01",
+   "title": "Intro Phil:Art of Inquiry",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "Gabelli School of Business 301"
+  },
+  {
+   "section": "PHIL.100.02",
+   "title": "Intro Phil:Art of Inquiry",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "Gabelli School of Business 301"
+  },
+  {
+   "section": "PHIL.310.01",
+   "title": "Existentialism",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Gabelli School of Business 300"
+  }
+ ]
+}

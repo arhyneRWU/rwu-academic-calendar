@@ -1,0 +1,64 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "ENG",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "ENG.100.01",
+   "title": "Mindful Reading",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Gabelli School of Business 208"
+  },
+  {
+   "section": "ENG.250.01",
+   "title": "Forbidden Lit",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "Gabelli School of Business 206"
+  },
+  {
+   "section": "ENG.280.01",
+   "title": "Women Warriors",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Humanities Building 217"
+  },
+  {
+   "section": "ENG.320.01",
+   "title": "Fictions from Africa",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "Gabelli School of Business 208"
+  },
+  {
+   "section": "ENG.481.01",
+   "title": "Senior Thesis II",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  }
+ ]
+}

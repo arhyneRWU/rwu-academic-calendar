@@ -1,0 +1,60 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "LEAD",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "LEAD.502.31",
+   "title": "Comm Skills Leadership Roles",
+   "days": [
+    "thursday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "One Empire Plaza 216"
+  },
+  {
+   "section": "LEAD.503.31",
+   "title": "Data Mgmt & Analysis/Org",
+   "days": [
+    "wednesday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "One Empire Plaza 230"
+  },
+  {
+   "section": "LEAD.506.31",
+   "title": "HR Management for Leaders",
+   "days": [
+    "thursday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "One Empire Plaza 216"
+  },
+  {
+   "section": "LEAD.590.31",
+   "title": "Research in Leadership",
+   "days": [
+    "tuesday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "One Empire Plaza 216"
+  },
+  {
+   "section": "LEAD.CNTEN.01",
+   "title": "Continuous Enrollment Status",
+   "days": [
+    "tuesday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "One Empire Plaza 216"
+  }
+ ]
+}

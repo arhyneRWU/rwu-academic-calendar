@@ -1,0 +1,367 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "MGMT",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "MGMT.200.01",
+   "title": "Management Principles",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Humanities Building 107"
+  },
+  {
+   "section": "MGMT.200.02",
+   "title": "Management Principles",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "College of Arts and Sciences 225"
+  },
+  {
+   "section": "MGMT.200.03",
+   "title": "Management Principles",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "Gabelli School of Business 205"
+  },
+  {
+   "section": "MGMT.200.04",
+   "title": "Management Principles",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "Gabelli School of Business 208"
+  },
+  {
+   "section": "MGMT.200.05",
+   "title": "Management Principles",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "College of Arts and Sciences 225"
+  },
+  {
+   "section": "MGMT.200.06",
+   "title": "Management Principles",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Gabelli School of Business 206"
+  },
+  {
+   "section": "MGMT.200.07",
+   "title": "Management Principles",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.200.08",
+   "title": "Management Principles",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "MGMT.302.01",
+   "title": "Organizational Behav",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Humanities Building 334"
+  },
+  {
+   "section": "MGMT.306.01",
+   "title": "Intl Business & Trade Dispute",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "Gabelli School of Business 106"
+  },
+  {
+   "section": "MGMT.310.01",
+   "title": "Human Resource Mgmt",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "MGMT.315.01",
+   "title": "Small Medium Enterprise Mgmt",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Humanities Building 309"
+  },
+  {
+   "section": "MGMT.325.02",
+   "title": "Business Analytics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.325.03",
+   "title": "Business Analytics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.330.01",
+   "title": "Operations Management",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Humanities Building 309"
+  },
+  {
+   "section": "MGMT.330.02",
+   "title": "Operations Management",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "Humanities Building 309"
+  },
+  {
+   "section": "MGMT.330.03",
+   "title": "Operations Management",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Humanities Building 107"
+  },
+  {
+   "section": "MGMT.330.21C",
+   "title": "Operations Management",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "Humanities Building 309"
+  },
+  {
+   "section": "MGMT.336.01",
+   "title": "Negotiations",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "MGMT.340.01",
+   "title": "International Mgmt",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "Gabelli School of Business 106"
+  },
+  {
+   "section": "MGMT.365.01",
+   "title": "Project Management",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Humanities Building 334"
+  },
+  {
+   "section": "MGMT.365.21C",
+   "title": "Project Management",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Humanities Building 334"
+  },
+  {
+   "section": "MGMT.379.01",
+   "title": "SpTp: Supply Chain Management",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.380.02",
+   "title": "The GSB Mentorship Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "18:20",
+   "room": "Gabelli School of Business G06"
+  },
+  {
+   "section": "MGMT.499.01",
+   "title": "Strategic Management",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "Gabelli School of Business 206"
+  },
+  {
+   "section": "MGMT.499.02",
+   "title": "Strategic Management",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "Gabelli School of Business 206"
+  },
+  {
+   "section": "MGMT.499.03",
+   "title": "Strategic Management",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "Gabelli School of Business 106"
+  },
+  {
+   "section": "MGMT.499.21C",
+   "title": "Strategic Management",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "Gabelli School of Business 106"
+  },
+  {
+   "section": "MGMT.510.01",
+   "title": "Data Analytics for Business",
+   "days": [
+    "thursday"
+   ],
+   "start": "13:00",
+   "end": "15:50",
+   "room": "One Empire Plaza 343"
+  },
+  {
+   "section": "MGMT.524.01",
+   "title": "Ethical Leadership of Organiza",
+   "days": [
+    "monday"
+   ],
+   "start": "13:00",
+   "end": "15:50",
+   "room": "One Empire Plaza 429"
+  },
+  {
+   "section": "MGMT.525.01",
+   "title": "Data Viz & Bus. Intelligence",
+   "days": [
+    "tuesday"
+   ],
+   "start": "13:00",
+   "end": "15:50",
+   "room": "One Empire Plaza 230"
+  },
+  {
+   "section": "MGMT.579.01",
+   "title": "SpTp:Management Consulting",
+   "days": [
+    "thursday"
+   ],
+   "start": "09:00",
+   "end": "11:50",
+   "room": "One Empire Plaza 346"
+  }
+ ]
+}

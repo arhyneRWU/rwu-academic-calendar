@@ -1,0 +1,120 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "AAH",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "AAH.121.01",
+   "title": "Hist of Art/Arch I",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "College of Arts and Sciences 157"
+  },
+  {
+   "section": "AAH.121.02",
+   "title": "Hist of Art/Arch I",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "College of Arts and Sciences 157"
+  },
+  {
+   "section": "AAH.121.03",
+   "title": "Hist of Art/Arch I",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Cummings School Architecture 132"
+  },
+  {
+   "section": "AAH.121.04",
+   "title": "Hist of Art/Arch I",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "Cummings School Architecture 132"
+  },
+  {
+   "section": "AAH.121.05",
+   "title": "Hist of Art/Arch I",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "College of Arts and Sciences 157"
+  },
+  {
+   "section": "AAH.121.06",
+   "title": "Hist of Art/Arch I",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "18:00",
+   "end": "19:20",
+   "room": "College of Arts and Sciences 157"
+  },
+  {
+   "section": "AAH.122.01",
+   "title": "Hist of Art/Arch II",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "College of Arts and Sciences 157"
+  },
+  {
+   "section": "AAH.122.02",
+   "title": "Hist of Art/Arch II",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "College of Arts and Sciences 157"
+  },
+  {
+   "section": "AAH.122.03",
+   "title": "Hist of Art/Arch II",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "18:00",
+   "end": "19:20",
+   "room": "Cummings School Architecture 132"
+  },
+  {
+   "section": "AAH.322.01",
+   "title": "Art/Arch Medieval World",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "College of Arts and Sciences 157"
+  }
+ ]
+}

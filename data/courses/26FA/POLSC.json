@@ -1,0 +1,259 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "POLSC",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "POLSC.100.01",
+   "title": "Amer Govt & Politics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.100.02",
+   "title": "Amer Govt & Politics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "College of Arts and Sciences 220"
+  },
+  {
+   "section": "POLSC.100.03",
+   "title": "Amer Govt & Politics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "College of Arts and Sciences 220"
+  },
+  {
+   "section": "POLSC.110.01",
+   "title": "U.S. in World Affairs",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "College of Arts and Sciences 220"
+  },
+  {
+   "section": "POLSC.110.02",
+   "title": "U.S. in World Affairs",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "College of Arts and Sciences 220"
+  },
+  {
+   "section": "POLSC.120.01",
+   "title": "Comparative Politics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.120.02",
+   "title": "Comparative Politics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.120.03",
+   "title": "Comparative Politics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.200.01",
+   "title": "Constitution/Amer Pol",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.210.01",
+   "title": "International Relations",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "College of Arts and Sciences 127"
+  },
+  {
+   "section": "POLSC.240.02",
+   "title": "Research Meth Pol Sci",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "College of Arts and Sciences 126"
+  },
+  {
+   "section": "POLSC.301.01",
+   "title": "Campaigns and Elections",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "College of Arts and Sciences 126"
+  },
+  {
+   "section": "POLSC.301.02",
+   "title": "Campaigns and Elections",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "College of Arts and Sciences 126"
+  },
+  {
+   "section": "POLSC.306.01",
+   "title": "Political Attitudes & Behavior",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.327.01",
+   "title": "Politics of the Middle East",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "College of Arts and Sciences 120"
+  },
+  {
+   "section": "POLSC.376.01",
+   "title": "Housing Policy in the U.S.",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.379.01",
+   "title": "SpTp:Humn Rights Advocacy Sem",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "POLSC.379.02",
+   "title": "SpTp: War and Peace",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "POLSC.379.HON01",
+   "title": "Honrs:Human Rights Advocacy",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "POLSC.383.01",
+   "title": "Global Environmental Politics",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "College of Arts and Sciences 220"
+  },
+  {
+   "section": "POLSC.390.01",
+   "title": "Globalization and Its Critics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.403.01",
+   "title": "Unlocking Leadership",
+   "days": [
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "College of Arts and Sciences 221"
+  }
+ ]
+}

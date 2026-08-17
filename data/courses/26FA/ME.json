@@ -1,0 +1,63 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "ME",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "ME.151.01",
+   "title": "Crit Think&Prob Solv in Math",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "School of Education 009"
+  },
+  {
+   "section": "ME.354.01",
+   "title": "Frm Pyth to Hipp: Geom&Trig",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "School of Education 059"
+  },
+  {
+   "section": "ME.501.91",
+   "title": "Prob Solv Found Num Concepts",
+   "days": [
+    "saturday"
+   ],
+   "start": "09:00",
+   "end": "16:00",
+   "room": ""
+  },
+  {
+   "section": "ME.501.91",
+   "title": "Prob Solv Found Num Concepts",
+   "days": [
+    "saturday"
+   ],
+   "start": "09:00",
+   "end": "16:00",
+   "room": ""
+  },
+  {
+   "section": "ME.505.01",
+   "title": "Class Approach to 2D Geometry",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "School of Education 059"
+  }
+ ]
+}

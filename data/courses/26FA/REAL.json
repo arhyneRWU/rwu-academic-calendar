@@ -1,0 +1,83 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "REAL",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "REAL.101.01",
+   "title": "Intro to Real Estate",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "REAL.101.02",
+   "title": "Intro to Real Estate",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "REAL.302.01",
+   "title": "Real Estate Economics",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "REAL.443.01",
+   "title": "Project Development and Finan",
+   "days": [
+    "monday"
+   ],
+   "start": "18:30",
+   "end": "21:20",
+   "room": "Cummings School Architecture 132"
+  },
+  {
+   "section": "REAL.443.02",
+   "title": "Project Development and Finan",
+   "days": [
+    "thursday"
+   ],
+   "start": "18:30",
+   "end": "21:20",
+   "room": ""
+  },
+  {
+   "section": "REAL.501.01",
+   "title": "Real Estate Equity & Environ",
+   "days": [
+    "monday"
+   ],
+   "start": "18:00",
+   "end": "20:50",
+   "room": ""
+  },
+  {
+   "section": "REAL.543.01",
+   "title": "Project Development and Financ",
+   "days": [
+    "wednesday"
+   ],
+   "start": "17:30",
+   "end": "20:20",
+   "room": "Cummings School Architecture 203"
+  }
+ ]
+}

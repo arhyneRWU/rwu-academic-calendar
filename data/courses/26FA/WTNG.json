@@ -1,0 +1,665 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "WTNG",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "WTNG.100.01",
+   "title": "Intro to Academic Wtng",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "College of Arts and Sciences 221"
+  },
+  {
+   "section": "WTNG.100.02",
+   "title": "Intro to Academic Wtng",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "WTNG.100.03",
+   "title": "Intro to Academic Wtng",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "WTNG.100.04",
+   "title": "Intro to Academic Wtng",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "College of Arts and Sciences 221"
+  },
+  {
+   "section": "WTNG.100.05",
+   "title": "Intro to Academic Wtng",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "College of Arts and Sciences 221"
+  },
+  {
+   "section": "WTNG.100.06",
+   "title": "Intro to Academic Wtng",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "College of Arts and Sciences 221"
+  },
+  {
+   "section": "WTNG.102.01",
+   "title": "How Writing Works",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "ELS 112"
+  },
+  {
+   "section": "WTNG.102.02",
+   "title": "How Writing Works",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "ELS 112"
+  },
+  {
+   "section": "WTNG.102.03",
+   "title": "How Writing Works",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "WTNG.102.04",
+   "title": "How Writing Works",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "WTNG.102.05",
+   "title": "How Writing Works",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "ELS 113"
+  },
+  {
+   "section": "WTNG.102.06",
+   "title": "How Writing Works",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "WTNG.102.07",
+   "title": "How Writing Works",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Gabelli School of Business G13"
+  },
+  {
+   "section": "WTNG.102.08",
+   "title": "How Writing Works",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Humanities Building 329"
+  },
+  {
+   "section": "WTNG.102.09",
+   "title": "How Writing Works",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "WTNG.102.10",
+   "title": "How Writing Works",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "WTNG.102.11",
+   "title": "How Writing Works",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "08:50",
+   "room": "ELS 112"
+  },
+  {
+   "section": "WTNG.102.12",
+   "title": "How Writing Works",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "08:50",
+   "room": "Humanities Building 102"
+  },
+  {
+   "section": "WTNG.102.13",
+   "title": "How Writing Works",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "College of Arts and Sciences 227"
+  },
+  {
+   "section": "WTNG.102.14",
+   "title": "How Writing Works",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "ELS 112"
+  },
+  {
+   "section": "WTNG.102.15",
+   "title": "How Writing Works",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "College of Arts and Sciences 227"
+  },
+  {
+   "section": "WTNG.102.16",
+   "title": "How Writing Works",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "ELS 112"
+  },
+  {
+   "section": "WTNG.102.17",
+   "title": "How Writing Works",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "Gabelli School of Business G13"
+  },
+  {
+   "section": "WTNG.102.18",
+   "title": "How Writing Works",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "Humanities Building 308"
+  },
+  {
+   "section": "WTNG.102.19",
+   "title": "How Writing Works",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "College of Arts and Sciences 227"
+  },
+  {
+   "section": "WTNG.102.20",
+   "title": "How Writing Works",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "Gabelli School of Business G13"
+  },
+  {
+   "section": "WTNG.102.21",
+   "title": "How Writing Works",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "ELS 112"
+  },
+  {
+   "section": "WTNG.102.22",
+   "title": "How Writing Works",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "WTNG.102.23",
+   "title": "How Writing Works",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "College of Arts and Sciences 227"
+  },
+  {
+   "section": "WTNG.102.24",
+   "title": "How Writing Works",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "College of Arts and Sciences 227"
+  },
+  {
+   "section": "WTNG.102.25",
+   "title": "How Writing Works",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "ELS 111"
+  },
+  {
+   "section": "WTNG.102.26",
+   "title": "How Writing Works",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "WTNG.102.HON01",
+   "title": "Honr How Writng Works",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "Stonewall 103"
+  },
+  {
+   "section": "WTNG.102.HON02",
+   "title": "Honr How Writing Works",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "Stonewall 103"
+  },
+  {
+   "section": "WTNG.225.01",
+   "title": "Wtng Profession-Public Context",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "Humanities Building 308"
+  },
+  {
+   "section": "WTNG.225.02",
+   "title": "Wtng Profession-Public Context",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "ELS 113"
+  },
+  {
+   "section": "WTNG.225.03",
+   "title": "Wtng Profession-Public Context",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Humanities Building 329"
+  },
+  {
+   "section": "WTNG.225.04",
+   "title": "Wtng Profession-Public Context",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Humanities Building 329"
+  },
+  {
+   "section": "WTNG.225.05",
+   "title": "Wtng Profession-Public Context",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Gabelli School of Business G13"
+  },
+  {
+   "section": "WTNG.225.06",
+   "title": "Wtng Profession-Public Context",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Humanities Building 102"
+  },
+  {
+   "section": "WTNG.225.07",
+   "title": "Wtng Profession-Public Context",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "WTNG.225.10",
+   "title": "Wtng Profession-Public Context",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "08:50",
+   "room": "Gabelli School of Business 301"
+  },
+  {
+   "section": "WTNG.225.11",
+   "title": "Wtng Profession-Public Context",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "Gabelli School of Business 301"
+  },
+  {
+   "section": "WTNG.225.12",
+   "title": "Wtng Profession-Public Context",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "ELS 111"
+  },
+  {
+   "section": "WTNG.225.13",
+   "title": "Wtng Profession-Public Context",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "ELS 111"
+  },
+  {
+   "section": "WTNG.225.14",
+   "title": "Wtng Profession-Public Context",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "ELS 113"
+  },
+  {
+   "section": "WTNG.225.15",
+   "title": "Wtng Profession-Public Context",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "Humanities Building 329"
+  },
+  {
+   "section": "WTNG.235.01",
+   "title": "Technical Writing",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 213"
+  },
+  {
+   "section": "WTNG.235.02",
+   "title": "Technical Writing",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Marine & Natural Sciences Bldg 213"
+  },
+  {
+   "section": "WTNG.235.HON01",
+   "title": "Honors Technical Writing",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 213"
+  },
+  {
+   "section": "WTNG.235.HON02",
+   "title": "Honors Technical Writing",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Marine & Natural Sciences Bldg 213"
+  },
+  {
+   "section": "WTNG.240.01",
+   "title": "Wtng for Business Organization",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Humanities Building 102"
+  },
+  {
+   "section": "WTNG.240.02",
+   "title": "Wtng for Business Organization",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Humanities Building 102"
+  },
+  {
+   "section": "WTNG.245.02",
+   "title": "Writing About Health",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "Humanities Building 102"
+  },
+  {
+   "section": "WTNG.245.HON02",
+   "title": "Writing About Health",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "Humanities Building 102"
+  },
+  {
+   "section": "WTNG.470.01",
+   "title": "The Writing Portfolio",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "ELS 112"
+  },
+  {
+   "section": "WTNG.470.HON01",
+   "title": "Honors The Writing Portfolio",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "ELS 112"
+  }
+ ]
+}

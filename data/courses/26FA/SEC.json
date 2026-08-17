@@ -1,0 +1,124 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "SEC",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "SEC.100.01",
+   "title": "Computer Hardware and Software",
+   "days": [
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "School of Engineering 127"
+  },
+  {
+   "section": "SEC.201.01",
+   "title": "Intro to Computer Networks",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "School of Engineering 128"
+  },
+  {
+   "section": "SEC.203.01",
+   "title": "Cybersecurity Fundamentals",
+   "days": [
+    "wednesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "School of Engineering 210"
+  },
+  {
+   "section": "SEC.206.01",
+   "title": "Digital Detective",
+   "days": [
+    "monday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "School of Engineering 122"
+  },
+  {
+   "section": "SEC.215.01",
+   "title": "Cloud Computing Fundamentals",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "School of Engineering 210"
+  },
+  {
+   "section": "SEC.275.01",
+   "title": "Servers Admin & Security",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "School of Engineering 210"
+  },
+  {
+   "section": "SEC.404.01",
+   "title": "Applied Cyber Defense",
+   "days": [
+    "wednesday"
+   ],
+   "start": "18:00",
+   "end": "20:30",
+   "room": "School of Engineering 122"
+  },
+  {
+   "section": "SEC.409.01",
+   "title": "Linux Scripting and Automation",
+   "days": [
+    "tuesday"
+   ],
+   "start": "18:00",
+   "end": "20:30",
+   "room": "School of Engineering 122"
+  },
+  {
+   "section": "SEC.415.01",
+   "title": "Intrusion Detection System",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "SEC.430.91",
+   "title": "Principles of CyberIntellige",
+   "days": [
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "SEC.431.01",
+   "title": "Penetration Testing",
+   "days": [
+    "thursday"
+   ],
+   "start": "18:00",
+   "end": "20:30",
+   "room": "School of Engineering 210"
+  }
+ ]
+}

@@ -1,0 +1,256 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "DANCE",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "DANCE.101.01",
+   "title": "The Creative Athlete",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Performing Arts Cntr STDA"
+  },
+  {
+   "section": "DANCE.210.01",
+   "title": "Ballet I",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Performing Arts Cntr STDA"
+  },
+  {
+   "section": "DANCE.211.01",
+   "title": "Ballet II",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Performing Arts Cntr STDA"
+  },
+  {
+   "section": "DANCE.220.01",
+   "title": "Int Cont/Mod Tech I",
+   "days": [
+    "monday",
+    "tuesday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "17:20",
+   "room": "Performing Arts Cntr STDA"
+  },
+  {
+   "section": "DANCE.221.01",
+   "title": "Int Cont/Mod Tech II",
+   "days": [
+    "monday",
+    "tuesday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "17:20",
+   "room": "Performing Arts Cntr STDA"
+  },
+  {
+   "section": "DANCE.290.01",
+   "title": "Intro Choreography",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Performing Arts Cntr STDA"
+  },
+  {
+   "section": "DANCE.301.01",
+   "title": "Int Cont/Mod TechIII",
+   "days": [
+    "monday",
+    "tuesday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "17:20",
+   "room": "Performing Arts Cntr STDA"
+  },
+  {
+   "section": "DANCE.302.01",
+   "title": "Int Cont/Mod Tech IV",
+   "days": [
+    "monday",
+    "tuesday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "17:20",
+   "room": "Performing Arts Cntr STDA"
+  },
+  {
+   "section": "DANCE.314.01",
+   "title": "Reper/Perform I(Aud)",
+   "days": [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "Performing Arts Cntr STDB"
+  },
+  {
+   "section": "DANCE.315.01",
+   "title": "Reper/Perform II(Aud)",
+   "days": [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "Performing Arts Cntr STDB"
+  },
+  {
+   "section": "DANCE.316.01",
+   "title": "Reper/Perform III(Aud)",
+   "days": [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "Performing Arts Cntr STDB"
+  },
+  {
+   "section": "DANCE.317.01",
+   "title": "Reper/Perform IV(Aud)",
+   "days": [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "Performing Arts Cntr STDB"
+  },
+  {
+   "section": "DANCE.318.01",
+   "title": "Reper/Perform V(Aud)",
+   "days": [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "Performing Arts Cntr STDB"
+  },
+  {
+   "section": "DANCE.319.01",
+   "title": "Reper/Perform VI(Aud)",
+   "days": [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "Performing Arts Cntr STDB"
+  },
+  {
+   "section": "DANCE.320.01",
+   "title": "Adv Tech & Improv I",
+   "days": [
+    "monday",
+    "tuesday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "17:20",
+   "room": "Performing Arts Cntr STDA"
+  },
+  {
+   "section": "DANCE.321.01",
+   "title": "Adv Tech & Improv II",
+   "days": [
+    "monday",
+    "tuesday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "17:20",
+   "room": "Performing Arts Cntr STDA"
+  },
+  {
+   "section": "DANCE.390.01",
+   "title": "Advanced Choreography",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Performing Arts Cntr STDA"
+  },
+  {
+   "section": "DANCE.401.01",
+   "title": "Adv Tech/Improv III",
+   "days": [
+    "monday",
+    "tuesday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "17:20",
+   "room": "Performing Arts Cntr STDA"
+  },
+  {
+   "section": "DANCE.402.01",
+   "title": "Adv Tech/Improv IV",
+   "days": [
+    "monday",
+    "tuesday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "17:20",
+   "room": "Performing Arts Cntr STDA"
+  },
+  {
+   "section": "DANCE.460.01",
+   "title": "Teach Tech/Dnc Pedag/Mus Cpts",
+   "days": [
+    "monday",
+    "wednesday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Performing Arts Cntr STDA"
+  }
+ ]
+}

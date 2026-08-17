@@ -1,0 +1,538 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "CNST",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "CNST.100.01",
+   "title": "Intro to Cnst Mgmt",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "08:50",
+   "room": "School of Engineering 127"
+  },
+  {
+   "section": "CNST.100.02",
+   "title": "Intro to Cnst Mgmt",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "School of Engineering 127"
+  },
+  {
+   "section": "CNST.100.03",
+   "title": "Intro to Cnst Mgmt",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "School of Engineering 127"
+  },
+  {
+   "section": "CNST.100.04",
+   "title": "Intro to Cnst Mgmt",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "School of Engineering 127"
+  },
+  {
+   "section": "CNST.100.05",
+   "title": "Intro to Cnst Mgmt",
+   "days": [
+    "monday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "School of Engineering 127"
+  },
+  {
+   "section": "CNST.116.01",
+   "title": "Computer Appl for Cnst",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "School of Engineering 206"
+  },
+  {
+   "section": "CNST.130.01",
+   "title": "Plans Specs & Bldg Codes",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "School of Engineering 127"
+  },
+  {
+   "section": "CNST.130.02",
+   "title": "Plans Specs & Bldg Codes",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "School of Engineering 127"
+  },
+  {
+   "section": "CNST.130.03",
+   "title": "Plans Specs & Bldg Codes",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "School of Engineering 127"
+  },
+  {
+   "section": "CNST.130.04",
+   "title": "Plans Specs & Bldg Codes",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "School of Engineering 127"
+  },
+  {
+   "section": "CNST.130.05",
+   "title": "Plans Specs & Bldg Codes",
+   "days": [
+    "wednesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "School of Engineering 127"
+  },
+  {
+   "section": "CNST.201.01",
+   "title": "Adv Cnst Meth & Material",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "08:50",
+   "room": "School of Engineering 128"
+  },
+  {
+   "section": "CNST.201.02",
+   "title": "Adv Cnst Meth & Material",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "School of Engineering 128"
+  },
+  {
+   "section": "CNST.201.03",
+   "title": "Adv Cnst Meth & Material",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "School of Engineering 127"
+  },
+  {
+   "section": "CNST.201.04",
+   "title": "Adv Cnst Meth & Material",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "School of Engineering 127"
+  },
+  {
+   "section": "CNST.201L.51",
+   "title": "Adv Cnst Meth & Mat Lab",
+   "days": [
+    "monday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "SECCM Labs 104"
+  },
+  {
+   "section": "CNST.201L.52",
+   "title": "Adv Cnst Meth & Mat Lab",
+   "days": [
+    "monday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "SECCM Labs 104"
+  },
+  {
+   "section": "CNST.201L.53",
+   "title": "Adv Cnst Meth & Mat Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "SECCM Labs 104"
+  },
+  {
+   "section": "CNST.201L.54",
+   "title": "Adv Cnst Meth & Mat Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "SECCM Labs 104"
+  },
+  {
+   "section": "CNST.201L.55",
+   "title": "Adv Cnst Meth & Mat Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "SECCM Labs 104"
+  },
+  {
+   "section": "CNST.201L.56",
+   "title": "Adv Cnst Meth & Mat Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "SECCM Labs 104"
+  },
+  {
+   "section": "CNST.201L.57",
+   "title": "Adv Cnst Meth & Mat Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "SECCM Labs 104"
+  },
+  {
+   "section": "CNST.201L.58",
+   "title": "Adv Cnst Meth & Mat Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "SECCM Labs 104"
+  },
+  {
+   "section": "CNST.201L.59",
+   "title": "Adv Cnst Meth & Mat Lab",
+   "days": [
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "SECCM Labs 104"
+  },
+  {
+   "section": "CNST.204.01",
+   "title": "Applied Statics for Const",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "School of Engineering 128"
+  },
+  {
+   "section": "CNST.204.02",
+   "title": "Applied Statics for Const",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "School of Engineering 128"
+  },
+  {
+   "section": "CNST.204.03",
+   "title": "Applied Statics for Const",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "School of Engineering 125"
+  },
+  {
+   "section": "CNST.260.01",
+   "title": "Cnst Estimating&Sched",
+   "days": [
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "College of Arts and Sciences 162"
+  },
+  {
+   "section": "CNST.302.01",
+   "title": "Surveying I",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "SECCM Labs 304"
+  },
+  {
+   "section": "CNST.302.02",
+   "title": "Surveying I",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "SECCM Labs 304"
+  },
+  {
+   "section": "CNST.302L.51",
+   "title": "Surveying I Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "School of Engineering 119"
+  },
+  {
+   "section": "CNST.302L.52",
+   "title": "Surveying I Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "School of Engineering 119"
+  },
+  {
+   "section": "CNST.302L.53",
+   "title": "Surveying I Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "School of Engineering 125"
+  },
+  {
+   "section": "CNST.321.01",
+   "title": "Adv Building Estimating",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "SECCM Labs 304"
+  },
+  {
+   "section": "CNST.321.02",
+   "title": "Adv Building Estimating",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "SECCM Labs 304"
+  },
+  {
+   "section": "CNST.321.03",
+   "title": "Adv Building Estimating",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "SECCM Labs 304"
+  },
+  {
+   "section": "CNST.321.04",
+   "title": "Adv Building Estimating",
+   "days": [
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "SECCM Labs 304"
+  },
+  {
+   "section": "CNST.367.01",
+   "title": "Residential Construction",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "School of Engineering 119"
+  },
+  {
+   "section": "CNST.445.01",
+   "title": "Cnst Proj Mgmt & Safety",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "School of Engineering 125"
+  },
+  {
+   "section": "CNST.445.02",
+   "title": "Cnst Proj Mgmt & Safety",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "School of Engineering 125"
+  },
+  {
+   "section": "CNST.445.03",
+   "title": "Cnst Proj Mgmt & Safety",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "School of Engineering 125"
+  },
+  {
+   "section": "CNST.445L.51",
+   "title": "Cnst Proj Mgmt/Sfty Lab",
+   "days": [
+    "monday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "School of Engineering 125"
+  },
+  {
+   "section": "CNST.445L.52",
+   "title": "Cnst Proj Mgmt/Sfty Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "SECCM Labs 304"
+  },
+  {
+   "section": "CNST.445L.53",
+   "title": "Cnst Proj Mgmt/Sfty Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "SECCM Labs 304"
+  },
+  {
+   "section": "CNST.445L.54",
+   "title": "Cnst Proj Mgmt/Sfty Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "School of Engineering 125"
+  },
+  {
+   "section": "CNST.450.01",
+   "title": "Cnst Planning/Scheduling",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "School of Engineering 125"
+  },
+  {
+   "section": "CNST.463.01",
+   "title": "Heavy Construction Estimating",
+   "days": [
+    "wednesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "SECCM Labs 304"
+  },
+  {
+   "section": "CNST.475.01",
+   "title": "Construction Project Control",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "SECCM Labs 304"
+  },
+  {
+   "section": "CNST.475.02",
+   "title": "Construction Project Control",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "SECCM Labs 304"
+  }
+ ]
+}

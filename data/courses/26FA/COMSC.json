@@ -1,0 +1,133 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "COMSC",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "COMSC.110.01",
+   "title": "Intro Cmptr Science I",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "School of Engineering 206"
+  },
+  {
+   "section": "COMSC.110L.51",
+   "title": "Intro Cmptr Science I Lab",
+   "days": [
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "School of Engineering 206"
+  },
+  {
+   "section": "COMSC.111.01",
+   "title": "Data Structures",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "School of Engineering 122"
+  },
+  {
+   "section": "COMSC.111L.51",
+   "title": "Data Structures Lab",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "School of Engineering 122"
+  },
+  {
+   "section": "COMSC.179.01",
+   "title": "SpTp:Programming in Context",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "School of Engineering 206"
+  },
+  {
+   "section": "COMSC.320.02",
+   "title": "Principles of Operating System",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "School of Engineering 206"
+  },
+  {
+   "section": "COMSC.335.01",
+   "title": "Theory of Computation",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "School of Engineering 122"
+  },
+  {
+   "section": "COMSC.370.01",
+   "title": "Human Computer Interaction",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "School of Engineering 122"
+  },
+  {
+   "section": "COMSC.390.01",
+   "title": "Principles of Secure Programm",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "School of Engineering 122"
+  },
+  {
+   "section": "COMSC.401.01",
+   "title": "Cmptr Sci Senior Sem",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
+   "end": "17:50",
+   "room": "School of Engineering 122"
+  },
+  {
+   "section": "COMSC.490.01",
+   "title": "Integ Senior Design I",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "School of Engineering 122"
+  }
+ ]
+}

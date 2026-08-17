@@ -1,0 +1,247 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "PHYS",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "PHYS.105.01",
+   "title": "Physics for Building Science",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "School of Engineering 119"
+  },
+  {
+   "section": "PHYS.105.01",
+   "title": "Physics for Building Science",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "School of Engineering 119"
+  },
+  {
+   "section": "PHYS.105.02",
+   "title": "Physics for Building Science",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "School of Engineering 119"
+  },
+  {
+   "section": "PHYS.105.02",
+   "title": "Physics for Building Science",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "School of Engineering 119"
+  },
+  {
+   "section": "PHYS.109.01",
+   "title": "Physics I (algebra) & Lab",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "School of Engineering 119"
+  },
+  {
+   "section": "PHYS.109.01",
+   "title": "Physics I (algebra) & Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "School of Engineering 119"
+  },
+  {
+   "section": "PHYS.109.02",
+   "title": "Physics I (algebra) & Lab",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "18:20",
+   "room": "School of Engineering 121"
+  },
+  {
+   "section": "PHYS.109.02",
+   "title": "Physics I (algebra) & Lab",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "18:30",
+   "end": "19:50",
+   "room": "School of Engineering 121"
+  },
+  {
+   "section": "PHYS.109.03",
+   "title": "Physics I (algebra) & Lab",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "School of Engineering 121"
+  },
+  {
+   "section": "PHYS.109.03",
+   "title": "Physics I (algebra) & Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "School of Engineering 121"
+  },
+  {
+   "section": "PHYS.110.01",
+   "title": "Physics II (algebra) & Lab",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "School of Engineering 121"
+  },
+  {
+   "section": "PHYS.110.01",
+   "title": "Physics II (algebra) & Lab",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "School of Engineering 121"
+  },
+  {
+   "section": "PHYS.201.01",
+   "title": "Physics I (calculus) & Lab",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "School of Engineering 119"
+  },
+  {
+   "section": "PHYS.201.01",
+   "title": "Physics I (calculus) & Lab",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "School of Engineering 119"
+  },
+  {
+   "section": "PHYS.201.02",
+   "title": "Physics I (calculus) & Lab",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "School of Engineering 119"
+  },
+  {
+   "section": "PHYS.201.02",
+   "title": "Physics I (calculus) & Lab",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "School of Engineering 119"
+  },
+  {
+   "section": "PHYS.202.01",
+   "title": "Physics II (calculus) and Lab",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "School of Engineering 121"
+  },
+  {
+   "section": "PHYS.202.01",
+   "title": "Physics II (calculus) and Lab",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "School of Engineering 121"
+  },
+  {
+   "section": "PHYS.202.02",
+   "title": "Physics II (calculus) and Lab",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "School of Engineering 121"
+  },
+  {
+   "section": "PHYS.202.02",
+   "title": "Physics II (calculus) and Lab",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "School of Engineering 121"
+  },
+  {
+   "section": "PHYS.320.01",
+   "title": "Modern Physics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "School of Engineering 121"
+  }
+ ]
+}

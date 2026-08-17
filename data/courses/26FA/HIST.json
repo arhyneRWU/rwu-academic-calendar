@@ -1,0 +1,101 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "HIST",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "HIST.100.01",
+   "title": "Making Global History",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Gabelli School of Business 301"
+  },
+  {
+   "section": "HIST.100.02",
+   "title": "Making Global History",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "College of Arts and Sciences 120"
+  },
+  {
+   "section": "HIST.100.03",
+   "title": "Making Global History",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "Gabelli School of Business 301"
+  },
+  {
+   "section": "HIST.242.01",
+   "title": "US in the American Century",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "HIST.360.01",
+   "title": "Gaming",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "College of Arts and Sciences 227"
+  },
+  {
+   "section": "HIST.363.01",
+   "title": "Gangsterism in America",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "Humanities Building 217"
+  },
+  {
+   "section": "HIST.380.01",
+   "title": "Lord of the Rings",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "College of Arts and Sciences 227"
+  },
+  {
+   "section": "HIST.383.02",
+   "title": "Latin America:Proxy Wars",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Humanities Building 100"
+  }
+ ]
+}

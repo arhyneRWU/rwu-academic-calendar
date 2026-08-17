@@ -85,11 +85,31 @@ class Catalog:
             time.sleep(gap)
         self._last = time.monotonic()
 
-    def _open(self, req: urllib.request.Request, timeout: int = 45) -> bytes:
-        self._wait()
+    def _open(self, req: urllib.request.Request, timeout: int = 45,
+              attempts: int = 4) -> bytes:
+        """One request, retried on transient failures.
+
+        A full term is a quarter of an hour of requests to a remote host, so a
+        dropped connection somewhere in the middle is ordinary rather than
+        exceptional -- the first long run died on ``[Errno 60] Operation timed
+        out`` at subject six. Backs off rather than hammering, and never
+        retries a 4xx, which means the same thing every time.
+        """
         req.add_header('User-Agent', USER_AGENT)
-        with self._opener.open(req, timeout=timeout) as r:
-            return r.read()
+        last: Exception | None = None
+        for attempt in range(attempts):
+            self._wait()
+            try:
+                with self._opener.open(req, timeout=timeout) as r:
+                    return r.read()
+            except urllib.error.HTTPError as e:
+                if e.code < 500:
+                    raise
+                last = e
+            except (urllib.error.URLError, TimeoutError, OSError) as e:
+                last = e
+            time.sleep(min(2 ** attempt, 30))
+        raise RuntimeError(f'{req.full_url} failed after {attempts} attempts: {last}')
 
     def connect(self) -> None:
         """Fetch the catalog page for its antiforgery token and cookie.
@@ -148,13 +168,21 @@ class Catalog:
             page += 1
 
     def sections(self, course: dict, term: str) -> list[Section]:
-        """Meeting patterns for one course, filtered to one term."""
+        """Meeting patterns for one course, filtered to one term.
+
+        ``courseId`` is the course's **numeric ``Id``**, which is what the site
+        itself sends. The obvious-looking ``SUBJECT_NUMBER`` form -- which the
+        catalog view does use -- is accepted for some courses and silently
+        returns an empty result for others: ``BIO_101`` works, ``HIST_100``
+        gives nothing at all, with no error. A first pass keyed on it collected
+        417 meeting patterns and looked entirely successful while dropping most
+        of the catalog on the floor.
+        """
         ids = course.get('MatchingSectionIds') or []
-        if not ids:
+        if not ids or not course.get('Id'):
             return []
-        key = f"{course.get('SubjectCode')}_{course.get('Number')}"
         d = self._post('/Student/Courses/Sections',
-                       {'courseId': key, 'sectionIds': ids})
+                       {'courseId': str(course['Id']), 'sectionIds': ids})
         out = []
         for block in (d.get('SectionsRetrieved') or {}).get('TermsAndSections') or []:
             if (block.get('Term') or {}).get('Code') != term:
@@ -238,19 +266,30 @@ def pull(term: str, subjects: list[str], delay: float = DELAY,
     out: dict[str, list[Section]] = {}
     for subject in subjects:
         found: list[Section] = []
+        n_courses = 0
         for course in cat.courses(subject, term):
+            n_courses += 1
             try:
                 found.extend(cat.sections(course, term))
-            except urllib.error.HTTPError as e:
+            except (urllib.error.HTTPError, RuntimeError) as e:
+                # One unreachable course must not end a fifteen-minute run.
                 if progress:
-                    progress(f'  ! {subject} {course.get("Number")}: HTTP {e.code}')
+                    progress(f'  ! {subject} {course.get("Number")}: {e}')
         found.sort(key=lambda s: s.section)
         if found:
             out[subject] = found
         if on_subject:
             on_subject(subject, found)
         if progress:
-            progress(f'  {subject}: {len(found)} meeting patterns')
+            # A subject with courses but no patterns at all is the shape of a
+            # silent lookup failure, not a fact about the timetable. It is how
+            # a wrong `courseId` key hid for a whole run: every subject
+            # "succeeded" and the total looked plausible. Say it out loud.
+            note = ''
+            if n_courses and not found:
+                note = f'  <-- {n_courses} courses but NO patterns; check the lookup'
+            progress(f'  {subject}: {len(found)} meeting patterns '
+                     f'from {n_courses} courses{note}')
     return out
 
 

@@ -31,6 +31,15 @@ both that the source still has them and that our files do not.
 | C4 | Colleague sends booleans as the strings `'True'`/`'False'`; both are truthy in Python, so the naive check fails open and schedules every TBD section. | fixed — `_truthy()`, with a test asserting `bool('False') is True` so the trap stays documented |
 | C5 | A long pull saved only at the end, so a timeout at subject 100 discarded ~15 minutes of paced requests. | fixed — writes per subject as it goes |
 | C6 | The existing test asserted the builder issues **no** network request. The picker fetches course lists, so that claim needed to change rather than be deleted. | **verified** — now asserts no XHR/beacon/socket/POST at all, that both fetches are relative paths built from one helper, and that nothing the user types is ever a fetch argument |
+| C7 | **The section lookup used the wrong key and lost most of the catalog.** `courseId` was built as `SUBJECT_NUMBER`; the site itself sends the numeric course `Id`. The wrong form is accepted for *some* courses and silently returns an empty result for others — `BIO_101` works, `HIST_100` returns nothing, no error, no status code. A full run finished "successfully" with 417 patterns across 26 subjects while dropping the rest on the floor. | **verified** — captured the site's own XHR to find the real key; a subject with courses but zero patterns is now called out in the run log, which is the guard that would have caught it on run one |
+| C8 | No retry. A quarter-hour of requests to a remote host met `[Errno 60] Operation timed out` at subject six and the whole run died. | fixed — four attempts with backoff on 5xx and connection errors, never on 4xx; one unreachable course no longer ends the run |
+
+**How C7 got caught, since it is the interesting part.** The numbers looked
+fine: 417 patterns, no errors, plausible spread. What did not look fine was
+*EDU: 0* and *HIST: 1* for a fall term. Checking one subject against the live
+site took two minutes and showed ten HIST courses with sections. The lesson is
+the same one in gotcha 7 of the handoff: a clean run is not evidence, and the
+cheapest check is against reality rather than against our own output.
 
 **Known limit, not a defect:** course data goes stale during add/drop in a way
 the academic calendar never does. The page stamps when it was pulled and says

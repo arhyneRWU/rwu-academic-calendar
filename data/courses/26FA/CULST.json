@@ -1,0 +1,76 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "CULST",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "CULST.100.01",
+   "title": "Approaches to Soc & Cul",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Gabelli School of Business 206"
+  },
+  {
+   "section": "CULST.100.02",
+   "title": "Approaches to Soc & Cul",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "Gabelli School of Business 206"
+  },
+  {
+   "section": "CULST.100.03",
+   "title": "Approaches to Soc & Cul",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Humanities Building 100"
+  },
+  {
+   "section": "CULST.370.01",
+   "title": "Girl Culture",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Gabelli School of Business 206"
+  },
+  {
+   "section": "CULST.370.02",
+   "title": "Finding Ourselves",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Humanities Building 217"
+  },
+  {
+   "section": "CULST.370.HON01",
+   "title": "Honors:Finding Ourselves",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Humanities Building 217"
+  }
+ ]
+}

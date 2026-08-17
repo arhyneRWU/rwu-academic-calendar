@@ -1,0 +1,172 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "DSGN",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "DSGN.100.01",
+   "title": "Introduction to Design Communi",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:00",
+   "end": "13:50",
+   "room": "Humanities Building 223"
+  },
+  {
+   "section": "DSGN.100.02",
+   "title": "Introduction to Design Communi",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:50",
+   "room": "Humanities Building 223"
+  },
+  {
+   "section": "DSGN.110.01",
+   "title": "Intro to Typography",
+   "days": [
+    "monday",
+    "wednesday"
+   ],
+   "start": "10:00",
+   "end": "11:50",
+   "room": "Humanities Building 222"
+  },
+  {
+   "section": "DSGN.210.01",
+   "title": "Advanced Design Communication",
+   "days": [
+    "monday",
+    "wednesday"
+   ],
+   "start": "10:00",
+   "end": "11:50",
+   "room": "Humanities Building 223"
+  },
+  {
+   "section": "DSGN.210.02",
+   "title": "Advanced Design Communication",
+   "days": [
+    "monday",
+    "wednesday"
+   ],
+   "start": "12:00",
+   "end": "13:50",
+   "room": "Humanities Building 223"
+  },
+  {
+   "section": "DSGN.220.01",
+   "title": "Advanced Typography",
+   "days": [
+    "monday",
+    "wednesday"
+   ],
+   "start": "12:00",
+   "end": "13:50",
+   "room": "Humanities Building 222"
+  },
+  {
+   "section": "DSGN.220.02",
+   "title": "Advanced Typography",
+   "days": [
+    "monday",
+    "wednesday"
+   ],
+   "start": "08:00",
+   "end": "09:50",
+   "room": "Humanities Building 223"
+  },
+  {
+   "section": "DSGN.300.01",
+   "title": "Web Design Communication",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:00",
+   "end": "13:50",
+   "room": "Humanities Building 222"
+  },
+  {
+   "section": "DSGN.320.01",
+   "title": "Publication Design",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
+   "end": "20:50",
+   "room": "Humanities Building 216"
+  },
+  {
+   "section": "DSGN.330.01",
+   "title": "Package Design",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "11:20",
+   "room": "Humanities Building 222"
+  },
+  {
+   "section": "DSGN.350.01",
+   "title": "Designing the User Experience",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "10:00",
+   "end": "11:50",
+   "room": "Humanities Building 223"
+  },
+  {
+   "section": "DSGN.429.01",
+   "title": "Citizen Designer",
+   "days": [
+    "monday"
+   ],
+   "start": "17:00",
+   "end": "20:50",
+   "room": "Humanities Building 216"
+  },
+  {
+   "section": "DSGN.440.01",
+   "title": "Senior Thesis Capstone",
+   "days": [
+    "monday",
+    "wednesday"
+   ],
+   "start": "10:00",
+   "end": "11:50",
+   "room": "Humanities Building 216"
+  },
+  {
+   "section": "DSGN.440.02",
+   "title": "Senior Thesis Capstone",
+   "days": [
+    "monday",
+    "wednesday"
+   ],
+   "start": "12:00",
+   "end": "13:50",
+   "room": "Humanities Building 216"
+  },
+  {
+   "section": "DSGN.479.01",
+   "title": "SpTp:Advanced Publication Dsg",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
+   "end": "20:50",
+   "room": "Humanities Building 216"
+  }
+ ]
+}

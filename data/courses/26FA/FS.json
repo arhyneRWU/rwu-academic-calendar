@@ -1,0 +1,54 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "FS",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "FS.100.01",
+   "title": "Intro to Food Studies",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "School of Engineering 126"
+  },
+  {
+   "section": "FS.100.02",
+   "title": "Intro to Food Studies",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "School of Engineering 126"
+  },
+  {
+   "section": "FS.101.01",
+   "title": "Intro to Food Science W/ Lab",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "School of Engineering 126"
+  },
+  {
+   "section": "FS.101L.51",
+   "title": "Intro to Food Sci Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "15:30",
+   "end": "18:20",
+   "room": "School of Engineering 126"
+  }
+ ]
+}
