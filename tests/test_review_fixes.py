@@ -340,6 +340,35 @@ class TestUnpublishedTermsAreNamed:
         assert 'Spring 2027 and Summer 2027' in many
 
 
+class TestBuilderScriptHasNoDuplicateDeclarations:
+    """Adding the catalog picker declared `const stamp` a second time. That is
+    a SyntaxError, and it kills the *entire* builder script -- every feature at
+    once, silently, with the page still rendering perfectly. Every substring
+    test still passed; only opening a browser found it.
+
+    Same family as the literal CR/LF bug in `test_phase1_fixes`. Both are
+    "the JS lives inside a Python string and nothing type-checks it"."""
+
+    @staticmethod
+    def _top_level_declarations(page):
+        body = page[page.index('(() => {'):]
+        body = body[:body.index('\n})();')]
+        # Declarations at the IIFE's own scope are indented exactly two spaces.
+        return re.findall(r'^  (?:const|let)\s+([A-Za-z_$][\w$]*)\s*=', body, re.M)
+
+    def test_no_name_is_declared_twice(self, page):
+        names = self._top_level_declarations(page)
+        dupes = sorted({n for n in names if names.count(n) > 1})
+        assert dupes == [], f'redeclared in one scope, a SyntaxError: {dupes}'
+
+    def test_the_check_can_actually_see_declarations(self, page):
+        """Guard the guard: if the indentation convention changes this test
+        would pass by finding nothing at all."""
+        names = self._top_level_declarations(page)
+        assert len(names) > 15
+        assert 'stamp' in names and 'catStamp' in names
+
+
 class TestPageHardening:
     def test_the_grid_cannot_close_its_own_script_block(self, years):
         ay = next(a for a in years if a.academic_year == '2026-2027')
@@ -349,7 +378,7 @@ class TestPageHardening:
         try:
             p = emit.to_index_html(years, TODAY).decode()
             assert '</script><img' not in p
-            assert p.count('<script') == 3
+            assert p.count('<script') == 4
         finally:
             t.events[0].label = was
 

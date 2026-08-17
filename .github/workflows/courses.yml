@@ -1,0 +1,86 @@
+# Refresh course meeting patterns from RWU's public course catalog.
+#
+# Weekly, not nightly. Roger Central is a production student-services system,
+# a full term is ~850 requests, and every one is paced a second apart. There is
+# no version of this that needs to be fast.
+#
+# The result is COMMITTED, exactly like data/*.yaml: what is published is what
+# is in git, the site build never touches the network, and a run that fails
+# leaves the last good data serving. The commit diff is also the record of
+# which sections moved.
+name: refresh courses
+
+on:
+  schedule:
+    - cron: '41 9 * * 2'        # Tuesdays, 09:41 UTC
+  workflow_dispatch:
+    inputs:
+      term:
+        description: 'Term code, e.g. 26/FA. Blank pulls every term that overlaps the calendar.'
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-courses        # never two pulls at once against RWU
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -e .
+
+      - name: Work out which terms to pull
+        id: terms
+        env:
+          REQUESTED: ${{ inputs.term }}
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os, pathlib
+          from rwu_calendar import courses, emit, serialize
+
+          requested = (os.environ.get('REQUESTED') or '').strip()
+          if requested:
+              print(f'list={json.dumps([requested])}')
+              raise SystemExit
+
+          # Only terms our own calendar covers, and only those RWU has actually
+          # published. Grows on its own as they post Winter and Spring.
+          years = serialize.load_dir(pathlib.Path('data'))
+          current = emit.pick_current(years, __import__('datetime').date.today())
+          ours = {courses.rc_term_slug(t.split('::')[0])
+                  for t in (emit.meeting_grid(current) if current else {})}
+          _subjects, live = courses.subjects_and_terms()
+          want = [code for code, _label, _n in live
+                  if courses.term_slug(code) in ours]
+          print(f'list={json.dumps(want)}')
+          PY
+
+      - name: Pull
+        run: |
+          for term in $(echo '${{ steps.terms.outputs.list }}' | python -c 'import json,sys; print(" ".join(json.load(sys.stdin)))'); do
+            echo "::group::$term"
+            rwu-calendar courses --term "$term" --delay 1.0
+            echo "::endgroup::"
+          done
+
+      - name: Commit if anything moved
+        run: |
+          if [ -z "$(git status --porcelain data/courses)" ]; then
+            echo "no change"; exit 0
+          fi
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/courses
+          git commit -m "chore(courses): weekly refresh from Roger Central
+
+          Meeting patterns only. Instructor names, seat counts and enrolment
+          are not collected."
+          git push

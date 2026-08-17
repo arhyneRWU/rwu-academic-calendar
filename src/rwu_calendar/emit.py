@@ -18,6 +18,7 @@ from pathlib import Path
 
 from icalendar import Calendar, Event as IcsEvent
 
+from . import courses
 from .model import TERMS, AcademicYear, Event, Term, link
 
 PRODID = '-//arhyneRWU//RWU Academic Calendar (unofficial)//EN'
@@ -562,6 +563,21 @@ follows the university's class schedule. Check the preview below before you
 download: it names every date you gain and every date you lose.</p>
 </details>
 
+<!-- Only shown for terms whose course data has been pulled; hidden by
+     default so the builder is unchanged when there is none. -->
+<div id="catalog" class="catalog" hidden>
+<p><strong>Add a course from the catalog</strong>
+<span class="tiny" id="catalog-stamp"></span></p>
+<div class="crow">
+<label>Subject <select id="cat-subject"></select></label>
+<label class="grow">Course <select id="cat-section" disabled></select></label>
+<button type="button" id="cat-add" class="btn alt" disabled>Add</button>
+</div>
+<p class="tip" id="cat-note">Days, times and room come from Roger Central.
+The <em>dates</em> come from the academic calendar above, so holidays and the
+day swap are already handled. Check anything that moved during add/drop.</p>
+</div>
+
 <div id="courses"></div>
 <p>
 <button type="button" id="add" class="btn alt">+ Add another item</button>
@@ -846,10 +862,82 @@ _BUILDER_JS = r"""
     return out.map(fold).join('\r\n') + '\r\n';   // RFC 5545 wants CRLF
   }
 
+  // ---- catalog picker -------------------------------------------------
+  // Course data is fetched from THIS site, one small file per subject, only
+  // when a subject is chosen. It supplies days, times and room. It never
+  // supplies dates: Roger Central's section range runs through finals week
+  // (Fall 2026 ends 12-09 there, 12-02 here), so using it would hand everyone
+  // an extra week of classes that do not exist. The grid decides dates.
+  const CATALOG = JSON.parse(document.getElementById('catalog-map').textContent);
+  const box = document.getElementById('catalog');
+  const subjSel = document.getElementById('cat-subject');
+  const sectSel = document.getElementById('cat-section');
+  const addBtn = document.getElementById('cat-add');
+  const catStamp = document.getElementById('catalog-stamp');
+  const cache = new Map();
+  let loaded = [];
+
+  const base = () => `courses/${CATALOG[termSel.value]}`;
+
+  async function loadIndex() {
+    const slug = CATALOG[termSel.value];
+    box.hidden = !slug;
+    if (!slug) return;
+    sectSel.innerHTML = ''; sectSel.disabled = true; addBtn.disabled = true;
+    subjSel.innerHTML = '<option value="">Choose a subject…</option>';
+    try {
+      const idx = await (await fetch(`${base()}/index.json`)).json();
+      for (const s of idx.subjects)
+        subjSel.add(new Option(`${s.code} (${s.count})`, s.code));
+      catStamp.textContent = idx.retrieved ? `pulled ${idx.retrieved}` : '';
+    } catch (e) { box.hidden = true; }
+  }
+
+  async function loadSubject() {
+    loaded = []; sectSel.innerHTML = ''; sectSel.disabled = true; addBtn.disabled = true;
+    if (!subjSel.value) return;
+    const url = `${base()}/${subjSel.value}.json`;
+    try {
+      if (!cache.has(url)) cache.set(url, await (await fetch(url)).json());
+      loaded = cache.get(url).sections || [];
+    } catch (e) { sectSel.add(new Option('could not load', '')); return; }
+    sectSel.add(new Option(`Choose one of ${loaded.length}…`, ''));
+    loaded.forEach((s, i) => sectSel.add(new Option(
+      `${s.section} ${s.title} — ${s.days.map(d => d.slice(0,3)).join('/')} `
+      + `${s.start}-${s.end}${s.room ? ' · ' + s.room : ''}`, String(i))));
+    sectSel.disabled = false;
+  }
+
+  subjSel.addEventListener('change', loadSubject);
+  sectSel.addEventListener('change', () => { addBtn.disabled = sectSel.value === ''; });
+  addBtn.addEventListener('click', () => {
+    const s = loaded[Number(sectSel.value)];
+    if (!s) return;
+    // Reuse the first row if it is still untouched, so the common case is one
+    // click rather than one click plus deleting an empty row.
+    const first = courses.firstElementChild;
+    const blank = first && !first.querySelector('[name=name]').value.trim()
+                        && !first.querySelectorAll('[name=day]:checked').length;
+    const row = blank ? first : addItem(read().pop());
+    row.querySelector('[name=name]').value = `${s.section} ${s.title}`.trim();
+    row.querySelector('[name=room]').value = s.room || '';
+    row.querySelector('[name=start]').value = s.start;
+    row.querySelector('[name=end]').value = s.end;
+    for (const cb of row.querySelectorAll('[name=day]')) cb.checked = s.days.includes(cb.value);
+    const weekend = s.days.filter(d => d === 'saturday' || d === 'sunday');
+    row.querySelector('[name=repeat]').value = 'weekly';
+    update();
+    if (weekend.length) alert(
+      `${s.section} meets on ${weekend.join(' and ')}, which this builder cannot `
+      + `schedule yet — the academic calendar grid covers weekdays only. `
+      + `The weekday part has been added.`);
+  });
+
   document.getElementById('add').addEventListener('click', () => {
     addItem(read().pop()); update();
   });
-  termSel.addEventListener('change', update);
+  termSel.addEventListener('change', () => { update(); loadIndex(); });
+  loadIndex();
 
   document.getElementById('sched').addEventListener('submit', ev => {
     ev.preventDefault();
@@ -894,9 +982,11 @@ if (navigator.clipboard) {
 """
 
 
-def to_index_html(years: list[AcademicYear], today: _dt.date | None = None) -> bytes:
+def to_index_html(years: list[AcademicYear], today: _dt.date | None = None,
+                  catalog: dict[str, list[str]] | None = None) -> bytes:
     """A plain landing page for GitHub Pages. No assets, no external requests."""
     today = today or _dt.date.today()
+    catalog = catalog or {}
     current = pick_current(years, today)
     others = [ay for ay in years if ay is not current]
     src = years[0].source_url if years else ''
@@ -932,6 +1022,15 @@ featured year once the current one's spring term ends.</p>
     # under "Current academic year" and looks maintained when it is not. A
     # calendar that is quietly a year out of date is worse than one that is
     # obviously missing, so say it at the top, above everything.
+    # Which of the grid's terms have course data pulled. Only terms RWU has
+    # actually published appear, so this grows on its own rather than needing a
+    # code change each time they post another term.
+    course_terms = {tid: slug for tid, slug in
+                    ((t, courses.rc_term_slug(t.split('::')[0]))
+                     for t in (meeting_grid(current) if current else {}))
+                    if slug and slug in catalog}
+    course_map = json.dumps(course_terms, separators=(',', ':')).replace('<', '\\u003c')
+
     stale = bool(current and is_retired(current, today))
     eyebrow = 'Most recent academic year' if stale else 'Current academic year'
     stale_banner = (f"""
@@ -1059,6 +1158,13 @@ site yet, so <strong>do not plan against it</strong> — check the
  .chk {{ flex-direction: row !important; align-items: center; gap: .35rem;
         text-transform: none !important; color: inherit !important;
         font-weight: 600 !important; font-size: .92rem !important; }}
+ .catalog {{ border: 1px solid var(--line); border-radius: 8px;
+            padding: .8rem 1rem; margin: 1rem 0; }}
+ .catalog p {{ margin: 0 0 .5rem; }}
+ .catalog .crow {{ align-items: end; }}
+ .catalog select {{ max-width: 100%; }}
+ #cat-section {{ min-width: 0; }}
+ #cat-note {{ margin: .6rem 0 0; }}
  details.explain {{ margin: 1rem 0; background: #8881; }}
  details.explain summary {{ font-weight: 600; }}
  details.explain p {{ font-size: .93rem; margin: .6rem 0; }}
@@ -1155,7 +1261,13 @@ a download. Nothing is uploaded, stored, or sent anywhere.</p>
 <li>No third-party requests — no CDN, no web fonts, no embedded widgets.
 This page loads nothing from any other host.</li>
 <li>No form that submits anywhere. There is no server to submit to.</li>
+<li>Choosing a subject in the course picker reads one small file
+<em>from this site</em> — the published course list. That is a download, not
+an upload: nothing you typed is part of the request.</li>
 </ul>
+<p>The course lists are meeting patterns only — section, title, days, times and
+room. Instructor names, seat counts and enrolment are deliberately not
+collected, and are not in the published files.</p>
 <p>You can check all of this yourself: view the page source, or open your
 browser's network tab and watch it stay empty while you use the builder.</p>
 <p>The full policy — threat model, dependency posture, and how to report a
@@ -1178,6 +1290,7 @@ no longer what this page leads with.</p>
 Last extracted from rwu.edu: {_e(current.retrieved) if current else '—'}
 </footer>
 <script type="application/json" id="grid">{grid}</script>
+<script type="application/json" id="catalog-map">{course_map}</script>
 {_BUILDER_JS}
 {_COPY_JS}
 </body></html>
@@ -1209,8 +1322,38 @@ def _only_term(ay: AcademicYear, term_id: str) -> AcademicYear:
     return link(out)
 
 
+def _copy_courses(src: Path, out: Path) -> list[Path]:
+    """Publish the committed course files, plus a per-term index.
+
+    One file per subject, fetched only when someone picks that subject, so the
+    landing page stays small. Copied rather than regenerated because — exactly
+    like ``data/*.yaml`` — what is published is what is in git, and the build
+    never touches the network.
+    """
+    written: list[Path] = []
+    if not src.exists():
+        return written
+    for term_slug, subjects in sorted(courses.available(src).items()):
+        dest = out / 'courses' / term_slug
+        dest.mkdir(parents=True, exist_ok=True)
+        index = {'term': term_slug, 'subjects': [], 'retrieved': None}
+        for subject in subjects:
+            doc = json.loads((src / term_slug / f'{subject}.json').read_text('utf-8'))
+            p = dest / f'{subject}.json'
+            p.write_text(json.dumps(doc, separators=(',', ':')) + '\n', encoding='utf-8')
+            written.append(p)
+            index['subjects'].append({'code': subject,
+                                      'count': len(doc.get('sections') or [])})
+            index['retrieved'] = doc.get('retrieved') or index['retrieved']
+        p = dest / 'index.json'
+        p.write_text(json.dumps(index, separators=(',', ':')) + '\n', encoding='utf-8')
+        written.append(p)
+    return written
+
+
 def build(years: list[AcademicYear], outdir: str | Path,
-          today: _dt.date | None = None) -> list[Path]:
+          today: _dt.date | None = None,
+          course_data: str | Path | None = None) -> list[Path]:
     out = Path(outdir)
     out.mkdir(parents=True, exist_ok=True)
     written: list[Path] = []
@@ -1238,6 +1381,9 @@ def build(years: list[AcademicYear], outdir: str | Path,
             single = _only_term(ay, t.id)
             w(f'{t.id}.ics', to_ics([single], f'RWU {_term_title(t)} (unofficial)'))
             w(f'{t.id}.json', to_json([single]))
-    w('index.html', to_index_html(years, today))
+    src = Path(course_data) if course_data else Path(__file__).resolve().parents[2] / 'data' / 'courses'
+    catalog = courses.available(src)
+    written += _copy_courses(src, out)
+    w('index.html', to_index_html(years, today, catalog=catalog))
     w('.nojekyll', b'')     # Pages would otherwise skip nothing here, but be explicit
     return written

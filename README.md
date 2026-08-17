@@ -197,6 +197,42 @@ These are reported, not corrected and not fatal: the dates are taken as
 authoritative and the printed weekday is treated as the typo. Run
 `rwu-calendar validate` to see the current list.
 
+## Course meeting patterns
+
+The schedule builder can fill a course in for you. Pick the term, the subject
+and the section, and its days, times and room are filled from RWU's public
+[course catalog][cat] — the same pages anyone can browse without logging in.
+
+Five fields are collected and no others:
+
+```json
+{"section": "BIO.101.01", "title": "Biological Investigations W/La",
+ "days": ["monday", "wednesday", "friday"],
+ "start": "09:00", "end": "09:50", "room": "Marine & Natural Sciences Bldg 210"}
+```
+
+**Instructor names, seat counts and enrolment are deliberately not collected.**
+They are in the source payload; they are not read, not stored and not
+published. A meeting pattern is a fact about a room and a clock.
+
+**Dates never come from the catalog.** Roger Central's section range runs
+through finals week — Fall 2026 ends `12-09` there and `12-02` here — so using
+it would hand everyone an extra week of classes that do not exist. The catalog
+supplies the pattern; the academic calendar supplies the dates, with holidays
+removed and the day swap applied.
+
+Refreshed weekly by CI, committed to `data/courses/`, and paced one request a
+second with a `User-Agent` naming this project. Course data goes stale in a way
+the academic calendar does not — sections move during add/drop — so the page
+shows when it was pulled and says to check Roger Central.
+
+[cat]: https://collselfsrvprod.rwu.edu/Student/Courses
+
+```bash
+rwu-calendar courses --list              # terms and subjects RWU publishes
+rwu-calendar courses --term 26/FA        # pull one term (~15 minutes)
+```
+
 ## Local use
 
 ```bash

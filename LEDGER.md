@@ -16,6 +16,27 @@ unit test alone is `fixed`, not `verified`.
 | H2 | **Tell the Registrar this exists.** | It carries RWU's name, is published from a personal account, and is aimed at RWU students. The disclaimer is prominent and scraping a public page is fine, but a conversation had beforehand beats one had during a mid-semester divergence. The weekly drift job is the good thing to point at. |
 | H3 | The drift job's **issue-opening branch has never fired** — only the no-drift path is proven (run 31950932130, green). | Needs real divergence, or a deliberate edit to `data/` to force it. Straightforward code, but unwatched. |
 
+## Course catalog picker — 2026-08-16
+
+Added after production readiness. Scope decided deliberately: **five fields,
+no people.** Roger Central's payload carries instructor names, seat counts and
+enrolment; none are read, stored or published, and there are tests asserting
+both that the source still has them and that our files do not.
+
+| # | What | State |
+|---|---|---|
+| C1 | Adding the picker declared `const stamp` a second time — a SyntaxError that killed the **entire** builder script while the page still rendered perfectly. Every substring test passed. | **verified** — renamed; `TestBuilderScriptHasNoDuplicateDeclarations` now parses the IIFE's own scope and fails on any redeclaration, with a guard-the-guard test so it cannot pass by finding nothing |
+| C2 | First draft read `PlannedMeetings`, which does not exist on the response. | fixed before shipping — the real list is `FormattedMeetingTimes`; tested against an unedited captured response |
+| C3 | `Meetings[].StartTime` is an ISO datetime stamped with *today's* date in UTC — right only by accident, wrong across DST. | fixed — read `FormattedMeetingTimes`, which is already 24-hour local |
+| C4 | Colleague sends booleans as the strings `'True'`/`'False'`; both are truthy in Python, so the naive check fails open and schedules every TBD section. | fixed — `_truthy()`, with a test asserting `bool('False') is True` so the trap stays documented |
+| C5 | A long pull saved only at the end, so a timeout at subject 100 discarded ~15 minutes of paced requests. | fixed — writes per subject as it goes |
+| C6 | The existing test asserted the builder issues **no** network request. The picker fetches course lists, so that claim needed to change rather than be deleted. | **verified** — now asserts no XHR/beacon/socket/POST at all, that both fetches are relative paths built from one helper, and that nothing the user types is ever a fetch argument |
+
+**Known limit, not a defect:** course data goes stale during add/drop in a way
+the academic calendar never does. The page stamps when it was pulled and says
+to check Roger Central. A weekly refresh is the deliberate cadence — nightly
+would be a standing load on a production student system for no real gain.
+
 ## Production readiness — 2026-08-16
 
 Asked and answered: the feeds were ready, the builder was not. Three gaps

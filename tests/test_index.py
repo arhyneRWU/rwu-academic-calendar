@@ -163,9 +163,9 @@ class TestContent:
         """Dependency-free: no CDN, no fonts, no external scripts. The one
         inline script is progressive enhancement for the copy buttons."""
         assert '<script src' not in page.lower()
-        # three inline blocks: the embedded meeting grid, the schedule
-        # builder, and the copy buttons. All same-origin, none fetched.
-        assert page.lower().count('<script') == 3
+        # Four inline blocks, all same-origin and none fetched: the meeting
+        # grid, the catalog term map, the schedule builder, the copy buttons.
+        assert page.lower().count('<script') == 4
         for bad in ('http://', 'cdn.', 'fonts.googleapis', '<link rel="stylesheet"'):
             assert bad not in page, bad
 
@@ -226,11 +226,45 @@ class TestSecurity:
         for api in ('localStorage', 'sessionStorage', 'document.cookie', 'indexedDB'):
             assert api not in page, api
 
-    def test_builder_never_issues_a_network_request(self, page):
-        """The claim on the page is that nothing leaves the browser. If a
-        fetch ever appears, that claim becomes false."""
-        for api in ('fetch(', 'XMLHttpRequest', 'navigator.sendBeacon', 'WebSocket'):
+    def test_the_builder_sends_nothing_anywhere(self, page):
+        """The claim is that nothing you type leaves the browser, and that
+        remains absolute: no beacon, no socket, no XHR, no upload.
+
+        The catalog picker does `fetch` course lists -- but only from this
+        site, only paths, and only after you choose a subject. It is a read of
+        published files, not a transmission of anything you entered. The
+        assertions below are what keeps that distinction honest.
+        """
+        for api in ('XMLHttpRequest', 'sendBeacon', 'WebSocket', 'FormData',
+                    "method:'POST'", 'method: "POST"'):
             assert api not in page, api
+
+    @staticmethod
+    def _fetch_sites(page):
+        """Every fetch call site, to end of line. Not a paren-balanced match:
+        `fetch(`${base()}/index.json`)` contains nested parens and a naive
+        `[^)]*` truncates it to `` `${base( `` and proves nothing."""
+        import re
+        return [line.strip() for line in page.splitlines() if 'fetch(' in line]
+
+    def test_the_page_fetches_only_the_course_lists(self, page):
+        sites = self._fetch_sites(page)
+        assert len(sites) == 2, f'expected the index and one subject file: {sites}'
+        for s in sites:
+            arg = s.split('fetch(')[1]
+            assert 'http' not in arg and '//' not in arg[:40], f'absolute URL: {s}'
+        # Both URLs are built from one helper, so there is a single place a
+        # host could ever be introduced, and it is a relative path.
+        assert "const base = () => `courses/${CATALOG[termSel.value]}`;" in page
+        assert 'fetch(`${base()}/index.json`)' in page
+        assert 'const url = `${base()}/${subjSel.value}.json`;' in page
+
+    def test_nothing_the_user_types_is_ever_fetched(self, page):
+        """Course names and rooms are the user's own data. They may reach the
+        generated file and nothing else."""
+        for s in self._fetch_sites(page):
+            for user_field in ('c.name', 'c.room', 'read()', 'rows'):
+                assert user_field not in s, s
 
     def test_privacy_section_and_policy_link_are_present(self, page):
         assert 'id="privacy"' in page

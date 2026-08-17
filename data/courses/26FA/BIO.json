@@ -1,0 +1,427 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "26/FA",
+ "subject": "BIO",
+ "retrieved": "2026-08-16",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "BIO.101.01",
+   "title": "Biological Investigations W/La",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "Marine & Natural Sciences Bldg 210"
+  },
+  {
+   "section": "BIO.101.02",
+   "title": "Biological Investigations W/La",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "08:50",
+   "room": "Marine & Natural Sciences Bldg 210"
+  },
+  {
+   "section": "BIO.101L.51",
+   "title": "Biological Investigations Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Marine & Natural Sciences Bldg 207"
+  },
+  {
+   "section": "BIO.101L.61",
+   "title": "Biological Investigations Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 207"
+  },
+  {
+   "section": "BIO.101L.62",
+   "title": "Biological Investigations Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "10:50",
+   "room": "Marine & Natural Sciences Bldg 207"
+  },
+  {
+   "section": "BIO.103.01",
+   "title": "Intro to Molec & Cell Biology",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "BIO.103.02",
+   "title": "Intro to Molec & Cell Biology",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Marine & Natural Sciences Bldg 200"
+  },
+  {
+   "section": "BIO.103.03",
+   "title": "Intro to Molec & Cell Biology",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 200"
+  },
+  {
+   "section": "BIO.103.04",
+   "title": "Intro to Molec & Cell Biology",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "Gabelli School of Business G01"
+  },
+  {
+   "section": "BIO.103.05",
+   "title": "Intro to Molec & Cell Biology",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "Marine & Natural Sciences Bldg 200"
+  },
+  {
+   "section": "BIO.103L.51",
+   "title": "Intro to Molec & Cell Bio Lab",
+   "days": [
+    "monday"
+   ],
+   "start": "18:00",
+   "end": "20:50",
+   "room": "Marine & Natural Sciences Bldg 103"
+  },
+  {
+   "section": "BIO.103L.52",
+   "title": "Intro to Molec & Cell Bio Lab",
+   "days": [
+    "monday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 103"
+  },
+  {
+   "section": "BIO.103L.53",
+   "title": "Intro to Molec & Cell Bio Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "08:00",
+   "end": "10:50",
+   "room": "Marine & Natural Sciences Bldg 103"
+  },
+  {
+   "section": "BIO.103L.54",
+   "title": "Intro to Molec & Cell Bio Lab",
+   "days": [
+    "monday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Marine & Natural Sciences Bldg 103"
+  },
+  {
+   "section": "BIO.103L.55",
+   "title": "Intro to Molec & Cell Bio Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Marine & Natural Sciences Bldg 103"
+  },
+  {
+   "section": "BIO.103L.61",
+   "title": "Intro to Molec & Cell Bio Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "Marine & Natural Sciences Bldg 103"
+  },
+  {
+   "section": "BIO.103L.62",
+   "title": "Intro to Molec & Cell Bio Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 103"
+  },
+  {
+   "section": "BIO.103L.64",
+   "title": "Intro to Molec & Cell Bio Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Marine & Natural Sciences Bldg 103"
+  },
+  {
+   "section": "BIO.103L.65",
+   "title": "Intro to Molec & Cell Bio Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 103"
+  },
+  {
+   "section": "BIO.215.01",
+   "title": "Human Anat & Phys I",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "Marine & Natural Sciences Bldg 200"
+  },
+  {
+   "section": "BIO.215L.51",
+   "title": "Human Anat & Phys I Lab",
+   "days": [
+    "monday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 207"
+  },
+  {
+   "section": "BIO.215L.52",
+   "title": "Human Anat & Phys I Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "08:00",
+   "end": "10:50",
+   "room": "Marine & Natural Sciences Bldg 207"
+  },
+  {
+   "section": "BIO.220.01",
+   "title": "Marine Vertebrate Zoo",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "BIO.220L.51",
+   "title": "Marine Vert Zoo Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 107"
+  },
+  {
+   "section": "BIO.230.01",
+   "title": "Microbiology and Lab",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "College of Arts and Sciences 127"
+  },
+  {
+   "section": "BIO.230L.51",
+   "title": "Microbiology Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "17:00",
+   "room": "Marine & Natural Sciences Bldg 207"
+  },
+  {
+   "section": "BIO.230L.52",
+   "title": "Microbiology Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "Marine & Natural Sciences Bldg 207"
+  },
+  {
+   "section": "BIO.320.01",
+   "title": "Marine Ecology",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "BIO.320L.51",
+   "title": "Marine Ecology Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "10:50",
+   "room": "Marine & Natural Sciences Bldg 107"
+  },
+  {
+   "section": "BIO.340.01",
+   "title": "Biotechnology",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "ELS 112"
+  },
+  {
+   "section": "BIO.340L.51",
+   "title": "Biotechnology Lab",
+   "days": [
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 207"
+  },
+  {
+   "section": "BIO.345.01",
+   "title": "Aquaculture",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "BIO.355.01",
+   "title": "Marine Phycology",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "08:50",
+   "room": "College of Arts and Sciences 162"
+  },
+  {
+   "section": "BIO.355L.51",
+   "title": "Marine Phycology Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "08:00",
+   "end": "10:50",
+   "room": "Marine & Natural Sciences Bldg 107"
+  },
+  {
+   "section": "BIO.355L.52",
+   "title": "Marine Phycology Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Marine & Natural Sciences Bldg 107"
+  },
+  {
+   "section": "BIO.362.01",
+   "title": "Animal Behavior",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "College of Arts and Sciences 222"
+  },
+  {
+   "section": "BIO.375.01",
+   "title": "Soil Ecology",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 212"
+  },
+  {
+   "section": "BIO.390.01",
+   "title": "Biochemistry",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 213"
+  },
+  {
+   "section": "BIO.390L.51",
+   "title": "Biochemistry Lab",
+   "days": [
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Marine & Natural Sciences Bldg 207"
+  }
+ ]
+}

@@ -137,6 +137,24 @@ sharing a date and label, and unions their fields rather than taking the first
 — in 2024 one copy read "office Closed" (singular) while its siblings read
 "Offices", so first-wins made the office status a coin toss.
 
+**10. There is a second data source now, with opposite properties.**
+`courses.py` pulls meeting patterns from Roger Central (Ellucian Colleague
+Self-Service, public, no login). The academic calendar is ~470 rows that change
+once a year; the course catalog is thousands of sections that change daily
+during add/drop. Both are committed and both are scraped out-of-band, but only
+the calendar can be treated as settled. Three things to know:
+
+- **Dates never come from the catalog.** Its section range includes finals week
+  (Fall 2026 ends `12-09` there, `12-02` here). Date fields are not collected
+  at all, which is the cheapest possible guarantee.
+- **Five fields, on purpose.** Instructor names, seat counts and enrolment are
+  in the payload and are not taken. `tests/test_courses.py` asserts both that
+  the source still contains them and that our files do not.
+- **Read `FormattedMeetingTimes`, never `Meetings`.** The latter's `StartTime`
+  is an ISO datetime stamped with *today's* date in UTC. And Colleague sends
+  booleans as the strings `'True'`/`'False'`, which are both truthy in Python —
+  that mistake fails open and schedules every TBD section.
+
 ## Deliberately not built
 
 - **"Nth weekday of the month"** — no defensible default when the first
