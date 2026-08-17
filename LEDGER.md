@@ -20,8 +20,9 @@ unit test alone is `fixed`, not `verified`.
 
 Three complaints — "it's just iPhone I think", "the courses added is
 strange", and "it feels like you're restricted to just scheduled classes" —
-turned out to be five bugs, three of them CSS and one a default that stopped
-being right the moment the catalog picker existed.
+turned out to be eight bugs: three CSS, one default that stopped being right
+the moment the catalog picker existed, and three actions that did their work
+in silence.
 
 | # | What | State |
 |---|---|---|
@@ -30,6 +31,9 @@ being right the moment the catalog picker existed.
 | U3 | **Horizontal scroll on a phone**, 852px against a 375 viewport — but only *after* choosing a subject. A flex item defaults to `min-width:auto` and will not shrink below its content, and the picker's longest option is a whole section line. An earlier mobile check passed because it never loaded a subject. | **verified** — `min-width: 0`; re-checked at 375px with a subject loaded |
 | U4 | **`DTSTAMP` frozen at `20000101`.** Correct for the published feeds, where a fixed stamp keeps rebuilds diffing clean — wrong for a personal download, because a client comparing timestamps reads a re-import as no newer than what it holds and declines to update. That silently broke the one thing content-derived UIDs exist for. | **verified** — real stamp plus `SEQUENCE:0` |
 | U5 | **The builder opened with a blank, class-shaped row and a `+ Add another item` button.** Sitting directly under the catalog picker with no heading of its own, it read as *the other way to add a course*, and "another item" inherited that meaning — so office hours, meetings, clubs and work shifts looked out of scope until you clicked and read the placeholder. The catalog dropdown now handles classes, which makes a class-shaped default actively wrong. | **verified** — two labelled boxes (*Your classes* from the catalog, *Anything else that repeats* with examples), no row built until someone asks for one, and an empty-state line so an empty list does not look broken. Checked at 375px with a catalog course added, and both submit paths re-run in the browser |
+| U6 | **Pressing *Add* in the catalog said nothing.** The course was added correctly, but the list sits below the fold on a phone, so the only evidence was off-screen — and the picker kept the course selected, so a second press looked like the way to make something happen. | **verified** — a `role="status"` line naming the section, the course picker cleared for the next one, and a two-second flash on the new row. Two courses added in a row in the browser |
+| U7 | **The download was a synthetic click on an anchor that never appeared on the page.** On a desktop that is the whole interaction; on iOS Safari and inside any in-app browser (Outlook's, Teams', Instagram's) it can be declined outright — and when it is, *nothing happens on screen at all*: no file, and no way to tell whether the button worked. Reported as "the download doesn't download a thing". | **verified** — the file is now offered as a **real link on the page** that stays there to be tapped, in a block that says so; the automatic click is still attempted first. The blob is fetched back and parsed in the browser: 2 VEVENTs, CRLF, no line over 75 octets |
+| U8 | The import instructions covered iPhone, Outlook desktop, Outlook web, Google and Mac Calendar — but not **Outlook on a phone**, which is the app most likely to be open when someone taps the file, and the one with no Import menu at all. | **verified** — says to import once at outlook.office.com and let it sync down, and warns that tapping the file lands it in Apple Calendar instead |
 
 **And the actual reason it felt iPhone-only:** the file was always a valid
 `.ics` that any app can read. But the page's only instructions were for

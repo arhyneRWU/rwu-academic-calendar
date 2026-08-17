@@ -508,3 +508,48 @@ class TestTheBuilderDoesNotDefaultToAClass:
     def test_submitting_an_empty_builder_explains_both_ways_in(self, page):
         assert 'Nothing to download yet' in page
         assert 'Add a class from the catalog, or add an item of your own' in page
+
+
+class TestTheBuilderSaysWhatItJustDid:
+    """Two silent actions, reported the same day: pressing Add gave no sign
+    anything happened (the new row lands below the fold on a phone), and
+    pressing Download gave no sign either — which on a platform that declines
+    a synthetic anchor click means no file AND no explanation."""
+
+    def test_adding_from_the_catalog_reports_and_resets(self, page):
+        js = page[page.index("addBtn.addEventListener"):]
+        js = js[:js.index('document.getElementById(\'add\')')]
+        assert 'said.textContent' in js and 'said.hidden = false' in js
+        assert 'sectSel.selectedIndex = 0' in js and 'addBtn.disabled = true' in js
+        assert "row.classList.add('just-added')" in js
+
+    def test_the_confirmation_is_announced_not_only_seen(self, page):
+        assert '<p class="said" id="cat-said" role="status" hidden></p>' in page
+        assert '<div id="done" class="done" role="status" hidden></div>' in page
+
+    def test_a_stale_confirmation_is_cleared_when_the_subject_changes(self, page):
+        block = page[page.index('async function loadSubject'):]
+        assert 'said.hidden = true' in block[:block.index('sectSel.disabled = false')]
+
+    def test_the_catalog_no_longer_hijacks_a_row_someone_added_by_hand(self, page):
+        # It reused a blank first row back when the builder always made one.
+        assert 'const blank = first' not in page
+
+    def test_the_download_link_is_real_and_stays_on_the_page(self, page):
+        block = page[page.index('function offer(text, name)'):]
+        block = block[:block.index('document.getElementById(\'sched\')')]
+        assert "a.download = name" in block and "done.append(a)" in block
+        assert "done.hidden = false" in block
+        # The automatic click is still attempted; it is just not the only route.
+        assert 'a.click()' in block
+
+    def test_only_one_blob_url_is_held_at_a_time(self, page):
+        block = page[page.index('function offer(text, name)'):]
+        assert 'if (lastUrl) URL.revokeObjectURL(lastUrl)' in block
+
+    def test_outlook_on_a_phone_is_covered(self, page):
+        block = page[page.index('How to import the file'):]
+        block = block[:block.index('</details>')]
+        assert 'Outlook on a phone' in block
+        assert 'cannot import a' in block and 'calendar file' in block
+        assert 'outlook.office.com' in block

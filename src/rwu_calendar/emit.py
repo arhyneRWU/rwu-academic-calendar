@@ -577,6 +577,7 @@ download: it names every date you gain and every date you lose.</p>
 <label class="grow">Course <select id="cat-section" disabled></select></label>
 <button type="button" id="cat-add" class="btn alt" disabled>Add</button>
 </div>
+<p class="said" id="cat-said" role="status" hidden></p>
 <p class="tip" id="cat-note">Days, times and room come from Roger Central.
 The <em>dates</em> come from the academic calendar above, so holidays and the
 day swap are already handled. Check anything that moved during add/drop.</p>
@@ -601,6 +602,7 @@ shifts, a class the catalog doesn't list — anything with days and a time.</p>
 your own.</p>
 
 <p><button type="submit" class="btn">Download my schedule</button></p>
+<div id="done" class="done" role="status" hidden></div>
 </form>
 <div id="preview" class="preview" aria-live="polite" hidden></div>
 
@@ -623,6 +625,13 @@ your own calendar.</p>
 <p><strong>Outlook on the web</strong> — <em>Calendar → Add calendar → Upload
 from file</em>, choose the file, pick which calendar it lands in, then
 <em>Import</em>.</p>
+
+<p><strong>Outlook on a phone</strong> — the Outlook app cannot import a
+calendar file; it has no Import menu at all. Import once at
+<a href="https://outlook.office.com/calendar">outlook.office.com</a> using the
+steps above and it syncs down to your phone within a few minutes. (Tapping the
+file on a phone will offer to open it in Apple Calendar instead, which works
+but puts it in a different calendar from your RWU one.)</p>
 
 <p><strong>Google Calendar</strong> — must be done on a computer;
 the mobile app cannot import a file. <em>Settings → Import &amp; export →
@@ -994,6 +1003,7 @@ _BUILDER_JS = r"""
   const subjSel = document.getElementById('cat-subject');
   const sectSel = document.getElementById('cat-section');
   const addBtn = document.getElementById('cat-add');
+  const said = document.getElementById('cat-said');
   const catStamp = document.getElementById('catalog-stamp');
   const cache = new Map();
   let loaded = [];
@@ -1016,6 +1026,7 @@ _BUILDER_JS = r"""
 
   async function loadSubject() {
     loaded = []; sectSel.innerHTML = ''; sectSel.disabled = true; addBtn.disabled = true;
+    said.hidden = true;
     if (!subjSel.value) return;
     const url = `${base()}/${subjSel.value}.json`;
     try {
@@ -1037,22 +1048,7 @@ _BUILDER_JS = r"""
   addBtn.addEventListener('click', () => {
     const s = loaded[Number(sectSel.value)];
     if (!s) return;
-    // Reuse the first row if it is still untouched, so the common case is one
-    // click rather than one click plus deleting an empty row.
-    const first = courses.firstElementChild;
-    const blank = first && !first.querySelector('[name=name]').value.trim()
-                        && !first.querySelectorAll('[name=day]:checked').length;
-    const row = blank ? first : addItem(read().pop(), {fromCatalog: true});
-    if (blank) {
-      const sum = row.querySelector('summary');
-      if (!sum.querySelector('.it-tag')) {
-        const tag = document.createElement('span');
-        tag.className = 'it-tag';
-        tag.textContent = 'from catalog';
-        sum.append(tag);
-      }
-      row.querySelector('.item').open = false;   // it is already filled in
-    }
+    const row = addItem(read().pop(), {fromCatalog: true});
     row.querySelector('[name=name]').value = `${s.section} ${s.title}`.trim();
     row.querySelector('[name=room]').value = s.room || '';
     row.querySelector('[name=start]').value = s.start;
@@ -1061,6 +1057,15 @@ _BUILDER_JS = r"""
     const weekend = s.days.filter(d => d === 'saturday' || d === 'sunday');
     row.querySelector('[name=repeat]').value = 'weekly';
     update();
+
+    // Adding used to be silent: the new row lands below the fold on a phone,
+    // so the only evidence was a list you could not see. Say what happened,
+    // clear the course picker for the next one, and flash the row itself.
+    said.textContent = `Added ${s.section} — it is in “Your schedule so far” below.`;
+    said.hidden = false;
+    sectSel.selectedIndex = 0; addBtn.disabled = true;
+    row.classList.add('just-added');
+    setTimeout(() => row.classList.remove('just-added'), 2000);
     if (weekend.length) alert(
       `${s.section} meets on ${weekend.join(' and ')}, which this builder cannot `
       + `schedule yet — the academic calendar grid covers weekdays only. `
@@ -1072,6 +1077,36 @@ _BUILDER_JS = r"""
   });
   termSel.addEventListener('change', () => { update(); loadIndex(); });
   loadIndex();
+
+  // A synthetic click on a detached anchor is not a reliable way to save a
+  // file: iOS Safari and every in-app browser (Outlook's, Teams', Instagram's)
+  // may decline it, and when they do nothing at all happens on screen. So the
+  // link is REAL and stays on the page for the user to tap. The automatic
+  // click is still attempted, because on a desktop it is the whole
+  // interaction; it is just no longer the only route to the file.
+  let lastUrl = null;
+  function offer(text, name) {
+    if (lastUrl) URL.revokeObjectURL(lastUrl);
+    lastUrl = URL.createObjectURL(new Blob([text],
+                {type: 'text/calendar;charset=utf-8'}));
+    const done = document.getElementById('done');
+    const a = document.createElement('a');
+    a.href = lastUrl; a.download = name; a.className = 'btn';
+    a.textContent = `Save ${name}`;
+    done.innerHTML = '<p><strong>Your file is ready.</strong> If nothing '
+      + 'downloaded on its own — phones and in-app browsers often block that '
+      + '— use this link:</p>';
+    done.append(a);
+    const tip = document.createElement('p');
+    tip.className = 'tip';
+    tip.innerHTML = 'Then open <em>How to import the file you just '
+      + 'downloaded</em> below. Outlook on a phone cannot import it; '
+      + 'the instructions say what to do instead.';
+    done.append(tip);
+    done.hidden = false;
+    a.click();
+    done.scrollIntoView({block: 'nearest'});
+  }
 
   document.getElementById('sched').addEventListener('submit', ev => {
     ev.preventDefault();
@@ -1087,13 +1122,7 @@ _BUILDER_JS = r"""
     if (bad) { alert(`"${bad.name}" ends at or before it starts.`); return; }
     const wrong = rows.find(c => badDates(c).length);
     if (wrong) { alert(`"${wrong.name}" has dates this tool cannot use. See the preview.`); return; }
-    const blob = new Blob([ics(termSel.value, rows)],
-                          {type: 'text/calendar;charset=utf-8'});
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = `my-schedule-${termSel.value}.ics`;
-    document.body.append(a); a.click(); a.remove();
-    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    offer(ics(termSel.value, rows), `my-schedule-${termSel.value}.ics`);
   });
 
   update();
@@ -1345,6 +1374,13 @@ site yet, so <strong>do not plan against it</strong> — check the
  .catalog select {{ max-width: 100%; width: 100%; }}
  #cat-section {{ min-width: 0; }}
  #cat-note {{ margin: .6rem 0 0; }}
+ .said {{ margin: .6rem 0 0; font-weight: 600; font-size: .92rem; }}
+ .just-added {{ animation: flash 2s ease-out; }}
+ @keyframes flash {{ from {{ background: #4f8cff33; }} to {{ background: transparent; }} }}
+ .done {{ border: 1px solid var(--line); border-radius: 8px;
+          padding: .8rem 1rem; margin: 1rem 0; }}
+ .done p {{ margin: 0 0 .6rem; }}
+ .done p:last-child {{ margin: .6rem 0 0; }}
  details.explain {{ margin: 1rem 0; background: #8881; }}
  details.explain summary {{ font-weight: 600; }}
  details.explain p {{ font-size: .93rem; margin: .6rem 0; }}
