@@ -540,6 +540,10 @@ _BUILDER_HTML = """
 that repeats. You get one calendar file with every occurrence worked out against
 the academic calendar. Nothing is uploaded; the file is made in your browser.</p>
 
+<ol class="steps">
+<li>Pick your term</li><li>Add your courses</li><li>Download and import</li>
+</ol>
+
 <form id="sched" autocomplete="off">
 <p><label><strong>Term</strong> <select id="term"></select></label></p>
 
@@ -585,10 +589,45 @@ day swap are already handled. Check anything that moved during add/drop.</p>
 </p>
 </form>
 <div id="preview" class="preview" aria-live="polite" hidden></div>
-<p class="tip">Times are saved as local wall-clock time, so an 11:00 meeting
-stays at 11:00 across the November clock change. This is a one-time download,
-not a subscription: it is built from your own entries, which no server here
-knows about. For the academic calendar itself, subscribe to a feed above.</p>
+
+<details><summary><strong>How to import the file you just downloaded</strong></summary>
+<p>The download is a standard <code>.ics</code> calendar file. Every app below can
+read it — but only iPhone opens it by tapping. On a computer you have to
+<em>import</em> it, which is a different menu in every app, and the step people
+miss.</p>
+
+<p><strong>iPhone / iPad</strong> — tap the downloaded file (Files → Downloads).
+Calendar opens and offers <em>Add All</em>. Choose which calendar to add them to.</p>
+
+<p><strong>Outlook, desktop (Windows or Mac)</strong> — do <em>not</em>
+double-click the file; that opens one appointment and drops the rest.
+<em>File → Open &amp; Export → Import/Export → Import an iCalendar (.ics) or
+vCalendar file → </em>pick the file<em> → Import</em>. Choosing
+<strong>Import</strong> rather than <em>Open as New</em> puts the classes in
+your own calendar.</p>
+
+<p><strong>Outlook on the web</strong> — <em>Calendar → Add calendar → Upload
+from file</em>, choose the file, pick which calendar it lands in, then
+<em>Import</em>.</p>
+
+<p><strong>Google Calendar</strong> — must be done on a computer;
+the mobile app cannot import a file. <em>Settings → Import &amp; export →
+Import</em>, choose the file and the destination calendar, then
+<em>Import</em>. It syncs to your phone afterwards.</p>
+
+<p><strong>Calendar on a Mac</strong> — <em>File → Import</em>, choose the file,
+then pick a calendar.</p>
+
+<p class="tip">Import puts a fixed copy in your calendar. It does not follow
+later changes — if your schedule changes, or RWU moves a date, build and import
+again. Re-importing updates the same events rather than duplicating them,
+because each one carries a name derived from the course itself.</p>
+</details>
+
+<p class="tip">Times are saved as local wall-clock time, so an 11:00 class stays
+at 11:00 across the November clock change. This is a one-time download, not a
+subscription: it is built from your own entries, which no server here knows
+about. For the academic calendar itself, subscribe to a feed below.</p>
 """
 
 _BUILDER_JS = r"""
@@ -620,10 +659,22 @@ _BUILDER_JS = r"""
   const mondayOf = s => { const d = dateOf(s); d.setDate(d.getDate() - ((d.getDay()+6)%7)); return d; };
   const weeksApart = (a, b) => Math.round((mondayOf(a) - mondayOf(b)) / 604800000);
 
-  function addItem(prev) {
+  // Each item is a <details>: collapsed it is one readable line, expanded it is
+  // the full form. Eight controls per course meant two courses filled the
+  // screen, and for a course that came from the catalog every one of them
+  // re-asked what the registrar had already answered. <details> rather than a
+  // JS toggle so it works before any script runs and needs no state of its own.
+  function addItem(prev, opts) {
+    const fromCatalog = !!(opts && opts.fromCatalog);
     const row = document.createElement('div');
     row.className = 'course';
     row.innerHTML = `
+      <details class="item"${fromCatalog ? '' : ' open'}>
+      <summary>
+        <span class="it-name">Untitled item</span>
+        <span class="it-meta">not set up yet</span>
+        ${fromCatalog ? '<span class="it-tag">from catalog</span>' : ''}
+      </summary>
       <div class="crow">
         <label class="grow">Name<input type="text" name="name" placeholder="e.g. BIO 320 Lecture, Office hours, Dept meeting"></label>
         <label>Room<input type="text" name="room" placeholder="optional"></label>
@@ -637,7 +688,6 @@ _BUILDER_JS = r"""
         <label>Remind<select name="alarm">${
           ALARMS.map(([v,l]) => `<option value="${v}"${v===(prev?prev.alarm:'PT15M')?' selected':''}>${l}</option>`).join('')
         }</select></label>
-        <button type="button" class="rm" title="Remove this item">Remove</button>
       </div>
       <div class="crow rules">
         <label>Repeats<select name="repeat">${
@@ -651,7 +701,9 @@ _BUILDER_JS = r"""
       <div class="crow datebox" hidden>
         <label class="grow">Dates, one per line as YYYY-MM-DD
           <textarea name="dates" rows="3" placeholder="2026-09-15&#10;2026-10-20"></textarea></label>
-      </div>`;
+      </div>
+      </details>
+      <button type="button" class="rm" title="Remove this item">Remove</button>`;
     row.querySelector('.rm').addEventListener('click', () => {
       row.remove(); if (!courses.children.length) addItem(); update();
     });
@@ -742,9 +794,50 @@ _BUILDER_JS = r"""
   const fmt = s => dateOf(s).toLocaleDateString(undefined,
       {weekday:'short', day:'numeric', month:'short', year:'numeric'});
 
+  // '09:00' -> '9:00 AM'. The form takes 24-hour input; the summary line reads
+  // better in the same clock people say out loud.
+  const hm12 = t => {
+    if (!t) return '';
+    const [H, M] = t.split(':').map(Number);
+    return `${((H + 11) % 12) + 1}:${pad(M)} ${H < 12 ? 'AM' : 'PM'}`;
+  };
+
+  // The collapsed line. It has to say enough that nobody needs to expand a row
+  // to check it, and say what is MISSING when the row is not usable yet --
+  // otherwise an incomplete item just silently fails to appear in the preview.
+  function describeItem(c) {
+    if (!c.name) return 'add a name';
+    if (c.repeat === 'dates') {
+      if (!c.dates.trim()) return 'no dates listed yet';
+      const bad = badDates(c);
+      if (bad.length) return `${bad.length} date${bad.length === 1 ? '' : 's'} not usable`;
+      const n = occurrences(termSel.value, c).length;
+      return `${n} listed date${n === 1 ? '' : 's'}`
+             + (c.start ? ` · ${hm12(c.start)}` : '') + (c.room ? ` · ${c.room}` : '');
+    }
+    if (!c.days.length) return 'pick the days it meets';
+    if (!c.start || !c.end) return 'add a start and end time';
+    const s = series(termSel.value, c);
+    const n = s ? s.meetings.length : 0;
+    return `${c.days.map(d => CODE[d]).join('')} ${hm12(c.start)}–${hm12(c.end)}`
+           + (c.room ? ` · ${c.room}` : '')
+           + ` · ${n} date${n === 1 ? '' : 's'}`;
+  }
+
+  function refreshItems(all) {
+    [...courses.children].forEach((row, i) => {
+      const c = all[i];
+      if (!c) return;
+      row.querySelector('.it-name').textContent = c.name || 'Untitled item';
+      row.querySelector('.it-meta').textContent = describeItem(c);
+    });
+  }
+
   function update() {
     const t = GRID[termSel.value];
-    const rows = read().filter(c => c.name && (c.repeat === 'dates' || c.days.length));
+    const all = read();
+    refreshItems(all);
+    const rows = all.filter(c => c.name && (c.repeat === 'dates' || c.days.length));
     if (!rows.length) { preview.hidden = true; return; }
     preview.hidden = false;
     preview.innerHTML = '<h3>What you will get</h3>' + rows.map(c => {
@@ -815,6 +908,13 @@ _BUILDER_JS = r"""
   function ics(termId, rows) {
     const out = ['BEGIN:VCALENDAR','VERSION:2.0',
       'PRODID:-//arhyneRWU//RWU Academic Calendar (unofficial)//EN','CALSCALE:GREGORIAN',
+      // METHOD:PUBLISH is what tells an importer this is a calendar to absorb
+      // rather than a meeting invitation to reply to; Outlook in particular is
+      // happier with it. X-WR-TIMEZONE tells Google and Outlook which zone to
+      // read the floating times in, which is the point of floating times: an
+      // 11:00 class stays at 11:00 through the November clock change.
+      'METHOD:PUBLISH',
+      'X-WR-TIMEZONE:America/New_York',
       'X-WR-CALNAME:' + esc('My schedule — ' + GRID[termId].label)];
     // Two rows can legitimately agree on name, days and start time -- the same
     // office hour held in two rooms, say. They used to hash to one UID, and a
@@ -831,9 +931,15 @@ _BUILDER_JS = r"""
       const key = uid(termId+'|'+c.name+'|'+c.days.join(',')+'|'+c.start+'|'+c.repeat);
       const n = (used.get(key) || 0) + 1;
       used.set(key, n);
+      // A real DTSTAMP, and SEQUENCE. The published feeds freeze DTSTAMP so a
+      // rebuild produces an empty git diff -- but this file is a personal
+      // download, nothing diffs it, and a stamp frozen in the year 2000 breaks
+      // the one thing UIDs are for: a client comparing timestamps sees a
+      // re-import as no newer than what it already has and declines to update.
       out.push('BEGIN:VEVENT',
         `UID:${key}${n > 1 ? '-' + n : ''}@rwu-academic-calendar`,
-        'DTSTAMP:20000101T000000Z',
+        `DTSTAMP:${new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d+/,'')}`,
+        'SEQUENCE:0',
         `DTSTART:${at(first)}`,
         `DTEND:${stamp(first)}T${c.end.replace(':','')}00`);
       if (s.byRule.length) {
@@ -902,9 +1008,12 @@ _BUILDER_JS = r"""
       loaded = cache.get(url).sections || [];
     } catch (e) { sectSel.add(new Option('could not load', '')); return; }
     sectSel.add(new Option(`Choose one of ${loaded.length}…`, ''));
+    // Same shape as the collapsed item line, so what you pick and what you
+    // then see listed read identically instead of one saying "wed 14:00-16:50"
+    // and the other "W 2:00 PM–4:50 PM".
     loaded.forEach((s, i) => sectSel.add(new Option(
-      `${s.section} ${s.title} — ${s.days.map(d => d.slice(0,3)).join('/')} `
-      + `${s.start}-${s.end}${s.room ? ' · ' + s.room : ''}`, String(i))));
+      `${s.section} ${s.title} — ${s.days.map(d => CODE[d] || '?').join('')} `
+      + `${hm12(s.start)}–${hm12(s.end)}${s.room ? ' · ' + s.room : ''}`, String(i))));
     sectSel.disabled = false;
   }
 
@@ -918,7 +1027,17 @@ _BUILDER_JS = r"""
     const first = courses.firstElementChild;
     const blank = first && !first.querySelector('[name=name]').value.trim()
                         && !first.querySelectorAll('[name=day]:checked').length;
-    const row = blank ? first : addItem(read().pop());
+    const row = blank ? first : addItem(read().pop(), {fromCatalog: true});
+    if (blank) {
+      const sum = row.querySelector('summary');
+      if (!sum.querySelector('.it-tag')) {
+        const tag = document.createElement('span');
+        tag.className = 'it-tag';
+        tag.textContent = 'from catalog';
+        sum.append(tag);
+      }
+      row.querySelector('.item').open = false;   // it is already filled in
+    }
     row.querySelector('[name=name]').value = `${s.section} ${s.title}`.trim();
     row.querySelector('[name=room]').value = s.room || '';
     row.querySelector('[name=start]').value = s.start;
@@ -948,7 +1067,8 @@ _BUILDER_JS = r"""
     if (bad) { alert(`"${bad.name}" ends at or before it starts.`); return; }
     const wrong = rows.find(c => badDates(c).length);
     if (wrong) { alert(`"${wrong.name}" has dates this tool cannot use. See the preview.`); return; }
-    const blob = new Blob([ics(termSel.value, rows)], {type: 'text/calendar'});
+    const blob = new Blob([ics(termSel.value, rows)],
+                          {type: 'text/calendar;charset=utf-8'});
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
     a.download = `my-schedule-${termSel.value}.ics`;
@@ -1051,6 +1171,11 @@ site yet, so <strong>do not plan against it</strong> — check the
  :root {{ color-scheme: light dark; --line:#8886; --accent:#2563eb; --warn:#c33; }}
  @media (prefers-color-scheme: dark) {{ :root {{ --accent:#7aa2f7; }} }}
  * {{ box-sizing: border-box; }}
+ /* The browser's own `[hidden] {{ display: none }}` loses to any author rule
+    that sets `display`, and `.crow` sets `display: flex`. The date-list
+    textarea was therefore visible on every course row, always, however the
+    Repeats menu was set. Nothing in the markup looked wrong. */
+ [hidden] {{ display: none !important; }}
  body {{ font: 16px/1.6 system-ui, -apple-system, sans-serif; max-width: 56rem;
         margin: 0 auto; padding: 2rem 1rem 4rem; }}
  h1 {{ margin-bottom: .2rem; }}
@@ -1123,18 +1248,50 @@ site yet, so <strong>do not plan against it</strong> — check the
          padding: .3rem .8rem; border-radius: 6px; border: 1px solid var(--line);
          background: transparent; color: inherit; }}
  .copy:hover {{ border-color: var(--accent); color: var(--accent); }}
- .course {{ border: 1px solid var(--line); border-radius: 8px; padding: .8rem 1rem;
-           margin: .75rem 0; }}
+ .course {{ border: 1px solid var(--line); border-radius: 8px;
+           margin: .75rem 0; display: flex; align-items: flex-start; gap: .5rem;
+           padding: .6rem .8rem; }}
+ .course .item {{ flex: 1 1 auto; min-width: 0; border: 0; padding: 0; margin: 0; }}
+ .course summary {{ cursor: pointer; display: flex; flex-wrap: wrap;
+                   align-items: baseline; gap: .5rem; }}
+ .it-name {{ font-weight: 700; }}
+ .it-meta {{ color: #8889; font-size: .9rem; }}
+ .it-tag {{ font-size: .68rem; font-weight: 700; text-transform: uppercase;
+           letter-spacing: .05em; padding: .1em .45em; border-radius: 99px;
+           background: color-mix(in srgb, var(--accent) 18%, transparent);
+           color: var(--accent); white-space: nowrap; }}
+ .course details[open] summary {{ margin-bottom: .75rem; }}
+ .steps {{ list-style: none; counter-reset: s; padding: 0; margin: 1.25rem 0 .5rem;
+          display: flex; flex-wrap: wrap; gap: .4rem 1.5rem; }}
+ .steps li {{ counter-increment: s; font-weight: 600; color: #8889; }}
+ .steps li::before {{ content: counter(s); display: inline-flex;
+   align-items: center; justify-content: center; width: 1.5em; height: 1.5em;
+   margin-right: .45em; border-radius: 50%; font-size: .8em;
+   background: color-mix(in srgb, var(--accent) 18%, transparent);
+   color: var(--accent); }}
  .crow {{ display: flex; flex-wrap: wrap; gap: .75rem; align-items: flex-end;
          margin-bottom: .5rem; }}
  .crow:last-child {{ margin-bottom: 0; }}
- .crow label {{ display: flex; flex-direction: column; gap: .2rem;
+ /* `min-width: 0` because a flex item defaults to `min-width: auto`, which
+    refuses to shrink below its content. The course picker's longest option is
+    a whole section line, so on a phone the select forced itself to 820px and
+    the entire page scrolled sideways -- but only once a subject was chosen,
+    which is why an earlier mobile check on the empty form found nothing. */
+ .crow label {{ display: flex; flex-direction: column; gap: .2rem; min-width: 0;
                font-size: .8rem; font-weight: 700; color: #8889;
                text-transform: uppercase; letter-spacing: .04em; }}
- .crow label.grow {{ flex: 1 1 16rem; }}
- input[type=text], input[type=time], select {{ font: inherit; padding: .4rem .5rem;
+ .crow label.grow {{ flex: 1 1 16rem; min-width: 0; }}
+ /* `color: inherit` inherited the CAPTION grey above, so every value the user
+    typed rendered at about 2.1:1 contrast and looked like placeholder text --
+    a filled form was indistinguishable from an empty one. CanvasText is the
+    system foreground and tracks `color-scheme: light dark` on its own. The
+    explicit font-size matters for the same reason: `font: inherit` was picking
+    up the caption's .8rem. */
+ input[type=text], input[type=time], select, textarea {{
+   font: inherit; font-size: .95rem; padding: .4rem .5rem;
    border: 1px solid var(--line); border-radius: 6px; background: transparent;
-   color: inherit; text-transform: none; letter-spacing: normal; }}
+   color: CanvasText; text-transform: none; letter-spacing: normal; }}
+ input::placeholder, textarea::placeholder {{ color: #8889; }}
  fieldset.days {{ border: 1px solid var(--line); border-radius: 6px;
                  padding: .2rem .6rem .4rem; margin: 0; display: flex; gap: .6rem; }}
  fieldset.days legend {{ font-size: .8rem; font-weight: 700; color: #8889;
@@ -1162,7 +1319,7 @@ site yet, so <strong>do not plan against it</strong> — check the
             padding: .8rem 1rem; margin: 1rem 0; }}
  .catalog p {{ margin: 0 0 .5rem; }}
  .catalog .crow {{ align-items: end; }}
- .catalog select {{ max-width: 100%; }}
+ .catalog select {{ max-width: 100%; width: 100%; }}
  #cat-section {{ min-width: 0; }}
  #cat-note {{ margin: .6rem 0 0; }}
  details.explain {{ margin: 1rem 0; background: #8881; }}

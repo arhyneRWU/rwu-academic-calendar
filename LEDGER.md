@@ -16,6 +16,35 @@ unit test alone is `fixed`, not `verified`.
 | H2 | **Tell the Registrar this exists.** | It carries RWU's name, is published from a personal account, and is aimed at RWU students. The disclaimer is prominent and scraping a public page is fine, but a conversation had beforehand beats one had during a mid-semester divergence. The weekly drift job is the good thing to point at. |
 | H3 | The drift job's **issue-opening branch has never fired** — only the no-drift path is proven (run 31950932130, green). | Needs real divergence, or a deliberate edit to `data/` to force it. Straightforward code, but unwatched. |
 
+## Builder clarity and cross-platform import — 2026-08-17
+
+Two complaints — "it's just iPhone I think" and "the courses added is
+strange" — turned out to be four bugs, three of them CSS.
+
+| # | What | State |
+|---|---|---|
+| U1 | **Every value the user typed rendered in the caption grey.** `color: inherit` on an input inherits from its parent, which is the grey uppercase `<label>`. Values came out at `rgba(136,136,136,.6)` — about 2.1:1 contrast — at 12.8px, because `font: inherit` also took the caption's size. A filled form was indistinguishable from an empty one. | **verified** — `color: CanvasText` (tracks light/dark on its own) and an explicit size; placeholders stay grey |
+| U2 | **The "Dates, one per line" textarea was visible on every row, always.** It is marked `hidden`, but the browser's `[hidden] {display:none}` loses to any author rule setting `display`, and `.crow` sets `display:flex`. Nothing in the markup looked wrong. | **verified** — `[hidden] {display:none !important}` |
+| U3 | **Horizontal scroll on a phone**, 852px against a 375 viewport — but only *after* choosing a subject. A flex item defaults to `min-width:auto` and will not shrink below its content, and the picker's longest option is a whole section line. An earlier mobile check passed because it never loaded a subject. | **verified** — `min-width: 0`; re-checked at 375px with a subject loaded |
+| U4 | **`DTSTAMP` frozen at `20000101`.** Correct for the published feeds, where a fixed stamp keeps rebuilds diffing clean — wrong for a personal download, because a client comparing timestamps reads a re-import as no newer than what it holds and declines to update. That silently broke the one thing content-derived UIDs exist for. | **verified** — real stamp plus `SEQUENCE:0` |
+
+**And the actual reason it felt iPhone-only:** the file was always a valid
+`.ics` that any app can read. But the page's only instructions were for
+*subscribing to the feed*, and iOS is the one platform where opening the
+downloaded file just works. Everywhere else needs an Import menu — different in
+every app, and in Outlook desktop it is *File → Open & Export → Import/Export*,
+not double-clicking the file, which imports one appointment and drops the rest.
+There are now instructions for iPhone, Outlook desktop, Outlook web, Google
+Calendar and Mac Calendar, plus `METHOD:PUBLISH`, `X-WR-TIMEZONE` and
+`charset=utf-8` for the importers that want them.
+
+**The UI**, separately: each added course collapses to one line
+(`MWF 9:00 AM–9:50 AM · MNS 210 · 39 dates`) with a *from catalog* tag,
+expanding to the full form only when you click it — a plain `<details>`, no JS
+state. Catalog rows arrive collapsed; hand-entered ones open, since they are
+empty. An incomplete row says what is missing rather than silently failing to
+appear in the preview.
+
 ## Course catalog picker — 2026-08-16
 
 Added after production readiness. Scope decided deliberately: **five fields,

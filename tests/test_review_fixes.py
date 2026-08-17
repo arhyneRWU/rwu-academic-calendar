@@ -369,6 +369,84 @@ class TestBuilderScriptHasNoDuplicateDeclarations:
         assert 'stamp' in names and 'catStamp' in names
 
 
+class TestTheFormLooksLikeAFilledInForm:
+    """Three CSS bugs that made a working builder read as broken."""
+
+    def test_values_are_not_rendered_in_the_caption_grey(self, page):
+        """`color: inherit` on an input inherited the LABEL's grey, so every
+        value the user typed came out at about 2.1:1 contrast and looked like
+        placeholder text. A filled form was indistinguishable from an empty
+        one. CanvasText is the system foreground and follows color-scheme."""
+        assert 'color: CanvasText;' in page
+        block = page[page.index('input[type=text], input[type=time], select, textarea'):]
+        block = block[:block.index('}}') if '}}' in block[:400] else 400]
+        assert 'color: inherit' not in block
+
+    def test_inputs_do_not_inherit_the_caption_font_size(self, page):
+        """`font: inherit` was picking up the caption's .8rem."""
+        block = page[page.index('input[type=text], input[type=time], select, textarea'):][:400]
+        assert 'font-size: .95rem' in block
+
+    def test_hidden_actually_hides(self, page):
+        """The browser's `[hidden] {{ display: none }}` loses to any author rule
+        that sets display, and `.crow` sets `display: flex`. The date-list
+        textarea was therefore visible on every row, always, whatever the
+        Repeats menu said."""
+        assert '[hidden] {' in page and 'display: none !important' in page
+
+    def test_flex_items_can_shrink_below_their_content(self, page):
+        """A flex item defaults to `min-width: auto` and refuses to shrink
+        below its content. The course picker's longest option is a whole
+        section line, so on a phone the select forced itself to 820px and the
+        page scrolled sideways -- but only after a subject was chosen, which is
+        why an earlier mobile check on the empty form found nothing."""
+        block = page[page.index(' .crow label {'):][:420]
+        assert 'min-width: 0' in block
+
+
+class TestTheDownloadedFileImportsElsewhere:
+    """It always produced a valid .ics, but iPhone was the only place that
+    obviously worked -- because iOS opens the file on tap and every other app
+    needs an Import menu nobody was told about."""
+
+    def test_it_declares_publish(self, page):
+        assert "'METHOD:PUBLISH'" in page
+
+    def test_it_names_the_timezone_for_the_floating_times(self, page):
+        assert "'X-WR-TIMEZONE:America/New_York'" in page
+
+    def test_the_stamp_is_real_and_there_is_a_sequence(self, page):
+        """DTSTAMP was frozen at 20000101. The published feeds freeze it so a
+        rebuild diffs clean, but this file is a personal download -- and a
+        client comparing timestamps reads a re-import as no newer than what it
+        already has, which silently breaks updating in place."""
+        assert 'DTSTAMP:20000101T000000Z' not in page
+        assert 'new Date().toISOString()' in page
+        assert "'SEQUENCE:0'" in page
+
+    def test_the_download_declares_utf8(self, page):
+        assert "type: 'text/calendar;charset=utf-8'" in page
+
+    @pytest.mark.parametrize('platform', [
+        'iPhone', 'Outlook, desktop', 'Outlook on the web', 'Google Calendar',
+        'Calendar on a Mac'])
+    def test_every_platform_gets_instructions(self, page, platform):
+        block = page[page.index('How to import the file'):]
+        assert platform in block[:block.index('</details>')], platform
+
+    def test_it_names_the_menu_path_people_miss(self, page):
+        assert 'Open &amp; Export' in page and 'Import an iCalendar' in page
+
+    def test_it_warns_against_double_clicking_in_outlook(self, page):
+        assert 'double-click' in page
+
+    def test_it_says_google_cannot_import_on_mobile(self, page):
+        assert 'mobile app cannot import a file' in page
+
+    def test_it_explains_that_a_download_does_not_follow_changes(self, page):
+        assert 'It does not follow' in page
+
+
 class TestPageHardening:
     def test_the_grid_cannot_close_its_own_script_block(self, years):
         ay = next(a for a in years if a.academic_year == '2026-2027')
