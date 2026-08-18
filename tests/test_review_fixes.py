@@ -477,8 +477,12 @@ class TestTheBuilderDoesNotDefaultToAClass:
     def test_no_item_is_built_before_the_user_asks_for_one(self, page):
         js = page[page.index('function addItem'):]
         # The load-time call and the re-add on removing the last row are both
-        # gone; a row exists only because someone added one.
-        assert 'addItem(); update();' not in js
+        # gone; a row exists only because someone pressed a button. The add
+        # button's own `addItem(); update();` is the one legitimate call, so
+        # count rather than merely look.
+        assert js.count('addItem(); update();') == 1
+        assert "getElementById('add').addEventListener" in js[
+            js.index('addItem(); update();') - 200:js.index('addItem(); update();')]
         assert 'if (!courses.children.length) addItem()' not in js
 
     def test_an_empty_list_says_so_instead_of_looking_broken(self, page):
@@ -553,3 +557,31 @@ class TestTheBuilderSaysWhatItJustDid:
         assert 'Outlook on a phone' in block
         assert 'cannot import a' in block and 'calendar file' in block
         assert 'outlook.office.com' in block
+
+
+class TestTheReminderIsSettableWithoutExpandingAnything:
+    """Reminders never stopped being emitted — VALARM was in every file. But a
+    catalog row arrives collapsed, so the only control for it was behind a
+    click nobody makes, and the collapsed line did not say what it was set to.
+    A setting you cannot see or reach is a setting you have lost."""
+
+    def test_there_is_one_control_for_the_whole_schedule(self, page):
+        assert 'id="alarm-all"' in page
+        assert "ALARMS.forEach(([v, l]) => alarmAll.add(new Option(l, v," in page
+
+    def test_it_moves_every_row_that_was_not_set_by_hand(self, page):
+        block = page[page.index('alarmAll.addEventListener'):]
+        block = block[:block.index('});')]
+        assert 'if (row.dataset.alarmSet) continue' in block
+        assert "row.querySelector('[name=alarm]').value = alarmAll.value" in block
+
+    def test_a_row_set_by_hand_stops_following_it(self, page):
+        assert "row.dataset.alarmSet = '1'" in page
+
+    def test_the_collapsed_line_says_what_the_reminder_is(self, page):
+        js = page[page.index('function describeItem'):]
+        js = js[:js.index('function refreshItems')]
+        assert js.count("alarmLabel(c.alarm) : 'no reminder'") == 2   # timed and listed-date rows
+
+    def test_the_alarm_still_reaches_the_file(self, page):
+        assert 'BEGIN:VALARM' in page and 'TRIGGER:-${c.alarm}' in page

@@ -601,6 +601,11 @@ shifts, a class the catalog doesn't list — anything with days and a time.</p>
 <p class="tip" id="empty">Nothing added yet — add a class above, or an item of
 your own.</p>
 
+<p class="remind"><label><strong>Remind me</strong>
+<select id="alarm-all"></select></label>
+<span class="tip">before every item. Expand an item to give that one a
+different reminder.</span></p>
+
 <p><button type="submit" class="btn">Download my schedule</button></p>
 <div id="done" class="done" role="status" hidden></div>
 </form>
@@ -666,6 +671,8 @@ _BUILDER_JS = r"""
     ['PT2H','2 hours before'],['P1D','1 day before']];
   const REPEATS = [['weekly','Every week'],['biweekly','Every other week'],
                    ['dates','Only on dates I list']];
+  const alarmAll = document.getElementById('alarm-all');
+  ALARMS.forEach(([v, l]) => alarmAll.add(new Option(l, v, v === 'PT15M', v === 'PT15M')));
   const termSel = document.getElementById('term');
   const courses = document.getElementById('courses');
   const preview = document.getElementById('preview');
@@ -687,7 +694,7 @@ _BUILDER_JS = r"""
   // screen, and for a course that came from the catalog every one of them
   // re-asked what the registrar had already answered. <details> rather than a
   // JS toggle so it works before any script runs and needs no state of its own.
-  function addItem(prev, opts) {
+  function addItem(opts) {
     const fromCatalog = !!(opts && opts.fromCatalog);
     const row = document.createElement('div');
     row.className = 'course';
@@ -709,7 +716,7 @@ _BUILDER_JS = r"""
         <label>Start<input type="time" name="start"></label>
         <label>End<input type="time" name="end"></label>
         <label>Remind<select name="alarm">${
-          ALARMS.map(([v,l]) => `<option value="${v}"${v===(prev?prev.alarm:'PT15M')?' selected':''}>${l}</option>`).join('')
+          ALARMS.map(([v,l]) => `<option value="${v}"${v===alarmAll.value?' selected':''}>${l}</option>`).join('')
         }</select></label>
       </div>
       <div class="crow rules">
@@ -730,6 +737,8 @@ _BUILDER_JS = r"""
     row.querySelector('.rm').addEventListener('click', () => {
       row.remove(); update();
     });
+    row.querySelector('[name=alarm]').addEventListener('change',
+      () => { row.dataset.alarmSet = '1'; });
     const rep = row.querySelector('[name=repeat]'), box = row.querySelector('.datebox');
     const sync = () => { box.hidden = rep.value !== 'dates';
                          row.querySelector('.days').disabled = rep.value === 'dates'; };
@@ -836,7 +845,8 @@ _BUILDER_JS = r"""
       if (bad.length) return `${bad.length} date${bad.length === 1 ? '' : 's'} not usable`;
       const n = occurrences(termSel.value, c).length;
       return `${n} listed date${n === 1 ? '' : 's'}`
-             + (c.start ? ` · ${hm12(c.start)}` : '') + (c.room ? ` · ${c.room}` : '');
+             + (c.start ? ` · ${hm12(c.start)}` : '') + (c.room ? ` · ${c.room}` : '')
+             + ` · ${c.alarm ? alarmLabel(c.alarm) : 'no reminder'}`;
     }
     if (!c.days.length) return 'pick the days it meets';
     if (!c.start || !c.end) return 'add a start and end time';
@@ -844,7 +854,8 @@ _BUILDER_JS = r"""
     const n = s ? s.meetings.length : 0;
     return `${c.days.map(d => CODE[d]).join('')} ${hm12(c.start)}–${hm12(c.end)}`
            + (c.room ? ` · ${c.room}` : '')
-           + ` · ${n} date${n === 1 ? '' : 's'}`;
+           + ` · ${n} date${n === 1 ? '' : 's'}`
+           + ` · ${c.alarm ? alarmLabel(c.alarm) : 'no reminder'}`;
   }
 
   function refreshItems(all) {
@@ -1048,7 +1059,7 @@ _BUILDER_JS = r"""
   addBtn.addEventListener('click', () => {
     const s = loaded[Number(sectSel.value)];
     if (!s) return;
-    const row = addItem(read().pop(), {fromCatalog: true});
+    const row = addItem({fromCatalog: true});
     row.querySelector('[name=name]').value = `${s.section} ${s.title}`.trim();
     row.querySelector('[name=room]').value = s.room || '';
     row.querySelector('[name=start]').value = s.start;
@@ -1073,7 +1084,14 @@ _BUILDER_JS = r"""
   });
 
   document.getElementById('add').addEventListener('click', () => {
-    addItem(read().pop()); update();
+    addItem(); update();
+  });
+  alarmAll.addEventListener('change', () => {
+    for (const row of courses.children) {
+      if (row.dataset.alarmSet) continue;      // this one was set by hand
+      row.querySelector('[name=alarm]').value = alarmAll.value;
+    }
+    update();
   });
   termSel.addEventListener('change', () => { update(); loadIndex(); });
   loadIndex();
@@ -1374,6 +1392,8 @@ site yet, so <strong>do not plan against it</strong> — check the
  .catalog select {{ max-width: 100%; width: 100%; }}
  #cat-section {{ min-width: 0; }}
  #cat-note {{ margin: .6rem 0 0; }}
+ .remind {{ display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem; }}
+ .remind .tip {{ flex: 1 1 12rem; min-width: 0; }}
  .said {{ margin: .6rem 0 0; font-weight: 600; font-size: .92rem; }}
  .just-added {{ animation: flash 2s ease-out; }}
  @keyframes flash {{ from {{ background: #4f8cff33; }} to {{ background: transparent; }} }}

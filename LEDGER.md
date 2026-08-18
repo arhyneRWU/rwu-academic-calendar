@@ -20,9 +20,10 @@ unit test alone is `fixed`, not `verified`.
 
 Three complaints — "it's just iPhone I think", "the courses added is
 strange", and "it feels like you're restricted to just scheduled classes" —
-turned out to be eight bugs: three CSS, one default that stopped being right
-the moment the catalog picker existed, and three actions that did their work
-in silence.
+turned out to be nine bugs: three CSS, one default that stopped being right the
+moment the catalog picker existed, three actions that did their work in
+silence, and one setting that was working perfectly somewhere nobody could
+reach it.
 
 | # | What | State |
 |---|---|---|
@@ -34,6 +35,7 @@ in silence.
 | U6 | **Pressing *Add* in the catalog said nothing.** The course was added correctly, but the list sits below the fold on a phone, so the only evidence was off-screen — and the picker kept the course selected, so a second press looked like the way to make something happen. | **verified** — a `role="status"` line naming the section, the course picker cleared for the next one, and a two-second flash on the new row. Two courses added in a row in the browser |
 | U7 | **The download was a synthetic click on an anchor that never appeared on the page.** On a desktop that is the whole interaction; on iOS Safari and inside any in-app browser (Outlook's, Teams', Instagram's) it can be declined outright — and when it is, *nothing happens on screen at all*: no file, and no way to tell whether the button worked. Reported as "the download doesn't download a thing". | **verified** — the file is now offered as a **real link on the page** that stays there to be tapped, in a block that says so; the automatic click is still attempted first. The blob is fetched back and parsed in the browser: 2 VEVENTs, CRLF, no line over 75 octets |
 | U8 | The import instructions covered iPhone, Outlook desktop, Outlook web, Google and Mac Calendar — but not **Outlook on a phone**, which is the app most likely to be open when someone taps the file, and the one with no Import menu at all. | **verified** — says to import once at outlook.office.com and let it sync down, and warns that tapping the file lands it in Apple Calendar instead |
+| U9 | **The reminder looked lost.** It was not — every VEVENT still carried its `VALARM`, and the preview still said "reminder 15 min before". But the only control for it lives inside a row's expanded form, and catalog rows arrive collapsed, so for the main path through the builder it was behind a click nobody makes; the collapsed line did not mention it either. A setting you cannot see or reach is a setting you have lost. | **verified** — one **Remind me** control for the whole schedule beside the download button, which moves every row that has not been set by hand; a row's own select still wins once touched, and the collapsed line now ends with the reminder. Browser-checked: global 15→30 moved both rows, a hand-set row held `P1D` while the global went to `PT5M`, and the downloaded file carried `TRIGGER:-PT5M` and `TRIGGER:-P1D` |
 
 **And the actual reason it felt iPhone-only:** the file was always a valid
 `.ics` that any app can read. But the page's only instructions were for

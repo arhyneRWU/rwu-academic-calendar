@@ -186,10 +186,13 @@ class TestEmbedding:
         assert 'No reminder' in page
 
     def test_reminder_defaults_to_fifteen_minutes(self, page):
-        assert "prev?prev.alarm:'PT15M'" in page.replace(' ', '')
+        assert "v === 'PT15M', v === 'PT15M'" in page   # selected, and default
 
-    def test_a_new_row_inherits_the_previous_reminder(self, page):
-        assert 'addItem(read().pop())' in page
+    def test_a_new_row_takes_the_schedule_wide_reminder(self, page):
+        """It used to inherit the previous row's, which is invisible in both
+        directions once rows collapse to one line."""
+        assert "${v===alarmAll.value?' selected':''}" in page
+        assert 'addItem(read().pop())' not in page
 
     def test_alarm_trigger_is_negative_and_relative_to_the_event(self, page):
         """A positive or absolute TRIGGER fires after the class, or at a fixed
