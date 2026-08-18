@@ -585,3 +585,66 @@ class TestTheReminderIsSettableWithoutExpandingAnything:
 
     def test_the_alarm_still_reaches_the_file(self, page):
         assert 'BEGIN:VALARM' in page and 'TRIGGER:-${c.alarm}' in page
+
+
+class TestRwuDatesRideAlongWithAPersonalSchedule:
+    """A downloaded schedule used to contain only what you typed, so the dates
+    that *change* it — the day swap especially — were visible only if you also
+    subscribed to a feed. They now come along, as free time."""
+
+    def test_the_grid_carries_the_terms_own_dates(self, years):
+        ay = next(a for a in years if a.academic_year == '2026-2027')
+        notes = emit.meeting_grid(ay)['fall-2026']['rwu']
+        got = {n['s'] for n in notes}
+        assert 'RWU: First Day of Classes' in got
+        assert 'RWU: Reading Day' in got
+        assert 'RWU: Tuesday runs a Monday schedule' in got
+        assert any('Thanksgiving' in x for x in got)
+
+    def test_a_day_swap_says_which_day_it_is_and_which_it_runs_as(self, years):
+        """RWU has written this eight ways in four years; a line read once, on
+        a phone, cannot be one of them."""
+        ay = next(a for a in years if a.academic_year == '2026-2027')
+        swap = next(n for n in emit.meeting_grid(ay)['fall-2026']['rwu']
+                    if 'runs a' in n['s'])
+        assert swap['s'] == 'RWU: Tuesday runs a Monday schedule'
+        assert swap['x'] == 'Tuesday - Monday Classes Observed'   # RWU's own words kept
+
+    def test_the_uid_is_the_one_the_published_feed_uses(self, years):
+        """So subscribing AND downloading gives one Thanksgiving, not two."""
+        ay = next(a for a in years if a.academic_year == '2026-2027')
+        note = next(n for n in emit.meeting_grid(ay)['fall-2026']['rwu']
+                    if 'Thanksgiving' in n['s'])
+        feed = emit.to_ics([ay], 'x', predicate=lambda e: e.no_classes).decode()
+        assert f"UID:{note['u']}" in feed.replace('\r\n ', '')
+
+    def test_summer_sessions_only_get_their_own_window(self, years):
+        ay = next(a for a in years if a.academic_year == '2025-2026')
+        grid = emit.meeting_grid(ay)
+        sessions = [k for k in grid if k.startswith('summer-')]
+        assert sessions, 'summer should be split into sessions'
+        for gid in sessions:
+            for n in grid[gid]['rwu']:
+                assert grid[gid]['begin'] <= n['d'] <= grid[gid]['end'], (gid, n)
+
+    def test_they_are_emitted_all_day_and_never_block(self, page):
+        block = page[page.index('if (rwuBox.checked) for (const n of'):]
+        block = block[:block.index("out.push('END:VCALENDAR')")]
+        assert 'DTSTART;VALUE=DATE:${stamp(n.d)}' in block
+        assert 'DTEND;VALUE=DATE:${stamp(nextDay(n.d))}' in block
+        assert 'TRANSP:TRANSPARENT' in block
+        assert 'X-MICROSOFT-CDO-BUSYSTATUS:FREE' in block   # what Outlook reads
+        assert 'VALARM' not in block                        # no 15-min warning that a break began
+
+    def test_the_published_feeds_do_not_make_subscribers_look_busy(self, tmp_path, years):
+        feed = emit.to_ics(years, 'x').decode()
+        assert feed.count('TRANSP:TRANSPARENT') == feed.count(
+            'X-MICROSOFT-CDO-BUSYSTATUS:FREE') == feed.count('BEGIN:VEVENT')
+
+    def test_it_is_on_by_default_and_can_be_turned_off(self, page):
+        assert '<input type="checkbox" id="rwu-dates" checked>' in page
+        assert "rwuBox.addEventListener('change', update)" in page
+
+    def test_the_preview_accounts_for_them(self, page):
+        assert 'function rwuLine(t)' in page
+        assert "if (!rwuBox.checked || !n) return ''" in page

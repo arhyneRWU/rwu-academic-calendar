@@ -83,6 +83,8 @@ pattern-match the prose; use `Term.effective_weekday()` or the grid.
 | Two plain checkboxes instead | "Follows the class timetable" / "Skips holidays and breaks" — answerable about your own commitment |
 | Course data: **five fields, no people** | Instructor names, seat counts and enrolment are in the payload and are not taken. A meeting pattern is a fact about a room and a clock |
 | Classes come from the catalog; **no blank class row by default** | Once the picker existed, opening with a class-shaped form made everything else — office hours, meetings, clubs, shifts — look out of scope. A labelled section says what belongs there; a button cannot |
+| A downloaded schedule **carries RWU's dates too** | Free-time, all-day, opt-out. The day swap changes a personal schedule; a file that acts on it without showing it is a file you cannot check. UIDs match the feeds, so subscribing as well does not double them |
+| Day swaps are **reworded** in personal files only | The feeds keep RWU's prose verbatim; a ride-along line read once on a phone says "Tuesday runs a Monday schedule" instead, with RWU's own words in the description |
 | Courses committed, refreshed **weekly** | Same rule as the calendar; nightly would be standing load on a production student system for no real gain |
 
 ## Things that will bite you

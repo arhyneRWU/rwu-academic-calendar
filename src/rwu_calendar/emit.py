@@ -115,6 +115,11 @@ def to_ics(years: list[AcademicYear], name: str,
                 ev.add('dtend', e.date + _dt.timedelta(days=1))  # DTEND is exclusive
                 ev.add('summary', _summary(e))
                 ev.add('transp', 'TRANSPARENT')
+                # TRANSP is the standard for "this does not make me busy";
+                # X-MICROSOFT-CDO-BUSYSTATUS is what Outlook actually reads.
+                # A subscriber should not look booked solid for Thanksgiving
+                # week to anyone checking their availability.
+                ev.add('x-microsoft-cdo-busystatus', 'FREE')
                 desc = [f'Term: {t.id}', f'Academic year: {ay.academic_year}',
                         f'Categories: {", ".join(e.kinds)}']
                 sessions = sorted({x.session for x in evs if x.session})
@@ -316,6 +321,44 @@ def _session_label(session: str | None) -> str:
     return re.sub(r'\s+', ' ', text).strip().rstrip(',')
 
 
+def _rwu_note(e: Event) -> str:
+    """The line a personal calendar shows for one of RWU's own dates.
+
+    Holidays keep RWU's wording. Day swaps do not: RWU has written that fact
+    eight different ways in four years ("Tuesday - Monday Classes Observed",
+    "Monday Schedule - Monday classes meet"), and a line someone reads once, on
+    a phone, in a week they had not thought about it, has to say which day it
+    is and which day it runs as. The source wording goes in the description.
+    """
+    if e.observes_schedule_of:
+        return (f'RWU: {e.date:%A} runs a '
+                f'{e.observes_schedule_of.title()} schedule')
+    return f'RWU: {e.label}'
+
+
+def _rwu_notes(ay: AcademicYear, t, window=None) -> list[dict]:
+    """Holidays, breaks, day swaps and term boundaries, ready for the builder.
+
+    The UID is the *same one the published feeds use*, so someone who both
+    subscribes to a feed and downloads a schedule ends up with one copy of
+    Thanksgiving rather than two.
+    """
+    seen, out = set(), []
+    for e in sorted(t.events, key=lambda e: (e.date, e.label)):
+        if not (e.no_classes or e.observes_schedule_of
+                or 'term_start' in e.kinds or 'term_end' in e.kinds):
+            continue
+        if window and not (window[0] <= e.date <= window[1]):
+            continue
+        if (e.date, e.label) in seen:
+            continue
+        seen.add((e.date, e.label))
+        out.append({'d': e.date.isoformat(), 's': _rwu_note(e), 'x': e.label,
+                    'u': _uid(ay.academic_year, e.owner_term or t.id,
+                              e.date, e.label)})
+    return out
+
+
 def meeting_grid(ay: AcademicYear) -> dict:
     """For each term, every teaching date mapped to the weekday it *runs as*.
 
@@ -363,6 +406,11 @@ def meeting_grid(ay: AcademicYear) -> dict:
                 'days': days,
                 'swaps': {e.date.isoformat(): e.observes_schedule_of
                           for e in t.day_swaps() if begin <= e.date <= end},
+                # Summer's sessions each get only their own window; every other
+                # term takes the lot, because Reading Day and finals sit
+                # *after* classes_end by construction and are exactly the kind
+                # of date people want to see.
+                'rwu': _rwu_notes(ay, t, (begin, end) if multi else None),
             }
     return out
 
@@ -601,6 +649,13 @@ shifts, a class the catalog doesn't list — anything with days and a time.</p>
 <p class="tip" id="empty">Nothing added yet — add a class above, or an item of
 your own.</p>
 
+<p class="chk"><label><input type="checkbox" id="rwu-dates" checked>
+<strong>Include RWU's own dates</strong> — holidays, breaks, the day swap,
+first and last day of classes</label></p>
+<p class="tip" id="rwu-note">They come in as all-day entries marked
+<em>free</em>, so they show up without blocking your calendar or making you
+look busy to anyone checking your availability.</p>
+
 <p class="remind"><label><strong>Remind me</strong>
 <select id="alarm-all"></select></label>
 <span class="tip">before every item. Expand an item to give that one a
@@ -655,7 +710,8 @@ because each one carries a name derived from the course itself.</p>
 <p class="tip">Times are saved as local wall-clock time, so an 11:00 class stays
 at 11:00 across the November clock change. This is a one-time download, not a
 subscription: it is built from your own entries, which no server here knows
-about. For the academic calendar itself, subscribe to a feed below.</p>
+about. RWU's own dates come along as a snapshot of today's data — if RWU moves
+one later, only a subscribed feed follows it, so it is worth having both.</p>
 """
 
 _BUILDER_JS = r"""
@@ -671,6 +727,8 @@ _BUILDER_JS = r"""
     ['PT2H','2 hours before'],['P1D','1 day before']];
   const REPEATS = [['weekly','Every week'],['biweekly','Every other week'],
                    ['dates','Only on dates I list']];
+  const rwuBox = document.getElementById('rwu-dates');
+  const nextDay = s => { const d = dateOf(s); d.setDate(d.getDate() + 1); return iso(d); };
   const alarmAll = document.getElementById('alarm-all');
   ALARMS.forEach(([v, l]) => alarmAll.add(new Option(l, v, v === 'PT15M', v === 'PT15M')));
   const termSel = document.getElementById('term');
@@ -904,7 +962,19 @@ _BUILDER_JS = r"""
         ${s.meetings.length === 1 ? 'date' : 'dates'}, ${fmt(s.meetings[0])} to
         ${fmt(s.meetings[s.meetings.length-1])}, ${rem}
         <ul class="notes">${notes.join('')}</ul></div>`;
-    }).join('');
+    }).join('') + rwuLine(t);
+  }
+
+  // The RWU dates are the one part of the file the user did not type, so the
+  // preview has to account for them or the count in their calendar will not
+  // match the count here.
+  function rwuLine(t) {
+    const n = (t.rwu || []).length;
+    if (!rwuBox.checked || !n) return '';
+    return `<div class="pv"><strong>RWU's own dates</strong> — <strong>${n}</strong>
+      all-day ${n === 1 ? 'entry' : 'entries'} marked free: holidays, breaks,
+      the day swap, first and last day of classes. They do not block your
+      calendar. Untick “Include RWU's own dates” to leave them out.</div>`;
   }
 
   // Backslash MUST be escaped, and MUST be escaped first -- otherwise a room
@@ -999,6 +1069,25 @@ _BUILDER_JS = r"""
       }
       out.push('END:VEVENT');
     }
+    // RWU's own dates, last. All-day and TRANSPARENT so they never block:
+    // TRANSP is the standard, and X-MICROSOFT-CDO-BUSYSTATUS is what Outlook
+    // actually reads to decide whether you look busy. No VALARM -- nobody
+    // needs a 15-minute warning that a break is starting.
+    if (rwuBox.checked) for (const n of (GRID[termId].rwu || [])) {
+      out.push('BEGIN:VEVENT',
+        `UID:${n.u}`,
+        `DTSTAMP:${new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d+/,'')}`,
+        'SEQUENCE:0',
+        `DTSTART;VALUE=DATE:${stamp(n.d)}`,
+        `DTEND;VALUE=DATE:${stamp(nextDay(n.d))}`,   // DTEND is exclusive
+        `SUMMARY:${esc(n.s)}`,
+        `DESCRIPTION:${esc(n.x + ' — from RWU\'s academic calendar. '
+                           + 'Unofficial; verify against the official one.')}`,
+        'CATEGORIES:RWU academic calendar',
+        'TRANSP:TRANSPARENT',
+        'X-MICROSOFT-CDO-BUSYSTATUS:FREE',
+        'END:VEVENT');
+    }
     out.push('END:VCALENDAR');
     return out.map(fold).join('\r\n') + '\r\n';   // RFC 5545 wants CRLF
   }
@@ -1086,6 +1175,7 @@ _BUILDER_JS = r"""
   document.getElementById('add').addEventListener('click', () => {
     addItem(); update();
   });
+  rwuBox.addEventListener('change', update);
   alarmAll.addEventListener('change', () => {
     for (const row of courses.children) {
       if (row.dataset.alarmSet) continue;      // this one was set by hand
