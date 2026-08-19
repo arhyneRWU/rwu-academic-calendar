@@ -648,3 +648,33 @@ class TestRwuDatesRideAlongWithAPersonalSchedule:
     def test_the_preview_accounts_for_them(self, page):
         assert 'function rwuLine(t)' in page
         assert "if (!rwuBox.checked || !n) return ''" in page
+
+
+class TestOutlookCanKeepTheSeriesTogether:
+    """Reported from Outlook: an imported schedule arrived as ~39 separate
+    appointments per course instead of one editable recurring series. The file
+    was already a proper series — one VEVENT, one RRULE — so the loss happened
+    inside Outlook's importer, on the two constructs it handles worst."""
+
+    def test_no_rdate_anywhere(self, page):
+        """Outlook's recurrence model cannot say "and also this one date". Faced
+        with RDATE it abandons the pattern rather than the extra date, and
+        expands every meeting into its own appointment."""
+        assert 'RDATE:' not in page
+
+    def test_the_gained_day_swap_date_is_its_own_event(self, page):
+        block = page[page.index('const extra = s.byRule.length'):]
+        block = block[:block.index("// RWU's own dates, last")]
+        assert 'BEGIN:VEVENT' in block and 'RRULE' not in block
+        assert '-${stamp(d)}@rwu-academic-calendar' in block   # its own stable UID
+        assert 'Extra meeting: this date runs a different' in block
+
+    def test_one_exdate_property_per_date(self, page):
+        """A comma-joined EXDATE is legal and folds past 75 octets; Outlook is
+        reliable with neither."""
+        assert 'for (const d of s.exdate) out.push(`EXDATE:${at(d)}`)' in page
+        assert "'EXDATE:' + s.exdate.map(at).join(',')" not in page
+
+    def test_the_recurring_part_is_still_one_event(self, page):
+        assert "'RRULE:FREQ=WEEKLY'" in page
+        assert 'UNTIL=' in page

@@ -157,14 +157,24 @@ row, always. And an input with `color: inherit` inherits its *label's* colour,
 so every typed value rendered in caption grey at 2.1:1 contrast. There is now a
 global `[hidden] {display:none !important}` and an explicit `CanvasText`.
 
-**12. A synthetic anchor click is not a download.** `a.click()` on a detached
+**12. Outlook decides what recurrence it will accept, and it is less than the
+spec.** A file can be a flawless RFC 5545 series and still land in Outlook as
+one appointment per meeting — it drops the *pattern*, not the dates, when it
+meets something it cannot model. `RDATE` is the main one: there is no "and also
+this date" in Outlook's recurrence, so the day swap's gained Tuesday is emitted
+as its own single event instead. Comma-joined multi-value `EXDATE` is the other;
+one property per date. Neither is a spec fix — the spec was already satisfied.
+Check any new recurrence construct against Outlook before assuming valid means
+importable.
+
+**13. A synthetic anchor click is not a download.** `a.click()` on a detached
 anchor works on a desktop and can be declined outright by iOS Safari and by
 every in-app browser (Outlook's, Teams', Instagram's) — with no error, no file
 and nothing on screen. The file is now offered as a real link that stays on the
 page; the automatic click is a convenience on top of it. The same rule caught
 the catalog's *Add*: any action whose only result is off-screen has to say so.
 
-**13. Substring tests are not enough for anything in the browser.** Verify in a
+**14. Substring tests are not enough for anything in the browser.** Verify in a
 browser (`python3 -m http.server` in `public/`, then Playwright) and expand
 generated ICS with `python-dateutil` to compare against the grid. **Hard-reload
 or cache-bust** — a stale `index.html` will happily "prove" your change works

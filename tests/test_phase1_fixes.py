@@ -206,8 +206,16 @@ class TestGeneratedPageIsSyntacticallySane:
         assert r"out.map(fold).join('\r\n')" in page
 
     def test_emits_a_recurring_series(self, page):
-        for needle in ("'RRULE:FREQ=WEEKLY'", 'EXDATE:', 'RDATE:', 'UNTIL='):
+        for needle in ("'RRULE:FREQ=WEEKLY'", 'EXDATE:', 'UNTIL='):
             assert needle in page, needle
+
+    def test_it_does_not_use_rdate(self, page):
+        """RDATE is legal and expresses the day swap exactly, but Outlook's
+        recurrence model cannot represent "and also this one date" -- and
+        rather than keep the pattern and drop the extra, it abandons the
+        pattern and imports every meeting as a separate appointment. The
+        gained date is its own event instead."""
+        assert 'RDATE:' not in page
 
     def test_uid_is_content_derived_not_row_index(self, page):
         """The old scheme keyed on array position, so deleting or reordering a
