@@ -165,7 +165,8 @@ this date" in Outlook's recurrence, so the day swap's gained Tuesday is emitted
 as its own single event instead. Comma-joined multi-value `EXDATE` is the other;
 one property per date. Neither is a spec fix — the spec was already satisfied.
 Check any new recurrence construct against Outlook before assuming valid means
-importable.
+importable — the fix above was confirmed there on 2026-08-18 by importing a
+real schedule, which is the only way this is ever confirmed.
 
 **13. A synthetic anchor click is not a download.** `a.click()` on a detached
 anchor works on a desktop and can be declined outright by iOS Safari and by
