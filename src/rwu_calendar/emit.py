@@ -611,36 +611,12 @@ every year. These are the alternatives — paste them the same way.</p>
 
 _BUILDER_HTML = """
 <h2 id="builder">Build your own schedule</h2>
-<p>Classes, office hours, lab or committee meetings, clubs, practices — anything
-that repeats. You get one calendar file with every occurrence worked out against
-the academic calendar. Nothing is uploaded; the file is made in your browser.</p>
-
-<ol class="steps">
-<li>Pick your term</li><li>Add your classes and anything else</li><li>Download and import</li>
-</ol>
+<p>Pick your term, add your classes, download. Every meeting is worked out
+against the academic calendar — holidays out, the day swap applied — and
+nothing is uploaded: the file is built in your browser.</p>
 
 <form id="sched" autocomplete="off">
 <p><label><strong>Term</strong> <select id="term"></select></label></p>
-
-<!-- These two checkboxes carry the whole correctness model, and ticking the
-     wrong one produces a calendar that looks entirely right. The explanation
-     used to live in a title= tooltip, which needs a mouse hover: on a phone,
-     where most people meet this, it did not exist at all. A <details> works on
-     touch and keyboard, is read out by screen readers, and needs no script. -->
-<details class="explain" open>
-<summary>What do “Follows the class timetable” and “Skips holidays” mean?</summary>
-<p><strong>Follows the class timetable</strong> — every fall and spring term,
-RWU moves one day onto a <em>different weekday's</em> timetable: Tuesday 13
-October 2026 runs Monday's schedule. Leave this ticked for <strong>classes and
-office hours</strong>, which move with it. Untick it for <strong>meetings,
-clubs and practices</strong>, which keep their own day and ignore the swap.</p>
-<p><strong>Skips holidays and breaks</strong> — leave it ticked and no
-occurrence lands on a no-class day. Untick it if the thing still meets over a
-break, as some labs, teams and research groups do.</p>
-<p class="tip">Not sure? Leave both ticked — that is right for anything that
-follows the university's class schedule. Check the preview below before you
-download: it names every date you gain and every date you lose.</p>
-</details>
 
 <!-- Only shown for terms whose course data has been pulled; hidden by
      default so the builder is unchanged when there is none. -->
@@ -839,6 +815,24 @@ _BUILDER_JS = r"""
         <label class="chk"><input type="checkbox" name="skip" checked>
           Skips holidays and breaks</label>
       </div>
+      <!-- These two carry the whole correctness model, and ticking the wrong
+           one produces a calendar that looks entirely right. It was a title=
+           tooltip once, which needs a mouse and so did not exist on a phone;
+           then a block open by default above the form, four screens tall,
+           explaining controls the reader could not yet see. Here it is beside
+           them, shut, still working on touch, keyboard and a screen reader
+           with no script. -->
+      <details class="hint">
+      <summary>What do these two mean?</summary>
+      <p><strong>Follows the class timetable</strong> — each fall and spring RWU
+      moves one day onto a <em>different weekday's</em> timetable. Leave it
+      ticked for classes and office hours, which move with it. Untick it for
+      meetings, clubs and practices, which keep their own day.</p>
+      <p><strong>Skips holidays and breaks</strong> — untick it if this still
+      meets over a break, as some labs and teams do.</p>
+      <p>Not sure? Leave both. The preview names every date you gain and every
+      date you lose.</p>
+      </details>
       <div class="crow datebox" hidden>
         <label class="grow">Dates, one per line as YYYY-MM-DD
           <textarea name="dates" rows="3" placeholder="2026-09-15&#10;2026-10-20"></textarea></label>
@@ -1437,16 +1431,8 @@ site yet, so <strong>do not plan against it</strong> — check the
  .warn {{ border-left: 4px solid var(--warn); padding: .75rem 1rem;
          background: color-mix(in srgb, var(--warn) 8%, transparent);
          border-radius: 0 4px 4px 0; }}
- .banner {{ display: block; text-decoration: none; color: inherit;
-           border: 2px solid var(--accent); border-radius: 12px;
-           padding: 1.1rem 1.4rem; margin: 1.5rem 0;
-           background: color-mix(in srgb, var(--accent) 9%, transparent); }}
- .banner:hover {{ background: color-mix(in srgb, var(--accent) 16%, transparent); }}
- .banner-kicker {{ display: block; text-transform: uppercase; letter-spacing: .08em;
-                  font-size: .7rem; font-weight: 700; color: var(--accent); }}
- .banner-title {{ display: block; font-size: 1.45rem; font-weight: 700;
-                 margin: .15rem 0 .35rem; }}
- .banner-sub {{ display: block; font-size: .95rem; }}
+ .hero-year {{ margin: 0 0 .5rem; font-size: 1.9rem; font-weight: 700;
+               line-height: 1.15; }}
  .tiny {{ font-size: .8rem; color: #8889; white-space: nowrap; }}
  .btn.small {{ padding: .3rem .8rem; font-size: .85rem; }}
  .hero {{ border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem 1.5rem;
@@ -1509,14 +1495,6 @@ site yet, so <strong>do not plan against it</strong> — check the
            background: color-mix(in srgb, var(--accent) 18%, transparent);
            color: var(--accent); white-space: nowrap; }}
  .course details[open] summary {{ margin-bottom: .75rem; }}
- .steps {{ list-style: none; counter-reset: s; padding: 0; margin: 1.25rem 0 .5rem;
-          display: flex; flex-wrap: wrap; gap: .4rem 1.5rem; }}
- .steps li {{ counter-increment: s; font-weight: 600; color: #8889; }}
- .steps li::before {{ content: counter(s); display: inline-flex;
-   align-items: center; justify-content: center; width: 1.5em; height: 1.5em;
-   margin-right: .45em; border-radius: 50%; font-size: .8em;
-   background: color-mix(in srgb, var(--accent) 18%, transparent);
-   color: var(--accent); }}
  .crow {{ display: flex; flex-wrap: wrap; gap: .75rem; align-items: flex-end;
          margin-bottom: .5rem; }}
  .crow:last-child {{ margin-bottom: 0; }}
@@ -1587,8 +1565,9 @@ site yet, so <strong>do not plan against it</strong> — check the
           padding: .8rem 1rem; margin: 1rem 0; }}
  .done p {{ margin: 0 0 .6rem; }}
  .done p:last-child {{ margin: .6rem 0 0; }}
- details.explain {{ margin: 1rem 0; background: #8881; }}
- details.explain summary {{ font-weight: 600; }}
+ details.hint {{ margin: .25rem 0 0; font-size: .92rem; }}
+ details.hint summary {{ cursor: pointer; color: #8889; font-weight: 600; }}
+ details.hint p {{ margin: .5rem 0 0; }}
  details.explain p {{ font-size: .93rem; margin: .6rem 0; }}
  details.explain p:last-child {{ margin-bottom: 0; }}
  textarea {{ font: inherit; font-size: .95rem; padding: .4rem .5rem; width: 100%;
@@ -1601,40 +1580,36 @@ site yet, so <strong>do not plan against it</strong> — check the
 </style></head><body>
 
 <h1>RWU Academic Calendar</h1>
-<p class="sub">Subscribable calendar feeds and JSON, derived from RWU's public
-academic calendar page.</p>
+<p class="sub">Build your class schedule as a calendar file, or subscribe to
+RWU's academic calendar. Derived from RWU's public calendar page.</p>
 {stale_banner}
-
-<a class="banner" href="#builder">
-<span class="banner-kicker">Most people want this</span>
-<span class="banner-title">Build your own class schedule &rarr;</span>
-<span class="banner-sub">Enter your courses and times, get a calendar with every
-meeting already worked out against the academic calendar — holidays removed, day
-swaps applied, reminders optional, ending with the term.</span>
-</a>
 
 <p class="warn"><strong>Not an official Roger Williams University
 publication.</strong> Derived by scraping the
 <a href="{_e(src)}">public academic calendar page</a>; not endorsed by the
 university. Verify against the official calendar before relying on it.</p>
 
+{_BUILDER_HTML}
+
+<h2 id="feeds">Or subscribe to the whole academic calendar</h2>
+<p>Holidays, breaks and day swaps as a live feed: add it once and it stays
+current, with no rebuilding when RWU moves a date. Useful alongside the
+schedule above, or on its own.</p>
+
 <div class="hero">
 <p class="eyebrow">{eyebrow}</p>
-<h2>{_e(current.academic_year) if current else 'Calendar'}</h2>
+<p class="hero-year">{_e(current.academic_year) if current else 'Calendar'}</p>
 {_next_milestone(current, today) if current else ''}
 <div class="cards">{hero_terms}</div>
 <div class="btns">
 <a class="btn" href="{webcal(PRIMARY_FEED)}">Subscribe on this device</a>
 <a class="btn alt" href="{webcal(cur_ics)}">Subscribe: {current.academic_year if current else ''} only</a>
 <a class="btn alt" href="{PRIMARY_FEED}">Download .ics</a>
-<a class="btn alt" href="#builder">Build my class schedule</a>
 </div>
-<p class="tip">Holidays, breaks and day swaps — add once and it stays current.
-If a button does nothing, paste this link into your calendar app instead:</p>
+<p class="tip">If a button does nothing, paste this link into your calendar app
+instead:</p>
 {_urlbox(FEED_URL)}
 </div>
-
-{_BUILDER_HTML}
 
 <h2 id="add-it-to-your-phone">Add it to your phone</h2>
 {_HOWTO}

@@ -58,6 +58,38 @@ state. Catalog rows arrive collapsed; hand-entered ones open, since they are
 empty. An incomplete row says what is missing rather than silently failing to
 appear in the preview.
 
+## Page order and density — 2026-08-19
+
+"Most people are going to use the builder, not the subscription feed." The page
+was built the other way round and had been quietly admitting it: a banner near
+the top read *"Most people want this → Build your own class schedule"*, which is
+a page telling you its own order is wrong.
+
+Measured at 375px, before and after, on the same viewport:
+
+| | before | after |
+|---|---|---|
+| Whole page | 10.7 screens | 9.6 |
+| "Build your own schedule" | 2.5 screens down | **0.6** |
+| Term picker | 2.9 | 0.8 |
+| **First control you can use** (subject) | 3.6 | **0.9** |
+| Download button | 5.4 | 2.7 |
+
+| # | What | State |
+|---|---|---|
+| S1 | **The builder sat below a complete second feature.** To reach it you scrolled past the year cards, the subscribe buttons and the feed link box. | **verified** — builder directly under the disclaimer; the feed section follows it under its own heading. The jump-link banner went with the reason for it |
+| S2 | **The checkbox explanation was in the wrong place**, not merely too long: open by default *above* the form, between the term picker and the course picker, describing two controls that live inside an item row the reader has not created yet. | **verified** — moved into that row, directly after the two checkboxes, shut. Still a `<details>`: touch, keyboard and screen reader, no script, which is what P1 required. A test asserts it carries no `title=` so it cannot regress into a tooltip |
+| S3 | The preamble said the same thing twice — a paragraph, then three numbered step markers repeating it. | **verified** — one sentence; `.steps` and its CSS deleted, along with the now-dead `.banner` rules |
+
+**A measurement error worth recording.** The first pass at these numbers was
+taken while the browser pane reported a zero-width viewport, and every
+`getBoundingClientRect` reading was inflated — the page was called 46.6 screens
+when it was 10.7, and the explain block 4 screens when it was 0.6. The design
+conclusions happened to survive, but only because the *order* was wrong
+independently of how tall anything was. Fix: build the previous commit in a
+temporary worktree, serve both, and measure them in the same viewport in the
+same session. Check `innerWidth` is non-zero before trusting a layout number.
+
 ## Course catalog picker — 2026-08-16
 
 Added after production readiness. Scope decided deliberately: **five fields,

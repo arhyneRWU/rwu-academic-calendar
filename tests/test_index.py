@@ -95,7 +95,9 @@ class TestSubscribeLinks:
     def test_leads_with_the_no_class_feed_not_the_full_one(self, page):
         """The full feed carries every add/drop deadline and buries a phone."""
         assert emit.PRIMARY_FEED == 'rwu-no-class-days.ics'
-        hero = page.split('class="hero"')[1].split('<h2 id="builder"')[0]
+        # The hero sits *below* the builder now, so its end is the next
+        # heading after it, not the builder's.
+        hero = page.split('class="hero"')[1].split('<h2 id="add-it-to-your-phone"')[0]
         assert emit.PRIMARY_FEED in hero
         assert 'rwu-academic-calendar.ics' not in hero
 
@@ -130,7 +132,7 @@ class TestInstructions:
                 assert 'class="urlbox"' in b, b[:120]
 
     def test_hero_also_shows_the_pasteable_url(self, page):
-        hero = page.split('class="hero"')[1].split('<h2 id="builder"')[0]
+        hero = page.split('class="hero"')[1].split('<h2 id="add-it-to-your-phone"')[0]
         assert f'{emit.SITE_URL}/{emit.PRIMARY_FEED}' in hero
 
     def test_copy_button_is_hidden_until_javascript_enables_it(self, page):

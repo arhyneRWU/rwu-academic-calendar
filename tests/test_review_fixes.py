@@ -264,17 +264,35 @@ class TestTheTrickyControlsAreExplainedOnAPhone:
         assert 'cursor: help' not in page
 
     def test_a_real_disclosure_replaces_it(self, page):
-        assert page.count('<details class="explain" open>') == 1
+        assert page.count('<details class="hint">') == 1
+
+    def test_it_sits_beside_the_checkboxes_it_explains(self, page):
+        """It was a block open by default *above* the form: four phone-screens
+        tall, between the term picker and the course picker, describing two
+        controls that live inside an item row the reader had not created yet.
+        Now it is in that row, after those two checkboxes, shut."""
+        row = page[page.index("<label class=\"chk\"><input type=\"checkbox\" name=\"swaps\""):]
+        row = row[:row.index('</details>')]
+        assert row.index('name="skip"') < row.index('<details class="hint">')
+        assert '<details class="explain"' not in page
 
     def test_it_explains_both_checkboxes_not_just_the_first(self, page):
         """"Skips holidays and breaks" never had an explanation at all."""
-        block = page[page.index('<details class="explain"'):]
+        block = page[page.index('<details class="hint">'):]
         block = block[:block.index('</details>')]
         assert 'Follows the class timetable</strong>' in block
         assert 'Skips holidays and breaks</strong>' in block
 
     def test_it_says_what_to_do_when_unsure(self, page):
-        assert 'Leave both ticked' in page
+        assert 'Not sure? Leave both.' in page
+
+    def test_it_still_needs_no_mouse_and_no_script(self, page):
+        """The whole point of P1: a <details> works on touch and keyboard and
+        is read out by screen readers. Moving it must not quietly turn it back
+        into something that needs a pointer."""
+        block = page[page.index('<details class="hint">'):]
+        block = block[:block.index('</details>')]
+        assert 'title=' not in block and 'onmouseover' not in block
 
     def test_the_preview_is_announced_as_it_changes(self, page):
         assert 'id="preview" class="preview" aria-live="polite"' in page
@@ -768,3 +786,30 @@ class TestTheExamGridCaveat:
         block = block[:block.index('</p>')]
         for stale in ('Fall 2026', 'December', '7–9'):
             assert stale not in block, stale
+
+
+class TestTheBuilderComesFirst:
+    """Measured at 375px: the first control anyone can use sat 3.6 screens
+    down, below a complete second feature. Andrew's call, on product grounds:
+    most people are here for the builder, not the subscription."""
+
+    def test_the_builder_precedes_the_feed_section(self, page):
+        assert page.index('id="builder"') < page.index('id="feeds"')
+
+    def test_the_jump_link_past_the_feeds_is_gone_with_its_reason(self, page):
+        """A banner reading "Most people want this →" existed to skip the
+        section above the builder. Nothing is above it now."""
+        assert 'class="banner"' not in page
+        assert 'Most people want this' not in page
+        assert '.banner {' not in page and 'banner-kicker' not in page
+
+    def test_only_one_h1_and_no_duplicate_year_heading(self, page):
+        assert page.count('<h1') == 1
+        # The hero's year was an <h2>; under its own section heading that made
+        # two h2s in a row saying different things.
+        assert '<p class="hero-year">' in page
+
+    def test_the_step_list_went_with_the_sentence_that_replaced_it(self, page):
+        assert 'class="steps"' not in page
+        assert '.steps {' not in page          # and its CSS
+        assert 'Pick your term, add your classes, download.' in page
