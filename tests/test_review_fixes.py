@@ -735,3 +735,36 @@ class TestStudentDeadlinesAreOptInAndRemind:
         assert 'function rwuCounts(t)' in page
         assert "'(none this term)'" in page
         assert "querySelector('input').disabled = !n" in page
+
+
+class TestTheExamGridCaveat:
+    """A beta tester compared our finals dates against the Registrar's exam
+    grid and found a Saturday we do not list. We match the academic calendar
+    exactly; the two RWU documents disagree with each other."""
+
+    def test_our_finals_match_the_academic_calendar(self, years):
+        ay = next(a for a in years if a.academic_year == '2026-2027')
+        t = next(t for t in ay.terms if t.id == 'fall-2026')
+        finals = sorted(e.date.isoformat() for e in t.events if 'finals' in e.kinds)
+        assert finals == ['2026-12-04', '2026-12-07', '2026-12-08', '2026-12-09']
+
+    def test_no_year_claims_a_saturday_exam_day(self, years):
+        """RWU's calendar has never listed one. If a future extraction produces
+        one, it is worth a human look before it ships."""
+        for ay in years:
+            for t in ay.terms:
+                for e in t.events:
+                    if 'finals' in e.kinds:
+                        assert e.date.weekday() != 5, (ay.academic_year, e.date)
+
+    def test_the_page_says_the_exam_grid_is_a_different_document(self, page):
+        assert 'exam grid' in page
+        assert 'This tool reads the academic' in page and 'calendar only' in page
+
+    def test_the_caveat_names_no_specific_term(self, page):
+        """It sits beside a term picker; naming Fall 2026's dates would be
+        wrong the moment someone chooses Spring."""
+        block = page[page.index('Exam days are the ones'):]
+        block = block[:block.index('</p>')]
+        for stale in ('Fall 2026', 'December', '7–9'):
+            assert stale not in block, stale

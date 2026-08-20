@@ -684,12 +684,18 @@ Holidays, breaks and the day swap <span class="tiny" data-count="closures"></spa
 First and last day of classes <span class="tiny" data-count="term"></span></label>
 <label class="chk"><input type="checkbox" class="rwu-g" value="deadlines">
 <strong>Student deadlines</strong> — add, drop, withdrawal, registration and
-the exam period <span class="tiny" data-count="deadlines"></span></label>
+the exam days <span class="tiny" data-count="deadlines"></span></label>
 <p class="tip">Everything here comes in as an all-day entry marked
 <em>free</em>: it shows up without blocking your calendar or making you look
 busy to anyone checking your availability. <strong>Add, drop and withdrawal
 deadlines also carry a reminder the afternoon before</strong> — they are the
 dates on this list that cost money to miss. The rest are silent.</p>
+<p class="tip"><strong>Exam days are the ones the academic calendar names.</strong>
+The Registrar publishes a separate <em>exam grid</em> that assigns each course
+its slot, and that grid can carry dates the academic calendar does not list —
+a Saturday for multi-section exams, for one. This tool reads the academic
+calendar only, so check the grid for the date, time and room of your own
+exam.</p>
 </fieldset>
 
 <p class="remind"><label><strong>Remind me</strong>

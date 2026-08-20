@@ -110,6 +110,7 @@ labelled, no unlabelled buttons.
 
 | # | What | Finding |
 |---|---|---|
+| D2 | A beta tester: the feed lists Fall 2026 finals on 4, 7, 8 and 9 December but not Saturday 5 December, which the Registrar's exam grid shows a column for. | **Two RWU documents disagree; we match the one we cite.** The academic calendar page reads verbatim: *Final Examinations: Day and Evening Classes — DEC 4, FRI* and *DEC 7-9, MON-WED*. No Saturday, and no year back to 2023 lists one. The **exam grid** — the time-block matrix that assigns each course its slot — is a separate Registrar publication and can carry dates the calendar does not. Not invented into `data/`, same call as D1. The builder now says the grid is a different document and to check it for your own exam; a test pins the four dates and asserts no year claims a Saturday, so a future extraction that produces one gets a human look. |
 | D1 | Summer 2026 has no Independence Day, though 2023-24 and 2024-25 do. 4 July 2026 is a Saturday, observed Friday the 3rd. | **RWU's omission, not a parse miss** — confirmed by re-extracting the live page (49 events, no such row). Deliberately *not* added to `data/`: these feeds publish what RWU published, and inventing a date is worse than reporting a gap. `validate.check_federal_holidays` reports it on every run. |
 
 ## Done — review of 2026-08-16
