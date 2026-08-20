@@ -85,6 +85,8 @@ pattern-match the prose; use `Term.effective_weekday()` or the grid.
 | Classes come from the catalog; **no blank class row by default** | Once the picker existed, opening with a class-shaped form made everything else — office hours, meetings, clubs, shifts — look out of scope. A labelled section says what belongs there; a button cannot |
 | A downloaded schedule **carries RWU's dates too** | Free-time, all-day, opt-out. The day swap changes a personal schedule; a file that acts on it without showing it is a file you cannot check. UIDs match the feeds, so subscribing as well does not double them |
 | Day swaps are **reworded** in personal files only | The feeds keep RWU's prose verbatim; a ride-along line read once on a phone says "Tuesday runs a Monday schedule" instead, with RWU's own words in the description |
+| Only add/drop dates get an alarm | Ten deadline entries with ten alarms trains people to dismiss the two that matter. Registration opening and the exam period are worth seeing, not worth waking up to |
+| Alarms on all-day events use `-PT9H` | `-P1D` fires at 00:00 the previous day. Nine hours before midnight is 3pm the afternoon before, while the Registrar's office is still open |
 | Courses committed, refreshed **weekly** | Same rule as the calendar; nightly would be standing load on a production student system for no real gain |
 
 ## Things that will bite you

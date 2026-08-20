@@ -336,8 +336,27 @@ def _rwu_note(e: Event) -> str:
     return f'RWU: {e.label}'
 
 
+#: The kinds that make up "student deadlines" -- dates a student has to *act*
+#: on, as opposed to dates the university is simply shut. Grades-due and
+#: residence-life dates are in the data and deliberately not here: nobody plans
+#: around when the Registrar receives grades, and a hall closing is not a
+#: deadline you can miss by forgetting.
+_DEADLINE_KINDS = frozenset({'add_drop', 'registration', 'advisement', 'finals'})
+
+
+def _rwu_group(e: Event) -> str | None:
+    """Which checkbox owns this event, or None if the builder never offers it."""
+    if e.no_classes or e.observes_schedule_of:
+        return 'closures'
+    if 'term_start' in e.kinds or 'term_end' in e.kinds:
+        return 'term'
+    if _DEADLINE_KINDS & set(e.kinds):
+        return 'deadlines'
+    return None
+
+
 def _rwu_notes(ay: AcademicYear, t, window=None) -> list[dict]:
-    """Holidays, breaks, day swaps and term boundaries, ready for the builder.
+    """RWU's own dates, grouped, ready for the builder to filter.
 
     The UID is the *same one the published feeds use*, so someone who both
     subscribes to a feed and downloads a schedule ends up with one copy of
@@ -345,17 +364,25 @@ def _rwu_notes(ay: AcademicYear, t, window=None) -> list[dict]:
     """
     seen, out = set(), []
     for e in sorted(t.events, key=lambda e: (e.date, e.label)):
-        if not (e.no_classes or e.observes_schedule_of
-                or 'term_start' in e.kinds or 'term_end' in e.kinds):
+        group = _rwu_group(e)
+        if group is None:
             continue
         if window and not (window[0] <= e.date <= window[1]):
             continue
         if (e.date, e.label) in seen:
             continue
         seen.add((e.date, e.label))
-        out.append({'d': e.date.isoformat(), 's': _rwu_note(e), 'x': e.label,
-                    'u': _uid(ay.academic_year, e.owner_term or t.id,
-                              e.date, e.label)})
+        note = {'d': e.date.isoformat(), 's': _rwu_note(e), 'x': e.label,
+                'g': group,
+                'u': _uid(ay.academic_year, e.owner_term or t.id,
+                          e.date, e.label)}
+        # A reminder only where missing the date costs money: add, drop, and
+        # withdrawal. Registration opening and the exam period are worth
+        # seeing, not worth an alarm, and an alarm on all ten would train
+        # people to dismiss the two that matter.
+        if 'add_drop' in e.kinds:
+            note['a'] = 1
+        out.append(note)
     return out
 
 
@@ -649,12 +676,21 @@ shifts, a class the catalog doesn't list — anything with days and a time.</p>
 <p class="tip" id="empty">Nothing added yet — add a class above, or an item of
 your own.</p>
 
-<p class="chk"><label><input type="checkbox" id="rwu-dates" checked>
-<strong>Include RWU's own dates</strong> — holidays, breaks, the day swap,
-first and last day of classes</label></p>
-<p class="tip" id="rwu-note">They come in as all-day entries marked
-<em>free</em>, so they show up without blocking your calendar or making you
-look busy to anyone checking your availability.</p>
+<fieldset class="rwu">
+<legend>RWU's own dates — tick what you want in your calendar</legend>
+<label class="chk"><input type="checkbox" class="rwu-g" value="closures" checked>
+Holidays, breaks and the day swap <span class="tiny" data-count="closures"></span></label>
+<label class="chk"><input type="checkbox" class="rwu-g" value="term" checked>
+First and last day of classes <span class="tiny" data-count="term"></span></label>
+<label class="chk"><input type="checkbox" class="rwu-g" value="deadlines">
+<strong>Student deadlines</strong> — add, drop, withdrawal, registration and
+the exam period <span class="tiny" data-count="deadlines"></span></label>
+<p class="tip">Everything here comes in as an all-day entry marked
+<em>free</em>: it shows up without blocking your calendar or making you look
+busy to anyone checking your availability. <strong>Add, drop and withdrawal
+deadlines also carry a reminder the afternoon before</strong> — they are the
+dates on this list that cost money to miss. The rest are silent.</p>
+</fieldset>
 
 <p class="remind"><label><strong>Remind me</strong>
 <select id="alarm-all"></select></label>
@@ -727,7 +763,18 @@ _BUILDER_JS = r"""
     ['PT2H','2 hours before'],['P1D','1 day before']];
   const REPEATS = [['weekly','Every week'],['biweekly','Every other week'],
                    ['dates','Only on dates I list']];
-  const rwuBox = document.getElementById('rwu-dates');
+  const rwuBoxes = [...document.querySelectorAll('.rwu-g')];
+  const rwuOn = () => new Set(rwuBoxes.filter(b => b.checked).map(b => b.value));
+  const rwuPicked = t => (t.rwu || []).filter(n => rwuOn().has(n.g));
+  // Counts are per term, so switching to a term RWU has published less of
+  // shows honest numbers rather than boxes that silently add nothing.
+  function rwuCounts(t) {
+    for (const el of document.querySelectorAll('[data-count]')) {
+      const n = (t.rwu || []).filter(x => x.g === el.dataset.count).length;
+      el.textContent = n ? `(${n})` : '(none this term)';
+      el.closest('label').querySelector('input').disabled = !n;
+    }
+  }
   const nextDay = s => { const d = dateOf(s); d.setDate(d.getDate() + 1); return iso(d); };
   const alarmAll = document.getElementById('alarm-all');
   ALARMS.forEach(([v, l]) => alarmAll.add(new Option(l, v, v === 'PT15M', v === 'PT15M')));
@@ -927,6 +974,7 @@ _BUILDER_JS = r"""
 
   function update() {
     const t = GRID[termSel.value];
+    rwuCounts(t);
     const all = read();
     refreshItems(all);
     document.getElementById('empty').hidden = courses.children.length > 0;
@@ -969,12 +1017,15 @@ _BUILDER_JS = r"""
   // preview has to account for them or the count in their calendar will not
   // match the count here.
   function rwuLine(t) {
-    const n = (t.rwu || []).length;
-    if (!rwuBox.checked || !n) return '';
-    return `<div class="pv"><strong>RWU's own dates</strong> — <strong>${n}</strong>
-      all-day ${n === 1 ? 'entry' : 'entries'} marked free: holidays, breaks,
-      the day swap, first and last day of classes. They do not block your
-      calendar. Untick “Include RWU's own dates” to leave them out.</div>`;
+    const picked = rwuPicked(t);
+    if (!picked.length) return '';
+    const withAlarm = picked.filter(n => n.a).length;
+    return `<div class="pv"><strong>RWU's own dates</strong> — <strong>${picked.length}</strong>
+      all-day ${picked.length === 1 ? 'entry' : 'entries'} marked free, so they
+      do not block your calendar.` + (withAlarm
+        ? ` <strong>${withAlarm}</strong> of them — the add, drop and withdrawal
+          deadlines — also remind you the afternoon before.` : '')
+      + `</div>`;
   }
 
   // Backslash MUST be escaped, and MUST be escaped first -- otherwise a room
@@ -1101,7 +1152,7 @@ _BUILDER_JS = r"""
     // TRANSP is the standard, and X-MICROSOFT-CDO-BUSYSTATUS is what Outlook
     // actually reads to decide whether you look busy. No VALARM -- nobody
     // needs a 15-minute warning that a break is starting.
-    if (rwuBox.checked) for (const n of (GRID[termId].rwu || [])) {
+    for (const n of rwuPicked(GRID[termId])) {
       out.push('BEGIN:VEVENT',
         `UID:${n.u}`,
         `DTSTAMP:${new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d+/,'')}`,
@@ -1113,8 +1164,14 @@ _BUILDER_JS = r"""
                            + 'Unofficial; verify against the official one.')}`,
         'CATEGORIES:RWU academic calendar',
         'TRANSP:TRANSPARENT',
-        'X-MICROSOFT-CDO-BUSYSTATUS:FREE',
-        'END:VEVENT');
+        'X-MICROSOFT-CDO-BUSYSTATUS:FREE');
+      // -PT9H, not -P1D. An all-day event starts at midnight, so "one day
+      // before" fires at 00:00 the previous day -- an alert nobody is awake
+      // for and everybody dismisses. Nine hours before midnight is 3pm the
+      // afternoon before, while the Registrar's office is still open.
+      if (n.a) out.push('BEGIN:VALARM', 'ACTION:DISPLAY', 'TRIGGER:-PT9H',
+        `DESCRIPTION:${esc(n.s + ' — tomorrow')}`, 'END:VALARM');
+      out.push('END:VEVENT');
     }
     out.push('END:VCALENDAR');
     return out.map(fold).join('\r\n') + '\r\n';   // RFC 5545 wants CRLF
@@ -1203,7 +1260,7 @@ _BUILDER_JS = r"""
   document.getElementById('add').addEventListener('click', () => {
     addItem(); update();
   });
-  rwuBox.addEventListener('change', update);
+  for (const b of rwuBoxes) b.addEventListener('change', update);
   alarmAll.addEventListener('change', () => {
     for (const row of courses.children) {
       if (row.dataset.alarmSet) continue;      // this one was set by hand
@@ -1510,6 +1567,11 @@ site yet, so <strong>do not plan against it</strong> — check the
  .catalog select {{ max-width: 100%; width: 100%; }}
  #cat-section {{ min-width: 0; }}
  #cat-note {{ margin: .6rem 0 0; }}
+ fieldset.rwu {{ border: 1px solid var(--line); border-radius: 8px;
+                 padding: .8rem 1rem; margin: 1rem 0; }}
+ fieldset.rwu legend {{ font-weight: 600; padding: 0 .4rem; }}
+ fieldset.rwu .chk {{ display: block; margin: 0 0 .5rem; }}
+ fieldset.rwu .tip {{ margin: .8rem 0 0; }}
  .remind {{ display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem; }}
  .remind .tip {{ flex: 1 1 12rem; min-width: 0; }}
  .said {{ margin: .6rem 0 0; font-weight: 600; font-size: .92rem; }}

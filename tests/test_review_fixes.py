@@ -628,26 +628,27 @@ class TestRwuDatesRideAlongWithAPersonalSchedule:
                 assert grid[gid]['begin'] <= n['d'] <= grid[gid]['end'], (gid, n)
 
     def test_they_are_emitted_all_day_and_never_block(self, page):
-        block = page[page.index('if (rwuBox.checked) for (const n of'):]
+        block = page[page.index('for (const n of rwuPicked(GRID[termId]))'):]
         block = block[:block.index("out.push('END:VCALENDAR')")]
         assert 'DTSTART;VALUE=DATE:${stamp(n.d)}' in block
         assert 'DTEND;VALUE=DATE:${stamp(nextDay(n.d))}' in block
         assert 'TRANSP:TRANSPARENT' in block
         assert 'X-MICROSOFT-CDO-BUSYSTATUS:FREE' in block   # what Outlook reads
-        assert 'VALARM' not in block                        # no 15-min warning that a break began
+        # The only alarm here is the deadline one, and it is conditional.
+        assert block.count('BEGIN:VALARM') == 1 and 'if (n.a) out.push' in block
 
     def test_the_published_feeds_do_not_make_subscribers_look_busy(self, tmp_path, years):
         feed = emit.to_ics(years, 'x').decode()
         assert feed.count('TRANSP:TRANSPARENT') == feed.count(
             'X-MICROSOFT-CDO-BUSYSTATUS:FREE') == feed.count('BEGIN:VEVENT')
 
-    def test_it_is_on_by_default_and_can_be_turned_off(self, page):
-        assert '<input type="checkbox" id="rwu-dates" checked>' in page
-        assert "rwuBox.addEventListener('change', update)" in page
+    def test_closures_are_on_by_default_and_can_be_turned_off(self, page):
+        assert '<input type="checkbox" class="rwu-g" value="closures" checked>' in page
+        assert "for (const b of rwuBoxes) b.addEventListener('change', update)" in page
 
     def test_the_preview_accounts_for_them(self, page):
         assert 'function rwuLine(t)' in page
-        assert "if (!rwuBox.checked || !n) return ''" in page
+        assert "if (!picked.length) return ''" in page
 
 
 class TestOutlookCanKeepTheSeriesTogether:
@@ -678,3 +679,59 @@ class TestOutlookCanKeepTheSeriesTogether:
     def test_the_recurring_part_is_still_one_event(self, page):
         assert "'RRULE:FREQ=WEEKLY'" in page
         assert 'UNTIL=' in page
+
+
+class TestStudentDeadlinesAreOptInAndRemind:
+    """Add/drop and withdrawal dates were in the data and not offered. They
+    are the dates on RWU's calendar that cost money to miss."""
+
+    def test_deadlines_are_their_own_group(self, years):
+        ay = next(a for a in years if a.academic_year == '2026-2027')
+        notes = emit.meeting_grid(ay)['fall-2026']['rwu']
+        by = {}
+        for n in notes:
+            by.setdefault(n['g'], []).append(n['s'])
+        assert set(by) == {'closures', 'term', 'deadlines'}
+        assert any('Drop a Course With the "W"' in x for x in by['deadlines'])
+        assert any('Final Examinations' in x for x in by['deadlines'])
+        assert any('Registration Begins' in x for x in by['deadlines'])
+
+    def test_only_add_drop_dates_carry_a_reminder(self, years):
+        """An alarm on all ten would train people to dismiss the two that
+        matter."""
+        ay = next(a for a in years if a.academic_year == '2026-2027')
+        notes = emit.meeting_grid(ay)['fall-2026']['rwu']
+        alarmed = [n['s'] for n in notes if n.get('a')]
+        assert len(alarmed) == 4
+        assert all('Add a Course' in x or 'Drop a Course' in x for x in alarmed)
+        assert not any(n.get('a') for n in notes if n['g'] != 'deadlines')
+
+    def test_grades_and_residence_life_are_not_offered(self, years):
+        """They are in the data. Nobody plans around when the Registrar
+        receives grades, and a hall closing is not a deadline you can miss."""
+        ay = next(a for a in years if a.academic_year == '2026-2027')
+        got = {n['s'] for n in emit.meeting_grid(ay)['fall-2026']['rwu']}
+        assert not any('Grades' in x for x in got)
+        assert not any('Residence Halls' in x for x in got)
+        assert not any('Orientation' in x for x in got)
+
+    def test_deadlines_are_off_until_ticked(self, page):
+        assert '<input type="checkbox" class="rwu-g" value="deadlines">' in page
+        assert 'value="deadlines" checked' not in page
+
+    def test_the_reminder_is_the_afternoon_before_not_midnight(self, page):
+        """An all-day event starts at midnight, so -P1D fires at 00:00 the
+        previous day -- an alert nobody is awake for."""
+        assert "'TRIGGER:-PT9H'" in page
+        assert "'TRIGGER:-P1D'" not in page
+
+    def test_a_deadline_still_shows_as_free(self, page):
+        block = page[page.index('for (const n of rwuPicked(GRID[termId]))'):]
+        block = block[:block.index("out.push('END:VCALENDAR')")]
+        # The alarm is added inside the same VEVENT, after the busy status.
+        assert block.index('X-MICROSOFT-CDO-BUSYSTATUS:FREE') < block.index('if (n.a)')
+
+    def test_counts_are_per_term_and_an_empty_group_disables_itself(self, page):
+        assert 'function rwuCounts(t)' in page
+        assert "'(none this term)'" in page
+        assert "querySelector('input').disabled = !n" in page
