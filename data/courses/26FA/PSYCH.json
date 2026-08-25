@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "PSYCH",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-08-25",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -16,7 +16,7 @@
    ],
    "start": "11:00",
    "end": "11:50",
-   "room": ""
+   "room": "College of Arts and Sciences 123"
   },
   {
    "section": "PSYCH.100.03",
@@ -140,18 +140,16 @@
    ],
    "start": "14:00",
    "end": "16:50",
-   "room": ""
+   "room": "College of Arts and Sciences 162"
   },
   {
    "section": "PSYCH.261.01",
    "title": "Intro to Neuroscience",
    "days": [
-    "monday",
-    "wednesday",
-    "friday"
+    "wednesday"
    ],
-   "start": "10:00",
-   "end": "10:50",
+   "start": "17:00",
+   "end": "19:50",
    "room": "College of Arts and Sciences 125"
   },
   {
@@ -163,7 +161,7 @@
    ],
    "start": "08:00",
    "end": "09:20",
-   "room": ""
+   "room": "College of Arts and Sciences 123"
   },
   {
    "section": "PSYCH.279.01",
@@ -173,7 +171,7 @@
    ],
    "start": "17:00",
    "end": "19:50",
-   "room": ""
+   "room": "Humanities Building 308"
   },
   {
    "section": "PSYCH.280.01",
@@ -207,7 +205,7 @@
    ],
    "start": "10:00",
    "end": "10:50",
-   "room": ""
+   "room": "College of Arts and Sciences 126"
   },
   {
    "section": "PSYCH.310.02",
@@ -219,7 +217,7 @@
    ],
    "start": "11:00",
    "end": "11:50",
-   "room": ""
+   "room": "College of Arts and Sciences 228"
   },
   {
    "section": "PSYCH.311.01",
@@ -259,7 +257,7 @@
    ],
    "start": "12:00",
    "end": "14:50",
-   "room": ""
+   "room": "College of Arts and Sciences 152"
   },
   {
    "section": "PSYCH.340.01",
@@ -293,7 +291,7 @@
    ],
    "start": "17:00",
    "end": "19:50",
-   "room": ""
+   "room": "College of Arts and Sciences 123"
   },
   {
    "section": "PSYCH.365.01",
@@ -357,7 +355,7 @@
    ],
    "start": "14:00",
    "end": "16:50",
-   "room": ""
+   "room": "College of Arts and Sciences 125"
   },
   {
    "section": "PSYCH.440.01",
@@ -390,7 +388,7 @@
    ],
    "start": "11:00",
    "end": "13:50",
-   "room": "Marine & Natural Sciences Bldg 211"
+   "room": "Gabelli School of Business G05"
   },
   {
    "section": "PSYCH.440L.52",
@@ -423,7 +421,7 @@
    ],
    "start": "10:00",
    "end": "10:50",
-   "room": ""
+   "room": "College of Arts and Sciences 123"
   },
   {
    "section": "PSYCH.499.91",
@@ -443,7 +441,7 @@
    ],
    "start": "11:00",
    "end": "13:50",
-   "room": ""
+   "room": "Gabelli School of Business G05"
   },
   {
    "section": "PSYCH.503.01",
@@ -464,7 +462,7 @@
    ],
    "start": "17:00",
    "end": "19:50",
-   "room": ""
+   "room": "College of Arts and Sciences 125"
   },
   {
    "section": "PSYCH.506.02",
@@ -474,7 +472,7 @@
    ],
    "start": "17:00",
    "end": "19:50",
-   "room": ""
+   "room": "College of Arts and Sciences 220"
   },
   {
    "section": "PSYCH.514.01",
@@ -485,7 +483,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": ""
+   "room": "College of Arts and Sciences 121"
   },
   {
    "section": "PSYCH.514.02",
@@ -496,7 +494,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": ""
+   "room": "College of Arts and Sciences 225"
   },
   {
    "section": "PSYCH.518.01",
@@ -517,7 +515,7 @@
    ],
    "start": "11:00",
    "end": "12:20",
-   "room": ""
+   "room": "Gabelli School of Business G06"
   },
   {
    "section": "PSYCH.532.01",
@@ -528,7 +526,7 @@
    ],
    "start": "09:30",
    "end": "10:50",
-   "room": ""
+   "room": "Gabelli School of Business G05"
   },
   {
    "section": "PSYCH.579.01",

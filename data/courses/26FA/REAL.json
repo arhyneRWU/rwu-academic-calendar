@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "REAL",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-08-25",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -15,7 +15,7 @@
    ],
    "start": "15:30",
    "end": "16:50",
-   "room": ""
+   "room": "Humanities Building 107"
   },
   {
    "section": "REAL.101.02",
@@ -26,7 +26,7 @@
    ],
    "start": "12:30",
    "end": "13:50",
-   "room": ""
+   "room": "Cummings School Architecture 132"
   },
   {
    "section": "REAL.302.01",
@@ -37,7 +37,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": ""
+   "room": "Humanities Building 107"
   },
   {
    "section": "REAL.443.01",
@@ -50,24 +50,14 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "REAL.443.02",
-   "title": "Project Development and Finan",
-   "days": [
-    "thursday"
-   ],
-   "start": "18:30",
-   "end": "21:20",
-   "room": ""
-  },
-  {
    "section": "REAL.501.01",
    "title": "Real Estate Equity & Environ",
    "days": [
-    "monday"
+    "thursday"
    ],
    "start": "18:00",
    "end": "20:50",
-   "room": ""
+   "room": "Cummings School Architecture 206"
   },
   {
    "section": "REAL.543.01",

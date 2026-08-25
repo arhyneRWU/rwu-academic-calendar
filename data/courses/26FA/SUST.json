@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "SUST",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-08-25",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -15,7 +15,7 @@
    ],
    "start": "09:30",
    "end": "10:50",
-   "room": ""
+   "room": "College of Arts and Sciences 222"
   },
   {
    "section": "SUST.101.02",
@@ -26,7 +26,7 @@
    ],
    "start": "12:30",
    "end": "13:50",
-   "room": ""
+   "room": "College of Arts and Sciences 222"
   },
   {
    "section": "SUST.301.01",
@@ -37,7 +37,7 @@
    ],
    "start": "11:00",
    "end": "12:20",
-   "room": ""
+   "room": "College of Arts and Sciences 222"
   },
   {
    "section": "SUST.401.02",
@@ -47,7 +47,7 @@
    ],
    "start": "14:00",
    "end": "16:50",
-   "room": ""
+   "room": "College of Arts and Sciences 162"
   },
   {
    "section": "SUST.401.03",
@@ -57,7 +57,7 @@
    ],
    "start": "14:00",
    "end": "16:50",
-   "room": ""
+   "room": "College of Arts and Sciences 222"
   }
  ]
 }

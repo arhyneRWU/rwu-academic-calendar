@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "VARTS",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-08-25",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -90,7 +90,7 @@
    ],
    "start": "14:00",
    "end": "17:50",
-   "room": ""
+   "room": "Fine Arts 201"
   },
   {
    "section": "VARTS.181.01",
@@ -266,7 +266,7 @@
    ],
    "start": "14:00",
    "end": "16:50",
-   "room": ""
+   "room": "Humanities Building 316"
   }
  ]
 }

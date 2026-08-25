@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "PRES",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-08-25",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -26,7 +26,7 @@
    ],
    "start": "09:30",
    "end": "10:50",
-   "room": "Cummings School Architecture 202"
+   "room": "Humanities Building 100"
   },
   {
    "section": "PRES.331.01",
@@ -68,7 +68,7 @@
    ],
    "start": "09:30",
    "end": "10:50",
-   "room": "Cummings School Architecture 202"
+   "room": "Humanities Building 100"
   },
   {
    "section": "PRES.531.01",

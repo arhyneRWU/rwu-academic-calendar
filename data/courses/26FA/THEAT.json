@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "THEAT",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-08-25",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -26,7 +26,7 @@
    ],
    "start": "11:00",
    "end": "12:20",
-   "room": ""
+   "room": "Gabelli School of Business G01"
   },
   {
    "section": "THEAT.130.01",
@@ -37,7 +37,7 @@
    ],
    "start": "09:30",
    "end": "10:50",
-   "room": ""
+   "room": "Gabelli School of Business G01"
   },
   {
    "section": "THEAT.140.01",
@@ -48,7 +48,7 @@
    ],
    "start": "11:00",
    "end": "12:20",
-   "room": ""
+   "room": "Humanities Building 316"
   },
   {
    "section": "THEAT.142.01",
@@ -59,7 +59,7 @@
    ],
    "start": "11:00",
    "end": "12:20",
-   "room": "College of Arts and Sciences 221"
+   "room": "Humanities Building 316"
   },
   {
    "section": "THEAT.150.01",

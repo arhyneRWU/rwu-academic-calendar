@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "WTNG",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-08-25",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -26,7 +26,7 @@
    ],
    "start": "11:00",
    "end": "12:20",
-   "room": ""
+   "room": "Library LIL"
   },
   {
    "section": "WTNG.100.03",
@@ -37,7 +37,7 @@
    ],
    "start": "12:30",
    "end": "13:50",
-   "room": ""
+   "room": "Library LIL"
   },
   {
    "section": "WTNG.100.04",
@@ -106,7 +106,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": ""
+   "room": "ELS 112"
   },
   {
    "section": "WTNG.102.04",
@@ -117,7 +117,7 @@
    ],
    "start": "09:30",
    "end": "10:50",
-   "room": ""
+   "room": "Humanities Building 217"
   },
   {
    "section": "WTNG.102.05",
@@ -139,7 +139,7 @@
    ],
    "start": "11:00",
    "end": "12:20",
-   "room": ""
+   "room": "Gabelli School of Business 301"
   },
   {
    "section": "WTNG.102.07",
@@ -172,7 +172,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": ""
+   "room": "Humanities Building 309"
   },
   {
    "section": "WTNG.102.10",
@@ -183,7 +183,7 @@
    ],
    "start": "15:30",
    "end": "16:50",
-   "room": ""
+   "room": "Marine & Natural Sciences Bldg 212"
   },
   {
    "section": "WTNG.102.11",
@@ -327,7 +327,7 @@
    ],
    "start": "11:00",
    "end": "11:50",
-   "room": ""
+   "room": "Humanities Building 309"
   },
   {
    "section": "WTNG.102.23",
@@ -374,7 +374,7 @@
    ],
    "start": "08:00",
    "end": "09:20",
-   "room": ""
+   "room": "Humanities Building 217"
   },
   {
    "section": "WTNG.102.HON01",
@@ -475,7 +475,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": ""
+   "room": "Marine & Natural Sciences Bldg 212"
   },
   {
    "section": "WTNG.225.10",
