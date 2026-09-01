@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "COMSC",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -117,7 +117,7 @@
    ],
    "start": "17:00",
    "end": "17:50",
-   "room": "School of Engineering 122"
+   "room": "College of Arts and Sciences 126"
   },
   {
    "section": "COMSC.490.01",
@@ -127,7 +127,7 @@
    ],
    "start": "14:00",
    "end": "16:50",
-   "room": "School of Engineering 122"
+   "room": "College of Arts and Sciences 126"
   }
  ]
 }

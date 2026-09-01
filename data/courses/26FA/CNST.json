@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "CNST",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -365,7 +365,16 @@
    "section": "CNST.321.01",
    "title": "Adv Building Estimating",
    "days": [
-    "monday",
+    "monday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "School of Engineering 125"
+  },
+  {
+   "section": "CNST.321.01",
+   "title": "Adv Building Estimating",
+   "days": [
     "thursday"
    ],
    "start": "12:30",
@@ -476,7 +485,7 @@
    ],
    "start": "14:00",
    "end": "16:50",
-   "room": "SECCM Labs 304"
+   "room": "College of Arts and Sciences 228"
   },
   {
    "section": "CNST.445L.54",
@@ -498,7 +507,7 @@
    ],
    "start": "10:00",
    "end": "10:50",
-   "room": "School of Engineering 125"
+   "room": "SECCM Labs 304"
   },
   {
    "section": "CNST.463.01",

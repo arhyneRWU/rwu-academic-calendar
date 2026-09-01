@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "ARCH",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -874,7 +874,7 @@
    ],
    "start": "11:00",
    "end": "12:20",
-   "room": ""
+   "room": "Cummings School Architecture 132"
   },
   {
    "section": "ARCH.541.01",
@@ -904,7 +904,7 @@
    ],
    "start": "12:30",
    "end": "13:50",
-   "room": "Cummings School Architecture 203"
+   "room": "Cummings School Architecture 132"
   },
   {
    "section": "ARCH.542.01",
@@ -934,16 +934,6 @@
    ],
    "start": "11:00",
    "end": "13:50",
-   "room": "Cummings School Architecture 205"
-  },
-  {
-   "section": "ARCH.545.01",
-   "title": "Architectual Analysis II",
-   "days": [
-    "monday"
-   ],
-   "start": "08:00",
-   "end": "10:50",
    "room": "Cummings School Architecture 205"
   },
   {

@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "PSYCH",
- "retrieved": "2026-08-25",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -28,7 +28,7 @@
    ],
    "start": "09:00",
    "end": "09:50",
-   "room": "Humanities Building 100"
+   "room": "Humanities Building 100B"
   },
   {
    "section": "PSYCH.100.04",
@@ -40,7 +40,7 @@
    ],
    "start": "10:00",
    "end": "10:50",
-   "room": "Humanities Building 100"
+   "room": "Humanities Building 100B"
   },
   {
    "section": "PSYCH.100.05",
@@ -61,7 +61,7 @@
    ],
    "start": "12:30",
    "end": "13:50",
-   "room": "Humanities Building 100"
+   "room": "Humanities Building 100B"
   },
   {
    "section": "PSYCH.100.HON01",
@@ -118,7 +118,7 @@
    ],
    "start": "11:00",
    "end": "11:50",
-   "room": "Humanities Building 100"
+   "room": "Humanities Building 100B"
   },
   {
    "section": "PSYCH.240.02",
@@ -130,7 +130,7 @@
    ],
    "start": "12:00",
    "end": "12:50",
-   "room": "Humanities Building 100"
+   "room": "Humanities Building 100B"
   },
   {
    "section": "PSYCH.255.01",
@@ -247,7 +247,7 @@
    ],
    "start": "14:00",
    "end": "16:50",
-   "room": "College of Arts and Sciences 122"
+   "room": "College of Arts and Sciences 223"
   },
   {
    "section": "PSYCH.326.01",
@@ -269,7 +269,7 @@
    ],
    "start": "09:00",
    "end": "09:50",
-   "room": "Humanities Building 222"
+   "room": "College of Arts and Sciences 126"
   },
   {
    "section": "PSYCH.340.02",
@@ -281,7 +281,7 @@
    ],
    "start": "13:00",
    "end": "13:50",
-   "room": "Humanities Building 100"
+   "room": "Humanities Building 100B"
   },
   {
    "section": "PSYCH.356.01",
@@ -504,7 +504,7 @@
    ],
    "start": "17:00",
    "end": "19:50",
-   "room": "College of Arts and Sciences 220"
+   "room": "Gabelli School of Business 105"
   },
   {
    "section": "PSYCH.521.01",

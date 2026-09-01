@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "ENGR",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -191,7 +191,7 @@
    ],
    "start": "14:00",
    "end": "16:50",
-   "room": "School of Engineering 203"
+   "room": "School of Engineering 202"
   },
   {
    "section": "ENGR.330.02",
@@ -305,6 +305,17 @@
    "room": "School of Engineering 201"
   },
   {
+   "section": "ENGR.403.01",
+   "title": "Engineering Hydrology",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "School of Engineering 202"
+  },
+  {
    "section": "ENGR.419.01",
    "title": "Highway Bridge Design",
    "days": [
@@ -325,7 +336,7 @@
    ],
    "start": "10:00",
    "end": "10:50",
-   "room": ""
+   "room": "SECCM Labs 300"
   },
   {
    "section": "ENGR.432.01",
@@ -371,7 +382,7 @@
    ],
    "start": "13:00",
    "end": "13:50",
-   "room": "School of Engineering 125"
+   "room": "School of Engineering 128"
   },
   {
    "section": "ENGR.479.01",

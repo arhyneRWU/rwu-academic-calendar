@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "ENTR",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -15,7 +15,7 @@
    ],
    "start": "08:00",
    "end": "09:20",
-   "room": ""
+   "room": "Humanities Building 107"
   },
   {
    "section": "ENTR.250.01",

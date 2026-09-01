@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "FSI",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -16,7 +16,7 @@
    ],
    "start": "09:00",
    "end": "09:50",
-   "room": "School of Engineering 204"
+   "room": "College of Arts and Sciences 122"
   },
   {
    "section": "FSI.101.02",
@@ -28,7 +28,7 @@
    ],
    "start": "10:00",
    "end": "10:50",
-   "room": "School of Engineering 204"
+   "room": "College of Arts and Sciences 125"
   },
   {
    "section": "FSI.226.01",
@@ -59,7 +59,7 @@
    ],
    "start": "17:00",
    "end": "19:50",
-   "room": "School of Engineering 204"
+   "room": "School of Engineering 201"
   },
   {
    "section": "FSI.303.01",

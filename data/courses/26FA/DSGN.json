@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "DSGN",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -81,7 +81,7 @@
    ],
    "start": "08:00",
    "end": "09:50",
-   "room": "Humanities Building 223"
+   "room": "Humanities Building 222"
   },
   {
    "section": "DSGN.300.01",
@@ -102,7 +102,7 @@
    ],
    "start": "17:00",
    "end": "20:50",
-   "room": "Humanities Building 216"
+   "room": "Humanities Building 222"
   },
   {
    "section": "DSGN.330.01",
@@ -166,7 +166,7 @@
    ],
    "start": "17:00",
    "end": "20:50",
-   "room": "Humanities Building 216"
+   "room": "Humanities Building 222"
   }
  ]
 }

@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "CHEM",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -16,7 +16,7 @@
    ],
    "start": "08:00",
    "end": "08:50",
-   "room": ""
+   "room": "Humanities Building 334"
   },
   {
    "section": "CHEM.184.02",
@@ -28,7 +28,7 @@
    ],
    "start": "09:00",
    "end": "09:50",
-   "room": ""
+   "room": "Humanities Building 334"
   },
   {
    "section": "CHEM.184.03",
@@ -74,7 +74,7 @@
    ],
    "start": "08:00",
    "end": "10:50",
-   "room": ""
+   "room": "Marine & Natural Sciences Bldg 205"
   },
   {
    "section": "CHEM.186L.52",
@@ -84,7 +84,7 @@
    ],
    "start": "11:00",
    "end": "13:50",
-   "room": ""
+   "room": "Marine & Natural Sciences Bldg 205"
   },
   {
    "section": "CHEM.186L.53",
@@ -94,7 +94,7 @@
    ],
    "start": "14:00",
    "end": "16:50",
-   "room": ""
+   "room": "Marine & Natural Sciences Bldg 205"
   },
   {
    "section": "CHEM.191.01",
@@ -285,7 +285,7 @@
    ],
    "start": "10:00",
    "end": "10:50",
-   "room": ""
+   "room": "Gabelli School of Business 206"
   },
   {
    "section": "CHEM.201L.51",
@@ -317,7 +317,7 @@
    ],
    "start": "09:00",
    "end": "09:50",
-   "room": "Humanities Building 107"
+   "room": "College of Arts and Sciences 121"
   },
   {
    "section": "CHEM.301.02",
@@ -329,7 +329,7 @@
    ],
    "start": "10:00",
    "end": "10:50",
-   "room": "Humanities Building 107"
+   "room": "College of Arts and Sciences 121"
   },
   {
    "section": "CHEM.301.03",
@@ -341,7 +341,7 @@
    ],
    "start": "11:00",
    "end": "11:50",
-   "room": "Humanities Building 107"
+   "room": "College of Arts and Sciences 121"
   },
   {
    "section": "CHEM.301L.51",
@@ -413,7 +413,7 @@
    ],
    "start": "10:00",
    "end": "10:50",
-   "room": ""
+   "room": "Marine & Natural Sciences Bldg 213"
   },
   {
    "section": "CHEM.311L.51",

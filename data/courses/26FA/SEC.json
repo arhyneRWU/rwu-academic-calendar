@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "SEC",
- "retrieved": "2026-08-25",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -25,7 +25,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": "School of Engineering 128"
+   "room": "School of Engineering 210"
   },
   {
    "section": "SEC.203.01",

@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "BIO",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -69,7 +69,7 @@
    ],
    "start": "09:30",
    "end": "10:50",
-   "room": ""
+   "room": "Marine & Natural Sciences Bldg 210"
   },
   {
    "section": "BIO.103.02",
@@ -103,7 +103,7 @@
    ],
    "start": "10:00",
    "end": "10:50",
-   "room": "Gabelli School of Business G01"
+   "room": "School of Law 033"
   },
   {
    "section": "BIO.103.05",
@@ -216,7 +216,7 @@
    ],
    "start": "17:00",
    "end": "18:20",
-   "room": ""
+   "room": "Marine & Natural Sciences Bldg 213"
   },
   {
    "section": "BIO.105L.52",
@@ -226,7 +226,7 @@
    ],
    "start": "18:00",
    "end": "21:00",
-   "room": ""
+   "room": "Marine & Natural Sciences Bldg 103"
   },
   {
    "section": "BIO.200.01",
@@ -313,7 +313,7 @@
    ],
    "start": "09:00",
    "end": "09:50",
-   "room": ""
+   "room": "Marine & Natural Sciences Bldg 213"
   },
   {
    "section": "BIO.220L.51",
@@ -334,7 +334,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": "College of Arts and Sciences 127"
+   "room": "Marine & Natural Sciences Bldg 210"
   },
   {
    "section": "BIO.230L.51",
@@ -365,7 +365,7 @@
    ],
    "start": "15:30",
    "end": "16:50",
-   "room": ""
+   "room": "Marine & Natural Sciences Bldg 213"
   },
   {
    "section": "BIO.320L.51",
@@ -419,7 +419,7 @@
    ],
    "start": "11:00",
    "end": "12:20",
-   "room": ""
+   "room": "Marine & Natural Sciences Bldg 210"
   },
   {
    "section": "BIO.355.01",
@@ -496,7 +496,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": ""
+   "room": "Marine & Natural Sciences Bldg 212"
   },
   {
    "section": "BIO.390.01",

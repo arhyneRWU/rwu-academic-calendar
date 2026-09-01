@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "ENVS",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -15,7 +15,7 @@
    ],
    "start": "15:30",
    "end": "16:50",
-   "room": ""
+   "room": "Marine & Natural Sciences Bldg 200"
   },
   {
    "section": "ENVS.101.02",
@@ -61,16 +61,6 @@
    "room": "Marine & Natural Sciences Bldg 107"
   },
   {
-   "section": "ENVS.103L.52",
-   "title": "The Dynamic Earth Lab",
-   "days": [
-    "wednesday"
-   ],
-   "start": "08:00",
-   "end": "10:50",
-   "room": "Marine & Natural Sciences Bldg 107"
-  },
-  {
    "section": "ENVS.103L.61",
    "title": "The Dynamic Earth Lab",
    "days": [
@@ -113,7 +103,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": ""
+   "room": "Marine & Natural Sciences Bldg 200"
   },
   {
    "section": "ENVS.104L.51",
@@ -184,7 +174,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": "School of Engineering 201"
+   "room": "Marine & Natural Sciences Bldg 213"
   },
   {
    "section": "ENVS.310.01",

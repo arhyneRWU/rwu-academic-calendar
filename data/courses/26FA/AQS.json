@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "AQS",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -46,7 +46,7 @@
    ],
    "start": "09:30",
    "end": "10:50",
-   "room": ""
+   "room": "Marine & Natural Sciences Bldg 200"
   },
   {
    "section": "AQS.318L.51",

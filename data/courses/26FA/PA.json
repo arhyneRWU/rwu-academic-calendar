@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "PA",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -14,7 +14,7 @@
    ],
    "start": "18:00",
    "end": "21:00",
-   "room": "One Empire Plaza 232"
+   "room": "One Empire Plaza 230"
   },
   {
    "section": "PA.503.31",

@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "MRKT",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -82,7 +82,7 @@
    ],
    "start": "10:00",
    "end": "10:50",
-   "room": ""
+   "room": "Marine & Natural Sciences Bldg 210"
   },
   {
    "section": "MRKT.302.01",
@@ -94,7 +94,7 @@
    ],
    "start": "13:00",
    "end": "13:50",
-   "room": ""
+   "room": "Gabelli School of Business 205"
   },
   {
    "section": "MRKT.302.02",
@@ -160,7 +160,7 @@
    ],
    "start": "17:00",
    "end": "19:50",
-   "room": ""
+   "room": "Gabelli School of Business 205"
   },
   {
    "section": "MRKT.340.01",
@@ -193,7 +193,7 @@
    ],
    "start": "15:30",
    "end": "16:50",
-   "room": ""
+   "room": "Gabelli School of Business 205"
   },
   {
    "section": "MRKT.370.01",
@@ -215,6 +215,17 @@
    ],
    "start": "14:00",
    "end": "15:20",
+   "room": "Gabelli School of Business G01"
+  },
+  {
+   "section": "MRKT.401.01",
+   "title": "Advertising Campaigns Research",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
    "room": "Gabelli School of Business 101"
   },
   {
@@ -226,7 +237,7 @@
    ],
    "start": "17:00",
    "end": "18:20",
-   "room": ""
+   "room": "Gabelli School of Business 205"
   }
  ]
 }

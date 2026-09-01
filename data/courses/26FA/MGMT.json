@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "MGMT",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -84,7 +84,7 @@
    ],
    "start": "12:30",
    "end": "13:50",
-   "room": ""
+   "room": "Marine & Natural Sciences Bldg 212"
   },
   {
    "section": "MGMT.200.08",
@@ -95,7 +95,7 @@
    ],
    "start": "08:00",
    "end": "09:20",
-   "room": ""
+   "room": "College of Arts and Sciences 225"
   },
   {
    "section": "MGMT.302.01",
@@ -129,7 +129,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": ""
+   "room": "College of Arts and Sciences 223"
   },
   {
    "section": "MGMT.315.01",
@@ -151,7 +151,7 @@
    ],
    "start": "09:30",
    "end": "10:50",
-   "room": ""
+   "room": "College of Arts and Sciences 225"
   },
   {
    "section": "MGMT.325.03",
@@ -163,7 +163,7 @@
    ],
    "start": "11:00",
    "end": "11:50",
-   "room": ""
+   "room": "Gabelli School of Business G12"
   },
   {
    "section": "MGMT.330.01",
@@ -218,7 +218,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": ""
+   "room": "College of Arts and Sciences 152"
   },
   {
    "section": "MGMT.340.01",
@@ -263,7 +263,7 @@
    ],
    "start": "09:30",
    "end": "10:50",
-   "room": ""
+   "room": "Humanities Building 107"
   },
   {
    "section": "MGMT.380.02",

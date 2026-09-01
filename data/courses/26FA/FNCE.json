@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "FNCE",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -83,7 +83,7 @@
    ],
    "start": "17:00",
    "end": "18:20",
-   "room": ""
+   "room": "Gabelli School of Business 206"
   },
   {
    "section": "FNCE.350.01",
@@ -139,7 +139,7 @@
    ],
    "start": "18:30",
    "end": "21:20",
-   "room": ""
+   "room": "Gabelli School of Business 300"
   },
   {
    "section": "FNCE.401.01",
@@ -161,7 +161,7 @@
    ],
    "start": "11:00",
    "end": "12:20",
-   "room": ""
+   "room": "Gabelli School of Business G12"
   },
   {
    "section": "FNCE.450.01",

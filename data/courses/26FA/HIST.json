@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "HIST",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -50,7 +50,7 @@
    ],
    "start": "13:00",
    "end": "13:50",
-   "room": ""
+   "room": "Humanities Building 334"
   },
   {
    "section": "HIST.360.01",
@@ -95,7 +95,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": "Humanities Building 100"
+   "room": "Humanities Building 100B"
   }
  ]
 }

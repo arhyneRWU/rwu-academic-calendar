@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "ME",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -26,7 +26,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": "School of Education 059"
+   "room": "School of Education 030"
   },
   {
    "section": "ME.501.91",
@@ -57,7 +57,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": "School of Education 059"
+   "room": "School of Education 030"
   }
  ]
 }

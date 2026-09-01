@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "ECON",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -28,7 +28,7 @@
    ],
    "start": "10:00",
    "end": "10:50",
-   "room": "College of Arts and Sciences 121"
+   "room": "Humanities Building 107"
   },
   {
    "section": "ECON.111.03",
@@ -73,7 +73,7 @@
    ],
    "start": "11:00",
    "end": "11:50",
-   "room": "College of Arts and Sciences 121"
+   "room": "Humanities Building 107"
   },
   {
    "section": "ECON.111.08",
@@ -154,7 +154,7 @@
    ],
    "start": "09:00",
    "end": "09:50",
-   "room": "College of Arts and Sciences 121"
+   "room": "Humanities Building 107"
   },
   {
    "section": "ECON.550.01",

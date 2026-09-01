@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "FYS",
- "retrieved": "2026-08-16",
+ "retrieved": "2026-09-01",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -82,7 +82,7 @@
    ],
    "start": "08:00",
    "end": "09:20",
-   "room": ""
+   "room": "Humanities Building 334"
   },
   {
    "section": "FYS.101.10",
@@ -115,7 +115,7 @@
    ],
    "start": "11:00",
    "end": "12:20",
-   "room": ""
+   "room": "Humanities Building 334"
   },
   {
    "section": "FYS.101.14",
@@ -137,7 +137,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": ""
+   "room": "College of Arts and Sciences 221"
   },
   {
    "section": "FYS.101.18",
@@ -148,7 +148,7 @@
    ],
    "start": "15:30",
    "end": "16:50",
-   "room": ""
+   "room": "College of Arts and Sciences 221"
   },
   {
    "section": "FYS.101.19",
@@ -231,7 +231,7 @@
    ],
    "start": "10:00",
    "end": "10:50",
-   "room": "Humanities Building 329"
+   "room": "Humanities Building 102"
   },
   {
    "section": "FYS.101.26",
@@ -358,7 +358,7 @@
    ],
    "start": "13:00",
    "end": "13:50",
-   "room": ""
+   "room": "Gabelli School of Business 105"
   },
   {
    "section": "FYS.101.40",
