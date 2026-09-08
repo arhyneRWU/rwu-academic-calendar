@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "MATH",
- "retrieved": "2026-09-01",
+ "retrieved": "2026-09-08",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -394,16 +394,6 @@
    "start": "15:30",
    "end": "16:50",
    "room": "College of Arts and Sciences 222"
-  },
-  {
-   "section": "MATH.207.02",
-   "title": "Applied Calculus",
-   "days": [
-    "thursday"
-   ],
-   "start": "17:00",
-   "end": "19:50",
-   "room": "College of Arts and Sciences 126"
   },
   {
    "section": "MATH.213.01",

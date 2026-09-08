@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "CNST",
- "retrieved": "2026-09-01",
+ "retrieved": "2026-09-08",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -297,7 +297,7 @@
    ],
    "start": "12:30",
    "end": "13:50",
-   "room": "School of Engineering 125"
+   "room": "SECCM Labs 304"
   },
   {
    "section": "CNST.260.01",
@@ -359,27 +359,18 @@
    ],
    "start": "14:00",
    "end": "16:50",
-   "room": "School of Engineering 125"
+   "room": "SECCM Labs 304"
   },
   {
    "section": "CNST.321.01",
    "title": "Adv Building Estimating",
    "days": [
-    "monday"
-   ],
-   "start": "12:30",
-   "end": "13:50",
-   "room": "School of Engineering 125"
-  },
-  {
-   "section": "CNST.321.01",
-   "title": "Adv Building Estimating",
-   "days": [
+    "monday",
     "thursday"
    ],
    "start": "12:30",
    "end": "13:50",
-   "room": "SECCM Labs 304"
+   "room": "School of Engineering 125"
   },
   {
    "section": "CNST.321.02",
@@ -390,7 +381,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": "SECCM Labs 304"
+   "room": "School of Engineering 125"
   },
   {
    "section": "CNST.321.03",
@@ -401,7 +392,7 @@
    ],
    "start": "15:30",
    "end": "16:50",
-   "room": "SECCM Labs 304"
+   "room": "School of Engineering 125"
   },
   {
    "section": "CNST.321.04",
@@ -465,7 +456,7 @@
    ],
    "start": "14:00",
    "end": "16:50",
-   "room": "School of Engineering 125"
+   "room": "SECCM Labs 304"
   },
   {
    "section": "CNST.445L.52",

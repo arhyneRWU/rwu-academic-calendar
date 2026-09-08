@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "VARTS",
- "retrieved": "2026-09-01",
+ "retrieved": "2026-09-08",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -194,6 +194,16 @@
    "start": "15:30",
    "end": "19:20",
    "room": "Clay Studio CLAYRM"
+  },
+  {
+   "section": "VARTS.336.02",
+   "title": "Interm Jewelry & Metals",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "17:50",
+   "room": "Fine Arts 101"
   },
   {
    "section": "VARTS.351.01",
