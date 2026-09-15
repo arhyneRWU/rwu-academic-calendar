@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "SPMGT",
- "retrieved": "2026-09-08",
+ "retrieved": "2026-09-15",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -16,6 +16,26 @@
    "start": "11:00",
    "end": "12:20",
    "room": "Marine & Natural Sciences Bldg 213"
+  },
+  {
+   "section": "SPMGT.370.02",
+   "title": "Sports Management Principles",
+   "days": [
+    "wednesday"
+   ],
+   "start": "15:00",
+   "end": "17:50",
+   "room": "Gabelli School of Business 208"
+  },
+  {
+   "section": "SPMGT.370.02",
+   "title": "Sports Management Principles",
+   "days": [
+    "wednesday"
+   ],
+   "start": "15:00",
+   "end": "17:50",
+   "room": "College of Arts and Sciences 220"
   },
   {
    "section": "SPMGT.370.02",

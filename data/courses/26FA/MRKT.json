@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "MRKT",
- "retrieved": "2026-09-08",
+ "retrieved": "2026-09-15",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -51,6 +51,26 @@
    "start": "09:30",
    "end": "10:50",
    "room": "Gabelli School of Business 205"
+  },
+  {
+   "section": "MRKT.200.05",
+   "title": "Marketing Principles",
+   "days": [
+    "wednesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "Gabelli School of Business 105"
+  },
+  {
+   "section": "MRKT.200.05",
+   "title": "Marketing Principles",
+   "days": [
+    "wednesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "Humanities Building 100B"
   },
   {
    "section": "MRKT.200.05",

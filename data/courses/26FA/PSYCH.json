@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "PSYCH",
- "retrieved": "2026-09-08",
+ "retrieved": "2026-09-15",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -228,6 +228,26 @@
    "start": "14:00",
    "end": "16:50",
    "room": "College of Arts and Sciences 123"
+  },
+  {
+   "section": "PSYCH.312.01",
+   "title": "Psych of Adolescence",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Gabelli School of Business G06"
+  },
+  {
+   "section": "PSYCH.312.01",
+   "title": "Psych of Adolescence",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "School of Engineering 128"
   },
   {
    "section": "PSYCH.312.01",
