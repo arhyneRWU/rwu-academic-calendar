@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "CNST",
- "retrieved": "2026-09-22",
+ "retrieved": "2026-09-29",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -508,7 +508,7 @@
    ],
    "start": "17:00",
    "end": "19:50",
-   "room": "SECCM Labs 304"
+   "room": "School of Engineering 125"
   },
   {
    "section": "CNST.475.01",

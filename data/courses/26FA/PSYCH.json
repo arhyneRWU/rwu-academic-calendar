@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "PSYCH",
- "retrieved": "2026-09-22",
+ "retrieved": "2026-09-29",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -140,7 +140,7 @@
    ],
    "start": "14:00",
    "end": "16:50",
-   "room": "College of Arts and Sciences 162"
+   "room": "College of Arts and Sciences 127"
   },
   {
    "section": "PSYCH.261.01",
