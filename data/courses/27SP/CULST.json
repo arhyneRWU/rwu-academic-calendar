@@ -1,0 +1,53 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "CULST",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "CULST.100.01",
+   "title": "Approaches to Soc & Cul",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "CULST.370.01",
+   "title": "Warrior Women",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "CULST.370.02",
+   "title": "Black Media Matters",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "CULST.372.01",
+   "title": "French Cinema",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": ""
+  }
+ ]
+}

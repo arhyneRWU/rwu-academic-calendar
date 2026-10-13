@@ -1,0 +1,52 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "AQS",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "AQS.264.01",
+   "title": "Prin of Aquatic Animal Husband",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "AQS.264L.51",
+   "title": "Princ Aquatic Animal Husb Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "AQS.306.01",
+   "title": "Prin of Museum Exhibit Dvlp",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "AQS.325.01",
+   "title": "Applied Shellfish Farming",
+   "days": [
+    "tuesday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": ""
+  }
+ ]
+}

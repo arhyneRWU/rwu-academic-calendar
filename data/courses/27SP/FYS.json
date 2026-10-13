@@ -1,0 +1,32 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "FYS",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "FYS.101.01",
+   "title": "Mama, I made it! What Now?",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "FYS.101.02",
+   "title": "Mama, I made it! What Now?",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  }
+ ]
+}

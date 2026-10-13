@@ -1,0 +1,42 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "IB",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "IB.250.01",
+   "title": "Int'l Business/EU",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "IB.450.01",
+   "title": "Multinatl Corps/European Union",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "IB.540.01",
+   "title": "Global Business",
+   "days": [
+    "tuesday"
+   ],
+   "start": "09:00",
+   "end": "11:50",
+   "room": "Gabelli School of Business 208"
+  }
+ ]
+}

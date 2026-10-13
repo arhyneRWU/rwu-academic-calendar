@@ -1,0 +1,43 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "ME",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "ME.151.01",
+   "title": "Crit Think&Prob Solv in Math",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "School of Education 009"
+  },
+  {
+   "section": "ME.253.01",
+   "title": "The PowerOfTheLine:Algeb&Func",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "School of Education 030"
+  },
+  {
+   "section": "ME.504.01",
+   "title": "Buildblock: Alg Patt Functions",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "School of Education 030"
+  }
+ ]
+}

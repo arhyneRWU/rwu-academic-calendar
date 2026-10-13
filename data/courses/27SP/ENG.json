@@ -1,0 +1,75 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "ENG",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "ENG.105.01",
+   "title": "The Bible As Literature",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "ENG.105.HON01",
+   "title": "Honors Bible as Literature",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "ENG.220.01",
+   "title": "Reading Like a Pro",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "ENG.250.01",
+   "title": "Girls on Fire",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "ENG.280.01",
+   "title": "Modern Love",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "ENG.480.01",
+   "title": "Senior Thesis I",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  }
+ ]
+}

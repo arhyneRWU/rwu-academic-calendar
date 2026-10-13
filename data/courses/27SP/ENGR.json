@@ -1,0 +1,452 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "ENGR",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "ENGR.115.01",
+   "title": "Computer Appl for Engr",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "School of Engineering 206"
+  },
+  {
+   "section": "ENGR.115.02",
+   "title": "Computer Appl for Engr",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "School of Engineering 206"
+  },
+  {
+   "section": "ENGR.115.03",
+   "title": "Computer Appl for Engr",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "School of Engineering 206"
+  },
+  {
+   "section": "ENGR.115.04",
+   "title": "Computer Appl for Engr",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "School of Engineering 206"
+  },
+  {
+   "section": "ENGR.115.HON01",
+   "title": "Honr:Computer Appl for Engr",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "School of Engineering 206"
+  },
+  {
+   "section": "ENGR.220.01",
+   "title": "Engineering Dynamics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "ENGR.220.02",
+   "title": "Engineering Dynamics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": ""
+  },
+  {
+   "section": "ENGR.300.01",
+   "title": "Mechanics of Materials",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "ENGR.300.02",
+   "title": "Mechanics of Materials",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "ENGR.300L.51",
+   "title": "Mech of Materials Lab",
+   "days": [
+    "monday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "SECCM Labs 300"
+  },
+  {
+   "section": "ENGR.300L.52",
+   "title": "Mech of Materials Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "08:00",
+   "end": "10:50",
+   "room": "SECCM Labs 300"
+  },
+  {
+   "section": "ENGR.300L.53",
+   "title": "Mech of Materials Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "SECCM Labs 300"
+  },
+  {
+   "section": "ENGR.300L.54",
+   "title": "Mech of Materials Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "SECCM Labs 300"
+  },
+  {
+   "section": "ENGR.305.01",
+   "title": "Fluid Mechanics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "08:50",
+   "room": ""
+  },
+  {
+   "section": "ENGR.305.02",
+   "title": "Fluid Mechanics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "ENGR.305L.51",
+   "title": "Fluid Mechanics Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "SECCM Labs 200"
+  },
+  {
+   "section": "ENGR.305L.52",
+   "title": "Fluid Mechanics Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "SECCM Labs 200"
+  },
+  {
+   "section": "ENGR.305L.53",
+   "title": "Fluid Mechanics Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "SECCM Labs 200"
+  },
+  {
+   "section": "ENGR.310.01",
+   "title": "Materials Science",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "ENGR.318.01",
+   "title": "Sustainable Engineering",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "School of Engineering 201"
+  },
+  {
+   "section": "ENGR.318.02",
+   "title": "Sustainable Engineering",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "School of Engineering 201"
+  },
+  {
+   "section": "ENGR.335.01",
+   "title": "Engr Economic Analysis",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "ENGR.355.01",
+   "title": "Wind Turbine Design",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "ENGR.358.01",
+   "title": "Engr Electronics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "ENGR.358L.51",
+   "title": "Engineering Electronics Lab",
+   "days": [
+    "monday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "SECCM Labs 205"
+  },
+  {
+   "section": "ENGR.360.01",
+   "title": "Signals and Systems",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": ""
+  },
+  {
+   "section": "ENGR.370.01",
+   "title": "Microprocessors",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "SECCM Labs 205"
+  },
+  {
+   "section": "ENGR.401.01",
+   "title": "Engr Senior Seminar",
+   "days": [
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "17:50",
+   "room": "College of Arts and Sciences 162"
+  },
+  {
+   "section": "ENGR.407.01",
+   "title": "Solid & Hazardous Waste Mgmt",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "School of Engineering 201"
+  },
+  {
+   "section": "ENGR.409.01",
+   "title": "Design of Structures",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "08:50",
+   "room": ""
+  },
+  {
+   "section": "ENGR.415.01",
+   "title": "Water & Wastewater Treatment",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "School of Engineering 201"
+  },
+  {
+   "section": "ENGR.420.01",
+   "title": "Transportation Engineering",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "ENGR.428.01",
+   "title": "Open Channel Hydraulics",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "School of Engineering 202"
+  },
+  {
+   "section": "ENGR.433.01",
+   "title": "Heat Transfer",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "ENGR.445.01",
+   "title": "Dynamic Modeling and Control",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "SECCM Labs 200"
+  },
+  {
+   "section": "ENGR.445.02",
+   "title": "Dynamic Modeling and Control",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "SECCM Labs 200"
+  },
+  {
+   "section": "ENGR.479.01",
+   "title": "SpTp:Thermofluid Design",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "ENGR.479.02",
+   "title": "SpTp:Medical Device Design",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "ENGR.479.03",
+   "title": "SpTp:Engineering",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "ENGR.492.01",
+   "title": "Engineering Design II",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "College of Arts and Sciences 162"
+  }
+ ]
+}

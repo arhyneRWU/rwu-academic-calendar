@@ -1,0 +1,24 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/WI",
+ "subject": "ENGR",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "ENGR.210.91C",
+   "title": "Engineering Statics",
+   "days": [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "15:30",
+   "room": ""
+  }
+ ]
+}

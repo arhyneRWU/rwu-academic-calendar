@@ -1,0 +1,20 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "MS",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "MS.102.01",
+   "title": "Intro ROTC/U.S. Army II",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:30",
+   "end": "17:20",
+   "room": "Humanities Building 316"
+  }
+ ]
+}

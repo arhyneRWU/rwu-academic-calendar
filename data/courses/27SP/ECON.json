@@ -1,0 +1,159 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "ECON",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "ECON.111.01",
+   "title": "Principles of Microeconomics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "ECON.112.01",
+   "title": "Principles of Macroeconomics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "ECON.112.02",
+   "title": "Principles of Macroeconomics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "ECON.112.03",
+   "title": "Principles of Macroeconomics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "ECON.112.04",
+   "title": "Principles of Macroeconomics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "ECON.112.05",
+   "title": "Principles of Macroeconomics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "ECON.112.06",
+   "title": "Principles of Macroeconomics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "ECON.112.HON01",
+   "title": "Honr:Principles of Macroecon",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "ECON.212.01",
+   "title": "Intermediate Macroeconomics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "ECON.212.02",
+   "title": "Intermediate Macroeconomics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "ECON.310.01",
+   "title": "Monetary Economics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "ECON.330.01",
+   "title": "Econ of Developing Countries",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "ECON.379.01",
+   "title": "SpTp:Urban Economics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  }
+ ]
+}

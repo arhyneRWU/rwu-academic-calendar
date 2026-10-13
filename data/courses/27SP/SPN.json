@@ -1,0 +1,68 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "SPN",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "SPN.101.01",
+   "title": "Elementary Spanish I",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "SPN.102.01",
+   "title": "Elementary Spanish II",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "SPN.202.01",
+   "title": "Interm Spnish II",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "SPN.350.01",
+   "title": "SpTp:Autores Latinoamericanos",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "SPN.353.01",
+   "title": "Mujeres Escritoras",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  }
+ ]
+}

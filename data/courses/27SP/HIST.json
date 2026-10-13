@@ -1,0 +1,156 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "HIST",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "HIST.100.01",
+   "title": "Making Global History",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "HIST.100.02",
+   "title": "Making Global History",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "HIST.100.03",
+   "title": "Making Global History",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "HIST.240.01",
+   "title": "Colonial & Revolution America",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "HIST.240.02",
+   "title": "Colonial & Revolution America",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "HIST.283.01",
+   "title": "Survey of Latin American Hist",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "HIST.344.01",
+   "title": "The Civil War Era",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "HIST.349.01",
+   "title": "Crime & Dissent in Early N.E.",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "HIST.350.01",
+   "title": "Slavery in New England",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "HIST.360.01",
+   "title": "Migration and Human Rights",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "HIST.380.01",
+   "title": "Magic and Myth",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "HIST.399.01",
+   "title": "Meth and Historiogrpahy & Lab",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "HIST.399L.51",
+   "title": "Method & Historiography Lab",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  }
+ ]
+}

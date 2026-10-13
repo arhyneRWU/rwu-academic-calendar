@@ -1,0 +1,246 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "POLSC",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "POLSC.100.01",
+   "title": "Amer Govt & Politics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.100.02",
+   "title": "Amer Govt & Politics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.100.03",
+   "title": "Amer Govt & Politics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "POLSC.100.04",
+   "title": "Amer Govt & Politics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.100.05",
+   "title": "Amer Govt & Politics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.110.01",
+   "title": "U.S. in World Affairs",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.110.02",
+   "title": "U.S. in World Affairs",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "POLSC.120.01",
+   "title": "Comparative Politics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.120.02",
+   "title": "Comparative Politics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.203.01",
+   "title": "The American Presidency",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.260.01",
+   "title": "Public Admin",
+   "days": [
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.303.01",
+   "title": "Politics and the Media",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.304.01",
+   "title": "Public Opinion",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.330.01",
+   "title": "Revol and Social Change",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "POLSC.340.01",
+   "title": "Int'l Political Economy",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "POLSC.347.01",
+   "title": "China Politics&Foreign Policy",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.361.01",
+   "title": "State & Local Government",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.379.01",
+   "title": "SpTp:Clean&Green Enrgy Policy",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.386.01",
+   "title": "Int'l Law/Organiz",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "POLSC.392.01",
+   "title": "Global Food Politics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "POLSC.442.01",
+   "title": "Senior Research Seminar",
+   "days": [
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "10:50",
+   "room": ""
+  }
+ ]
+}

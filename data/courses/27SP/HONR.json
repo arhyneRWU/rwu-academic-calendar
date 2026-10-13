@@ -1,0 +1,55 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "HONR",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "HONR.120.01",
+   "title": "Honr:Poetry,Phil, & Hum Survl",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "Stonewall 103"
+  },
+  {
+   "section": "HONR.120.02",
+   "title": "Honrs: Creating Coding",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "School of Engineering 122"
+  },
+  {
+   "section": "HONR.150D.01",
+   "title": "Honr:Race/Class/Gender & CJS",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": "Stonewall 103"
+  },
+  {
+   "section": "HONR.300.01",
+   "title": "Multisystm Resilience in Fmly",
+   "days": [
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Stonewall 103"
+  }
+ ]
+}

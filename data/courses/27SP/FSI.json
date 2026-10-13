@@ -1,0 +1,119 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "FSI",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "FSI.101.01",
+   "title": "Survey of Forensics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "FSI.101.02",
+   "title": "Survey of Forensics",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "FSI.226.01",
+   "title": "Forensic Science",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "FSI.226.02",
+   "title": "Forensic Science",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "FSI.226L.51",
+   "title": "Forensic Science Lab",
+   "days": [
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "School of Engineering 204"
+  },
+  {
+   "section": "FSI.226L.52",
+   "title": "Forensic Science Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "School of Engineering 204"
+  },
+  {
+   "section": "FSI.301.01",
+   "title": "Case Studies in Forensic Scien",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "FSI.302.01",
+   "title": "Quality Assurance",
+   "days": [
+    "wednesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "FSI.304.01",
+   "title": "Chemistry of Cannabis",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "FSI.402.01",
+   "title": "Crime Scene and Lab",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:50",
+   "room": ""
+  }
+ ]
+}

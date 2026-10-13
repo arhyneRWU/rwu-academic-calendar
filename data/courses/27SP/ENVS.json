@@ -1,0 +1,108 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "ENVS",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "ENVS.105.01",
+   "title": "Earth/Phys Sci for Elem Educ",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "ENVS.105L.51",
+   "title": "Earth & Phys Sci Lab",
+   "days": [
+    "monday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": ""
+  },
+  {
+   "section": "ENVS.105L.52",
+   "title": "Earth & Phys Sci Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": ""
+  },
+  {
+   "section": "ENVS.200.01",
+   "title": "Environmental Data Science",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "ENVS.200L.51",
+   "title": "Enviro Data Science Lab",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": ""
+  },
+  {
+   "section": "ENVS.340.01",
+   "title": "Hydrology and Lab",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "School of Engineering 201"
+  },
+  {
+   "section": "ENVS.340L.51",
+   "title": "Hydrology Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "School of Engineering 201"
+  },
+  {
+   "section": "ENVS.401.01",
+   "title": "Environmental Toxicology",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "ENVS.401L.51",
+   "title": "Environmental Toxicology Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": ""
+  }
+ ]
+}

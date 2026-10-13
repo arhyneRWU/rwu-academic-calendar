@@ -1,0 +1,32 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "ASL",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "ASL.102.01",
+   "title": "American Sign Lang II",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "18:20",
+   "room": ""
+  },
+  {
+   "section": "ASL.350.01",
+   "title": "American Sign Lang in Context",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "18:20",
+   "room": ""
+  }
+ ]
+}

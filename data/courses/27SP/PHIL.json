@@ -1,0 +1,79 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "PHIL",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "PHIL.100.01",
+   "title": "Intro Phil:Art of Inquiry",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "PHIL.100.02",
+   "title": "Intro Phil:Art of Inquiry",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": ""
+  },
+  {
+   "section": "PHIL.100.03",
+   "title": "Intro Phil:Art of Inquiry",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "PHIL.123.01",
+   "title": "Wisdom, Happiness, Good Life",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "PHIL.200.01",
+   "title": "Ethics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "PHIL.366.01",
+   "title": "Metaphysics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  }
+ ]
+}

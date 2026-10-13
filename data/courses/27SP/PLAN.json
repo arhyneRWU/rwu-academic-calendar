@@ -1,0 +1,41 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "PLAN",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "PLAN.511.01",
+   "title": "Interdisciplinary Planning Wor",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": "Cummings School Architecture 206"
+  },
+  {
+   "section": "PLAN.511L.51",
+   "title": "Intrdscplinry Planning Lal",
+   "days": [
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "Cummings School Architecture 206"
+  },
+  {
+   "section": "PLAN.581.91",
+   "title": "GIS Plan,Dsgn,Cnsrvtn",
+   "days": [
+    "wednesday"
+   ],
+   "start": "08:00",
+   "end": "10:50",
+   "room": ""
+  }
+ ]
+}

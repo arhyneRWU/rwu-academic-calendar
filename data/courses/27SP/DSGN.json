@@ -1,0 +1,173 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "DSGN",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "DSGN.100.01",
+   "title": "Introduction to Design Communi",
+   "days": [
+    "monday",
+    "wednesday"
+   ],
+   "start": "10:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "DSGN.100.02",
+   "title": "Introduction to Design Communi",
+   "days": [
+    "monday",
+    "wednesday"
+   ],
+   "start": "12:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "DSGN.110.01",
+   "title": "Intro to Typography",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "11:20",
+   "room": ""
+  },
+  {
+   "section": "DSGN.110.02",
+   "title": "Intro to Typography",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "DSGN.210.01",
+   "title": "Advanced Design Communication",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "DSGN.220.01",
+   "title": "Advanced Typography",
+   "days": [
+    "monday",
+    "wednesday"
+   ],
+   "start": "10:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "DSGN.220.02",
+   "title": "Advanced Typography",
+   "days": [
+    "monday",
+    "wednesday"
+   ],
+   "start": "12:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "DSGN.279.01",
+   "title": "SpTp: Motion Design",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "DSGN.300.01",
+   "title": "Web Design Communication",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "11:20",
+   "room": ""
+  },
+  {
+   "section": "DSGN.310.01",
+   "title": "Brand Identity",
+   "days": [
+    "monday",
+    "wednesday"
+   ],
+   "start": "10:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "DSGN.310.02",
+   "title": "Brand Identity",
+   "days": [
+    "monday",
+    "wednesday"
+   ],
+   "start": "12:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "DSGN.320.01",
+   "title": "Publication Design",
+   "days": [
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "DSGN.429.01",
+   "title": "Citizen Designer",
+   "days": [
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "20:50",
+   "room": ""
+  },
+  {
+   "section": "DSGN.450.01",
+   "title": "Prof Practices in Design",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "DSGN.450.02",
+   "title": "Prof Practices in Design",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "10:00",
+   "end": "11:50",
+   "room": ""
+  }
+ ]
+}

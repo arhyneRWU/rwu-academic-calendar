@@ -1,0 +1,85 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "LS",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "LS.101.01",
+   "title": "The American Legal System",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "LS.215.01",
+   "title": "Legal Methods II",
+   "days": [
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "LS.215.02",
+   "title": "Legal Methods II",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "LS.279.01",
+   "title": "SpTp:Law/Justce Inside Out Jv",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "LS.301.01",
+   "title": "Legal Advocacy Clinic",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "LS.315.01",
+   "title": "Concepts in Legal Advocacy",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "LS.345.01",
+   "title": "Legal Ethics and Prof Respons",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "PR",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "PR.111.01",
+   "title": "Writing for Mass Media",
+   "days": [
+    "wednesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "PR.200.01",
+   "title": "Intro to Public Relations",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "PR.279.01",
+   "title": "SpTp:Sports PR",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "PR.279.02",
+   "title": "SpTp:Brand Storytelling",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "18:20",
+   "room": ""
+  },
+  {
+   "section": "PR.340.01",
+   "title": "Public Relations Research Meth",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "PR.420.01",
+   "title": "Public Relations Case Studies",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "PR.420.02",
+   "title": "Public Relations Case Studies",
+   "days": [
+    "wednesday"
+   ],
+   "start": "17:30",
+   "end": "20:20",
+   "room": ""
+  }
+ ]
+}

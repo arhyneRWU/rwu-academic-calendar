@@ -1,0 +1,67 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "CIS",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "CIS.105.01",
+   "title": "Data Analys/Analys w Excel",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "CIS.105.02",
+   "title": "Data Analys/Analys w Excel",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "CIS.105.03",
+   "title": "Data Analys/Analys w Excel",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "08:50",
+   "room": ""
+  },
+  {
+   "section": "CIS.105.04",
+   "title": "Data Analys/Analys w Excel",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "CIS.335.01",
+   "title": "Database Management",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": ""
+  }
+ ]
+}

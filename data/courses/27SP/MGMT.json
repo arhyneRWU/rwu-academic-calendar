@@ -1,0 +1,320 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "MGMT",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "MGMT.200.01",
+   "title": "Management Principles",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.200.02",
+   "title": "Management Principles",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "MGMT.200.03",
+   "title": "Management Principles",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.200.04",
+   "title": "Management Principles",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.200.05",
+   "title": "Management Principles",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "18:20",
+   "room": ""
+  },
+  {
+   "section": "MGMT.200.06",
+   "title": "Management Principles",
+   "days": [
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.302.01",
+   "title": "Organizational Behav",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.302.02",
+   "title": "Organizational Behav",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.310.01",
+   "title": "Human Resource Mgmt",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.310.02",
+   "title": "Human Resource Mgmt",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.315.01",
+   "title": "Small Medium Enterprise Mgmt",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.325.01",
+   "title": "Business Analytics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.325.02",
+   "title": "Business Analytics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.325.03",
+   "title": "Business Analytics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "MGMT.330.01",
+   "title": "Operations Management",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.330.02",
+   "title": "Operations Management",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "MGMT.330.03",
+   "title": "Operations Management",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.336.01",
+   "title": "Negotiations",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "MGMT.365.01",
+   "title": "Project Management",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "MGMT.380.01",
+   "title": "The GSB Mentorship Lab",
+   "days": [
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.450.01",
+   "title": "Multinational Corporations",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.499.01",
+   "title": "Strategic Management",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.499.02",
+   "title": "Strategic Management",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.499.04",
+   "title": "Strategic Management",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.524.01",
+   "title": "Ethical Leadership of Organiza",
+   "days": [
+    "wednesday"
+   ],
+   "start": "15:00",
+   "end": "17:50",
+   "room": ""
+  },
+  {
+   "section": "MGMT.527.01",
+   "title": "Pred Analytics & Data Mining",
+   "days": [
+    "tuesday"
+   ],
+   "start": "13:00",
+   "end": "15:50",
+   "room": "Gabelli School of Business 208"
+  },
+  {
+   "section": "MGMT.528.01",
+   "title": "Database Management Systems",
+   "days": [
+    "thursday"
+   ],
+   "start": "13:00",
+   "end": "15:50",
+   "room": "Gabelli School of Business 208"
+  },
+  {
+   "section": "MGMT.599.01",
+   "title": "Strategic Management",
+   "days": [
+    "monday"
+   ],
+   "start": "13:00",
+   "end": "15:50",
+   "room": "Gabelli School of Business 208"
+  }
+ ]
+}

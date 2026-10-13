@@ -1,0 +1,536 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "MATH",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "MATH.110.01",
+   "title": "Math/The Modern World",
+   "days": [
+    "monday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.117.01",
+   "title": "College Algebra",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "MATH.117.02",
+   "title": "College Algebra",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "MATH.124.01",
+   "title": "Basic Statistics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "MATH.124.02",
+   "title": "Basic Statistics",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "MATH.124.03",
+   "title": "Basic Statistics",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.124.04",
+   "title": "Basic Statistics",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.124.05",
+   "title": "Basic Statistics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.124.06",
+   "title": "Basic Statistics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "08:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.124.07",
+   "title": "Basic Statistics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.124.08",
+   "title": "Basic Statistics",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "MATH.136.01",
+   "title": "Precalculus",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "MATH.136.01",
+   "title": "Precalculus",
+   "days": [
+    "wednesday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.136.02",
+   "title": "Precalculus",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.136.02",
+   "title": "Precalculus",
+   "days": [
+    "wednesday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.136.03",
+   "title": "Precalculus",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "17:20",
+   "room": ""
+  },
+  {
+   "section": "MATH.136.04",
+   "title": "Precalculus",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "17:20",
+   "room": ""
+  },
+  {
+   "section": "MATH.136.05",
+   "title": "Precalculus",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.136.05",
+   "title": "Precalculus",
+   "days": [
+    "tuesday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.136.06",
+   "title": "Precalculus",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.136.06",
+   "title": "Precalculus",
+   "days": [
+    "tuesday"
+   ],
+   "start": "08:30",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "MATH.141.01",
+   "title": "Finite Mathematics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "MATH.141.02",
+   "title": "Finite Mathematics",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.207.01",
+   "title": "Applied Calculus",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.213.01",
+   "title": "Calculus I",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.213.01",
+   "title": "Calculus I",
+   "days": [
+    "thursday"
+   ],
+   "start": "08:30",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "MATH.213.02",
+   "title": "Calculus I",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.213.02",
+   "title": "Calculus I",
+   "days": [
+    "tuesday"
+   ],
+   "start": "09:30",
+   "end": "10:20",
+   "room": ""
+  },
+  {
+   "section": "MATH.213.03",
+   "title": "Calculus I",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.213.03",
+   "title": "Calculus I",
+   "days": [
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:20",
+   "room": ""
+  },
+  {
+   "section": "MATH.213.04",
+   "title": "Calculus I",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.213.04",
+   "title": "Calculus I",
+   "days": [
+    "tuesday"
+   ],
+   "start": "09:30",
+   "end": "10:20",
+   "room": ""
+  },
+  {
+   "section": "MATH.214.01",
+   "title": "Calculus II",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.214.01",
+   "title": "Calculus II",
+   "days": [
+    "thursday"
+   ],
+   "start": "08:30",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "MATH.214.02",
+   "title": "Calculus II",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.214.02",
+   "title": "Calculus II",
+   "days": [
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:20",
+   "room": ""
+  },
+  {
+   "section": "MATH.218.01",
+   "title": "Appl Calculus for Life Science",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.221.01",
+   "title": "Discrete Mathematics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.221.01",
+   "title": "Discrete Mathematics",
+   "days": [
+    "tuesday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.250.01",
+   "title": "Intro to Biostatistics",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.255.01",
+   "title": "Scientific Comp&Data Visualiz",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.301.01",
+   "title": "Linear Programming",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.315.01",
+   "title": "Probability & Stats",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.315.02",
+   "title": "Probability & Stats",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.317.02",
+   "title": "Differential Equations",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.317.03",
+   "title": "Differential Equations",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.331.01",
+   "title": "Linear Algebra",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": ""
+  }
+ ]
+}

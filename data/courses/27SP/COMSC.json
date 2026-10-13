@@ -1,0 +1,137 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "COMSC",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "COMSC.110.01",
+   "title": "Intro Cmptr Science I",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": "School of Engineering 206"
+  },
+  {
+   "section": "COMSC.110L.51",
+   "title": "Intro Cmptr Science I Lab",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "School of Engineering 206"
+  },
+  {
+   "section": "COMSC.111.01",
+   "title": "Data Structures",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "School of Engineering 122"
+  },
+  {
+   "section": "COMSC.111L.51",
+   "title": "Data Structures Lab",
+   "days": [
+    "monday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": "School of Engineering 122"
+  },
+  {
+   "section": "COMSC.210.01",
+   "title": "Prin of Cmptr Organiz",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "School of Engineering 206"
+  },
+  {
+   "section": "COMSC.210L.51",
+   "title": "Prin of Cmptr Organiz Lab",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": "School of Engineering 206"
+  },
+  {
+   "section": "COMSC.225.01",
+   "title": "Introduction to Data Science",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "School of Engineering 122"
+  },
+  {
+   "section": "COMSC.330.01",
+   "title": "Principles of Sofware Design",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "COMSC.340.01",
+   "title": "Analysis of Algorithms",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "13:00",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "COMSC.345.01",
+   "title": "Data and Info Visualization",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": "School of Engineering 210"
+  },
+  {
+   "section": "COMSC.492.01",
+   "title": "Integ Senior Design II",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": ""
+  }
+ ]
+}

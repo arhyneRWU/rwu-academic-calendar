@@ -1,0 +1,122 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "THEAT",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "THEAT.110.01",
+   "title": "Acting I",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "Performing Arts Annex 106"
+  },
+  {
+   "section": "THEAT.123.01",
+   "title": "Design for the Theatre",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "Performing Arts Annex 103"
+  },
+  {
+   "section": "THEAT.130.01",
+   "title": "The Art of the Theatre",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "THEAT.141.01",
+   "title": "Musical Theatre Workshop",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "THEAT.142.01",
+   "title": "Musical Theatre Workshop",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "THEAT.150.01",
+   "title": "The American Musical",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "11:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "THEAT.200.01",
+   "title": "Theatre Practicum",
+   "days": [
+    "wednesday"
+   ],
+   "start": "15:30",
+   "end": "17:20",
+   "room": ""
+  },
+  {
+   "section": "THEAT.230.01",
+   "title": "Theatre History I",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "THEAT.250.01",
+   "title": "Queer Theatre and Drama",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": ""
+  },
+  {
+   "section": "THEAT.340.01",
+   "title": "Directing",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "JOUR",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "JOUR.170.01",
+   "title": "Writing & Editing for Media",
+   "days": [
+    "wednesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "JOUR.230.01",
+   "title": "Civic Media Community Engage I",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "JOUR.230L.51",
+   "title": "Civic Media &comm Engage Lab",
+   "days": [
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "JOUR.330.01",
+   "title": "Civic Media Community Engage 2",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "JOUR.330L.51",
+   "title": "Civic Media & Comm Engage Lab",
+   "days": [
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "JOUR.455.01",
+   "title": "Interact Storytelling Ii& Lab",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "Humanities Building 104"
+  },
+  {
+   "section": "JOUR.455L.51",
+   "title": "Interactivestorytelling II Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": ""
+  }
+ ]
+}

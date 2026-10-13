@@ -1,0 +1,245 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "COMM",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "COMM.100.01",
+   "title": "Intro to Communication",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "COMM.100.02",
+   "title": "Intro to Communication",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "COMM.101.01",
+   "title": "Intro to Mass Media",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "COMM.101.02",
+   "title": "Intro to Mass Media",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "COMM.101.03",
+   "title": "Intro to Mass Media",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "COMM.201.01",
+   "title": "Concepts in Communication",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": ""
+  },
+  {
+   "section": "COMM.210.01",
+   "title": "Intro to Public Speaking",
+   "days": [
+    "wednesday"
+   ],
+   "start": "18:00",
+   "end": "20:50",
+   "room": ""
+  },
+  {
+   "section": "COMM.210.02",
+   "title": "Intro to Public Speaking",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "COMM.210.03",
+   "title": "Intro to Public Speaking",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": ""
+  },
+  {
+   "section": "COMM.210.04",
+   "title": "Intro to Public Speaking",
+   "days": [
+    "monday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "COMM.210.05",
+   "title": "Intro to Public Speaking",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "COMM.210.06",
+   "title": "Intro to Public Speaking",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "COMM.210.07",
+   "title": "Intro to Public Speaking",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "12:00",
+   "end": "12:50",
+   "room": ""
+  },
+  {
+   "section": "COMM.210.08",
+   "title": "Intro to Public Speaking",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "08:50",
+   "room": ""
+  },
+  {
+   "section": "COMM.250.01",
+   "title": "Intercultural Communication",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "COMM.295.01",
+   "title": "Mass Comm Theory & Criticism",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "COMM.310.01",
+   "title": "Media Law and Ethics",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "COMM.312.01",
+   "title": "Personal Branding",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "COMM.375.01",
+   "title": "Global Audiences/Consumers",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "COMM.390.01",
+   "title": "Qualitative Rsrch Meth Comm",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "COMM.395.01",
+   "title": "Race, Ethnicity, and Media",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  }
+ ]
+}

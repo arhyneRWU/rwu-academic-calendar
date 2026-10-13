@@ -1,0 +1,40 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "STEM",
+ "retrieved": "2026-10-13",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "STEM.321.01",
+   "title": "STEAM Engineering Exploration",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
+   "end": "19:50",
+   "room": "School of Education 009"
+  },
+  {
+   "section": "STEM.500.91",
+   "title": "Adv Classroom App of Tech",
+   "days": [
+    "saturday"
+   ],
+   "start": "12:00",
+   "end": "18:00",
+   "room": ""
+  },
+  {
+   "section": "STEM.505.91",
+   "title": "Food Science for Educators",
+   "days": [
+    "saturday"
+   ],
+   "start": "12:00",
+   "end": "18:00",
+   "room": ""
+  }
+ ]
+}
