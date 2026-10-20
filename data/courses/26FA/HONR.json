@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "HONR",
- "retrieved": "2026-10-13",
+ "retrieved": "2026-10-20",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -99,7 +99,7 @@
   },
   {
    "section": "HONR.130.01",
-   "title": "Honors Global Perspectives",
+   "title": "Honr:Intro to Myth and Folklo",
    "days": [
     "tuesday",
     "thursday"
@@ -121,7 +121,7 @@
   },
   {
    "section": "HONR.150.01",
-   "title": "Honors Humanities & Soc Inq.",
+   "title": "Hon Intro Communicatn Studies",
    "days": [
     "monday",
     "thursday"

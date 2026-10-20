@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "CIS",
- "retrieved": "2026-10-13",
+ "retrieved": "2026-10-20",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -50,6 +50,17 @@
    ],
    "start": "15:30",
    "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "CIS.105.21C",
+   "title": "Data Analys/Analys w Excel",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
    "room": ""
   },
   {

@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "MUSIC",
- "retrieved": "2026-10-13",
+ "retrieved": "2026-10-20",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -147,6 +147,17 @@
    "start": "17:30",
    "end": "18:50",
    "room": "College of Arts and Sciences 152"
+  },
+  {
+   "section": "MUSIC.420.01",
+   "title": "Computer Music Programming",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": "College of Arts and Sciences 128"
   }
  ]
 }

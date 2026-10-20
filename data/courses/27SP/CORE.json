@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "CORE",
- "retrieved": "2026-10-13",
+ "retrieved": "2026-10-20",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -211,17 +211,6 @@
    ],
    "start": "08:00",
    "end": "10:50",
-   "room": ""
-  },
-  {
-   "section": "CORE.479.14",
-   "title": "SpTp:The Cats Class",
-   "days": [
-    "tuesday",
-    "thursday"
-   ],
-   "start": "12:30",
-   "end": "13:50",
    "room": ""
   },
   {

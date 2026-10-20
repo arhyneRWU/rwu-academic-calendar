@@ -3,20 +3,9 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "ENGR",
- "retrieved": "2026-10-13",
+ "retrieved": "2026-10-20",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
-  {
-   "section": "ENGR.115.01",
-   "title": "Computer Appl for Engr",
-   "days": [
-    "tuesday",
-    "thursday"
-   ],
-   "start": "09:30",
-   "end": "10:50",
-   "room": "School of Engineering 206"
-  },
   {
    "section": "ENGR.115.02",
    "title": "Computer Appl for Engr",
@@ -259,6 +248,17 @@
    "room": ""
   },
   {
+   "section": "ENGR.355.HON01",
+   "title": "Honrs:Wind Turbine Design",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
    "section": "ENGR.358.01",
    "title": "Engr Electronics",
    "days": [
@@ -428,13 +428,24 @@
   },
   {
    "section": "ENGR.479.03",
-   "title": "SpTp:Engineering",
+   "title": "SpTp:Semiconductor Devices",
    "days": [
     "monday",
     "wednesday",
     "friday"
    ],
    "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "ENGR.479.HON02",
+   "title": "Honrs:SpTp:Medical Device Dsg",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
    "end": "10:50",
    "room": ""
   },

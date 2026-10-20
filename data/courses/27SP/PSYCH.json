@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "PSYCH",
- "retrieved": "2026-10-13",
+ "retrieved": "2026-10-20",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -516,7 +516,7 @@
   },
   {
    "section": "PSYCH.446.01",
-   "title": "Seminar in Psychology",
+   "title": "Psychology of Cults",
    "days": [
     "tuesday",
     "thursday"
@@ -527,7 +527,7 @@
   },
   {
    "section": "PSYCH.446.02",
-   "title": "Seminar in Psychology",
+   "title": "Sleep",
    "days": [
     "monday",
     "wednesday",
@@ -543,8 +543,8 @@
    "days": [
     "tuesday"
    ],
-   "start": "18:00",
-   "end": "18:50",
+   "start": "17:00",
+   "end": "17:50",
    "room": ""
   },
   {

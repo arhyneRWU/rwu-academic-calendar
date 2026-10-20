@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "FILM",
- "retrieved": "2026-10-13",
+ "retrieved": "2026-10-20",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -37,6 +37,17 @@
    "start": "14:00",
    "end": "16:50",
    "room": ""
+  },
+  {
+   "section": "FILM.400.01",
+   "title": "Curation & Festival Production",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "18:20",
+   "room": "Humanities Building 104"
   }
  ]
 }

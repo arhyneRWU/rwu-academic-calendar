@@ -3,29 +3,29 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "COMM",
- "retrieved": "2026-10-13",
+ "retrieved": "2026-10-20",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
    "section": "COMM.100.01",
    "title": "Intro to Communication",
    "days": [
-    "tuesday",
+    "monday",
     "thursday"
    ],
-   "start": "09:30",
-   "end": "10:50",
+   "start": "14:00",
+   "end": "15:20",
    "room": ""
   },
   {
    "section": "COMM.100.02",
    "title": "Intro to Communication",
    "days": [
-    "tuesday",
+    "monday",
     "thursday"
    ],
-   "start": "11:00",
-   "end": "12:20",
+   "start": "15:30",
+   "end": "16:50",
    "room": ""
   },
   {
@@ -212,11 +212,11 @@
    "section": "COMM.375.01",
    "title": "Global Audiences/Consumers",
    "days": [
-    "monday",
+    "tuesday",
     "thursday"
    ],
-   "start": "15:30",
-   "end": "16:50",
+   "start": "09:30",
+   "end": "10:50",
    "room": ""
   },
   {
@@ -234,11 +234,11 @@
    "section": "COMM.395.01",
    "title": "Race, Ethnicity, and Media",
    "days": [
-    "monday",
+    "tuesday",
     "thursday"
    ],
-   "start": "14:00",
-   "end": "15:20",
+   "start": "11:00",
+   "end": "12:20",
    "room": ""
   }
  ]

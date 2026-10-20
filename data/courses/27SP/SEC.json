@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "SEC",
- "retrieved": "2026-10-13",
+ "retrieved": "2026-10-20",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -80,7 +80,7 @@
   },
   {
    "section": "SEC.479.91",
-   "title": "SpTp:Applied AI to IT & Cyber",
+   "title": "SpTp:Appld AI for Cybersecrty",
    "days": [
     "tuesday",
     "thursday"

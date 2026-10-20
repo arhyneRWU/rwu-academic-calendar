@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "ARCH",
- "retrieved": "2026-10-13",
+ "retrieved": "2026-10-20",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -665,7 +665,7 @@
    ],
    "start": "08:00",
    "end": "09:20",
-   "room": "Cummings School Architecture 205"
+   "room": "Cummings School Architecture 105"
   },
   {
    "section": "ARCH.538R.02",
@@ -675,7 +675,7 @@
    ],
    "start": "11:00",
    "end": "12:20",
-   "room": "Cummings School Architecture 205"
+   "room": "Cummings School Architecture 105"
   },
   {
    "section": "ARCH.538R.03",
@@ -685,7 +685,7 @@
    ],
    "start": "12:30",
    "end": "13:50",
-   "room": "Cummings School Architecture 205"
+   "room": "Cummings School Architecture 105"
   },
   {
    "section": "ARCH.540.01",
@@ -797,16 +797,6 @@
    "start": "08:00",
    "end": "10:50",
    "room": "Cummings School Architecture 205"
-  },
-  {
-   "section": "ARCH.594.01",
-   "title": "Urban Ecology",
-   "days": [
-    "tuesday"
-   ],
-   "start": "08:00",
-   "end": "10:50",
-   "room": "Cummings School Architecture 206"
   },
   {
    "section": "ARCH.613.01",

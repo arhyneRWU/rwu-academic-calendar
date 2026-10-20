@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "AQS",
- "retrieved": "2026-10-13",
+ "retrieved": "2026-10-20",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -11,10 +11,10 @@
    "title": "Prin of Aquatic Animal Husband",
    "days": [
     "tuesday",
-    "thursday"
+    "friday"
    ],
-   "start": "12:30",
-   "end": "13:50",
+   "start": "15:30",
+   "end": "16:50",
    "room": ""
   },
   {
@@ -46,6 +46,16 @@
    ],
    "start": "18:00",
    "end": "21:00",
+   "room": ""
+  },
+  {
+   "section": "AQS.379.01",
+   "title": "Social Blue Entrepreneurship",
+   "days": [
+    "wednesday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
    "room": ""
   }
  ]

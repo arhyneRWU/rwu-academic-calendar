@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "PRES",
- "retrieved": "2026-10-13",
+ "retrieved": "2026-10-20",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -62,12 +62,11 @@
    "section": "PRES.572.01",
    "title": "Preservation Law & Regulation",
    "days": [
-    "tuesday",
     "thursday"
    ],
-   "start": "15:30",
-   "end": "16:50",
-   "room": "Cummings School Architecture 202"
+   "start": "09:00",
+   "end": "11:50",
+   "room": "Cummings School Architecture 206"
   }
  ]
 }

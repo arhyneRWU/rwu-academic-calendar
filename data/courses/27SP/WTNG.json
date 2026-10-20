@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "WTNG",
- "retrieved": "2026-10-13",
+ "retrieved": "2026-10-20",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -495,6 +495,17 @@
    "room": ""
   },
   {
+   "section": "WTNG.250.HON01",
+   "title": "HONRS:Advanced Composition",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
    "section": "WTNG.270.01",
    "title": "Travel Writing",
    "days": [
@@ -517,8 +528,41 @@
    "room": ""
   },
   {
+   "section": "WTNG.270.HON01",
+   "title": "Honrs:Travel Writing",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "WTNG.270.HON02",
+   "title": "Honrs:Travel Writing",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
    "section": "WTNG.340.01",
    "title": "Adv Topics Workplace Writing",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "12:30",
+   "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "WTNG.340.HON01",
+   "title": "Honrs:Adv Tpcs Workplce Wtng",
    "days": [
     "tuesday",
     "thursday"

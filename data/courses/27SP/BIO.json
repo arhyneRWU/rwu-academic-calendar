@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "BIO",
- "retrieved": "2026-10-13",
+ "retrieved": "2026-10-20",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -154,7 +154,7 @@
    "days": [
     "thursday"
    ],
-   "start": "06:00",
+   "start": "18:00",
    "end": "20:50",
    "room": "Marine & Natural Sciences Bldg 103"
   },
@@ -395,6 +395,16 @@
    "room": ""
   },
   {
+   "section": "BIO.308.01",
+   "title": "Introducation to Histology",
+   "days": [
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "13:50",
+   "room": "Marine & Natural Sciences Bldg 107"
+  },
+  {
    "section": "BIO.312.01",
    "title": "Conservation Biology",
    "days": [
@@ -454,11 +464,12 @@
    "section": "BIO.333.01",
    "title": "Biochemistry for Life Science",
    "days": [
-    "tuesday",
-    "thursday"
+    "monday",
+    "wednesday",
+    "friday"
    ],
-   "start": "11:00",
-   "end": "12:20",
+   "start": "12:00",
+   "end": "12:50",
    "room": ""
   },
   {
@@ -614,14 +625,15 @@
    "room": ""
   },
   {
-   "section": "BIO.479.01",
-   "title": "SpTp:General & Aquatic Animal",
+   "section": "BIO.479.02",
+   "title": "SpTp:Kelp Forrest Eco",
    "days": [
+    "monday",
     "thursday"
    ],
-   "start": "11:00",
-   "end": "13:50",
-   "room": "Marine & Natural Sciences Bldg 107"
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
   }
  ]
 }

@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "CJS",
- "retrieved": "2026-10-13",
+ "retrieved": "2026-10-20",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -47,6 +47,17 @@
    ],
    "start": "17:00",
    "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "CJS.105.05",
+   "title": "Intro to Crim Justice",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
    "room": ""
   },
   {
@@ -279,17 +290,6 @@
    ],
    "start": "17:00",
    "end": "19:50",
-   "room": ""
-  },
-  {
-   "section": "CJS.379.02",
-   "title": "SpTp: Music and Crime",
-   "days": [
-    "tuesday",
-    "thursday"
-   ],
-   "start": "09:30",
-   "end": "10:50",
    "room": ""
   },
   {

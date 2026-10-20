@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "MATH",
- "retrieved": "2026-10-13",
+ "retrieved": "2026-10-20",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -273,6 +273,28 @@
    "start": "17:00",
    "end": "18:50",
    "room": "College of Arts and Sciences 121"
+  },
+  {
+   "section": "MATH.136.03",
+   "title": "Precalculus",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "15:30",
+   "end": "17:20",
+   "room": "Gabelli School of Business 105"
+  },
+  {
+   "section": "MATH.136.03",
+   "title": "Precalculus",
+   "days": [
+    "tuesday",
+    "friday"
+   ],
+   "start": "15:30",
+   "end": "17:20",
+   "room": "School of Engineering 127"
   },
   {
    "section": "MATH.136.03",

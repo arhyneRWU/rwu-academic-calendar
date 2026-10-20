@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "DSGN",
- "retrieved": "2026-10-13",
+ "retrieved": "2026-10-20",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -15,7 +15,7 @@
    ],
    "start": "10:00",
    "end": "11:50",
-   "room": ""
+   "room": "Humanities Building 223"
   },
   {
    "section": "DSGN.100.02",
@@ -26,7 +26,7 @@
    ],
    "start": "12:00",
    "end": "13:50",
-   "room": ""
+   "room": "Humanities Building 223"
   },
   {
    "section": "DSGN.110.01",
@@ -135,7 +135,7 @@
    ],
    "start": "10:00",
    "end": "13:50",
-   "room": ""
+   "room": "Humanities Building 222"
   },
   {
    "section": "DSGN.429.01",
@@ -167,6 +167,26 @@
    ],
    "start": "10:00",
    "end": "11:50",
+   "room": ""
+  },
+  {
+   "section": "DSGN.479.01",
+   "title": "SpTp:Adv. Publication Design",
+   "days": [
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "13:50",
+   "room": "Humanities Building 222"
+  },
+  {
+   "section": "DSGN.479.02",
+   "title": "SpTp:Adv. Citizen Designer",
+   "days": [
+    "thursday"
+   ],
+   "start": "17:00",
+   "end": "20:50",
    "room": ""
   }
  ]
