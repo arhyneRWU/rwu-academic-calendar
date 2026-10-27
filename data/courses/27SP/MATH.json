@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "MATH",
- "retrieved": "2026-10-20",
+ "retrieved": "2026-10-27",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -250,6 +250,17 @@
   },
   {
    "section": "MATH.141.02",
+   "title": "Finite Mathematics",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "MATH.141.21C",
    "title": "Finite Mathematics",
    "days": [
     "monday",

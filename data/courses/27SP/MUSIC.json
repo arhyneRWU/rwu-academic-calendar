@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "MUSIC",
- "retrieved": "2026-10-20",
+ "retrieved": "2026-10-27",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -90,6 +90,16 @@
    ],
    "start": "10:00",
    "end": "10:50",
+   "room": "College of Arts and Sciences 152"
+  },
+  {
+   "section": "MUSIC.171.01",
+   "title": "Aural Skills I",
+   "days": [
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "17:20",
    "room": "College of Arts and Sciences 152"
   },
   {

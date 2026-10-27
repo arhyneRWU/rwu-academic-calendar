@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "COMM",
- "retrieved": "2026-10-20",
+ "retrieved": "2026-10-27",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -43,11 +43,12 @@
    "section": "COMM.101.02",
    "title": "Intro to Mass Media",
    "days": [
-    "tuesday",
-    "thursday"
+    "monday",
+    "wednesday",
+    "friday"
    ],
-   "start": "11:00",
-   "end": "12:20",
+   "start": "09:00",
+   "end": "09:50",
    "room": ""
   },
   {
@@ -226,8 +227,8 @@
     "tuesday",
     "thursday"
    ],
-   "start": "09:30",
-   "end": "10:50",
+   "start": "11:00",
+   "end": "12:20",
    "room": ""
   },
   {

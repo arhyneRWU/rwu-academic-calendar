@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "ENGR",
- "retrieved": "2026-10-20",
+ "retrieved": "2026-10-27",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -248,17 +248,6 @@
    "room": ""
   },
   {
-   "section": "ENGR.355.HON01",
-   "title": "Honrs:Wind Turbine Design",
-   "days": [
-    "tuesday",
-    "thursday"
-   ],
-   "start": "12:30",
-   "end": "13:50",
-   "room": ""
-  },
-  {
    "section": "ENGR.358.01",
    "title": "Engr Electronics",
    "days": [
@@ -435,17 +424,6 @@
     "friday"
    ],
    "start": "10:00",
-   "end": "10:50",
-   "room": ""
-  },
-  {
-   "section": "ENGR.479.HON02",
-   "title": "Honrs:SpTp:Medical Device Dsg",
-   "days": [
-    "tuesday",
-    "thursday"
-   ],
-   "start": "09:30",
    "end": "10:50",
    "room": ""
   },

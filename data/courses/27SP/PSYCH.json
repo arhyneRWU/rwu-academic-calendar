@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "PSYCH",
- "retrieved": "2026-10-20",
+ "retrieved": "2026-10-27",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -55,11 +55,12 @@
    "section": "PSYCH.100.05",
    "title": "Intro to Psychology",
    "days": [
-    "tuesday",
-    "thursday"
+    "monday",
+    "wednesday",
+    "friday"
    ],
-   "start": "12:30",
-   "end": "13:50",
+   "start": "11:00",
+   "end": "11:50",
    "room": ""
   },
   {
@@ -428,16 +429,6 @@
    ],
    "start": "12:00",
    "end": "12:50",
-   "room": ""
-  },
-  {
-   "section": "PSYCH.379.02",
-   "title": "SpTp:Sports Psychology",
-   "days": [
-    "wednesday"
-   ],
-   "start": "14:00",
-   "end": "16:50",
    "room": ""
   },
   {

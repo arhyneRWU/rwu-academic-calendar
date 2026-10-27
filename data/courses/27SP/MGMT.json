@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "MGMT",
- "retrieved": "2026-10-20",
+ "retrieved": "2026-10-27",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -291,8 +291,8 @@
    "days": [
     "tuesday"
    ],
-   "start": "13:00",
-   "end": "15:50",
+   "start": "12:30",
+   "end": "15:20",
    "room": "Gabelli School of Business 208"
   },
   {
@@ -301,8 +301,8 @@
    "days": [
     "thursday"
    ],
-   "start": "13:00",
-   "end": "15:50",
+   "start": "12:30",
+   "end": "15:20",
    "room": "Gabelli School of Business 208"
   },
   {

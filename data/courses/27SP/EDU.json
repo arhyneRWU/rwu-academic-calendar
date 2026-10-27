@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "EDU",
- "retrieved": "2026-10-20",
+ "retrieved": "2026-10-27",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -29,17 +29,6 @@
    "room": "School of Education 059"
   },
   {
-   "section": "EDU.200.03",
-   "title": "Foundations of Educ",
-   "days": [
-    "tuesday",
-    "thursday"
-   ],
-   "start": "15:30",
-   "end": "16:50",
-   "room": "School of Education 059"
-  },
-  {
    "section": "EDU.202.01",
    "title": "Psych Learning/Develop",
    "days": [
@@ -62,17 +51,6 @@
    "room": "School of Education 030"
   },
   {
-   "section": "EDU.202.03",
-   "title": "Psych Learning/Develop",
-   "days": [
-    "monday",
-    "wednesday"
-   ],
-   "start": "09:30",
-   "end": "10:50",
-   "room": "School of Law 033"
-  },
-  {
    "section": "EDU.302.01",
    "title": "Lit in Elem School I",
    "days": [
@@ -81,7 +59,7 @@
    ],
    "start": "09:30",
    "end": "10:50",
-   "room": ""
+   "room": "School of Education 030"
   },
   {
    "section": "EDU.302.02",
@@ -973,8 +951,8 @@
    "days": [
     "monday"
    ],
-   "start": "14:00",
-   "end": "16:50",
+   "start": "17:00",
+   "end": "19:50",
    "room": ""
   },
   {

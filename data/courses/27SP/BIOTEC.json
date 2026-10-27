@@ -1,0 +1,54 @@
+{
+ "unofficial": true,
+ "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
+ "term": "27/SP",
+ "subject": "BIOTEC",
+ "retrieved": "2026-10-27",
+ "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
+ "sections": [
+  {
+   "section": "BIOTEC.565.01",
+   "title": "Introd Cgmp/Qsr Compliance",
+   "days": [
+    "tuesday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": ""
+  },
+  {
+   "section": "BIOTEC.579.01",
+   "title": "SpTp:Environmental Toxiology",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "09:00",
+   "end": "09:50",
+   "room": ""
+  },
+  {
+   "section": "BIOTEC.580.01",
+   "title": "Biochemical Analysis Cannabis",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "11:00",
+   "end": "12:20",
+   "room": ""
+  },
+  {
+   "section": "BIOTEC.679.01",
+   "title": "SpTp:Medical Device",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": ""
+  }
+ ]
+}
