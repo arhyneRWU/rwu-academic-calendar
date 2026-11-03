@@ -3,18 +3,17 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "LS",
- "retrieved": "2026-10-27",
+ "retrieved": "2026-11-03",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
    "section": "LS.101.01",
    "title": "The American Legal System",
    "days": [
-    "tuesday",
-    "thursday"
+    "wednesday"
    ],
-   "start": "09:30",
-   "end": "10:50",
+   "start": "17:00",
+   "end": "19:50",
    "room": ""
   },
   {

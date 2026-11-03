@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "HIST",
- "retrieved": "2026-10-27",
+ "retrieved": "2026-11-03",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -35,8 +35,8 @@
     "monday",
     "thursday"
    ],
-   "start": "14:00",
-   "end": "15:20",
+   "start": "15:30",
+   "end": "16:50",
    "room": ""
   },
   {
@@ -81,8 +81,8 @@
     "monday",
     "thursday"
    ],
-   "start": "15:30",
-   "end": "16:50",
+   "start": "14:00",
+   "end": "15:20",
    "room": ""
   },
   {

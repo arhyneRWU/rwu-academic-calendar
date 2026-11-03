@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "ARCH",
- "retrieved": "2026-10-27",
+ "retrieved": "2026-11-03",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -966,6 +966,17 @@
    "start": "14:00",
    "end": "16:50",
    "room": "Cummings School Architecture 206"
+  },
+  {
+   "section": "ARCH.579.03",
+   "title": "Special Topics",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "College of Arts and Sciences 157"
   },
   {
    "section": "ARCH.586.01",

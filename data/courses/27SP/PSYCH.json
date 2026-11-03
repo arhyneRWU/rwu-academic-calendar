@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "PSYCH",
- "retrieved": "2026-10-27",
+ "retrieved": "2026-11-03",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -200,11 +200,12 @@
    "section": "PSYCH.279.01",
    "title": "SpTp: Serial Offending",
    "days": [
-    "tuesday",
-    "thursday"
+    "monday",
+    "wednesday",
+    "friday"
    ],
-   "start": "12:30",
-   "end": "13:50",
+   "start": "10:00",
+   "end": "10:50",
    "room": ""
   },
   {
@@ -411,12 +412,10 @@
    "section": "PSYCH.367.01",
    "title": "Evolutionary Psychology",
    "days": [
-    "monday",
-    "wednesday",
-    "friday"
+    "wednesday"
    ],
-   "start": "09:00",
-   "end": "09:50",
+   "start": "14:00",
+   "end": "16:50",
    "room": ""
   },
   {

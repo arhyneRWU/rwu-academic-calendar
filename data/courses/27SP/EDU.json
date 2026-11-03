@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "EDU",
- "retrieved": "2026-10-27",
+ "retrieved": "2026-11-03",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -87,7 +87,8 @@
    "section": "EDU.306.01",
    "title": "Class Appl of Tech Sec",
    "days": [
-    "thursday"
+    "monday",
+    "wednesday"
    ],
    "start": "11:00",
    "end": "12:20",
@@ -487,7 +488,7 @@
    ],
    "start": "12:30",
    "end": "13:50",
-   "room": "School of Education 009"
+   "room": ""
   },
   {
    "section": "EDU.342.02",
@@ -498,7 +499,7 @@
    ],
    "start": "14:00",
    "end": "15:20",
-   "room": "School of Education 009"
+   "room": ""
   },
   {
    "section": "EDU.349.01",
@@ -944,16 +945,6 @@
    "start": "16:30",
    "end": "19:20",
    "room": "School of Education 059"
-  },
-  {
-   "section": "EDU.453.91",
-   "title": "Senior Thesis Seminar",
-   "days": [
-    "monday"
-   ],
-   "start": "17:00",
-   "end": "19:50",
-   "room": ""
   },
   {
    "section": "EDU.542.31",

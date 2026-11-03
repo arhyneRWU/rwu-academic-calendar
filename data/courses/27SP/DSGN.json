@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "DSGN",
- "retrieved": "2026-10-27",
+ "retrieved": "2026-11-03",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -176,6 +176,16 @@
    "start": "17:00",
    "end": "20:50",
    "room": ""
+  },
+  {
+   "section": "DSGN.479.03",
+   "title": "Sptp:intgrtd Dsgn & Crtv Strat",
+   "days": [
+    "tuesday"
+   ],
+   "start": "14:00",
+   "end": "17:50",
+   "room": "Humanities Building 216"
   }
  ]
 }
