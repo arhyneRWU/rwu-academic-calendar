@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "CW",
- "retrieved": "2026-11-03",
+ "retrieved": "2026-11-10",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -37,6 +37,18 @@
    ],
    "start": "14:00",
    "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "CW.120.91",
+   "title": "Narrative in Prose",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "08:50",
    "room": ""
   },
   {

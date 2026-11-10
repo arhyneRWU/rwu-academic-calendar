@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "PSYCH",
- "retrieved": "2026-11-03",
+ "retrieved": "2026-11-10",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -146,7 +146,7 @@
    "section": "PSYCH.250.01",
    "title": "Intro Theories of Personality",
    "days": [
-    "wednesday"
+    "monday"
    ],
    "start": "14:00",
    "end": "16:50",
@@ -399,13 +399,14 @@
    "room": ""
   },
   {
-   "section": "PSYCH.360.01",
+   "section": "PSYCH.360.91",
    "title": "Multicultural Psychology",
    "days": [
-    "tuesday"
+    "tuesday",
+    "thursday"
    ],
    "start": "17:00",
-   "end": "19:50",
+   "end": "18:20",
    "room": ""
   },
   {

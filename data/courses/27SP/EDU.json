@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "EDU",
- "retrieved": "2026-11-03",
+ "retrieved": "2026-11-10",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -488,7 +488,7 @@
    ],
    "start": "12:30",
    "end": "13:50",
-   "room": ""
+   "room": "School of Education 009"
   },
   {
    "section": "EDU.342.02",
@@ -553,7 +553,7 @@
    ],
    "start": "17:00",
    "end": "19:50",
-   "room": "School of Education 059"
+   "room": "School of Education 009"
   },
   {
    "section": "EDU.374.01",

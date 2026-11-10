@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "DSGN",
- "retrieved": "2026-11-03",
+ "retrieved": "2026-11-10",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -18,41 +18,8 @@
    "room": "Humanities Building 223"
   },
   {
-   "section": "DSGN.100.02",
-   "title": "Introduction to Design Communi",
-   "days": [
-    "monday",
-    "wednesday"
-   ],
-   "start": "12:00",
-   "end": "13:50",
-   "room": "Humanities Building 223"
-  },
-  {
-   "section": "DSGN.110.01",
-   "title": "Intro to Typography",
-   "days": [
-    "tuesday",
-    "thursday"
-   ],
-   "start": "09:30",
-   "end": "11:20",
-   "room": ""
-  },
-  {
    "section": "DSGN.110.02",
    "title": "Intro to Typography",
-   "days": [
-    "tuesday",
-    "thursday"
-   ],
-   "start": "12:00",
-   "end": "13:50",
-   "room": ""
-  },
-  {
-   "section": "DSGN.210.01",
-   "title": "Advanced Design Communication",
    "days": [
     "tuesday",
     "thursday"
@@ -159,7 +126,7 @@
   },
   {
    "section": "DSGN.479.01",
-   "title": "SpTp:Adv. Publication Design",
+   "title": "SpTp:Adv. Publication Dsgn",
    "days": [
     "friday"
    ],

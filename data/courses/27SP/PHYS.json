@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "PHYS",
- "retrieved": "2026-11-03",
+ "retrieved": "2026-11-10",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -101,6 +101,27 @@
     "thursday"
    ],
    "start": "18:30",
+   "end": "19:50",
+   "room": ""
+  },
+  {
+   "section": "PHYS.110.02",
+   "title": "Physics II (algebra) & Lab",
+   "days": [
+    "monday",
+    "thursday"
+   ],
+   "start": "14:00",
+   "end": "15:20",
+   "room": ""
+  },
+  {
+   "section": "PHYS.110.02",
+   "title": "Physics II (algebra) & Lab",
+   "days": [
+    "tuesday"
+   ],
+   "start": "17:00",
    "end": "19:50",
    "room": ""
   },
@@ -238,17 +259,6 @@
    ],
    "start": "17:00",
    "end": "19:50",
-   "room": ""
-  },
-  {
-   "section": "PHYS.260.01",
-   "title": "Climate Physics",
-   "days": [
-    "monday",
-    "thursday"
-   ],
-   "start": "14:00",
-   "end": "15:20",
    "room": ""
   }
  ]
