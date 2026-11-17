@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "MATH",
- "retrieved": "2026-11-10",
+ "retrieved": "2026-11-17",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -460,6 +460,18 @@
    "room": ""
   },
   {
+   "section": "MATH.225.01",
+   "title": "Introduction to Data Science",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": "School of Engineering 122"
+  },
+  {
    "section": "MATH.250.01",
    "title": "Intro to Biostatistics",
    "days": [
@@ -481,18 +493,6 @@
    ],
    "start": "13:00",
    "end": "13:50",
-   "room": ""
-  },
-  {
-   "section": "MATH.301.01",
-   "title": "Linear Programming",
-   "days": [
-    "monday",
-    "wednesday",
-    "friday"
-   ],
-   "start": "12:00",
-   "end": "12:50",
    "room": ""
   },
   {

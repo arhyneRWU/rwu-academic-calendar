@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "ACCTG",
- "retrieved": "2026-11-10",
+ "retrieved": "2026-11-17",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -28,6 +28,18 @@
    ],
    "start": "13:00",
    "end": "13:50",
+   "room": ""
+  },
+  {
+   "section": "ACCTG.201.03",
+   "title": "Acctg I:Financial",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "08:00",
+   "end": "08:50",
    "room": ""
   },
   {

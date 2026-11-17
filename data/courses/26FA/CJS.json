@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "CJS",
- "retrieved": "2026-11-10",
+ "retrieved": "2026-11-17",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -191,7 +191,7 @@
    ],
    "start": "17:00",
    "end": "18:20",
-   "room": "Gabelli School of Business G12"
+   "room": "ELS 111"
   },
   {
    "section": "CJS.308.01",
@@ -439,7 +439,7 @@
    ],
    "start": "17:00",
    "end": "18:20",
-   "room": "Gabelli School of Business G12"
+   "room": "ELS 111"
   }
  ]
 }

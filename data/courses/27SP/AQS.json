@@ -3,7 +3,7 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "AQS",
- "retrieved": "2026-11-10",
+ "retrieved": "2026-11-17",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
@@ -26,6 +26,16 @@
    "start": "14:00",
    "end": "16:50",
    "room": ""
+  },
+  {
+   "section": "AQS.264L.52",
+   "title": "Princ Aquatic Animal Husb Lab",
+   "days": [
+    "wednesday"
+   ],
+   "start": "18:00",
+   "end": "21:00",
+   "room": "Marine & Natural Sciences Bldg 107"
   },
   {
    "section": "AQS.306.01",
