@@ -1,6 +1,6 @@
 # Handoff — rwu-academic-calendar
 
-**Current as of 2026-08-17.** Read this before changing anything, then
+**Current as of 2026-11-24.** Read this before changing anything, then
 [`LEDGER.md`](LEDGER.md) for every defect found so far and what proved each one
 fixed. Several decisions here were made against specific evidence and should
 not be re-litigated from first principles.
@@ -19,7 +19,7 @@ course catalog.
 | Calendar source | RWU's [academic calendar page](https://www.rwu.edu/academics/resources-units/academic-calendar) — HTML tables, no ICS, no API |
 | Course source | [Roger Central](https://collselfsrvprod.rwu.edu/Student/Courses) — Ellucian Colleague Self-Service, public, JSON behind a JS front end |
 
-**State:** 18 commits, 330 tests, CI green, deployed. 4 academic years, 16
+**State:** 43 commits, 380 tests, CI green, deployed. 4 academic years, 16
 terms, 519 calendar events. 1,112 course meeting patterns across 69 subjects
 for Fall 2026. `validate` reports 0 errors and 17 source inconsistencies —
 RWU's own, not ours.
