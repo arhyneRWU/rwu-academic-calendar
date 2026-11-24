@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "MATH",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "MATH.115.01",
+   "section": "MATH.115-01",
    "title": "Math for Elem Educ I",
    "days": [
     "monday"
@@ -17,7 +17,7 @@
    "room": "School of Education 009"
   },
   {
-   "section": "MATH.115.01",
+   "section": "MATH.115-01",
    "title": "Math for Elem Educ I",
    "days": [
     "thursday"
@@ -27,7 +27,7 @@
    "room": "School of Education 059"
   },
   {
-   "section": "MATH.117.01",
+   "section": "MATH.117-01",
    "title": "College Algebra",
    "days": [
     "monday",
@@ -38,7 +38,7 @@
    "room": "College of Arts and Sciences 123"
   },
   {
-   "section": "MATH.117.02",
+   "section": "MATH.117-02",
    "title": "College Algebra",
    "days": [
     "monday",
@@ -49,7 +49,7 @@
    "room": "Gabelli School of Business G05"
   },
   {
-   "section": "MATH.117.03",
+   "section": "MATH.117-03",
    "title": "College Algebra",
    "days": [
     "monday",
@@ -60,7 +60,7 @@
    "room": "College of Arts and Sciences 120"
   },
   {
-   "section": "MATH.117.04",
+   "section": "MATH.117-04",
    "title": "College Algebra",
    "days": [
     "monday",
@@ -71,7 +71,7 @@
    "room": "Gabelli School of Business G05"
   },
   {
-   "section": "MATH.117.05",
+   "section": "MATH.117-05",
    "title": "College Algebra",
    "days": [
     "monday",
@@ -83,7 +83,7 @@
    "room": "College of Arts and Sciences 120"
   },
   {
-   "section": "MATH.117.06",
+   "section": "MATH.117-06",
    "title": "College Algebra",
    "days": [
     "monday",
@@ -95,7 +95,7 @@
    "room": "College of Arts and Sciences 120"
   },
   {
-   "section": "MATH.117.07",
+   "section": "MATH.117-07",
    "title": "College Algebra",
    "days": [
     "tuesday",
@@ -106,7 +106,7 @@
    "room": "College of Arts and Sciences 120"
   },
   {
-   "section": "MATH.117.08",
+   "section": "MATH.117-08",
    "title": "College Algebra",
    "days": [
     "monday",
@@ -117,7 +117,7 @@
    "room": "College of Arts and Sciences 123"
   },
   {
-   "section": "MATH.124.01",
+   "section": "MATH.124-01",
    "title": "Basic Statistics",
    "days": [
     "tuesday",
@@ -128,7 +128,7 @@
    "room": "College of Arts and Sciences 125"
   },
   {
-   "section": "MATH.124.02",
+   "section": "MATH.124-02",
    "title": "Basic Statistics",
    "days": [
     "monday",
@@ -140,7 +140,7 @@
    "room": "College of Arts and Sciences 123"
   },
   {
-   "section": "MATH.124.03",
+   "section": "MATH.124-03",
    "title": "Basic Statistics",
    "days": [
     "tuesday",
@@ -151,7 +151,7 @@
    "room": "College of Arts and Sciences 123"
   },
   {
-   "section": "MATH.124.04",
+   "section": "MATH.124-04",
    "title": "Basic Statistics",
    "days": [
     "monday",
@@ -162,7 +162,7 @@
    "room": "College of Arts and Sciences 223"
   },
   {
-   "section": "MATH.124.05",
+   "section": "MATH.124-05",
    "title": "Basic Statistics",
    "days": [
     "monday",
@@ -173,7 +173,7 @@
    "room": "College of Arts and Sciences 127"
   },
   {
-   "section": "MATH.124.06",
+   "section": "MATH.124-06",
    "title": "Basic Statistics",
    "days": [
     "monday",
@@ -184,7 +184,7 @@
    "room": "College of Arts and Sciences 127"
   },
   {
-   "section": "MATH.124.07",
+   "section": "MATH.124-07",
    "title": "Basic Statistics",
    "days": [
     "monday",
@@ -196,7 +196,7 @@
    "room": "College of Arts and Sciences 125"
   },
   {
-   "section": "MATH.124.08",
+   "section": "MATH.124-08",
    "title": "Basic Statistics",
    "days": [
     "monday",
@@ -208,7 +208,7 @@
    "room": "College of Arts and Sciences 123"
   },
   {
-   "section": "MATH.124.09",
+   "section": "MATH.124-09",
    "title": "Basic Statistics",
    "days": [
     "monday",
@@ -220,7 +220,7 @@
    "room": "College of Arts and Sciences 120"
   },
   {
-   "section": "MATH.124.10",
+   "section": "MATH.124-10",
    "title": "Basic Statistics",
    "days": [
     "tuesday",
@@ -231,7 +231,7 @@
    "room": "College of Arts and Sciences 162"
   },
   {
-   "section": "MATH.124.11",
+   "section": "MATH.124-11",
    "title": "Basic Statistics",
    "days": [
     "tuesday",
@@ -242,7 +242,7 @@
    "room": "School of Engineering 128"
   },
   {
-   "section": "MATH.124.12",
+   "section": "MATH.124-12",
    "title": "Basic Statistics",
    "days": [
     "monday",
@@ -253,7 +253,7 @@
    "room": "College of Arts and Sciences 223"
   },
   {
-   "section": "MATH.136.01",
+   "section": "MATH.136-01",
    "title": "Precalculus",
    "days": [
     "monday",
@@ -264,7 +264,7 @@
    "room": "College of Arts and Sciences 225"
   },
   {
-   "section": "MATH.136.02",
+   "section": "MATH.136-02",
    "title": "Precalculus",
    "days": [
     "monday",
@@ -275,7 +275,7 @@
    "room": "College of Arts and Sciences 121"
   },
   {
-   "section": "MATH.136.03",
+   "section": "MATH.136-03",
    "title": "Precalculus",
    "days": [
     "tuesday",
@@ -286,7 +286,7 @@
    "room": "Gabelli School of Business 105"
   },
   {
-   "section": "MATH.136.03",
+   "section": "MATH.136-03",
    "title": "Precalculus",
    "days": [
     "tuesday",
@@ -297,7 +297,7 @@
    "room": "School of Engineering 127"
   },
   {
-   "section": "MATH.136.03",
+   "section": "MATH.136-03",
    "title": "Precalculus",
    "days": [
     "tuesday",
@@ -308,7 +308,7 @@
    "room": "Gabelli School of Business 105"
   },
   {
-   "section": "MATH.136.05",
+   "section": "MATH.136-05",
    "title": "Precalculus",
    "days": [
     "monday",
@@ -320,7 +320,7 @@
    "room": "College of Arts and Sciences 121"
   },
   {
-   "section": "MATH.136.05",
+   "section": "MATH.136-05",
    "title": "Precalculus",
    "days": [
     "thursday"
@@ -330,7 +330,7 @@
    "room": "College of Arts and Sciences 121"
   },
   {
-   "section": "MATH.136.06",
+   "section": "MATH.136-06",
    "title": "Precalculus",
    "days": [
     "monday",
@@ -342,7 +342,7 @@
    "room": "Humanities Building 334"
   },
   {
-   "section": "MATH.136.06",
+   "section": "MATH.136-06",
    "title": "Precalculus",
    "days": [
     "thursday"
@@ -352,7 +352,7 @@
    "room": "College of Arts and Sciences 121"
   },
   {
-   "section": "MATH.136.07",
+   "section": "MATH.136-07",
    "title": "Precalculus",
    "days": [
     "monday",
@@ -363,7 +363,7 @@
    "room": "College of Arts and Sciences 222"
   },
   {
-   "section": "MATH.141.01",
+   "section": "MATH.141-01",
    "title": "Finite Mathematics",
    "days": [
     "monday",
@@ -374,7 +374,7 @@
    "room": "Marine & Natural Sciences Bldg 210"
   },
   {
-   "section": "MATH.141.02",
+   "section": "MATH.141-02",
    "title": "Finite Mathematics",
    "days": [
     "monday",
@@ -385,7 +385,7 @@
    "room": "Marine & Natural Sciences Bldg 210"
   },
   {
-   "section": "MATH.141.03",
+   "section": "MATH.141-03",
    "title": "Finite Mathematics",
    "days": [
     "tuesday",
@@ -396,7 +396,7 @@
    "room": "Gabelli School of Business G06"
   },
   {
-   "section": "MATH.141.04",
+   "section": "MATH.141-04",
    "title": "Finite Mathematics",
    "days": [
     "tuesday",
@@ -407,7 +407,7 @@
    "room": "Gabelli School of Business G06"
   },
   {
-   "section": "MATH.207.01",
+   "section": "MATH.207-01",
    "title": "Applied Calculus",
    "days": [
     "monday",
@@ -418,7 +418,7 @@
    "room": "College of Arts and Sciences 222"
   },
   {
-   "section": "MATH.213.01",
+   "section": "MATH.213-01",
    "title": "Calculus I",
    "days": [
     "monday",
@@ -430,7 +430,7 @@
    "room": "College of Arts and Sciences 162"
   },
   {
-   "section": "MATH.213.01",
+   "section": "MATH.213-01",
    "title": "Calculus I",
    "days": [
     "tuesday"
@@ -440,7 +440,7 @@
    "room": "College of Arts and Sciences 162"
   },
   {
-   "section": "MATH.213.02",
+   "section": "MATH.213-02",
    "title": "Calculus I",
    "days": [
     "monday",
@@ -452,7 +452,7 @@
    "room": "College of Arts and Sciences 223"
   },
   {
-   "section": "MATH.213.02",
+   "section": "MATH.213-02",
    "title": "Calculus I",
    "days": [
     "thursday"
@@ -462,7 +462,7 @@
    "room": "College of Arts and Sciences 223"
   },
   {
-   "section": "MATH.213.03",
+   "section": "MATH.213-03",
    "title": "Calculus I",
    "days": [
     "monday",
@@ -474,7 +474,7 @@
    "room": "College of Arts and Sciences 225"
   },
   {
-   "section": "MATH.213.03",
+   "section": "MATH.213-03",
    "title": "Calculus I",
    "days": [
     "thursday"
@@ -484,7 +484,7 @@
    "room": "College of Arts and Sciences 223"
   },
   {
-   "section": "MATH.213.04",
+   "section": "MATH.213-04",
    "title": "Calculus I",
    "days": [
     "monday",
@@ -496,7 +496,7 @@
    "room": "College of Arts and Sciences 223"
   },
   {
-   "section": "MATH.213.04",
+   "section": "MATH.213-04",
    "title": "Calculus I",
    "days": [
     "tuesday"
@@ -506,7 +506,7 @@
    "room": "College of Arts and Sciences 223"
   },
   {
-   "section": "MATH.213.05",
+   "section": "MATH.213-05",
    "title": "Calculus I",
    "days": [
     "monday",
@@ -518,7 +518,7 @@
    "room": "College of Arts and Sciences 121"
   },
   {
-   "section": "MATH.213.05",
+   "section": "MATH.213-05",
    "title": "Calculus I",
    "days": [
     "tuesday"
@@ -528,7 +528,7 @@
    "room": "College of Arts and Sciences 121"
   },
   {
-   "section": "MATH.213.06",
+   "section": "MATH.213-06",
    "title": "Calculus I",
    "days": [
     "monday",
@@ -540,7 +540,7 @@
    "room": "Marine & Natural Sciences Bldg 210"
   },
   {
-   "section": "MATH.213.06",
+   "section": "MATH.213-06",
    "title": "Calculus I",
    "days": [
     "thursday"
@@ -550,7 +550,7 @@
    "room": "Marine & Natural Sciences Bldg 210"
   },
   {
-   "section": "MATH.214.01",
+   "section": "MATH.214-01",
    "title": "Calculus II",
    "days": [
     "monday",
@@ -562,7 +562,7 @@
    "room": "College of Arts and Sciences 223"
   },
   {
-   "section": "MATH.214.01",
+   "section": "MATH.214-01",
    "title": "Calculus II",
    "days": [
     "thursday"
@@ -572,7 +572,7 @@
    "room": "College of Arts and Sciences 223"
   },
   {
-   "section": "MATH.214.02",
+   "section": "MATH.214-02",
    "title": "Calculus II",
    "days": [
     "monday",
@@ -584,7 +584,7 @@
    "room": "Marine & Natural Sciences Bldg 210"
   },
   {
-   "section": "MATH.214.02",
+   "section": "MATH.214-02",
    "title": "Calculus II",
    "days": [
     "thursday"
@@ -594,7 +594,7 @@
    "room": "Gabelli School of Business G05"
   },
   {
-   "section": "MATH.221.01",
+   "section": "MATH.221-01",
    "title": "Discrete Mathematics",
    "days": [
     "monday",
@@ -606,7 +606,7 @@
    "room": "Humanities Building 309"
   },
   {
-   "section": "MATH.221.01",
+   "section": "MATH.221-01",
    "title": "Discrete Mathematics",
    "days": [
     "thursday"
@@ -616,7 +616,7 @@
    "room": "College of Arts and Sciences 223"
   },
   {
-   "section": "MATH.250.01",
+   "section": "MATH.250-01",
    "title": "Intro to Biostatistics",
    "days": [
     "monday",
@@ -628,7 +628,7 @@
    "room": "College of Arts and Sciences 125"
   },
   {
-   "section": "MATH.305.01",
+   "section": "MATH.305-01",
    "title": "Mathematical Modeling",
    "days": [
     "monday",
@@ -640,7 +640,7 @@
    "room": "Marine & Natural Sciences Bldg 214"
   },
   {
-   "section": "MATH.315.01",
+   "section": "MATH.315-01",
    "title": "Probability & Stats",
    "days": [
     "monday",
@@ -652,7 +652,7 @@
    "room": "Humanities Building 309"
   },
   {
-   "section": "MATH.315.02",
+   "section": "MATH.315-02",
    "title": "Probability & Stats",
    "days": [
     "monday",
@@ -664,7 +664,7 @@
    "room": "Humanities Building 309"
   },
   {
-   "section": "MATH.331.01",
+   "section": "MATH.331-01",
    "title": "Linear Algebra",
    "days": [
     "monday",
@@ -676,7 +676,7 @@
    "room": "College of Arts and Sciences 228"
   },
   {
-   "section": "MATH.351.01",
+   "section": "MATH.351-01",
    "title": "Calculus of Several Variables",
    "days": [
     "monday",
@@ -688,7 +688,7 @@
    "room": "College of Arts and Sciences 162"
   },
   {
-   "section": "MATH.351.01",
+   "section": "MATH.351-01",
    "title": "Calculus of Several Variables",
    "days": [
     "tuesday"
@@ -698,7 +698,7 @@
    "room": "College of Arts and Sciences 162"
   },
   {
-   "section": "MATH.351.02",
+   "section": "MATH.351-02",
    "title": "Calculus of Several Variables",
    "days": [
     "monday",
@@ -710,7 +710,7 @@
    "room": "College of Arts and Sciences 162"
   },
   {
-   "section": "MATH.351.02",
+   "section": "MATH.351-02",
    "title": "Calculus of Several Variables",
    "days": [
     "tuesday"
@@ -720,7 +720,7 @@
    "room": "College of Arts and Sciences 162"
   },
   {
-   "section": "MATH.371.01",
+   "section": "MATH.371-01",
    "title": "Real Analysis",
    "days": [
     "monday",

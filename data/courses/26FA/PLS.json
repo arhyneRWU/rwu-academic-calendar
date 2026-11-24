@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "PLS",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "PLS.210.41C",
+   "section": "PLS.210-41C",
    "title": "Legal Research & Wtng I",
    "days": [
     "thursday"
@@ -17,7 +17,7 @@
    "room": "One Empire Plaza 343"
   },
   {
-   "section": "PLS.310.31C",
+   "section": "PLS.310-31C",
    "title": "Litigation I",
    "days": [
     "wednesday"

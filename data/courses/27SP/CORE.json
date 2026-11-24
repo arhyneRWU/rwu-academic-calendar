@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "CORE",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "CORE.423.01",
+   "section": "CORE.423-01",
    "title": "Kicks: Art Pltcs Cltr Sneakers",
    "days": [
     "friday"
@@ -17,7 +17,7 @@
    "room": ""
   },
   {
-   "section": "CORE.451.01",
+   "section": "CORE.451-01",
    "title": "It's All Greek to Us",
    "days": [
     "tuesday"
@@ -27,7 +27,7 @@
    "room": ""
   },
   {
-   "section": "CORE.451.02",
+   "section": "CORE.451-02",
    "title": "It's All Greek to Us",
    "days": [
     "thursday"
@@ -37,7 +37,7 @@
    "room": ""
   },
   {
-   "section": "CORE.461.01",
+   "section": "CORE.461-01",
    "title": "Researching Race",
    "days": [
     "monday",
@@ -48,7 +48,7 @@
    "room": "School of Education 009"
   },
   {
-   "section": "CORE.466.01",
+   "section": "CORE.466-01",
    "title": "Monster Ball",
    "days": [
     "monday",
@@ -59,7 +59,7 @@
    "room": ""
   },
   {
-   "section": "CORE.468.01",
+   "section": "CORE.468-01",
    "title": "Language and Society",
    "days": [
     "wednesday"
@@ -69,7 +69,7 @@
    "room": ""
   },
   {
-   "section": "CORE.468.02",
+   "section": "CORE.468-02",
    "title": "Language and Society",
    "days": [
     "monday"
@@ -79,7 +79,7 @@
    "room": ""
   },
   {
-   "section": "CORE.472.01",
+   "section": "CORE.472-01",
    "title": "War Propaganda",
    "days": [
     "wednesday"
@@ -89,7 +89,7 @@
    "room": ""
   },
   {
-   "section": "CORE.479.01",
+   "section": "CORE.479-01",
    "title": "SpTp:Labor,Soc Latin America",
    "days": [
     "friday"
@@ -99,7 +99,7 @@
    "room": ""
   },
   {
-   "section": "CORE.479.02",
+   "section": "CORE.479-02",
    "title": "SpTp:Saints and Sinners",
    "days": [
     "thursday"
@@ -109,7 +109,7 @@
    "room": ""
   },
   {
-   "section": "CORE.479.03",
+   "section": "CORE.479-03",
    "title": "SpTp:NAUWU:Disblty,Diff,Hum",
    "days": [
     "tuesday"
@@ -119,7 +119,7 @@
    "room": ""
   },
   {
-   "section": "CORE.479.04",
+   "section": "CORE.479-04",
    "title": "SpTp: Mind Mastery",
    "days": [
     "tuesday",
@@ -130,7 +130,7 @@
    "room": ""
   },
   {
-   "section": "CORE.479.05",
+   "section": "CORE.479-05",
    "title": "SpTp:TBD",
    "days": [
     "monday"
@@ -140,7 +140,7 @@
    "room": ""
   },
   {
-   "section": "CORE.479.06",
+   "section": "CORE.479-06",
    "title": "SpTp:Cult & Food Latin Amerca",
    "days": [
     "monday",
@@ -152,7 +152,7 @@
    "room": ""
   },
   {
-   "section": "CORE.479.08",
+   "section": "CORE.479-08",
    "title": "SpTp:AI Deep Dive",
    "days": [
     "tuesday"
@@ -162,7 +162,7 @@
    "room": ""
   },
   {
-   "section": "CORE.479.09",
+   "section": "CORE.479-09",
    "title": "SpTp:My Kingdom for a Horse",
    "days": [
     "monday",
@@ -173,7 +173,7 @@
    "room": ""
   },
   {
-   "section": "CORE.479.10",
+   "section": "CORE.479-10",
    "title": "SpTp:Sprhrs,Poltcs.Idnty,Cult",
    "days": [
     "monday"
@@ -183,18 +183,7 @@
    "room": ""
   },
   {
-   "section": "CORE.479.11",
-   "title": "SpTp:Mama, I made it! What no",
-   "days": [
-    "monday",
-    "thursday"
-   ],
-   "start": "14:00",
-   "end": "15:30",
-   "room": ""
-  },
-  {
-   "section": "CORE.479.12",
+   "section": "CORE.479-12",
    "title": "SpTp:AI Deep Dive",
    "days": [
     "thursday"
@@ -204,7 +193,7 @@
    "room": ""
   },
   {
-   "section": "CORE.479.13",
+   "section": "CORE.479-13",
    "title": "SpTp:Saints and Sinners",
    "days": [
     "tuesday"
@@ -214,7 +203,7 @@
    "room": ""
   },
   {
-   "section": "CORE.489.01",
+   "section": "CORE.489-01",
    "title": "Baseball",
    "days": [
     "monday"

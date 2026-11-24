@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "PH",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "PH.103.01",
+   "section": "PH.103-01",
    "title": "Health in Diverse Populations",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": "College of Arts and Sciences 122"
   },
   {
-   "section": "PH.104.01",
+   "section": "PH.104-01",
    "title": "Syst Human Hlth & Disease",
    "days": [
     "monday",
@@ -30,7 +30,7 @@
    "room": "College of Arts and Sciences 122"
   },
   {
-   "section": "PH.104.02",
+   "section": "PH.104-02",
    "title": "Syst Human Hlth & Disease",
    "days": [
     "monday",
@@ -42,7 +42,7 @@
    "room": "College of Arts and Sciences 122"
   },
   {
-   "section": "PH.201.01",
+   "section": "PH.201-01",
    "title": "Public Health Essentials",
    "days": [
     "monday",
@@ -54,7 +54,7 @@
    "room": "College of Arts and Sciences 122"
   },
   {
-   "section": "PH.301.01",
+   "section": "PH.301-01",
    "title": "Public Health Ethics",
    "days": [
     "tuesday",
@@ -65,7 +65,7 @@
    "room": "College of Arts and Sciences 122"
   },
   {
-   "section": "PH.350.01",
+   "section": "PH.350-01",
    "title": "Appl Practicum Public Health",
    "days": [
     "tuesday",
@@ -76,7 +76,7 @@
    "room": "Marine & Natural Sciences Bldg 213"
   },
   {
-   "section": "PH.375.01",
+   "section": "PH.375-01",
    "title": "Health Policy",
    "days": [
     "tuesday",
@@ -87,7 +87,7 @@
    "room": "College of Arts and Sciences 122"
   },
   {
-   "section": "PH.460.01",
+   "section": "PH.460-01",
    "title": "Public Health Senior Capstone",
    "days": [
     "monday"

@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "PA",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "PA.502.31",
+   "section": "PA.502-31",
    "title": "Organizational Dynamics",
    "days": [
     "thursday"
@@ -17,7 +17,7 @@
    "room": "One Empire Plaza 232"
   },
   {
-   "section": "PA.502.31",
+   "section": "PA.502-31",
    "title": "Organizational Dynamics",
    "days": [
     "thursday"
@@ -27,7 +27,7 @@
    "room": "One Empire Plaza 232"
   },
   {
-   "section": "PA.504.31",
+   "section": "PA.504-31",
    "title": "Public Policy & Program Eval",
    "days": [
     "monday"
@@ -37,7 +37,7 @@
    "room": "One Empire Plaza 230"
   },
   {
-   "section": "PA.505.31",
+   "section": "PA.505-31",
    "title": "Public Budgeting and Finance",
    "days": [
     "wednesday"
@@ -47,7 +47,7 @@
    "room": "One Empire Plaza 230"
   },
   {
-   "section": "PA.518.31",
+   "section": "PA.518-31",
    "title": "Program Evaluation",
    "days": [
     "wednesday"
@@ -57,7 +57,7 @@
    "room": ""
   },
   {
-   "section": "PA.590.31",
+   "section": "PA.590-31",
    "title": "Research in Public Admin",
    "days": [
     "tuesday"
@@ -67,7 +67,7 @@
    "room": "One Empire Plaza 232"
   },
   {
-   "section": "PA.590.31",
+   "section": "PA.590-31",
    "title": "Research in Public Admin",
    "days": [
     "tuesday"

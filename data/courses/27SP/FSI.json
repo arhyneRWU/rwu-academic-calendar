@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "FSI",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "FSI.101.01",
+   "section": "FSI.101-01",
    "title": "Survey of Forensics",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": ""
   },
   {
-   "section": "FSI.101.02",
+   "section": "FSI.101-02",
    "title": "Survey of Forensics",
    "days": [
     "tuesday"
@@ -29,7 +29,7 @@
    "room": ""
   },
   {
-   "section": "FSI.226.01",
+   "section": "FSI.226-01",
    "title": "Forensic Science",
    "days": [
     "monday",
@@ -41,7 +41,7 @@
    "room": ""
   },
   {
-   "section": "FSI.226.02",
+   "section": "FSI.226-02",
    "title": "Forensic Science",
    "days": [
     "tuesday",
@@ -52,7 +52,7 @@
    "room": ""
   },
   {
-   "section": "FSI.226L.51",
+   "section": "FSI.226L-51",
    "title": "Forensic Science Lab",
    "days": [
     "friday"
@@ -62,7 +62,7 @@
    "room": "School of Engineering 204"
   },
   {
-   "section": "FSI.226L.52",
+   "section": "FSI.226L-52",
    "title": "Forensic Science Lab",
    "days": [
     "wednesday"
@@ -72,7 +72,7 @@
    "room": "School of Engineering 204"
   },
   {
-   "section": "FSI.301.01",
+   "section": "FSI.301-01",
    "title": "Case Studies in Forensic Scien",
    "days": [
     "monday",
@@ -84,7 +84,7 @@
    "room": ""
   },
   {
-   "section": "FSI.302.01",
+   "section": "FSI.302-01",
    "title": "Quality Assurance",
    "days": [
     "wednesday"
@@ -94,26 +94,26 @@
    "room": ""
   },
   {
-   "section": "FSI.304.01",
-   "title": "Chemistry of Cannabis",
-   "days": [
-    "tuesday",
-    "thursday"
-   ],
-   "start": "11:00",
-   "end": "12:20",
-   "room": ""
-  },
-  {
-   "section": "FSI.402.01",
+   "section": "FSI.402-01",
    "title": "Crime Scene and Lab",
    "days": [
     "tuesday",
     "thursday"
    ],
    "start": "14:00",
-   "end": "15:50",
-   "room": ""
+   "end": "15:20",
+   "room": "School of Engineering 204"
+  },
+  {
+   "section": "FSI.402L-51",
+   "title": "Crime Scene Lab",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "15:30",
+   "end": "16:50",
+   "room": "School of Engineering 204"
   }
  ]
 }

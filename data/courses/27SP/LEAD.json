@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "LEAD",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "LEAD.505.31",
+   "section": "LEAD.505-31",
    "title": "Budgeting Finance in Org",
    "days": [
     "wednesday"
@@ -17,7 +17,7 @@
    "room": "One Empire Plaza 230"
   },
   {
-   "section": "LEAD.509.31",
+   "section": "LEAD.509-31",
    "title": "Negotiation Strategies",
    "days": [
     "wednesday"
@@ -27,7 +27,7 @@
    "room": ""
   },
   {
-   "section": "LEAD.511.31",
+   "section": "LEAD.511-31",
    "title": "Organizational Dynamics",
    "days": [
     "thursday"
@@ -37,7 +37,7 @@
    "room": "One Empire Plaza 232"
   },
   {
-   "section": "LEAD.511.31",
+   "section": "LEAD.511-31",
    "title": "Organizational Dynamics",
    "days": [
     "thursday"
@@ -47,7 +47,7 @@
    "room": "One Empire Plaza 232"
   },
   {
-   "section": "LEAD.590.31",
+   "section": "LEAD.590-31",
    "title": "Research in Leadership",
    "days": [
     "tuesday"
@@ -57,7 +57,7 @@
    "room": "One Empire Plaza 232"
   },
   {
-   "section": "LEAD.590.31",
+   "section": "LEAD.590-31",
    "title": "Research in Leadership",
    "days": [
     "tuesday"

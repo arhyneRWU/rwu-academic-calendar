@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "COMSC",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "COMSC.110.01",
+   "section": "COMSC.110-01",
    "title": "Intro Cmptr Science I",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": "School of Engineering 206"
   },
   {
-   "section": "COMSC.110L.51",
+   "section": "COMSC.110L-51",
    "title": "Intro Cmptr Science I Lab",
    "days": [
     "monday",
@@ -31,7 +31,7 @@
    "room": "School of Engineering 206"
   },
   {
-   "section": "COMSC.111.01",
+   "section": "COMSC.111-01",
    "title": "Data Structures",
    "days": [
     "monday",
@@ -43,7 +43,7 @@
    "room": "School of Engineering 122"
   },
   {
-   "section": "COMSC.111L.51",
+   "section": "COMSC.111L-51",
    "title": "Data Structures Lab",
    "days": [
     "monday"
@@ -53,7 +53,7 @@
    "room": "School of Engineering 122"
   },
   {
-   "section": "COMSC.210.01",
+   "section": "COMSC.210-01",
    "title": "Prin of Cmptr Organiz",
    "days": [
     "monday",
@@ -65,7 +65,7 @@
    "room": "School of Engineering 206"
   },
   {
-   "section": "COMSC.210L.51",
+   "section": "COMSC.210L-51",
    "title": "Prin of Cmptr Organiz Lab",
    "days": [
     "monday",
@@ -77,7 +77,7 @@
    "room": "School of Engineering 206"
   },
   {
-   "section": "COMSC.225.01",
+   "section": "COMSC.225-01",
    "title": "Introduction to Data Science",
    "days": [
     "monday",
@@ -89,7 +89,7 @@
    "room": "School of Engineering 122"
   },
   {
-   "section": "COMSC.330.01",
+   "section": "COMSC.330-01",
    "title": "Principles of Sofware Design",
    "days": [
     "tuesday",
@@ -100,7 +100,7 @@
    "room": ""
   },
   {
-   "section": "COMSC.340.01",
+   "section": "COMSC.340-01",
    "title": "Analysis of Algorithms",
    "days": [
     "monday",
@@ -109,10 +109,10 @@
    ],
    "start": "13:00",
    "end": "13:50",
-   "room": ""
+   "room": "School of Engineering 122"
   },
   {
-   "section": "COMSC.345.01",
+   "section": "COMSC.345-01",
    "title": "Data and Info Visualization",
    "days": [
     "monday",
@@ -124,7 +124,7 @@
    "room": "School of Engineering 210"
   },
   {
-   "section": "COMSC.492.01",
+   "section": "COMSC.492-01",
    "title": "Integ Senior Design II",
    "days": [
     "tuesday"

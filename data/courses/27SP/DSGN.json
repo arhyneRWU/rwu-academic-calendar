@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "DSGN",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "DSGN.100.01",
+   "section": "DSGN.100-01",
    "title": "Introduction to Design Communi",
    "days": [
     "monday",
@@ -18,7 +18,7 @@
    "room": "Humanities Building 223"
   },
   {
-   "section": "DSGN.110.02",
+   "section": "DSGN.110-02",
    "title": "Intro to Typography",
    "days": [
     "tuesday",
@@ -26,10 +26,10 @@
    ],
    "start": "12:00",
    "end": "13:50",
-   "room": ""
+   "room": "Humanities Building 222"
   },
   {
-   "section": "DSGN.220.02",
+   "section": "DSGN.220-02",
    "title": "Advanced Typography",
    "days": [
     "monday",
@@ -37,20 +37,20 @@
    ],
    "start": "12:00",
    "end": "13:50",
-   "room": ""
+   "room": "Humanities Building 222"
   },
   {
-   "section": "DSGN.279.01",
+   "section": "DSGN.279-01",
    "title": "SpTp: Motion Design",
    "days": [
     "thursday"
    ],
    "start": "14:00",
    "end": "17:50",
-   "room": ""
+   "room": "Humanities Building 223"
   },
   {
-   "section": "DSGN.300.01",
+   "section": "DSGN.300-01",
    "title": "Web Design Communication",
    "days": [
     "tuesday",
@@ -58,10 +58,10 @@
    ],
    "start": "09:30",
    "end": "11:20",
-   "room": ""
+   "room": "Humanities Building 222"
   },
   {
-   "section": "DSGN.310.01",
+   "section": "DSGN.310-01",
    "title": "Brand Identity",
    "days": [
     "monday",
@@ -72,7 +72,7 @@
    "room": ""
   },
   {
-   "section": "DSGN.310.02",
+   "section": "DSGN.310-02",
    "title": "Brand Identity",
    "days": [
     "monday",
@@ -83,7 +83,7 @@
    "room": ""
   },
   {
-   "section": "DSGN.320.01",
+   "section": "DSGN.320-01",
    "title": "Publication Design",
    "days": [
     "friday"
@@ -93,17 +93,17 @@
    "room": "Humanities Building 222"
   },
   {
-   "section": "DSGN.429.01",
+   "section": "DSGN.429-01",
    "title": "Citizen Designer",
    "days": [
     "thursday"
    ],
    "start": "17:00",
    "end": "20:50",
-   "room": ""
+   "room": "Humanities Building 216"
   },
   {
-   "section": "DSGN.450.01",
+   "section": "DSGN.450-01",
    "title": "Prof Practices in Design",
    "days": [
     "tuesday",
@@ -111,10 +111,10 @@
    ],
    "start": "12:00",
    "end": "13:50",
-   "room": ""
+   "room": "Humanities Building 223"
   },
   {
-   "section": "DSGN.450.02",
+   "section": "DSGN.450-02",
    "title": "Prof Practices in Design",
    "days": [
     "tuesday",
@@ -122,10 +122,10 @@
    ],
    "start": "10:00",
    "end": "11:50",
-   "room": ""
+   "room": "Humanities Building 223"
   },
   {
-   "section": "DSGN.479.01",
+   "section": "DSGN.479-01",
    "title": "SpTp:Adv. Publication Dsgn",
    "days": [
     "friday"
@@ -135,17 +135,17 @@
    "room": "Humanities Building 222"
   },
   {
-   "section": "DSGN.479.02",
+   "section": "DSGN.479-02",
    "title": "SpTp:Adv. Citizen Designer",
    "days": [
     "thursday"
    ],
    "start": "17:00",
    "end": "20:50",
-   "room": ""
+   "room": "Humanities Building 222"
   },
   {
-   "section": "DSGN.479.03",
+   "section": "DSGN.479-03",
    "title": "Sptp:intgrtd Dsgn & Crtv Strat",
    "days": [
     "tuesday"

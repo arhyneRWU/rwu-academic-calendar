@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "MRKT",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "MRKT.200.01",
+   "section": "MRKT.200-01",
    "title": "Marketing Principles",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": ""
   },
   {
-   "section": "MRKT.200.02",
+   "section": "MRKT.200-02",
    "title": "Marketing Principles",
    "days": [
     "monday",
@@ -30,7 +30,7 @@
    "room": ""
   },
   {
-   "section": "MRKT.200.03",
+   "section": "MRKT.200-03",
    "title": "Marketing Principles",
    "days": [
     "monday",
@@ -41,7 +41,7 @@
    "room": ""
   },
   {
-   "section": "MRKT.200.04",
+   "section": "MRKT.200-04",
    "title": "Marketing Principles",
    "days": [
     "tuesday",
@@ -52,7 +52,7 @@
    "room": ""
   },
   {
-   "section": "MRKT.200.05",
+   "section": "MRKT.200-05",
    "title": "Marketing Principles",
    "days": [
     "tuesday",
@@ -63,7 +63,7 @@
    "room": ""
   },
   {
-   "section": "MRKT.301.01",
+   "section": "MRKT.301-01",
    "title": "Advertising Principles",
    "days": [
     "wednesday"
@@ -73,7 +73,7 @@
    "room": ""
   },
   {
-   "section": "MRKT.302.01",
+   "section": "MRKT.302-01",
    "title": "Advertising Campaigns",
    "days": [
     "tuesday",
@@ -84,7 +84,7 @@
    "room": ""
   },
   {
-   "section": "MRKT.305.01",
+   "section": "MRKT.305-01",
    "title": "Marketing Research",
    "days": [
     "tuesday",
@@ -95,7 +95,7 @@
    "room": ""
   },
   {
-   "section": "MRKT.305.02",
+   "section": "MRKT.305-02",
    "title": "Marketing Research",
    "days": [
     "tuesday",
@@ -106,7 +106,7 @@
    "room": ""
   },
   {
-   "section": "MRKT.320.01",
+   "section": "MRKT.320-01",
    "title": "Personal Selling",
    "days": [
     "tuesday",
@@ -117,7 +117,7 @@
    "room": ""
   },
   {
-   "section": "MRKT.325.01",
+   "section": "MRKT.325-01",
    "title": "Digital Marketing",
    "days": [
     "monday",
@@ -128,7 +128,7 @@
    "room": "Humanities Building 309"
   },
   {
-   "section": "MRKT.325.02",
+   "section": "MRKT.325-02",
    "title": "Digital Marketing",
    "days": [
     "monday",
@@ -139,7 +139,7 @@
    "room": "Humanities Building 309"
   },
   {
-   "section": "MRKT.335.01",
+   "section": "MRKT.335-01",
    "title": "Consumer Behavior",
    "days": [
     "tuesday",
@@ -150,7 +150,7 @@
    "room": ""
   },
   {
-   "section": "MRKT.335.02",
+   "section": "MRKT.335-02",
    "title": "Consumer Behavior",
    "days": [
     "tuesday",
@@ -161,7 +161,7 @@
    "room": ""
   },
   {
-   "section": "MRKT.340.01",
+   "section": "MRKT.340-01",
    "title": "International Marketing",
    "days": [
     "tuesday",
@@ -172,7 +172,7 @@
    "room": ""
   },
   {
-   "section": "MRKT.370.01",
+   "section": "MRKT.370-01",
    "title": "Sports Marketing Principles",
    "days": [
     "tuesday",
@@ -183,7 +183,7 @@
    "room": ""
   },
   {
-   "section": "MRKT.379.01",
+   "section": "MRKT.379-01",
    "title": "SpTp:Creative Strategy & AI",
    "days": [
     "monday",
@@ -194,7 +194,7 @@
    "room": ""
   },
   {
-   "section": "MRKT.402.01",
+   "section": "MRKT.402-01",
    "title": "Advertising Campaigns Prac",
    "days": [
     "monday",
@@ -205,7 +205,7 @@
    "room": ""
   },
   {
-   "section": "MRKT.420.01",
+   "section": "MRKT.420-01",
    "title": "Marketing Seminar",
    "days": [
     "monday",
@@ -216,7 +216,7 @@
    "room": ""
   },
   {
-   "section": "MRKT.520.01",
+   "section": "MRKT.520-01",
    "title": "Decisions in Marketing Mgmt",
    "days": [
     "thursday"

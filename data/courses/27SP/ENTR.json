@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "ENTR",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "ENTR.200.01",
+   "section": "ENTR.200-01",
    "title": "Principles of Entrepreneurship",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": ""
   },
   {
-   "section": "ENTR.310.01",
+   "section": "ENTR.310-01",
    "title": "Life Is a Pitch",
    "days": [
     "monday",
@@ -30,7 +30,7 @@
    "room": ""
   },
   {
-   "section": "ENTR.350.01",
+   "section": "ENTR.350-01",
    "title": "Social Entrepreneurship",
    "days": [
     "wednesday"

@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "ECON",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "ECON.111.01",
+   "section": "ECON.111-01",
    "title": "Principles of Microeconomics",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": "Gabelli School of Business 205"
   },
   {
-   "section": "ECON.111.02",
+   "section": "ECON.111-02",
    "title": "Principles of Microeconomics",
    "days": [
     "monday",
@@ -31,7 +31,7 @@
    "room": "Humanities Building 107"
   },
   {
-   "section": "ECON.111.03",
+   "section": "ECON.111-03",
    "title": "Principles of Microeconomics",
    "days": [
     "tuesday",
@@ -42,7 +42,7 @@
    "room": "Gabelli School of Business 105"
   },
   {
-   "section": "ECON.111.04",
+   "section": "ECON.111-04",
    "title": "Principles of Microeconomics",
    "days": [
     "tuesday",
@@ -53,7 +53,7 @@
    "room": "Gabelli School of Business 105"
   },
   {
-   "section": "ECON.111.05",
+   "section": "ECON.111-05",
    "title": "Principles of Microeconomics",
    "days": [
     "tuesday",
@@ -64,7 +64,7 @@
    "room": "Gabelli School of Business 105"
   },
   {
-   "section": "ECON.111.06",
+   "section": "ECON.111-06",
    "title": "Principles of Microeconomics",
    "days": [
     "monday",
@@ -76,7 +76,7 @@
    "room": "Humanities Building 107"
   },
   {
-   "section": "ECON.111.08",
+   "section": "ECON.111-08",
    "title": "Principles of Microeconomics",
    "days": [
     "tuesday",
@@ -87,7 +87,7 @@
    "room": "Gabelli School of Business 205"
   },
   {
-   "section": "ECON.112.01",
+   "section": "ECON.112-01",
    "title": "Principles of Macroeconomics",
    "days": [
     "tuesday",
@@ -98,7 +98,7 @@
    "room": "School of Engineering 127"
   },
   {
-   "section": "ECON.211.01",
+   "section": "ECON.211-01",
    "title": "Intermediate Microeconomics",
    "days": [
     "monday",
@@ -110,7 +110,7 @@
    "room": "Humanities Building 217"
   },
   {
-   "section": "ECON.211.02",
+   "section": "ECON.211-02",
    "title": "Intermediate Microeconomics",
    "days": [
     "monday",
@@ -122,7 +122,7 @@
    "room": "Humanities Building 217"
   },
   {
-   "section": "ECON.303.01",
+   "section": "ECON.303-01",
    "title": "Intro to Econometrics",
    "days": [
     "tuesday",
@@ -133,7 +133,7 @@
    "room": "Gabelli School of Business 105"
   },
   {
-   "section": "ECON.320.01",
+   "section": "ECON.320-01",
    "title": "Resource & Environmental Econ",
    "days": [
     "monday",
@@ -145,7 +145,7 @@
    "room": "Gabelli School of Business G05"
   },
   {
-   "section": "ECON.360.01",
+   "section": "ECON.360-01",
    "title": "Int'l Macroeconomics",
    "days": [
     "monday",
@@ -157,7 +157,7 @@
    "room": "Humanities Building 107"
   },
   {
-   "section": "ECON.550.01",
+   "section": "ECON.550-01",
    "title": "Managerial Economics",
    "days": [
     "wednesday"

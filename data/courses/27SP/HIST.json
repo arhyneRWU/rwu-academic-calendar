@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "HIST",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "HIST.100.01",
+   "section": "HIST.100-01",
    "title": "Making Global History",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": ""
   },
   {
-   "section": "HIST.100.02",
+   "section": "HIST.100-02",
    "title": "Making Global History",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": ""
   },
   {
-   "section": "HIST.100.03",
+   "section": "HIST.100-03",
    "title": "Making Global History",
    "days": [
     "monday",
@@ -40,7 +40,7 @@
    "room": ""
   },
   {
-   "section": "HIST.240.01",
+   "section": "HIST.240-01",
    "title": "Colonial & Revolution America",
    "days": [
     "monday",
@@ -52,7 +52,7 @@
    "room": ""
   },
   {
-   "section": "HIST.240.02",
+   "section": "HIST.240-02",
    "title": "Colonial & Revolution America",
    "days": [
     "monday",
@@ -64,7 +64,7 @@
    "room": ""
   },
   {
-   "section": "HIST.283.01",
+   "section": "HIST.283-01",
    "title": "Survey of Latin American Hist",
    "days": [
     "tuesday",
@@ -75,7 +75,7 @@
    "room": ""
   },
   {
-   "section": "HIST.344.01",
+   "section": "HIST.344-01",
    "title": "The Civil War Era",
    "days": [
     "monday",
@@ -86,7 +86,7 @@
    "room": ""
   },
   {
-   "section": "HIST.349.01",
+   "section": "HIST.349-01",
    "title": "Crime & Dissent in Early N.E.",
    "days": [
     "monday",
@@ -98,7 +98,7 @@
    "room": ""
   },
   {
-   "section": "HIST.350.01",
+   "section": "HIST.350-01",
    "title": "Slavery in New England",
    "days": [
     "monday",
@@ -109,7 +109,7 @@
    "room": ""
   },
   {
-   "section": "HIST.360.01",
+   "section": "HIST.360-01",
    "title": "Migration and Human Rights",
    "days": [
     "tuesday",
@@ -120,7 +120,7 @@
    "room": ""
   },
   {
-   "section": "HIST.380.01",
+   "section": "HIST.380-01",
    "title": "Magic and Myth",
    "days": [
     "tuesday",
@@ -131,7 +131,7 @@
    "room": ""
   },
   {
-   "section": "HIST.399.01",
+   "section": "HIST.399-01",
    "title": "Meth and Historiogrpahy & Lab",
    "days": [
     "tuesday",
@@ -142,7 +142,7 @@
    "room": ""
   },
   {
-   "section": "HIST.399L.51",
+   "section": "HIST.399L-51",
    "title": "Method & Historiography Lab",
    "days": [
     "tuesday",

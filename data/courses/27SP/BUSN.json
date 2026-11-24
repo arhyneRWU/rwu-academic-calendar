@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "BUSN",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "BUSN.100.01",
+   "section": "BUSN.100-01",
    "title": "Enterprise",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": ""
   },
   {
-   "section": "BUSN.100.02",
+   "section": "BUSN.100-02",
    "title": "Enterprise",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": ""
   },
   {
-   "section": "BUSN.305.01",
+   "section": "BUSN.305-01",
    "title": "Legal Environ of Busn I",
    "days": [
     "tuesday",
@@ -40,7 +40,7 @@
    "room": ""
   },
   {
-   "section": "BUSN.305.02",
+   "section": "BUSN.305-02",
    "title": "Legal Environ of Busn I",
    "days": [
     "tuesday",
@@ -51,7 +51,7 @@
    "room": ""
   },
   {
-   "section": "BUSN.380.01",
+   "section": "BUSN.380-01",
    "title": "The GSB Mentorship Lab",
    "days": [
     "thursday"
@@ -61,7 +61,7 @@
    "room": ""
   },
   {
-   "section": "BUSN.590.01",
+   "section": "BUSN.590-01",
    "title": "International Experience",
    "days": [
     "wednesday"

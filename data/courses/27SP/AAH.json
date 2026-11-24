@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "AAH",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "AAH.121.01",
+   "section": "AAH.121-01",
    "title": "Hist of Art/Arch I",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": "College of Arts and Sciences 157"
   },
   {
-   "section": "AAH.121.02",
+   "section": "AAH.121-02",
    "title": "Hist of Art/Arch I",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "AAH.122.01",
+   "section": "AAH.122-01",
    "title": "Hist of Art/Arch II",
    "days": [
     "tuesday",
@@ -40,7 +40,7 @@
    "room": "College of Arts and Sciences 157"
   },
   {
-   "section": "AAH.122.02",
+   "section": "AAH.122-02",
    "title": "Hist of Art/Arch II",
    "days": [
     "tuesday",
@@ -51,7 +51,7 @@
    "room": "College of Arts and Sciences 157"
   },
   {
-   "section": "AAH.122.03",
+   "section": "AAH.122-03",
    "title": "Hist of Art/Arch II",
    "days": [
     "tuesday",
@@ -62,7 +62,7 @@
    "room": "College of Arts and Sciences 157"
   },
   {
-   "section": "AAH.122.04",
+   "section": "AAH.122-04",
    "title": "Hist of Art/Arch II",
    "days": [
     "tuesday",
@@ -73,7 +73,7 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "AAH.122.05",
+   "section": "AAH.122-05",
    "title": "Hist of Art/Arch II",
    "days": [
     "tuesday",
@@ -84,7 +84,7 @@
    "room": "College of Arts and Sciences 157"
   },
   {
-   "section": "AAH.305.01",
+   "section": "AAH.305-01",
    "title": "Theory/Meth of AAH",
    "days": [
     "tuesday",
@@ -95,7 +95,7 @@
    "room": "Cummings School Architecture 202"
   },
   {
-   "section": "AAH.321.01",
+   "section": "AAH.321-01",
    "title": "Art/Arch in the Classical Wrld",
    "days": [
     "monday",
@@ -106,7 +106,7 @@
    "room": "College of Arts and Sciences 157"
   },
   {
-   "section": "AAH.379.01",
+   "section": "AAH.379-01",
    "title": "Art & Arch of Islamic World",
    "days": [
     "tuesday",
@@ -114,10 +114,10 @@
    ],
    "start": "09:30",
    "end": "10:50",
-   "room": "College of Arts and Sciences 157"
+   "room": ""
   },
   {
-   "section": "AAH.479.01",
+   "section": "AAH.479-01",
    "title": "SpTp:Borromini",
    "days": [
     "tuesday",

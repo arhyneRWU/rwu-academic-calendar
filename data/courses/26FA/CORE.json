@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "CORE",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "CORE.423.01",
+   "section": "CORE.423-01",
    "title": "Kicks: Art Pltcs Cltr Sneakers",
    "days": [
     "friday"
@@ -17,7 +17,7 @@
    "room": "Humanities Building 222"
   },
   {
-   "section": "CORE.465.01",
+   "section": "CORE.465-01",
    "title": "Beyond Belief:Science/Religio",
    "days": [
     "monday"
@@ -27,7 +27,7 @@
    "room": "School of Engineering 127"
   },
   {
-   "section": "CORE.468.01",
+   "section": "CORE.468-01",
    "title": "Language and Society",
    "days": [
     "thursday"
@@ -37,7 +37,7 @@
    "room": "College of Arts and Sciences 227"
   },
   {
-   "section": "CORE.468.02",
+   "section": "CORE.468-02",
    "title": "Language and Society",
    "days": [
     "wednesday"
@@ -47,7 +47,7 @@
    "room": "School of Education 030"
   },
   {
-   "section": "CORE.472.01",
+   "section": "CORE.472-01",
    "title": "War Propaganda",
    "days": [
     "monday"
@@ -57,7 +57,7 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "CORE.479.01",
+   "section": "CORE.479-01",
    "title": "SpTp:Pnshmnt/Reform:Abolition",
    "days": [
     "monday",
@@ -69,7 +69,7 @@
    "room": "College of Arts and Sciences 126"
   },
   {
-   "section": "CORE.479.02",
+   "section": "CORE.479-02",
    "title": "SpTp:AI Deep Dive",
    "days": [
     "tuesday",
@@ -80,7 +80,7 @@
    "room": "Humanities Building 102"
   },
   {
-   "section": "CORE.479.03",
+   "section": "CORE.479-03",
    "title": "SpTp:The Public Bible",
    "days": [
     "tuesday"
@@ -90,7 +90,7 @@
    "room": "Gabelli School of Business 206"
   },
   {
-   "section": "CORE.479.04",
+   "section": "CORE.479-04",
    "title": "SpTp:The Cats Class",
    "days": [
     "tuesday",
@@ -101,7 +101,7 @@
    "room": "Humanities Building 318"
   },
   {
-   "section": "CORE.479.05",
+   "section": "CORE.479-05",
    "title": "How not to kill your planet?",
    "days": [
     "monday",
@@ -112,7 +112,7 @@
    "room": "School of Engineering 201"
   },
   {
-   "section": "CORE.479.07",
+   "section": "CORE.479-07",
    "title": "Sptp:Cult and Food Latin Amer",
    "days": [
     "monday",
@@ -124,7 +124,7 @@
    "room": "Humanities Building 329"
   },
   {
-   "section": "CORE.479.08",
+   "section": "CORE.479-08",
    "title": "SpTp:Sprhrs,Poltcs,Idnty,Cult",
    "days": [
     "monday"

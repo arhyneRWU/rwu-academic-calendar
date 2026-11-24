@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "PHYS",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "PHYS.105.01",
+   "section": "PHYS.105-01",
    "title": "Physics for Building Science",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": "School of Engineering 119"
   },
   {
-   "section": "PHYS.105.01",
+   "section": "PHYS.105-01",
    "title": "Physics for Building Science",
    "days": [
     "monday",
@@ -31,7 +31,7 @@
    "room": "School of Engineering 119"
   },
   {
-   "section": "PHYS.105.02",
+   "section": "PHYS.105-02",
    "title": "Physics for Building Science",
    "days": [
     "tuesday",
@@ -42,7 +42,7 @@
    "room": "School of Engineering 119"
   },
   {
-   "section": "PHYS.105.02",
+   "section": "PHYS.105-02",
    "title": "Physics for Building Science",
    "days": [
     "tuesday",
@@ -53,7 +53,7 @@
    "room": "School of Engineering 119"
   },
   {
-   "section": "PHYS.109.01",
+   "section": "PHYS.109-01",
    "title": "Physics I (algebra) & Lab",
    "days": [
     "tuesday",
@@ -64,7 +64,7 @@
    "room": "School of Engineering 119"
   },
   {
-   "section": "PHYS.109.01",
+   "section": "PHYS.109-01",
    "title": "Physics I (algebra) & Lab",
    "days": [
     "thursday"
@@ -74,7 +74,7 @@
    "room": "School of Engineering 119"
   },
   {
-   "section": "PHYS.109.02",
+   "section": "PHYS.109-02",
    "title": "Physics I (algebra) & Lab",
    "days": [
     "monday",
@@ -85,7 +85,7 @@
    "room": "School of Engineering 121"
   },
   {
-   "section": "PHYS.109.02",
+   "section": "PHYS.109-02",
    "title": "Physics I (algebra) & Lab",
    "days": [
     "monday",
@@ -96,7 +96,7 @@
    "room": "School of Engineering 121"
   },
   {
-   "section": "PHYS.109.03",
+   "section": "PHYS.109-03",
    "title": "Physics I (algebra) & Lab",
    "days": [
     "monday",
@@ -108,7 +108,7 @@
    "room": "School of Engineering 121"
   },
   {
-   "section": "PHYS.109.03",
+   "section": "PHYS.109-03",
    "title": "Physics I (algebra) & Lab",
    "days": [
     "tuesday"
@@ -118,7 +118,7 @@
    "room": "School of Engineering 121"
   },
   {
-   "section": "PHYS.110.01",
+   "section": "PHYS.110-01",
    "title": "Physics II (algebra) & Lab",
    "days": [
     "tuesday",
@@ -129,7 +129,7 @@
    "room": "School of Engineering 121"
   },
   {
-   "section": "PHYS.110.01",
+   "section": "PHYS.110-01",
    "title": "Physics II (algebra) & Lab",
    "days": [
     "tuesday",
@@ -140,7 +140,7 @@
    "room": "School of Engineering 121"
   },
   {
-   "section": "PHYS.201.01",
+   "section": "PHYS.201-01",
    "title": "Physics I (calculus) & Lab",
    "days": [
     "monday",
@@ -151,7 +151,7 @@
    "room": "School of Engineering 119"
   },
   {
-   "section": "PHYS.201.01",
+   "section": "PHYS.201-01",
    "title": "Physics I (calculus) & Lab",
    "days": [
     "monday",
@@ -162,7 +162,7 @@
    "room": "School of Engineering 119"
   },
   {
-   "section": "PHYS.201.02",
+   "section": "PHYS.201-02",
    "title": "Physics I (calculus) & Lab",
    "days": [
     "monday",
@@ -174,7 +174,7 @@
    "room": "School of Engineering 119"
   },
   {
-   "section": "PHYS.201.02",
+   "section": "PHYS.201-02",
    "title": "Physics I (calculus) & Lab",
    "days": [
     "monday",
@@ -186,7 +186,7 @@
    "room": "School of Engineering 119"
   },
   {
-   "section": "PHYS.202.01",
+   "section": "PHYS.202-01",
    "title": "Physics II (calculus) and Lab",
    "days": [
     "monday",
@@ -197,7 +197,7 @@
    "room": "School of Engineering 121"
   },
   {
-   "section": "PHYS.202.01",
+   "section": "PHYS.202-01",
    "title": "Physics II (calculus) and Lab",
    "days": [
     "monday",
@@ -208,7 +208,7 @@
    "room": "School of Engineering 121"
   },
   {
-   "section": "PHYS.202.02",
+   "section": "PHYS.202-02",
    "title": "Physics II (calculus) and Lab",
    "days": [
     "monday",
@@ -220,7 +220,7 @@
    "room": "School of Engineering 121"
   },
   {
-   "section": "PHYS.202.02",
+   "section": "PHYS.202-02",
    "title": "Physics II (calculus) and Lab",
    "days": [
     "monday",
@@ -232,7 +232,7 @@
    "room": "School of Engineering 121"
   },
   {
-   "section": "PHYS.320.01",
+   "section": "PHYS.320-01",
    "title": "Modern Physics",
    "days": [
     "monday",

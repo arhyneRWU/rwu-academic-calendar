@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "AQS",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "AQS.264.01",
+   "section": "AQS.264-01",
    "title": "Prin of Aquatic Animal Husband",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": ""
   },
   {
-   "section": "AQS.264L.51",
+   "section": "AQS.264L-51",
    "title": "Princ Aquatic Animal Husb Lab",
    "days": [
     "wednesday"
@@ -28,7 +28,7 @@
    "room": ""
   },
   {
-   "section": "AQS.264L.52",
+   "section": "AQS.264L-52",
    "title": "Princ Aquatic Animal Husb Lab",
    "days": [
     "wednesday"
@@ -38,7 +38,7 @@
    "room": "Marine & Natural Sciences Bldg 107"
   },
   {
-   "section": "AQS.306.01",
+   "section": "AQS.306-01",
    "title": "Prin of Museum Exhibit Dvlp",
    "days": [
     "tuesday",
@@ -49,7 +49,7 @@
    "room": ""
   },
   {
-   "section": "AQS.325.01",
+   "section": "AQS.325-01",
    "title": "Applied Shellfish Farming",
    "days": [
     "tuesday"
@@ -59,7 +59,7 @@
    "room": ""
   },
   {
-   "section": "AQS.379.01",
+   "section": "AQS.379-01",
    "title": "Social Blue Entrepreneurship",
    "days": [
     "wednesday"

@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "COMM",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "COMM.100.02",
+   "section": "COMM.100-02",
    "title": "Intro to Communication",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": "Humanities Building 308"
   },
   {
-   "section": "COMM.100.HON01",
+   "section": "COMM.100-HON01",
    "title": "Hon Intro Communicatn Studies",
    "days": [
     "monday",
@@ -30,7 +30,7 @@
    "room": "Stonewall 103"
   },
   {
-   "section": "COMM.101.01",
+   "section": "COMM.101-01",
    "title": "Intro to Mass Media",
    "days": [
     "tuesday",
@@ -41,7 +41,7 @@
    "room": "Gabelli School of Business G13"
   },
   {
-   "section": "COMM.101.02",
+   "section": "COMM.101-02",
    "title": "Intro to Mass Media",
    "days": [
     "monday",
@@ -53,7 +53,7 @@
    "room": "Humanities Building 217"
   },
   {
-   "section": "COMM.201.01",
+   "section": "COMM.201-01",
    "title": "Sport Communication Assessmnt",
    "days": [
     "monday",
@@ -65,7 +65,7 @@
    "room": "Humanities Building 308"
   },
   {
-   "section": "COMM.210.01",
+   "section": "COMM.210-01",
    "title": "Intro to Public Speaking",
    "days": [
     "tuesday",
@@ -76,7 +76,7 @@
    "room": "College of Arts and Sciences 228"
   },
   {
-   "section": "COMM.210.02",
+   "section": "COMM.210-02",
    "title": "Intro to Public Speaking",
    "days": [
     "tuesday",
@@ -87,7 +87,7 @@
    "room": "ELS 111"
   },
   {
-   "section": "COMM.210.03",
+   "section": "COMM.210-03",
    "title": "Intro to Public Speaking",
    "days": [
     "tuesday",
@@ -98,7 +98,7 @@
    "room": "ELS 111"
   },
   {
-   "section": "COMM.210.04",
+   "section": "COMM.210-04",
    "title": "Intro to Public Speaking",
    "days": [
     "tuesday",
@@ -109,7 +109,7 @@
    "room": "ELS 111"
   },
   {
-   "section": "COMM.210.05",
+   "section": "COMM.210-05",
    "title": "Intro to Public Speaking",
    "days": [
     "tuesday",
@@ -120,7 +120,7 @@
    "room": "College of Arts and Sciences 228"
   },
   {
-   "section": "COMM.210.06",
+   "section": "COMM.210-06",
    "title": "Intro to Public Speaking",
    "days": [
     "monday"
@@ -130,7 +130,7 @@
    "room": "Gabelli School of Business 208"
   },
   {
-   "section": "COMM.210.07",
+   "section": "COMM.210-07",
    "title": "Intro to Public Speaking",
    "days": [
     "monday",
@@ -142,7 +142,7 @@
    "room": "Gabelli School of Business 105"
   },
   {
-   "section": "COMM.210.08",
+   "section": "COMM.210-08",
    "title": "Intro to Public Speaking",
    "days": [
     "monday",
@@ -154,7 +154,7 @@
    "room": "ELS 111"
   },
   {
-   "section": "COMM.210.09",
+   "section": "COMM.210-09",
    "title": "Intro to Public Speaking",
    "days": [
     "tuesday"
@@ -164,7 +164,7 @@
    "room": "College of Arts and Sciences 228"
   },
   {
-   "section": "COMM.210.HON01",
+   "section": "COMM.210-HON01",
    "title": "Hnrs:Intro to Public Speaking",
    "days": [
     "tuesday",
@@ -175,7 +175,7 @@
    "room": "College of Arts and Sciences 228"
   },
   {
-   "section": "COMM.235.01",
+   "section": "COMM.235-01",
    "title": "Interpersonal Communication",
    "days": [
     "tuesday",
@@ -186,7 +186,7 @@
    "room": "College of Arts and Sciences 228"
   },
   {
-   "section": "COMM.295.01",
+   "section": "COMM.295-01",
    "title": "Mass Comm Theory & Criticism",
    "days": [
     "monday",
@@ -198,7 +198,7 @@
    "room": "Humanities Building 308"
   },
   {
-   "section": "COMM.310.01",
+   "section": "COMM.310-01",
    "title": "Media Law and Ethics",
    "days": [
     "tuesday",
@@ -209,7 +209,7 @@
    "room": "Humanities Building 100B"
   },
   {
-   "section": "COMM.330.01",
+   "section": "COMM.330-01",
    "title": "International Communication",
    "days": [
     "tuesday",
@@ -220,7 +220,7 @@
    "room": "Humanities Building 308"
   },
   {
-   "section": "COMM.360.01",
+   "section": "COMM.360-01",
    "title": "Comm in Organizations",
    "days": [
     "monday",
@@ -231,7 +231,7 @@
    "room": "Gabelli School of Business G13"
   },
   {
-   "section": "COMM.384.01",
+   "section": "COMM.384-01",
    "title": "Roots, Rock, Reggae",
    "days": [
     "tuesday",
@@ -242,7 +242,7 @@
    "room": "Humanities Building 308"
   },
   {
-   "section": "COMM.385.01",
+   "section": "COMM.385-01",
    "title": "Gender Globalization & Media",
    "days": [
     "tuesday",

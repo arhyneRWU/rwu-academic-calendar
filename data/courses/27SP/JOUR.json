@@ -3,21 +3,21 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "JOUR",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "JOUR.170.01",
+   "section": "JOUR.170-01",
    "title": "Writing & Editing for Media",
    "days": [
     "wednesday"
    ],
    "start": "17:00",
    "end": "19:50",
-   "room": ""
+   "room": "Humanities Building 104"
   },
   {
-   "section": "JOUR.230.01",
+   "section": "JOUR.230-01",
    "title": "Civic Media Community Engage I",
    "days": [
     "tuesday",
@@ -25,10 +25,10 @@
    ],
    "start": "09:30",
    "end": "10:50",
-   "room": ""
+   "room": "Humanities Building 104"
   },
   {
-   "section": "JOUR.230L.51",
+   "section": "JOUR.230L-51",
    "title": "Civic Media &comm Engage Lab",
    "days": [
     "friday"
@@ -38,7 +38,7 @@
    "room": ""
   },
   {
-   "section": "JOUR.330.01",
+   "section": "JOUR.330-01",
    "title": "Civic Media Community Engage 2",
    "days": [
     "tuesday",
@@ -46,10 +46,10 @@
    ],
    "start": "09:30",
    "end": "10:50",
-   "room": ""
+   "room": "Humanities Building 104"
   },
   {
-   "section": "JOUR.330L.51",
+   "section": "JOUR.330L-51",
    "title": "Civic Media & Comm Engage Lab",
    "days": [
     "friday"
@@ -59,7 +59,7 @@
    "room": ""
   },
   {
-   "section": "JOUR.455.01",
+   "section": "JOUR.455-01",
    "title": "Interact Storytelling Ii& Lab",
    "days": [
     "monday",
@@ -70,17 +70,17 @@
    "room": "Humanities Building 104"
   },
   {
-   "section": "JOUR.455L.51",
+   "section": "JOUR.455L-51",
    "title": "Interactivestorytelling II Lab",
    "days": [
-    "tuesday"
+    "monday"
    ],
-   "start": "14:00",
-   "end": "16:50",
-   "room": ""
+   "start": "11:00",
+   "end": "13:50",
+   "room": "Humanities Building 104"
   },
   {
-   "section": "JOUR.470.01",
+   "section": "JOUR.470-01",
    "title": "Journalism Capstone Portfolio",
    "days": [
     "monday",

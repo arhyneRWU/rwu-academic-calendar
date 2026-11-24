@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "PSYCH",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "PSYCH.100.01",
+   "section": "PSYCH.100-01",
    "title": "Intro to Psychology",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.100.02",
+   "section": "PSYCH.100-02",
    "title": "Intro to Psychology",
    "days": [
     "monday",
@@ -31,7 +31,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.100.03",
+   "section": "PSYCH.100-03",
    "title": "Intro to Psychology",
    "days": [
     "tuesday",
@@ -42,7 +42,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.100.04",
+   "section": "PSYCH.100-04",
    "title": "Intro to Psychology",
    "days": [
     "wednesday"
@@ -52,7 +52,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.100.05",
+   "section": "PSYCH.100-05",
    "title": "Intro to Psychology",
    "days": [
     "monday",
@@ -64,7 +64,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.205.01",
+   "section": "PSYCH.205-01",
    "title": "Psychology and Work",
    "days": [
     "monday",
@@ -76,7 +76,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.210.01",
+   "section": "PSYCH.210-01",
    "title": "Lifespan Development",
    "days": [
     "wednesday"
@@ -86,7 +86,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.211.01",
+   "section": "PSYCH.211-01",
    "title": "Child Development",
    "days": [
     "monday",
@@ -98,7 +98,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.211.02",
+   "section": "PSYCH.211-02",
    "title": "Child Development",
    "days": [
     "monday",
@@ -110,7 +110,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.230.01",
+   "section": "PSYCH.230-01",
    "title": "Psych of Men and Masculinities",
    "days": [
     "monday",
@@ -121,7 +121,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.240.01",
+   "section": "PSYCH.240-01",
    "title": "Quantitative Analysis",
    "days": [
     "tuesday",
@@ -132,7 +132,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.240.02",
+   "section": "PSYCH.240-02",
    "title": "Quantitative Analysis",
    "days": [
     "tuesday",
@@ -143,7 +143,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.250.01",
+   "section": "PSYCH.250-01",
    "title": "Intro Theories of Personality",
    "days": [
     "monday"
@@ -153,7 +153,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.255.01",
+   "section": "PSYCH.255-01",
    "title": "Social Psychology",
    "days": [
     "monday",
@@ -165,7 +165,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.255.02",
+   "section": "PSYCH.255-02",
    "title": "Social Psychology",
    "days": [
     "monday",
@@ -177,7 +177,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.261.01",
+   "section": "PSYCH.261-01",
    "title": "Intro to Neuroscience",
    "days": [
     "wednesday"
@@ -187,17 +187,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.270.01",
-   "title": "Positive Psycholgy",
-   "days": [
-    "thursday"
-   ],
-   "start": "17:00",
-   "end": "19:50",
-   "room": ""
-  },
-  {
-   "section": "PSYCH.279.01",
+   "section": "PSYCH.279-01",
    "title": "SpTp: Serial Offending",
    "days": [
     "monday",
@@ -209,7 +199,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.280.01",
+   "section": "PSYCH.280-01",
    "title": "Intro to Psychopathology",
    "days": [
     "monday"
@@ -219,7 +209,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.280.02",
+   "section": "PSYCH.280-02",
    "title": "Intro to Psychopathology",
    "days": [
     "monday",
@@ -230,7 +220,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.303.01",
+   "section": "PSYCH.303-01",
    "title": "Cognitive Psychology",
    "days": [
     "monday",
@@ -242,7 +232,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.303.02",
+   "section": "PSYCH.303-02",
    "title": "Cognitive Psychology",
    "days": [
     "monday",
@@ -254,7 +244,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.309.01",
+   "section": "PSYCH.309-01",
    "title": "Organizational Psychology",
    "days": [
     "tuesday"
@@ -264,7 +254,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.310.01",
+   "section": "PSYCH.310-01",
    "title": "Appl Soc Psychology",
    "days": [
     "monday",
@@ -275,7 +265,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.312.02",
+   "section": "PSYCH.312-02",
    "title": "Psych of Adolescence",
    "days": [
     "monday",
@@ -286,7 +276,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.313.01",
+   "section": "PSYCH.313-01",
    "title": "Psychology of Infancy",
    "days": [
     "monday",
@@ -298,7 +288,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.314.01",
+   "section": "PSYCH.314-01",
    "title": "Psych of Adulthood",
    "days": [
     "monday",
@@ -310,17 +300,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.315.01",
-   "title": "Intro to Clinical Psych",
-   "days": [
-    "tuesday"
-   ],
-   "start": "17:00",
-   "end": "19:50",
-   "room": ""
-  },
-  {
-   "section": "PSYCH.320.01",
+   "section": "PSYCH.320-01",
    "title": "Forensic Psychology",
    "days": [
     "tuesday",
@@ -331,7 +311,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.320.02",
+   "section": "PSYCH.320-02",
    "title": "Forensic Psychology",
    "days": [
     "tuesday",
@@ -342,17 +322,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.326.01",
-   "title": "Health Psychology",
-   "days": [
-    "tuesday"
-   ],
-   "start": "17:30",
-   "end": "20:30",
-   "room": ""
-  },
-  {
-   "section": "PSYCH.340.01",
+   "section": "PSYCH.340-01",
    "title": "Research Methods",
    "days": [
     "monday",
@@ -364,7 +334,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.340.02",
+   "section": "PSYCH.340-02",
    "title": "Research Methods",
    "days": [
     "monday",
@@ -376,7 +346,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.342.01",
+   "section": "PSYCH.342-01",
    "title": "Legal Psychology",
    "days": [
     "monday",
@@ -388,7 +358,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.356.01",
+   "section": "PSYCH.356-01",
    "title": "Counseling:Theory and Skills",
    "days": [
     "tuesday",
@@ -399,7 +369,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.360.91",
+   "section": "PSYCH.360-91",
    "title": "Multicultural Psychology",
    "days": [
     "tuesday",
@@ -410,7 +380,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.367.01",
+   "section": "PSYCH.367-01",
    "title": "Evolutionary Psychology",
    "days": [
     "wednesday"
@@ -420,7 +390,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.379.01",
+   "section": "PSYCH.379-01",
    "title": "SpTp: Animal Personality",
    "days": [
     "monday",
@@ -432,7 +402,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.379.91",
+   "section": "PSYCH.379-91",
    "title": "SpTp:Intro School Counseling",
    "days": [
     "monday"
@@ -442,7 +412,17 @@
    "room": ""
   },
   {
-   "section": "PSYCH.392.01",
+   "section": "PSYCH.379-92",
+   "title": "SpTp:Sports of Psychology",
+   "days": [
+    "wednesday"
+   ],
+   "start": "14:00",
+   "end": "16:50",
+   "room": ""
+  },
+  {
+   "section": "PSYCH.392-01",
    "title": "Art Therapy",
    "days": [
     "thursday"
@@ -452,7 +432,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.395.01",
+   "section": "PSYCH.395-01",
    "title": "Themes in Cultural Psychology",
    "days": [
     "thursday"
@@ -462,7 +442,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.440.01",
+   "section": "PSYCH.440-01",
    "title": "Experimental Psych",
    "days": [
     "monday",
@@ -474,7 +454,7 @@
    "room": "Marine & Natural Sciences Bldg 211"
   },
   {
-   "section": "PSYCH.440.02",
+   "section": "PSYCH.440-02",
    "title": "Experimental Psych",
    "days": [
     "monday",
@@ -486,7 +466,7 @@
    "room": "Marine & Natural Sciences Bldg 211"
   },
   {
-   "section": "PSYCH.440L.51",
+   "section": "PSYCH.440L-51",
    "title": "Experimental Psych Lab",
    "days": [
     "tuesday"
@@ -496,7 +476,7 @@
    "room": "Marine & Natural Sciences Bldg 211"
   },
   {
-   "section": "PSYCH.440L.52",
+   "section": "PSYCH.440L-52",
    "title": "Experimental Psych Lab",
    "days": [
     "thursday"
@@ -506,7 +486,7 @@
    "room": "Marine & Natural Sciences Bldg 211"
   },
   {
-   "section": "PSYCH.446.01",
+   "section": "PSYCH.446-01",
    "title": "Psychology of Cults",
    "days": [
     "tuesday",
@@ -517,7 +497,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.446.02",
+   "section": "PSYCH.446-02",
    "title": "Sleep",
    "days": [
     "monday",
@@ -529,7 +509,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.499.91",
+   "section": "PSYCH.499-91",
    "title": "Applied Pract in Psych",
    "days": [
     "tuesday"
@@ -539,7 +519,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.505.02",
+   "section": "PSYCH.505-02",
    "title": "Intro to Clinical Assessment",
    "days": [
     "monday"
@@ -549,7 +529,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.509.01",
+   "section": "PSYCH.509-01",
    "title": "Methods of Psychotherapy",
    "days": [
     "monday"
@@ -559,7 +539,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.515.01",
+   "section": "PSYCH.515-01",
    "title": "Intro to Group Counseling",
    "days": [
     "thursday"
@@ -569,7 +549,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.519.01",
+   "section": "PSYCH.519-01",
    "title": "Methods of Psychotherapy II",
    "days": [
     "wednesday"
@@ -579,7 +559,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.519.02",
+   "section": "PSYCH.519-02",
    "title": "Methods of Psychotherapy II",
    "days": [
     "wednesday"
@@ -589,7 +569,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.533.01",
+   "section": "PSYCH.533-01",
    "title": "Law and Mental Health",
    "days": [
     "wednesday"
@@ -599,7 +579,7 @@
    "room": ""
   },
   {
-   "section": "PSYCH.550.01",
+   "section": "PSYCH.550-01",
    "title": "Professional Ethics in Psych",
    "days": [
     "tuesday"

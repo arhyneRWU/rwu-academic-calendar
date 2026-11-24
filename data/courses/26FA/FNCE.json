@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "FNCE",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "FNCE.201.01",
+   "section": "FNCE.201-01",
    "title": "Financial Management",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": "Humanities Building 334"
   },
   {
-   "section": "FNCE.201.02",
+   "section": "FNCE.201-02",
    "title": "Financial Management",
    "days": [
     "monday",
@@ -31,7 +31,7 @@
    "room": "Gabelli School of Business 205"
   },
   {
-   "section": "FNCE.201.03",
+   "section": "FNCE.201-03",
    "title": "Financial Management",
    "days": [
     "tuesday",
@@ -42,7 +42,7 @@
    "room": "Gabelli School of Business 106"
   },
   {
-   "section": "FNCE.325.01",
+   "section": "FNCE.325-01",
    "title": "Prin of Investments",
    "days": [
     "tuesday",
@@ -53,7 +53,7 @@
    "room": "Gabelli School of Business G12"
   },
   {
-   "section": "FNCE.325.02",
+   "section": "FNCE.325-02",
    "title": "Prin of Investments",
    "days": [
     "tuesday",
@@ -64,7 +64,7 @@
    "room": "Gabelli School of Business G12"
   },
   {
-   "section": "FNCE.327.01",
+   "section": "FNCE.327-01",
    "title": "Personal Financial Planning",
    "days": [
     "tuesday",
@@ -75,7 +75,7 @@
    "room": "Gabelli School of Business G06"
   },
   {
-   "section": "FNCE.330.01",
+   "section": "FNCE.330-01",
    "title": "Bank Management",
    "days": [
     "monday",
@@ -86,7 +86,7 @@
    "room": "Gabelli School of Business 206"
   },
   {
-   "section": "FNCE.350.01",
+   "section": "FNCE.350-01",
    "title": "Financial Modeling & Valuation",
    "days": [
     "monday",
@@ -98,7 +98,7 @@
    "room": "Gabelli School of Business G12"
   },
   {
-   "section": "FNCE.350.02",
+   "section": "FNCE.350-02",
    "title": "Financial Modeling & Valuation",
    "days": [
     "monday",
@@ -110,7 +110,7 @@
    "room": "Gabelli School of Business G12"
   },
   {
-   "section": "FNCE.360.01",
+   "section": "FNCE.360-01",
    "title": "International Finance",
    "days": [
     "monday",
@@ -121,7 +121,7 @@
    "room": "College of Arts and Sciences 122"
   },
   {
-   "section": "FNCE.360.02",
+   "section": "FNCE.360-02",
    "title": "International Finance",
    "days": [
     "tuesday",
@@ -132,7 +132,7 @@
    "room": "College of Arts and Sciences 122"
   },
   {
-   "section": "FNCE.379.01",
+   "section": "FNCE.379-01",
    "title": "SpTp:Sem in Risk Mgmt & Insu",
    "days": [
     "monday"
@@ -142,7 +142,7 @@
    "room": "Gabelli School of Business 300"
   },
   {
-   "section": "FNCE.401.01",
+   "section": "FNCE.401-01",
    "title": "Advanced Financial Mgmt",
    "days": [
     "tuesday",
@@ -153,7 +153,7 @@
    "room": "Gabelli School of Business G12"
   },
   {
-   "section": "FNCE.426.01",
+   "section": "FNCE.426-01",
    "title": "Opt/Futures/Other Deriv",
    "days": [
     "tuesday",
@@ -164,7 +164,7 @@
    "room": "Gabelli School of Business G12"
   },
   {
-   "section": "FNCE.450.01",
+   "section": "FNCE.450-01",
    "title": "Portfolio Analysis",
    "days": [
     "monday"
@@ -174,7 +174,7 @@
    "room": "Gabelli School of Business 108"
   },
   {
-   "section": "FNCE.479.01",
+   "section": "FNCE.479-01",
    "title": "SpTp:Adv Portfolio Analysis",
    "days": [
     "monday"
@@ -184,7 +184,7 @@
    "room": "Gabelli School of Business 108"
   },
   {
-   "section": "FNCE.550.01",
+   "section": "FNCE.550-01",
    "title": "Corporate Finance",
    "days": [
     "wednesday"

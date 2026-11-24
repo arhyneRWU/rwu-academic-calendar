@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "CJS",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "CJS.105.01",
+   "section": "CJS.105-01",
    "title": "Intro to Crim Justice",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": "College of Arts and Sciences 122"
   },
   {
-   "section": "CJS.105.02",
+   "section": "CJS.105-02",
    "title": "Intro to Crim Justice",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": "College of Arts and Sciences 127"
   },
   {
-   "section": "CJS.105.03",
+   "section": "CJS.105-03",
    "title": "Intro to Crim Justice",
    "days": [
     "tuesday",
@@ -40,7 +40,7 @@
    "room": "College of Arts and Sciences 127"
   },
   {
-   "section": "CJS.105.04",
+   "section": "CJS.105-04",
    "title": "Intro to Crim Justice",
    "days": [
     "tuesday",
@@ -51,7 +51,7 @@
    "room": "College of Arts and Sciences 120"
   },
   {
-   "section": "CJS.105.05",
+   "section": "CJS.105-05",
    "title": "Intro to Crim Justice",
    "days": [
     "tuesday",
@@ -62,7 +62,7 @@
    "room": "College of Arts and Sciences 123"
   },
   {
-   "section": "CJS.105.06",
+   "section": "CJS.105-06",
    "title": "Intro to Crim Justice",
    "days": [
     "monday",
@@ -74,7 +74,7 @@
    "room": "College of Arts and Sciences 127"
   },
   {
-   "section": "CJS.105.07",
+   "section": "CJS.105-07",
    "title": "Intro to Crim Justice",
    "days": [
     "monday",
@@ -86,7 +86,7 @@
    "room": "College of Arts and Sciences 127"
   },
   {
-   "section": "CJS.105.08",
+   "section": "CJS.105-08",
    "title": "Intro to Crim Justice",
    "days": [
     "monday",
@@ -97,7 +97,7 @@
    "room": "College of Arts and Sciences 120"
   },
   {
-   "section": "CJS.150.01",
+   "section": "CJS.150-01",
    "title": "Policing in America",
    "days": [
     "tuesday",
@@ -108,7 +108,7 @@
    "room": "College of Arts and Sciences 120"
   },
   {
-   "section": "CJS.201.01",
+   "section": "CJS.201-01",
    "title": "Sub Criminal Law",
    "days": [
     "tuesday",
@@ -119,7 +119,7 @@
    "room": "College of Arts and Sciences 125"
   },
   {
-   "section": "CJS.201.02",
+   "section": "CJS.201-02",
    "title": "Sub Criminal Law",
    "days": [
     "monday",
@@ -130,7 +130,7 @@
    "room": "College of Arts and Sciences 125"
   },
   {
-   "section": "CJS.201.03",
+   "section": "CJS.201-03",
    "title": "Sub Criminal Law",
    "days": [
     "monday",
@@ -141,7 +141,7 @@
    "room": "College of Arts and Sciences 125"
   },
   {
-   "section": "CJS.203.01",
+   "section": "CJS.203-01",
    "title": "Criminal Procedure",
    "days": [
     "tuesday"
@@ -151,7 +151,7 @@
    "room": "College of Arts and Sciences 127"
   },
   {
-   "section": "CJS.210.01",
+   "section": "CJS.210-01",
    "title": "Law of Evidence",
    "days": [
     "monday",
@@ -163,7 +163,7 @@
    "room": "College of Arts and Sciences 127"
   },
   {
-   "section": "CJS.210.02",
+   "section": "CJS.210-02",
    "title": "Law of Evidence",
    "days": [
     "wednesday"
@@ -173,7 +173,7 @@
    "room": "College of Arts and Sciences 120"
   },
   {
-   "section": "CJS.212.01",
+   "section": "CJS.212-01",
    "title": "Police Comm Relations",
    "days": [
     "monday"
@@ -183,7 +183,7 @@
    "room": "College of Arts and Sciences 227"
   },
   {
-   "section": "CJS.279.01",
+   "section": "CJS.279-01",
    "title": "SpTp: Crime Analysis",
    "days": [
     "tuesday",
@@ -194,7 +194,7 @@
    "room": "ELS 111"
   },
   {
-   "section": "CJS.308.01",
+   "section": "CJS.308-01",
    "title": "Criminology",
    "days": [
     "tuesday",
@@ -205,7 +205,7 @@
    "room": "College of Arts and Sciences 120"
   },
   {
-   "section": "CJS.308.02",
+   "section": "CJS.308-02",
    "title": "Criminology",
    "days": [
     "tuesday",
@@ -216,7 +216,7 @@
    "room": "College of Arts and Sciences 120"
   },
   {
-   "section": "CJS.308.03",
+   "section": "CJS.308-03",
    "title": "Criminology",
    "days": [
     "monday",
@@ -227,7 +227,7 @@
    "room": "College of Arts and Sciences 120"
   },
   {
-   "section": "CJS.308.04",
+   "section": "CJS.308-04",
    "title": "Criminology",
    "days": [
     "monday",
@@ -239,7 +239,7 @@
    "room": "School of Engineering 128"
   },
   {
-   "section": "CJS.310.02",
+   "section": "CJS.310-02",
    "title": "Criminal Investigation",
    "days": [
     "monday",
@@ -250,7 +250,7 @@
    "room": "College of Arts and Sciences 220"
   },
   {
-   "section": "CJS.320.01",
+   "section": "CJS.320-01",
    "title": "Crim & Civ Proc in Courts",
    "days": [
     "monday",
@@ -262,7 +262,7 @@
    "room": "College of Arts and Sciences 220"
   },
   {
-   "section": "CJS.320.02",
+   "section": "CJS.320-02",
    "title": "Crim & Civ Proc in Courts",
    "days": [
     "monday",
@@ -274,7 +274,7 @@
    "room": "College of Arts and Sciences 220"
   },
   {
-   "section": "CJS.330.01",
+   "section": "CJS.330-01",
    "title": "Corrections in the U.S.",
    "days": [
     "tuesday",
@@ -285,7 +285,7 @@
    "room": "College of Arts and Sciences 122"
   },
   {
-   "section": "CJS.330.02",
+   "section": "CJS.330-02",
    "title": "Corrections in the U.S.",
    "days": [
     "monday",
@@ -297,7 +297,7 @@
    "room": "Gabelli School of Business G01"
   },
   {
-   "section": "CJS.330.03",
+   "section": "CJS.330-03",
    "title": "Corrections in the U.S.",
    "days": [
     "monday",
@@ -309,7 +309,7 @@
    "room": "College of Arts and Sciences 126"
   },
   {
-   "section": "CJS.330.04",
+   "section": "CJS.330-04",
    "title": "Corrections in the U.S.",
    "days": [
     "monday",
@@ -321,7 +321,7 @@
    "room": "College of Arts and Sciences 222"
   },
   {
-   "section": "CJS.342.01",
+   "section": "CJS.342-01",
    "title": "Legal Psychology",
    "days": [
     "tuesday",
@@ -332,7 +332,7 @@
    "room": "College of Arts and Sciences 127"
   },
   {
-   "section": "CJS.379.01",
+   "section": "CJS.379-01",
    "title": "SpTp:Race,Gender,Class in CJ",
    "days": [
     "monday",
@@ -344,7 +344,7 @@
    "room": "College of Arts and Sciences 222"
   },
   {
-   "section": "CJS.403.01",
+   "section": "CJS.403-01",
    "title": "Juvenile Justice",
    "days": [
     "monday",
@@ -356,7 +356,7 @@
    "room": "Library LIL"
   },
   {
-   "section": "CJS.403.02",
+   "section": "CJS.403-02",
    "title": "Juvenile Justice",
    "days": [
     "monday",
@@ -368,7 +368,7 @@
    "room": "Library LIL"
   },
   {
-   "section": "CJS.403.03",
+   "section": "CJS.403-03",
    "title": "Juvenile Justice",
    "days": [
     "thursday"
@@ -378,7 +378,7 @@
    "room": "College of Arts and Sciences 125"
   },
   {
-   "section": "CJS.420.01",
+   "section": "CJS.420-01",
    "title": "Justice Studies Capstone",
    "days": [
     "monday",
@@ -390,7 +390,7 @@
    "room": "School of Engineering 128"
   },
   {
-   "section": "CJS.428.01",
+   "section": "CJS.428-01",
    "title": "Crime Prevention",
    "days": [
     "tuesday",
@@ -401,7 +401,7 @@
    "room": "College of Arts and Sciences 123"
   },
   {
-   "section": "CJS.501.31",
+   "section": "CJS.501-31",
    "title": "CJ System Overview",
    "days": [
     "wednesday"
@@ -411,7 +411,7 @@
    "room": "College of Arts and Sciences 127"
   },
   {
-   "section": "CJS.503.31",
+   "section": "CJS.503-31",
    "title": "Surv of Rsrch Methods",
    "days": [
     "thursday"
@@ -421,7 +421,7 @@
    "room": "College of Arts and Sciences 228"
   },
   {
-   "section": "CJS.505.31",
+   "section": "CJS.505-31",
    "title": "Legal Iss US Jus Sys",
    "days": [
     "monday"
@@ -431,7 +431,7 @@
    "room": "College of Arts and Sciences 228"
   },
   {
-   "section": "CJS.528.01",
+   "section": "CJS.528-01",
    "title": "SpTp: Crime Analysis",
    "days": [
     "tuesday",

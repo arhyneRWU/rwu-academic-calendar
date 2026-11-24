@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "PRES",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "PRES.101.01",
+   "section": "PRES.101-01",
    "title": "Intro to Pres Studies",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": ""
   },
   {
-   "section": "PRES.101.02",
+   "section": "PRES.101-02",
    "title": "Intro to Pres Studies",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": ""
   },
   {
-   "section": "PRES.421.01",
+   "section": "PRES.421-01",
    "title": "History & Philos of Hp",
    "days": [
     "friday"
@@ -39,17 +39,17 @@
    "room": "Cummings School Architecture 202"
   },
   {
-   "section": "PRES.501.01",
+   "section": "PRES.501-01",
    "title": "Fundamentals of Pres Practice",
    "days": [
-    "wednesday"
+    "tuesday"
    ],
    "start": "08:00",
    "end": "10:50",
-   "room": "Cummings School Architecture 202"
+   "room": "Cummings School Architecture 203"
   },
   {
-   "section": "PRES.521.01",
+   "section": "PRES.521-01",
    "title": "History and Philosophy of Hist",
    "days": [
     "friday"
@@ -59,7 +59,7 @@
    "room": "Cummings School Architecture 202"
   },
   {
-   "section": "PRES.572.01",
+   "section": "PRES.572-01",
    "title": "Preservation Law & Regulation",
    "days": [
     "thursday"

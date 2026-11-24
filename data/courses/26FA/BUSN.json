@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "BUSN",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "BUSN.100.02",
+   "section": "BUSN.100-02",
    "title": "Enterprise",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": "Gabelli School of Business 208"
   },
   {
-   "section": "BUSN.100.03",
+   "section": "BUSN.100-03",
    "title": "Enterprise",
    "days": [
     "monday",
@@ -31,7 +31,7 @@
    "room": "Gabelli School of Business 208"
   },
   {
-   "section": "BUSN.100.04",
+   "section": "BUSN.100-04",
    "title": "Enterprise",
    "days": [
     "monday",
@@ -43,7 +43,7 @@
    "room": "Gabelli School of Business G06"
   },
   {
-   "section": "BUSN.100.05",
+   "section": "BUSN.100-05",
    "title": "Enterprise",
    "days": [
     "monday",
@@ -55,7 +55,7 @@
    "room": "Gabelli School of Business G06"
   },
   {
-   "section": "BUSN.100.06",
+   "section": "BUSN.100-06",
    "title": "Enterprise",
    "days": [
     "monday",
@@ -67,7 +67,7 @@
    "room": "Gabelli School of Business G06"
   },
   {
-   "section": "BUSN.100.07",
+   "section": "BUSN.100-07",
    "title": "Enterprise",
    "days": [
     "tuesday",
@@ -78,7 +78,7 @@
    "room": "College of Arts and Sciences 152"
   },
   {
-   "section": "BUSN.100.08",
+   "section": "BUSN.100-08",
    "title": "Enterprise",
    "days": [
     "monday",
@@ -90,7 +90,7 @@
    "room": "Gabelli School of Business G06"
   },
   {
-   "section": "BUSN.100.09",
+   "section": "BUSN.100-09",
    "title": "Enterprise",
    "days": [
     "tuesday",
@@ -101,7 +101,7 @@
    "room": "Humanities Building 309"
   },
   {
-   "section": "BUSN.100.10",
+   "section": "BUSN.100-10",
    "title": "Enterprise",
    "days": [
     "monday",
@@ -113,7 +113,7 @@
    "room": "Gabelli School of Business 208"
   },
   {
-   "section": "BUSN.305.01",
+   "section": "BUSN.305-01",
    "title": "Legal Environ of Busn I",
    "days": [
     "tuesday",
@@ -124,7 +124,7 @@
    "room": "Gabelli School of Business 206"
   },
   {
-   "section": "BUSN.305.02",
+   "section": "BUSN.305-02",
    "title": "Legal Environ of Busn I",
    "days": [
     "tuesday",
@@ -135,7 +135,7 @@
    "room": "Gabelli School of Business G06"
   },
   {
-   "section": "BUSN.305.21C",
+   "section": "BUSN.305-21C",
    "title": "Legal Environ of Busn I",
    "days": [
     "tuesday",
@@ -146,7 +146,7 @@
    "room": "Gabelli School of Business G06"
   },
   {
-   "section": "BUSN.380.02",
+   "section": "BUSN.380-02",
    "title": "The GSB Mentorship Lab",
    "days": [
     "thursday"

@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "PRES",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "PRES.101.02",
+   "section": "PRES.101-02",
    "title": "Intro to Pres Studies",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": "Humanities Building 100B"
   },
   {
-   "section": "PRES.320.01",
+   "section": "PRES.320-01",
    "title": "American Cultural Landscapes",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": "Humanities Building 100B"
   },
   {
-   "section": "PRES.331.01",
+   "section": "PRES.331-01",
    "title": "Historic Cnst Material&Assemb",
    "days": [
     "friday"
@@ -39,7 +39,7 @@
    "room": "Cummings School Architecture 202"
   },
   {
-   "section": "PRES.341.01",
+   "section": "PRES.341-01",
    "title": "Bldg & Site Doc Resrch Methods",
    "days": [
     "tuesday",
@@ -50,7 +50,7 @@
    "room": "Cummings School Architecture 203"
   },
   {
-   "section": "PRES.341L.51",
+   "section": "PRES.341L-51",
    "title": "Bldg&Site Doc Res Method La",
    "days": [
     "wednesday"
@@ -60,7 +60,7 @@
    "room": "Cummings School Architecture 203"
   },
   {
-   "section": "PRES.520.01",
+   "section": "PRES.520-01",
    "title": "American Cultural Landscapes",
    "days": [
     "tuesday",
@@ -71,7 +71,7 @@
    "room": "Humanities Building 100B"
   },
   {
-   "section": "PRES.531.01",
+   "section": "PRES.531-01",
    "title": "Historic Cnst Material&Assemb",
    "days": [
     "friday"
@@ -81,7 +81,7 @@
    "room": "No Room NEEDED NRR"
   },
   {
-   "section": "PRES.541.01",
+   "section": "PRES.541-01",
    "title": "Bldg & Site Doc Research Meth",
    "days": [
     "tuesday",
@@ -92,7 +92,7 @@
    "room": "Cummings School Architecture 203"
   },
   {
-   "section": "PRES.541L.51",
+   "section": "PRES.541L-51",
    "title": "Bldg & Site Doc Lab",
    "days": [
     "wednesday"

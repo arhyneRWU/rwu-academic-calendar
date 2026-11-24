@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "WTNG",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "WTNG.100.01",
+   "section": "WTNG.100-01",
    "title": "Intro to Academic Wtng",
    "days": [
     "monday",
@@ -18,7 +18,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.01",
+   "section": "WTNG.102-01",
    "title": "How Writing Works",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.02",
+   "section": "WTNG.102-02",
    "title": "How Writing Works",
    "days": [
     "tuesday",
@@ -40,7 +40,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.03",
+   "section": "WTNG.102-03",
    "title": "How Writing Works",
    "days": [
     "tuesday",
@@ -51,7 +51,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.04",
+   "section": "WTNG.102-04",
    "title": "How Writing Works",
    "days": [
     "tuesday",
@@ -62,7 +62,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.05",
+   "section": "WTNG.102-05",
    "title": "How Writing Works",
    "days": [
     "tuesday",
@@ -73,7 +73,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.06",
+   "section": "WTNG.102-06",
    "title": "How Writing Works",
    "days": [
     "tuesday",
@@ -84,7 +84,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.07",
+   "section": "WTNG.102-07",
    "title": "How Writing Works",
    "days": [
     "tuesday",
@@ -95,7 +95,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.08",
+   "section": "WTNG.102-08",
    "title": "How Writing Works",
    "days": [
     "monday",
@@ -106,7 +106,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.09",
+   "section": "WTNG.102-09",
    "title": "How Writing Works",
    "days": [
     "monday",
@@ -117,7 +117,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.10",
+   "section": "WTNG.102-10",
    "title": "How Writing Works",
    "days": [
     "monday",
@@ -129,7 +129,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.11",
+   "section": "WTNG.102-11",
    "title": "How Writing Works",
    "days": [
     "monday",
@@ -141,7 +141,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.12",
+   "section": "WTNG.102-12",
    "title": "How Writing Works",
    "days": [
     "monday",
@@ -153,7 +153,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.13",
+   "section": "WTNG.102-13",
    "title": "How Writing Works",
    "days": [
     "monday",
@@ -165,7 +165,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.14",
+   "section": "WTNG.102-14",
    "title": "How Writing Works",
    "days": [
     "monday",
@@ -177,7 +177,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.15",
+   "section": "WTNG.102-15",
    "title": "How Writing Works",
    "days": [
     "monday",
@@ -189,19 +189,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.16",
-   "title": "How Writing Works",
-   "days": [
-    "monday",
-    "wednesday",
-    "friday"
-   ],
-   "start": "10:00",
-   "end": "10:50",
-   "room": ""
-  },
-  {
-   "section": "WTNG.102.17",
+   "section": "WTNG.102-17",
    "title": "How Writing Works",
    "days": [
     "monday",
@@ -213,7 +201,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.18",
+   "section": "WTNG.102-18",
    "title": "How Writing Works",
    "days": [
     "monday",
@@ -225,7 +213,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.19",
+   "section": "WTNG.102-19",
    "title": "How Writing Works",
    "days": [
     "monday",
@@ -237,19 +225,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.20",
-   "title": "How Writing Works",
-   "days": [
-    "monday",
-    "wednesday",
-    "friday"
-   ],
-   "start": "11:00",
-   "end": "11:50",
-   "room": ""
-  },
-  {
-   "section": "WTNG.102.21",
+   "section": "WTNG.102-21",
    "title": "How Writing Works",
    "days": [
     "monday",
@@ -261,7 +237,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.22",
+   "section": "WTNG.102-22",
    "title": "How Writing Works",
    "days": [
     "monday",
@@ -273,7 +249,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.23",
+   "section": "WTNG.102-23",
    "title": "How Writing Works",
    "days": [
     "monday",
@@ -285,7 +261,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.24",
+   "section": "WTNG.102-24",
    "title": "How Writing Works",
    "days": [
     "monday",
@@ -297,7 +273,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.25",
+   "section": "WTNG.102-25",
    "title": "How Writing Works",
    "days": [
     "monday",
@@ -309,7 +285,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.102.HON01",
+   "section": "WTNG.102-HON01",
    "title": "Honr How Writing Works",
    "days": [
     "tuesday",
@@ -320,7 +296,7 @@
    "room": "Stonewall 103"
   },
   {
-   "section": "WTNG.225.01",
+   "section": "WTNG.225-01",
    "title": "Wtng Profession-Public Context",
    "days": [
     "tuesday",
@@ -331,7 +307,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.225.02",
+   "section": "WTNG.225-02",
    "title": "Wtng Profession-Public Context",
    "days": [
     "tuesday",
@@ -342,7 +318,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.225.03",
+   "section": "WTNG.225-03",
    "title": "Wtng Profession-Public Context",
    "days": [
     "monday",
@@ -353,7 +329,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.225.04",
+   "section": "WTNG.225-04",
    "title": "Wtng Profession-Public Context",
    "days": [
     "monday",
@@ -364,7 +340,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.225.05",
+   "section": "WTNG.225-05",
    "title": "Wtng Profession-Public Context",
    "days": [
     "monday",
@@ -376,7 +352,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.225.06",
+   "section": "WTNG.225-06",
    "title": "Wtng Profession-Public Context",
    "days": [
     "monday",
@@ -388,7 +364,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.225.07",
+   "section": "WTNG.225-07",
    "title": "Wtng Profession-Public Context",
    "days": [
     "monday",
@@ -400,7 +376,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.225.08",
+   "section": "WTNG.225-08",
    "title": "Wtng Profession-Public Context",
    "days": [
     "monday",
@@ -412,7 +388,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.225.09",
+   "section": "WTNG.225-09",
    "title": "Wtng Profession-Public Context",
    "days": [
     "monday",
@@ -424,7 +400,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.225.10",
+   "section": "WTNG.225-10",
    "title": "Wtng Profession-Public Context",
    "days": [
     "monday",
@@ -436,7 +412,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.225.11",
+   "section": "WTNG.225-11",
    "title": "Wtng Profession-Public Context",
    "days": [
     "monday",
@@ -448,7 +424,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.225.12",
+   "section": "WTNG.225-12",
    "title": "Wtng Profession-Public Context",
    "days": [
     "monday",
@@ -460,7 +436,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.225.13",
+   "section": "WTNG.225-13",
    "title": "Wtng Profession-Public Context",
    "days": [
     "monday",
@@ -472,7 +448,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.225.14",
+   "section": "WTNG.225-14",
    "title": "Wtng Profession-Public Context",
    "days": [
     "monday",
@@ -484,7 +460,19 @@
    "room": ""
   },
   {
-   "section": "WTNG.250.01",
+   "section": "WTNG.225-15",
+   "title": "Wtng Profession-Public Context",
+   "days": [
+    "monday",
+    "wednesday",
+    "friday"
+   ],
+   "start": "10:00",
+   "end": "10:50",
+   "room": ""
+  },
+  {
+   "section": "WTNG.250-01",
    "title": "Advanced Composition",
    "days": [
     "tuesday",
@@ -495,7 +483,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.270.01",
+   "section": "WTNG.270-01",
    "title": "Travel Writing",
    "days": [
     "tuesday",
@@ -506,7 +494,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.270.02",
+   "section": "WTNG.270-02",
    "title": "Travel Writing",
    "days": [
     "tuesday",
@@ -517,7 +505,7 @@
    "room": ""
   },
   {
-   "section": "WTNG.340.01",
+   "section": "WTNG.340-01",
    "title": "Adv Topics Workplace Writing",
    "days": [
     "tuesday",

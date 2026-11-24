@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "THEAT",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "THEAT.110.01",
+   "section": "THEAT.110-01",
    "title": "Acting I",
    "days": [
     "monday",
@@ -18,7 +18,7 @@
    "room": "Performing Arts Annex 106"
   },
   {
-   "section": "THEAT.123.01",
+   "section": "THEAT.123-01",
    "title": "Design for the Theatre",
    "days": [
     "monday",
@@ -29,7 +29,7 @@
    "room": "Performing Arts Annex 103"
   },
   {
-   "section": "THEAT.130.01",
+   "section": "THEAT.130-01",
    "title": "The Art of the Theatre",
    "days": [
     "monday",
@@ -41,7 +41,7 @@
    "room": ""
   },
   {
-   "section": "THEAT.141.01",
+   "section": "THEAT.141-01",
    "title": "Musical Theatre Workshop",
    "days": [
     "tuesday",
@@ -52,7 +52,7 @@
    "room": ""
   },
   {
-   "section": "THEAT.142.01",
+   "section": "THEAT.142-01",
    "title": "Musical Theatre Workshop",
    "days": [
     "tuesday",
@@ -63,7 +63,7 @@
    "room": ""
   },
   {
-   "section": "THEAT.150.01",
+   "section": "THEAT.150-01",
    "title": "The American Musical",
    "days": [
     "monday",
@@ -75,7 +75,7 @@
    "room": ""
   },
   {
-   "section": "THEAT.200.01",
+   "section": "THEAT.200-01",
    "title": "Theatre Practicum",
    "days": [
     "wednesday"
@@ -85,7 +85,7 @@
    "room": ""
   },
   {
-   "section": "THEAT.230.01",
+   "section": "THEAT.230-01",
    "title": "Theatre History I",
    "days": [
     "tuesday",
@@ -96,7 +96,7 @@
    "room": ""
   },
   {
-   "section": "THEAT.250.01",
+   "section": "THEAT.250-01",
    "title": "Queer Theatre and Drama",
    "days": [
     "monday",
@@ -108,7 +108,7 @@
    "room": ""
   },
   {
-   "section": "THEAT.340.01",
+   "section": "THEAT.340-01",
    "title": "Directing",
    "days": [
     "tuesday",

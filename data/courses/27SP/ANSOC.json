@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "ANSOC",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "ANSOC.100.01",
+   "section": "ANSOC.100-01",
    "title": "Intro to Cultural Anth",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": ""
   },
   {
-   "section": "ANSOC.100.02",
+   "section": "ANSOC.100-02",
    "title": "Intro to Cultural Anth",
    "days": [
     "monday",
@@ -31,7 +31,7 @@
    "room": ""
   },
   {
-   "section": "ANSOC.100.03",
+   "section": "ANSOC.100-03",
    "title": "Intro to Cultural Anth",
    "days": [
     "tuesday",
@@ -42,7 +42,7 @@
    "room": ""
   },
   {
-   "section": "ANSOC.105.01",
+   "section": "ANSOC.105-01",
    "title": "Introduction to Sociology",
    "days": [
     "tuesday",
@@ -53,7 +53,7 @@
    "room": ""
   },
   {
-   "section": "ANSOC.105.02",
+   "section": "ANSOC.105-02",
    "title": "Introduction to Sociology",
    "days": [
     "tuesday",
@@ -64,7 +64,7 @@
    "room": ""
   },
   {
-   "section": "ANSOC.105.03",
+   "section": "ANSOC.105-03",
    "title": "Introduction to Sociology",
    "days": [
     "tuesday",
@@ -75,7 +75,7 @@
    "room": ""
   },
   {
-   "section": "ANSOC.275.01",
+   "section": "ANSOC.275-01",
    "title": "Food, People, & Place",
    "days": [
     "monday",
@@ -87,7 +87,7 @@
    "room": ""
   },
   {
-   "section": "ANSOC.280.01",
+   "section": "ANSOC.280-01",
    "title": "Anthropology of Sport",
    "days": [
     "monday",
@@ -99,7 +99,7 @@
    "room": ""
   },
   {
-   "section": "ANSOC.335.01",
+   "section": "ANSOC.335-01",
    "title": "Social Worlds of Fashion&Arts",
    "days": [
     "monday",
@@ -111,7 +111,7 @@
    "room": ""
   },
   {
-   "section": "ANSOC.375.01",
+   "section": "ANSOC.375-01",
    "title": "Comp Soc Movmts/Soc Chg",
    "days": [
     "monday",
@@ -122,18 +122,7 @@
    "room": ""
   },
   {
-   "section": "ANSOC.385.01",
-   "title": "Sociology of Health & Illness",
-   "days": [
-    "monday",
-    "thursday"
-   ],
-   "start": "14:00",
-   "end": "15:20",
-   "room": ""
-  },
-  {
-   "section": "ANSOC.400.01",
+   "section": "ANSOC.400-01",
    "title": "Senior Seminar",
    "days": [
     "tuesday",

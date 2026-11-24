@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "MRKT",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "MRKT.200.01",
+   "section": "MRKT.200-01",
    "title": "Marketing Principles",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": "Gabelli School of Business 105"
   },
   {
-   "section": "MRKT.200.02",
+   "section": "MRKT.200-02",
    "title": "Marketing Principles",
    "days": [
     "monday",
@@ -31,7 +31,7 @@
    "room": "Gabelli School of Business 105"
   },
   {
-   "section": "MRKT.200.03",
+   "section": "MRKT.200-03",
    "title": "Marketing Principles",
    "days": [
     "tuesday",
@@ -42,7 +42,7 @@
    "room": "Gabelli School of Business 105"
   },
   {
-   "section": "MRKT.200.04",
+   "section": "MRKT.200-04",
    "title": "Marketing Principles",
    "days": [
     "tuesday",
@@ -53,7 +53,7 @@
    "room": "Gabelli School of Business 205"
   },
   {
-   "section": "MRKT.200.05",
+   "section": "MRKT.200-05",
    "title": "Marketing Principles",
    "days": [
     "wednesday"
@@ -63,7 +63,7 @@
    "room": "Marine & Natural Sciences Bldg 210"
   },
   {
-   "section": "MRKT.301.01",
+   "section": "MRKT.301-01",
    "title": "Advertising Principles",
    "days": [
     "thursday"
@@ -73,7 +73,7 @@
    "room": "Gabelli School of Business 106"
   },
   {
-   "section": "MRKT.301.02",
+   "section": "MRKT.301-02",
    "title": "Advertising Principles",
    "days": [
     "monday",
@@ -85,7 +85,7 @@
    "room": "Marine & Natural Sciences Bldg 210"
   },
   {
-   "section": "MRKT.302.01",
+   "section": "MRKT.302-01",
    "title": "Advertising Campaigns",
    "days": [
     "monday",
@@ -97,7 +97,7 @@
    "room": "Gabelli School of Business 205"
   },
   {
-   "section": "MRKT.302.02",
+   "section": "MRKT.302-02",
    "title": "Advertising Campaigns",
    "days": [
     "monday",
@@ -109,7 +109,7 @@
    "room": "Gabelli School of Business 105"
   },
   {
-   "section": "MRKT.305.01",
+   "section": "MRKT.305-01",
    "title": "Marketing Research",
    "days": [
     "monday",
@@ -120,7 +120,7 @@
    "room": "Gabelli School of Business 106"
   },
   {
-   "section": "MRKT.305.02",
+   "section": "MRKT.305-02",
    "title": "Marketing Research",
    "days": [
     "monday",
@@ -131,7 +131,7 @@
    "room": "Gabelli School of Business 106"
   },
   {
-   "section": "MRKT.325.01",
+   "section": "MRKT.325-01",
    "title": "Digital Marketing",
    "days": [
     "tuesday",
@@ -142,7 +142,7 @@
    "room": "Humanities Building 308"
   },
   {
-   "section": "MRKT.325.02",
+   "section": "MRKT.325-02",
    "title": "Digital Marketing",
    "days": [
     "tuesday",
@@ -153,7 +153,7 @@
    "room": "Humanities Building 308"
   },
   {
-   "section": "MRKT.335.02",
+   "section": "MRKT.335-02",
    "title": "Consumer Behavior",
    "days": [
     "monday"
@@ -163,7 +163,7 @@
    "room": "Gabelli School of Business 205"
   },
   {
-   "section": "MRKT.340.01",
+   "section": "MRKT.340-01",
    "title": "International Marketing",
    "days": [
     "tuesday",
@@ -174,7 +174,7 @@
    "room": "Gabelli School of Business 208"
   },
   {
-   "section": "MRKT.340.02",
+   "section": "MRKT.340-02",
    "title": "International Marketing",
    "days": [
     "tuesday",
@@ -185,7 +185,7 @@
    "room": "Gabelli School of Business 208"
   },
   {
-   "section": "MRKT.355.01",
+   "section": "MRKT.355-01",
    "title": "Sustainability Marketing",
    "days": [
     "tuesday",
@@ -196,7 +196,7 @@
    "room": "Gabelli School of Business 205"
   },
   {
-   "section": "MRKT.370.01",
+   "section": "MRKT.370-01",
    "title": "Sports Marketing Principles",
    "days": [
     "tuesday",
@@ -207,7 +207,7 @@
    "room": "Gabelli School of Business 205"
   },
   {
-   "section": "MRKT.401.01",
+   "section": "MRKT.401-01",
    "title": "Advertising Campaigns Research",
    "days": [
     "monday",
@@ -218,7 +218,7 @@
    "room": "Gabelli School of Business G01"
   },
   {
-   "section": "MRKT.401.01",
+   "section": "MRKT.401-01",
    "title": "Advertising Campaigns Research",
    "days": [
     "monday",
@@ -229,7 +229,7 @@
    "room": "Gabelli School of Business 101"
   },
   {
-   "section": "MRKT.420.01",
+   "section": "MRKT.420-01",
    "title": "Marketing Seminar",
    "days": [
     "tuesday",

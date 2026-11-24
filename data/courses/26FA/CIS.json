@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "CIS",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "CIS.105.01",
+   "section": "CIS.105-01",
    "title": "Data Analys/Analys w Excel",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": "School of Engineering 122"
   },
   {
-   "section": "CIS.105.02",
+   "section": "CIS.105-02",
    "title": "Data Analys/Analys w Excel",
    "days": [
     "monday",
@@ -31,7 +31,7 @@
    "room": "School of Engineering 122"
   },
   {
-   "section": "CIS.105.03",
+   "section": "CIS.105-03",
    "title": "Data Analys/Analys w Excel",
    "days": [
     "monday",
@@ -43,7 +43,7 @@
    "room": "Gabelli School of Business 208"
   },
   {
-   "section": "CIS.105.04",
+   "section": "CIS.105-04",
    "title": "Data Analys/Analys w Excel",
    "days": [
     "monday",
@@ -55,7 +55,7 @@
    "room": "School of Engineering 128"
   },
   {
-   "section": "CIS.105.05",
+   "section": "CIS.105-05",
    "title": "Data Analys/Analys w Excel",
    "days": [
     "monday",
@@ -67,7 +67,7 @@
    "room": "Gabelli School of Business 208"
   },
   {
-   "section": "CIS.350.01",
+   "section": "CIS.350-01",
    "title": "Geographical Analysis Data",
    "days": [
     "monday",

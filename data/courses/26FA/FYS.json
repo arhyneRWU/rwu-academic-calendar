@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "FYS",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "FYS.101.01",
+   "section": "FYS.101-01",
    "title": "Eating in East Asia",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": "Humanities Building 309"
   },
   {
-   "section": "FYS.101.03",
+   "section": "FYS.101-03",
    "title": "Monsters in Fiction and Film",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": "ELS 113"
   },
   {
-   "section": "FYS.101.04",
+   "section": "FYS.101-04",
    "title": "Mama, I made it! What Now?",
    "days": [
     "tuesday",
@@ -40,7 +40,7 @@
    "room": "ELS 111"
   },
   {
-   "section": "FYS.101.06",
+   "section": "FYS.101-06",
    "title": "Monsters in Fiction and Film",
    "days": [
     "tuesday",
@@ -51,7 +51,7 @@
    "room": "ELS 113"
   },
   {
-   "section": "FYS.101.07",
+   "section": "FYS.101-07",
    "title": "Language and the Good Life",
    "days": [
     "tuesday",
@@ -62,7 +62,7 @@
    "room": "College of Arts and Sciences 221"
   },
   {
-   "section": "FYS.101.08",
+   "section": "FYS.101-08",
    "title": "Living the Common Good",
    "days": [
     "monday",
@@ -74,7 +74,7 @@
    "room": "College of Arts and Sciences 227"
   },
   {
-   "section": "FYS.101.09",
+   "section": "FYS.101-09",
    "title": "Guns, Robots, Sex in America",
    "days": [
     "tuesday",
@@ -85,7 +85,7 @@
    "room": "Gabelli School of Business G05"
   },
   {
-   "section": "FYS.101.10",
+   "section": "FYS.101-10",
    "title": "Visl Thnkng:Style & Substance",
    "days": [
     "tuesday",
@@ -96,7 +96,7 @@
    "room": "Humanities Building 318"
   },
   {
-   "section": "FYS.101.11",
+   "section": "FYS.101-11",
    "title": "Animals on Screen",
    "days": [
     "tuesday",
@@ -107,7 +107,7 @@
    "room": "Humanities Building 318"
   },
   {
-   "section": "FYS.101.12",
+   "section": "FYS.101-12",
    "title": "Eating Humans",
    "days": [
     "tuesday",
@@ -118,7 +118,7 @@
    "room": "Humanities Building 334"
   },
   {
-   "section": "FYS.101.14",
+   "section": "FYS.101-14",
    "title": "Guns, Robots, Sex in America",
    "days": [
     "tuesday",
@@ -129,7 +129,7 @@
    "room": "Humanities Building 308"
   },
   {
-   "section": "FYS.101.16",
+   "section": "FYS.101-16",
    "title": "Can You Dig It? Archaeology",
    "days": [
     "monday",
@@ -140,7 +140,7 @@
    "room": "College of Arts and Sciences 221"
   },
   {
-   "section": "FYS.101.18",
+   "section": "FYS.101-18",
    "title": "Can You Dig It? Archaeology",
    "days": [
     "monday",
@@ -151,7 +151,7 @@
    "room": "College of Arts and Sciences 221"
   },
   {
-   "section": "FYS.101.19",
+   "section": "FYS.101-19",
    "title": "Echoes of Africa",
    "days": [
     "monday",
@@ -162,7 +162,7 @@
    "room": "Humanities Building 318"
   },
   {
-   "section": "FYS.101.20",
+   "section": "FYS.101-20",
    "title": "Revealing Power, Privilege",
    "days": [
     "monday",
@@ -174,7 +174,7 @@
    "room": "ELS 113"
   },
   {
-   "section": "FYS.101.21",
+   "section": "FYS.101-21",
    "title": "Climte Change & Future RWU",
    "days": [
     "monday",
@@ -186,7 +186,7 @@
    "room": "Gabelli School of Business 106"
   },
   {
-   "section": "FYS.101.22",
+   "section": "FYS.101-22",
    "title": "Revealing Power, Privilege",
    "days": [
     "monday",
@@ -198,7 +198,7 @@
    "room": "ELS 113"
   },
   {
-   "section": "FYS.101.23",
+   "section": "FYS.101-23",
    "title": "Food, Examined",
    "days": [
     "monday",
@@ -210,7 +210,7 @@
    "room": "School of Engineering 126"
   },
   {
-   "section": "FYS.101.24",
+   "section": "FYS.101-24",
    "title": "Italian American Experience",
    "days": [
     "monday",
@@ -222,7 +222,7 @@
    "room": "Gabelli School of Business G13"
   },
   {
-   "section": "FYS.101.25",
+   "section": "FYS.101-25",
    "title": "Climate Chnge & Future RWU",
    "days": [
     "monday",
@@ -234,7 +234,7 @@
    "room": "Humanities Building 102"
   },
   {
-   "section": "FYS.101.26",
+   "section": "FYS.101-26",
    "title": "Capturing History",
    "days": [
     "monday",
@@ -246,7 +246,7 @@
    "room": "Humanities Building 329"
   },
   {
-   "section": "FYS.101.27",
+   "section": "FYS.101-27",
    "title": "Capturing History",
    "days": [
     "monday",
@@ -258,7 +258,7 @@
    "room": "Humanities Building 329"
   },
   {
-   "section": "FYS.101.28",
+   "section": "FYS.101-28",
    "title": "Phil Exmntion of AI / Outside",
    "days": [
     "monday",
@@ -270,7 +270,7 @@
    "room": "Humanities Building 102"
   },
   {
-   "section": "FYS.101.29",
+   "section": "FYS.101-29",
    "title": "Capturing History",
    "days": [
     "monday",
@@ -282,7 +282,7 @@
    "room": "Humanities Building 329"
   },
   {
-   "section": "FYS.101.33",
+   "section": "FYS.101-33",
    "title": "Italian American Experience",
    "days": [
     "monday",
@@ -294,7 +294,7 @@
    "room": "Gabelli School of Business G13"
   },
   {
-   "section": "FYS.101.34",
+   "section": "FYS.101-34",
    "title": "Lvng Mindful:Tools 4 Mod Stdn",
    "days": [
     "monday",
@@ -305,7 +305,7 @@
    "room": "Marine & Natural Sciences Bldg 200"
   },
   {
-   "section": "FYS.101.35",
+   "section": "FYS.101-35",
    "title": "Visual Thnkng:Style & Substnc",
    "days": [
     "tuesday",
@@ -316,7 +316,7 @@
    "room": "Humanities Building 318"
   },
   {
-   "section": "FYS.101.36",
+   "section": "FYS.101-36",
    "title": "Eating Humans",
    "days": [
     "tuesday",
@@ -327,7 +327,7 @@
    "room": "Humanities Building 102"
   },
   {
-   "section": "FYS.101.37",
+   "section": "FYS.101-37",
    "title": "Italian American Experience",
    "days": [
     "tuesday",
@@ -338,7 +338,7 @@
    "room": "Gabelli School of Business G13"
   },
   {
-   "section": "FYS.101.38",
+   "section": "FYS.101-38",
    "title": "Horse:Org American Influencer",
    "days": [
     "monday",
@@ -349,7 +349,7 @@
    "room": "Humanities Building 102"
   },
   {
-   "section": "FYS.101.39",
+   "section": "FYS.101-39",
    "title": "Climte Change & Future RWU",
    "days": [
     "monday",
@@ -361,7 +361,7 @@
    "room": "Gabelli School of Business 105"
   },
   {
-   "section": "FYS.101.40",
+   "section": "FYS.101-40",
    "title": "What is Wellness",
    "days": [
     "tuesday",
@@ -372,7 +372,7 @@
    "room": "College of Arts and Sciences 227"
   },
   {
-   "section": "FYS.101.41",
+   "section": "FYS.101-41",
    "title": "Global Problems & Systm Solu",
    "days": [
     "monday",
@@ -384,7 +384,7 @@
    "room": "School of Engineering 126"
   },
   {
-   "section": "FYS.101.42",
+   "section": "FYS.101-42",
    "title": "How to College",
    "days": [
     "monday",
@@ -396,7 +396,7 @@
    "room": "College of Arts and Sciences 228"
   },
   {
-   "section": "FYS.101.43",
+   "section": "FYS.101-43",
    "title": "Who Owns the Past?",
    "days": [
     "tuesday",
@@ -407,7 +407,7 @@
    "room": "Humanities Building 329"
   },
   {
-   "section": "FYS.101.44",
+   "section": "FYS.101-44",
    "title": "Mama, I made it! What Now?",
    "days": [
     "tuesday",
@@ -418,7 +418,7 @@
    "room": "ELS 111"
   },
   {
-   "section": "FYS.101.45",
+   "section": "FYS.101-45",
    "title": "Phil Exmntion of AI/Outside",
    "days": [
     "tuesday",
@@ -429,7 +429,7 @@
    "room": "Humanities Building 102"
   },
   {
-   "section": "FYS.101.46",
+   "section": "FYS.101-46",
    "title": "Here's the Pitch: Sport Lit",
    "days": [
     "tuesday",
@@ -440,7 +440,7 @@
    "room": "Gabelli School of Business G13"
   },
   {
-   "section": "FYS.101.47",
+   "section": "FYS.101-47",
    "title": "The Politics of Music",
    "days": [
     "tuesday",
@@ -451,7 +451,7 @@
    "room": "College of Arts and Sciences 221"
   },
   {
-   "section": "FYS.101.48",
+   "section": "FYS.101-48",
    "title": "The Politics of Music",
    "days": [
     "tuesday",
@@ -462,7 +462,7 @@
    "room": "Humanities Building 329"
   },
   {
-   "section": "FYS.101.49",
+   "section": "FYS.101-49",
    "title": "How to College",
    "days": [
     "monday",

@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "ITAL",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "ITAL.102.01",
+   "section": "ITAL.102-01",
    "title": "Elem Italian II",
    "days": [
     "monday",
@@ -18,7 +18,7 @@
    "room": ""
   },
   {
-   "section": "ITAL.202.01",
+   "section": "ITAL.202-01",
    "title": "Interm Italian II",
    "days": [
     "monday",

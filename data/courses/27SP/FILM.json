@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "FILM",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "FILM.270.01",
+   "section": "FILM.270-01",
    "title": "Documentary Film",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": "Humanities Building 104"
   },
   {
-   "section": "FILM.351.01",
+   "section": "FILM.351-01",
    "title": "Fantstic Bodies:Monster Genre",
    "days": [
     "monday",
@@ -29,7 +29,7 @@
    "room": ""
   },
   {
-   "section": "FILM.353.01",
+   "section": "FILM.353-01",
    "title": "French Cinema",
    "days": [
     "tuesday"
@@ -39,7 +39,7 @@
    "room": ""
   },
   {
-   "section": "FILM.400.01",
+   "section": "FILM.400-01",
    "title": "Curation & Festival Production",
    "days": [
     "monday",

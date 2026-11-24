@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "EDU",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "EDU.200.01",
+   "section": "EDU.200-01",
    "title": "Foundations of Educ",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": "School of Education 059"
   },
   {
-   "section": "EDU.200.02",
+   "section": "EDU.200-02",
    "title": "Foundations of Educ",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": "School of Education 059"
   },
   {
-   "section": "EDU.202.01",
+   "section": "EDU.202-01",
    "title": "Psych Learning/Develop",
    "days": [
     "tuesday",
@@ -40,7 +40,7 @@
    "room": "School of Education 030"
   },
   {
-   "section": "EDU.202.02",
+   "section": "EDU.202-02",
    "title": "Psych Learning/Develop",
    "days": [
     "tuesday",
@@ -51,7 +51,7 @@
    "room": "School of Education 030"
   },
   {
-   "section": "EDU.303.01",
+   "section": "EDU.303-01",
    "title": "Lit in Elem School II",
    "days": [
     "tuesday",
@@ -62,7 +62,7 @@
    "room": "School of Law 033"
   },
   {
-   "section": "EDU.303.02",
+   "section": "EDU.303-02",
    "title": "Lit in Elem School II",
    "days": [
     "tuesday",
@@ -73,7 +73,7 @@
    "room": "School of Education 030"
   },
   {
-   "section": "EDU.305.01",
+   "section": "EDU.305-01",
    "title": "Class Appl of Tech Elem",
    "days": [
     "monday",
@@ -84,7 +84,7 @@
    "room": "School of Education 009"
   },
   {
-   "section": "EDU.305.02",
+   "section": "EDU.305-02",
    "title": "Class Appl of Tech Elem",
    "days": [
     "monday",
@@ -95,7 +95,7 @@
    "room": "School of Education 009"
   },
   {
-   "section": "EDU.315.01",
+   "section": "EDU.315-01",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "monday"
@@ -105,7 +105,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.02",
+   "section": "EDU.315-02",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "monday"
@@ -115,7 +115,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.03",
+   "section": "EDU.315-03",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "monday"
@@ -125,7 +125,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.04",
+   "section": "EDU.315-04",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "monday"
@@ -135,7 +135,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.05",
+   "section": "EDU.315-05",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "monday"
@@ -145,7 +145,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.06",
+   "section": "EDU.315-06",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "monday"
@@ -155,7 +155,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.07",
+   "section": "EDU.315-07",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "tuesday"
@@ -165,7 +165,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.08",
+   "section": "EDU.315-08",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "tuesday"
@@ -175,7 +175,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.09",
+   "section": "EDU.315-09",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "tuesday"
@@ -185,7 +185,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.10",
+   "section": "EDU.315-10",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "tuesday"
@@ -195,7 +195,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.11",
+   "section": "EDU.315-11",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "tuesday"
@@ -205,7 +205,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.12",
+   "section": "EDU.315-12",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "tuesday"
@@ -215,7 +215,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.13",
+   "section": "EDU.315-13",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "wednesday"
@@ -225,7 +225,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.14",
+   "section": "EDU.315-14",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "wednesday"
@@ -235,7 +235,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.15",
+   "section": "EDU.315-15",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "wednesday"
@@ -245,7 +245,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.16",
+   "section": "EDU.315-16",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "wednesday"
@@ -255,7 +255,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.17",
+   "section": "EDU.315-17",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "wednesday"
@@ -265,7 +265,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.18",
+   "section": "EDU.315-18",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "wednesday"
@@ -275,7 +275,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.19",
+   "section": "EDU.315-19",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "thursday"
@@ -285,7 +285,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.20",
+   "section": "EDU.315-20",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "thursday"
@@ -295,7 +295,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.21",
+   "section": "EDU.315-21",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "thursday"
@@ -305,7 +305,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.22",
+   "section": "EDU.315-22",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "thursday"
@@ -315,7 +315,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.23",
+   "section": "EDU.315-23",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "thursday"
@@ -325,7 +325,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.24",
+   "section": "EDU.315-24",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "thursday"
@@ -335,7 +335,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.25",
+   "section": "EDU.315-25",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "friday"
@@ -345,7 +345,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.26",
+   "section": "EDU.315-26",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "friday"
@@ -355,7 +355,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.27",
+   "section": "EDU.315-27",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "friday"
@@ -365,7 +365,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.28",
+   "section": "EDU.315-28",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "friday"
@@ -375,7 +375,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.29",
+   "section": "EDU.315-29",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "friday"
@@ -385,7 +385,7 @@
    "room": ""
   },
   {
-   "section": "EDU.315.30",
+   "section": "EDU.315-30",
    "title": "Elem Ed Pre-Prac",
    "days": [
     "friday"
@@ -395,7 +395,7 @@
    "room": ""
   },
   {
-   "section": "EDU.316.01",
+   "section": "EDU.316-01",
    "title": "Classrooms as Communities",
    "days": [
     "tuesday",
@@ -406,7 +406,7 @@
    "room": "School of Education 030"
   },
   {
-   "section": "EDU.330.01",
+   "section": "EDU.330-01",
    "title": "Found of Equity and Diversity",
    "days": [
     "monday",
@@ -417,7 +417,7 @@
    "room": "School of Education 059"
   },
   {
-   "section": "EDU.330.02",
+   "section": "EDU.330-02",
    "title": "Found of Equity and Diversity",
    "days": [
     "monday",
@@ -428,7 +428,7 @@
    "room": "School of Education 059"
   },
   {
-   "section": "EDU.332.01",
+   "section": "EDU.332-01",
    "title": "Respond to Diverse Learners",
    "days": [
     "tuesday"
@@ -438,7 +438,7 @@
    "room": "School of Education 009"
   },
   {
-   "section": "EDU.341.01",
+   "section": "EDU.341-01",
    "title": "Science & Tech Elem Schl",
    "days": [
     "tuesday",
@@ -449,7 +449,7 @@
    "room": "School of Education 009"
   },
   {
-   "section": "EDU.341.02",
+   "section": "EDU.341-02",
    "title": "Science & Tech Elem Schl",
    "days": [
     "tuesday",
@@ -460,7 +460,7 @@
    "room": "School of Education 009"
   },
   {
-   "section": "EDU.350.01",
+   "section": "EDU.350-01",
    "title": "Mathematics in Elem Schl II",
    "days": [
     "tuesday",
@@ -471,7 +471,7 @@
    "room": "School of Education 009"
   },
   {
-   "section": "EDU.350.02",
+   "section": "EDU.350-02",
    "title": "Mathematics in Elem Schl II",
    "days": [
     "tuesday",
@@ -482,7 +482,7 @@
    "room": "School of Education 009"
   },
   {
-   "section": "EDU.360.01",
+   "section": "EDU.360-01",
    "title": "Foundations of Spec Ed",
    "days": [
     "monday",
@@ -493,7 +493,7 @@
    "room": "School of Law 033"
   },
   {
-   "section": "EDU.361.01",
+   "section": "EDU.361-01",
    "title": "Inclus Prac Exc Lrnrs",
    "days": [
     "monday",
@@ -504,7 +504,7 @@
    "room": "School of Education 059"
   },
   {
-   "section": "EDU.363.01",
+   "section": "EDU.363-01",
    "title": "Literacy Across the Curriculum",
    "days": [
     "tuesday"
@@ -514,7 +514,7 @@
    "room": "School of Law 033"
   },
   {
-   "section": "EDU.370.01",
+   "section": "EDU.370-01",
    "title": "Soc Studies in Elem Schl",
    "days": [
     "monday"
@@ -524,7 +524,7 @@
    "room": "School of Education 009"
   },
   {
-   "section": "EDU.374.01",
+   "section": "EDU.374-01",
    "title": "Sec Ed Pre Prac",
    "days": [
     "monday"
@@ -534,7 +534,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.02",
+   "section": "EDU.374-02",
    "title": "Sec Ed Pre Prac",
    "days": [
     "monday"
@@ -544,7 +544,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.03",
+   "section": "EDU.374-03",
    "title": "Sec Ed Pre Prac",
    "days": [
     "monday"
@@ -554,7 +554,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.04",
+   "section": "EDU.374-04",
    "title": "Sec Ed Pre Prac",
    "days": [
     "monday"
@@ -564,7 +564,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.05",
+   "section": "EDU.374-05",
    "title": "Sec Ed Pre Prac",
    "days": [
     "monday"
@@ -574,7 +574,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.06",
+   "section": "EDU.374-06",
    "title": "Sec Ed Pre Prac",
    "days": [
     "monday"
@@ -584,7 +584,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.07",
+   "section": "EDU.374-07",
    "title": "Sec Ed Pre Prac",
    "days": [
     "monday"
@@ -594,7 +594,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.08",
+   "section": "EDU.374-08",
    "title": "Sec Ed Pre Prac",
    "days": [
     "tuesday"
@@ -604,7 +604,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.09",
+   "section": "EDU.374-09",
    "title": "Sec Ed Pre Prac",
    "days": [
     "tuesday"
@@ -614,7 +614,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.10",
+   "section": "EDU.374-10",
    "title": "Sec Ed Pre Prac",
    "days": [
     "tuesday"
@@ -624,7 +624,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.11",
+   "section": "EDU.374-11",
    "title": "Sec Ed Pre Prac",
    "days": [
     "tuesday"
@@ -634,7 +634,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.12",
+   "section": "EDU.374-12",
    "title": "Sec Ed Pre Prac",
    "days": [
     "tuesday"
@@ -644,7 +644,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.13",
+   "section": "EDU.374-13",
    "title": "Sec Ed Pre Prac",
    "days": [
     "tuesday"
@@ -654,7 +654,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.14",
+   "section": "EDU.374-14",
    "title": "Sec Ed Pre Prac",
    "days": [
     "tuesday"
@@ -664,7 +664,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.15",
+   "section": "EDU.374-15",
    "title": "Sec Ed Pre Prac",
    "days": [
     "wednesday"
@@ -674,7 +674,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.16",
+   "section": "EDU.374-16",
    "title": "Sec Ed Pre Prac",
    "days": [
     "wednesday"
@@ -684,7 +684,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.17",
+   "section": "EDU.374-17",
    "title": "Sec Ed Pre Prac",
    "days": [
     "wednesday"
@@ -694,7 +694,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.18",
+   "section": "EDU.374-18",
    "title": "Sec Ed Pre Prac",
    "days": [
     "wednesday"
@@ -704,7 +704,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.19",
+   "section": "EDU.374-19",
    "title": "Sec Ed Pre Prac",
    "days": [
     "wednesday"
@@ -714,7 +714,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.20",
+   "section": "EDU.374-20",
    "title": "Sec Ed Pre Prac",
    "days": [
     "wednesday"
@@ -724,7 +724,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.21",
+   "section": "EDU.374-21",
    "title": "Sec Ed Pre Prac",
    "days": [
     "wednesday"
@@ -734,7 +734,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.22",
+   "section": "EDU.374-22",
    "title": "Sec Ed Pre Prac",
    "days": [
     "thursday"
@@ -744,7 +744,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.23",
+   "section": "EDU.374-23",
    "title": "Sec Ed Pre Prac",
    "days": [
     "thursday"
@@ -754,7 +754,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.24",
+   "section": "EDU.374-24",
    "title": "Sec Ed Pre Prac",
    "days": [
     "thursday"
@@ -764,7 +764,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.25",
+   "section": "EDU.374-25",
    "title": "Sec Ed Pre Prac",
    "days": [
     "thursday"
@@ -774,7 +774,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.26",
+   "section": "EDU.374-26",
    "title": "Sec Ed Pre Prac",
    "days": [
     "thursday"
@@ -784,7 +784,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.27",
+   "section": "EDU.374-27",
    "title": "Sec Ed Pre Prac",
    "days": [
     "thursday"
@@ -794,7 +794,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.28",
+   "section": "EDU.374-28",
    "title": "Sec Ed Pre Prac",
    "days": [
     "thursday"
@@ -804,7 +804,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.29",
+   "section": "EDU.374-29",
    "title": "Sec Ed Pre Prac",
    "days": [
     "friday"
@@ -814,7 +814,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.30",
+   "section": "EDU.374-30",
    "title": "Sec Ed Pre Prac",
    "days": [
     "friday"
@@ -824,7 +824,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.31",
+   "section": "EDU.374-31",
    "title": "Sec Ed Pre Prac",
    "days": [
     "friday"
@@ -834,7 +834,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.32",
+   "section": "EDU.374-32",
    "title": "Sec Ed Pre Prac",
    "days": [
     "friday"
@@ -844,7 +844,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.33",
+   "section": "EDU.374-33",
    "title": "Sec Ed Pre Prac",
    "days": [
     "friday"
@@ -854,7 +854,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.34",
+   "section": "EDU.374-34",
    "title": "Sec Ed Pre Prac",
    "days": [
     "friday"
@@ -864,7 +864,7 @@
    "room": ""
   },
   {
-   "section": "EDU.374.35",
+   "section": "EDU.374-35",
    "title": "Sec Ed Pre Prac",
    "days": [
     "friday"
@@ -874,7 +874,7 @@
    "room": ""
   },
   {
-   "section": "EDU.381.31",
+   "section": "EDU.381-31",
    "title": "Young Adolescent Development",
    "days": [
     "tuesday"
@@ -884,7 +884,7 @@
    "room": "School of Education 059"
   },
   {
-   "section": "EDU.397.01",
+   "section": "EDU.397-01",
    "title": "Social Sci Inquiry in Context",
    "days": [
     "wednesday"
@@ -894,7 +894,7 @@
    "room": "School of Education 059"
   },
   {
-   "section": "EDU.411.01",
+   "section": "EDU.411-01",
    "title": "Capstone:Science Education",
    "days": [
     "thursday"
@@ -904,7 +904,7 @@
    "room": "School of Law 033"
   },
   {
-   "section": "EDU.412.01",
+   "section": "EDU.412-01",
    "title": "Cap:Mlticltrl Adolescent Lit",
    "days": [
     "thursday"
@@ -914,7 +914,7 @@
    "room": "School of Law 033"
   },
   {
-   "section": "EDU.413.01",
+   "section": "EDU.413-01",
    "title": "Cap:Ways of Knwng Hstry/SocSt",
    "days": [
     "thursday"
@@ -924,7 +924,7 @@
    "room": "School of Law 033"
   },
   {
-   "section": "EDU.414.01",
+   "section": "EDU.414-01",
    "title": "Capstone:Teach Sec Math",
    "days": [
     "thursday"
@@ -934,7 +934,7 @@
    "room": "School of Law 033"
   },
   {
-   "section": "EDU.415.01",
+   "section": "EDU.415-01",
    "title": "Capstone:Foreign Lang Edu",
    "days": [
     "thursday"
@@ -944,7 +944,7 @@
    "room": "School of Law 033"
   },
   {
-   "section": "EDU.541.31",
+   "section": "EDU.541-31",
    "title": "Young Adolescent Development",
    "days": [
     "tuesday"
@@ -954,7 +954,7 @@
    "room": "School of Education 059"
   },
   {
-   "section": "EDU.635.01",
+   "section": "EDU.635-01",
    "title": "Assessment and Planning",
    "days": [
     "monday"
@@ -964,7 +964,7 @@
    "room": "School of Education 030"
   },
   {
-   "section": "EDU.640.92",
+   "section": "EDU.640-92",
    "title": "Interven in Math & Cont Area",
    "days": [
     "thursday"
@@ -974,7 +974,7 @@
    "room": ""
   },
   {
-   "section": "EDU.644.91",
+   "section": "EDU.644-91",
    "title": "Post Secondary Transition Plan",
    "days": [
     "tuesday"

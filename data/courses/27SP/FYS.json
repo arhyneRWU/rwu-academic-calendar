@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "FYS",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "FYS.101.01",
+   "section": "FYS.101-01",
    "title": "Mama, I made it! What Now?",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": ""
   },
   {
-   "section": "FYS.101.02",
+   "section": "FYS.101-02",
    "title": "Mama, I made it! What Now?",
    "days": [
     "tuesday",

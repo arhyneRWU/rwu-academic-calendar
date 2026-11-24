@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "COMSC",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "COMSC.110.01",
+   "section": "COMSC.110-01",
    "title": "Intro Cmptr Science I",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": "School of Engineering 206"
   },
   {
-   "section": "COMSC.110L.51",
+   "section": "COMSC.110L-51",
    "title": "Intro Cmptr Science I Lab",
    "days": [
     "friday"
@@ -29,7 +29,7 @@
    "room": "School of Engineering 206"
   },
   {
-   "section": "COMSC.111.01",
+   "section": "COMSC.111-01",
    "title": "Data Structures",
    "days": [
     "monday",
@@ -41,7 +41,7 @@
    "room": "School of Engineering 122"
   },
   {
-   "section": "COMSC.111L.51",
+   "section": "COMSC.111L-51",
    "title": "Data Structures Lab",
    "days": [
     "monday",
@@ -53,7 +53,7 @@
    "room": "School of Engineering 122"
   },
   {
-   "section": "COMSC.179.01",
+   "section": "COMSC.179-01",
    "title": "SpTp:Programming in Context",
    "days": [
     "monday",
@@ -65,7 +65,7 @@
    "room": "School of Engineering 206"
   },
   {
-   "section": "COMSC.320.02",
+   "section": "COMSC.320-02",
    "title": "Principles of Operating System",
    "days": [
     "monday",
@@ -77,7 +77,7 @@
    "room": "School of Engineering 206"
   },
   {
-   "section": "COMSC.335.01",
+   "section": "COMSC.335-01",
    "title": "Theory of Computation",
    "days": [
     "tuesday",
@@ -88,7 +88,7 @@
    "room": "School of Engineering 122"
   },
   {
-   "section": "COMSC.370.01",
+   "section": "COMSC.370-01",
    "title": "Human Computer Interaction",
    "days": [
     "tuesday",
@@ -99,7 +99,7 @@
    "room": "School of Engineering 122"
   },
   {
-   "section": "COMSC.390.01",
+   "section": "COMSC.390-01",
    "title": "Principles of Secure Programm",
    "days": [
     "tuesday",
@@ -110,7 +110,7 @@
    "room": "School of Engineering 122"
   },
   {
-   "section": "COMSC.401.01",
+   "section": "COMSC.401-01",
    "title": "Cmptr Sci Senior Sem",
    "days": [
     "tuesday"
@@ -120,7 +120,7 @@
    "room": "College of Arts and Sciences 126"
   },
   {
-   "section": "COMSC.490.01",
+   "section": "COMSC.490-01",
    "title": "Integ Senior Design I",
    "days": [
     "tuesday"

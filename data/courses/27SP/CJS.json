@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "CJS",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "CJS.105.01",
+   "section": "CJS.105-01",
    "title": "Intro to Crim Justice",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": ""
   },
   {
-   "section": "CJS.105.02",
+   "section": "CJS.105-02",
    "title": "Intro to Crim Justice",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": ""
   },
   {
-   "section": "CJS.105.03",
+   "section": "CJS.105-03",
    "title": "Intro to Crim Justice",
    "days": [
     "monday",
@@ -40,7 +40,7 @@
    "room": ""
   },
   {
-   "section": "CJS.105.04",
+   "section": "CJS.105-04",
    "title": "Intro to Crim Justice",
    "days": [
     "thursday"
@@ -50,7 +50,7 @@
    "room": ""
   },
   {
-   "section": "CJS.105.05",
+   "section": "CJS.105-05",
    "title": "Intro to Crim Justice",
    "days": [
     "tuesday",
@@ -61,7 +61,7 @@
    "room": ""
   },
   {
-   "section": "CJS.150.01",
+   "section": "CJS.150-01",
    "title": "Policing in America",
    "days": [
     "tuesday",
@@ -72,7 +72,7 @@
    "room": ""
   },
   {
-   "section": "CJS.150.02",
+   "section": "CJS.150-02",
    "title": "Policing in America",
    "days": [
     "tuesday",
@@ -83,7 +83,7 @@
    "room": ""
   },
   {
-   "section": "CJS.150.03",
+   "section": "CJS.150-03",
    "title": "Policing in America",
    "days": [
     "monday",
@@ -95,7 +95,7 @@
    "room": ""
   },
   {
-   "section": "CJS.150.04",
+   "section": "CJS.150-04",
    "title": "Policing in America",
    "days": [
     "monday",
@@ -107,7 +107,7 @@
    "room": ""
   },
   {
-   "section": "CJS.204.01",
+   "section": "CJS.204-01",
    "title": "Constitutional Law",
    "days": [
     "tuesday",
@@ -118,7 +118,7 @@
    "room": ""
   },
   {
-   "section": "CJS.204.02",
+   "section": "CJS.204-02",
    "title": "Constitutional Law",
    "days": [
     "tuesday",
@@ -129,7 +129,7 @@
    "room": ""
   },
   {
-   "section": "CJS.204.03",
+   "section": "CJS.204-03",
    "title": "Constitutional Law",
    "days": [
     "monday",
@@ -141,7 +141,7 @@
    "room": ""
   },
   {
-   "section": "CJS.210.01",
+   "section": "CJS.210-01",
    "title": "Law of Evidence",
    "days": [
     "tuesday"
@@ -151,7 +151,7 @@
    "room": ""
   },
   {
-   "section": "CJS.212.01",
+   "section": "CJS.212-01",
    "title": "Police Comm Relations",
    "days": [
     "monday"
@@ -161,7 +161,7 @@
    "room": ""
   },
   {
-   "section": "CJS.254.01",
+   "section": "CJS.254-01",
    "title": "Survey of Rsrch Methods in CJ",
    "days": [
     "tuesday",
@@ -172,7 +172,7 @@
    "room": ""
   },
   {
-   "section": "CJS.254.02",
+   "section": "CJS.254-02",
    "title": "Survey of Rsrch Methods in CJ",
    "days": [
     "tuesday",
@@ -183,7 +183,7 @@
    "room": ""
   },
   {
-   "section": "CJS.254.03",
+   "section": "CJS.254-03",
    "title": "Survey of Rsrch Methods in CJ",
    "days": [
     "tuesday",
@@ -194,7 +194,7 @@
    "room": ""
   },
   {
-   "section": "CJS.254.04",
+   "section": "CJS.254-04",
    "title": "Survey of Rsrch Methods in CJ",
    "days": [
     "tuesday",
@@ -205,7 +205,7 @@
    "room": ""
   },
   {
-   "section": "CJS.308.01",
+   "section": "CJS.308-01",
    "title": "Criminology",
    "days": [
     "tuesday",
@@ -216,7 +216,7 @@
    "room": ""
   },
   {
-   "section": "CJS.310.01",
+   "section": "CJS.310-01",
    "title": "Criminal Investigation",
    "days": [
     "monday",
@@ -227,7 +227,7 @@
    "room": ""
   },
   {
-   "section": "CJS.320.01",
+   "section": "CJS.320-01",
    "title": "Crim & Civ Proc in Courts",
    "days": [
     "monday",
@@ -239,7 +239,7 @@
    "room": ""
   },
   {
-   "section": "CJS.320.02",
+   "section": "CJS.320-02",
    "title": "Crim & Civ Proc in Courts",
    "days": [
     "monday",
@@ -251,7 +251,7 @@
    "room": ""
   },
   {
-   "section": "CJS.320.03",
+   "section": "CJS.320-03",
    "title": "Crim & Civ Proc in Courts",
    "days": [
     "monday",
@@ -262,7 +262,7 @@
    "room": ""
   },
   {
-   "section": "CJS.342.01",
+   "section": "CJS.342-01",
    "title": "Legal Psychology",
    "days": [
     "tuesday",
@@ -273,17 +273,17 @@
    "room": ""
   },
   {
-   "section": "CJS.379.01",
+   "section": "CJS.379-01",
    "title": "SpTp:Crime Mapping ArcGIS Pro",
    "days": [
     "wednesday"
    ],
    "start": "17:00",
    "end": "19:50",
-   "room": ""
+   "room": "School of Engineering 206"
   },
   {
-   "section": "CJS.415.01",
+   "section": "CJS.415-01",
    "title": "Crime/(in)justiceartsentertain",
    "days": [
     "monday",
@@ -294,7 +294,7 @@
    "room": ""
   },
   {
-   "section": "CJS.420.01",
+   "section": "CJS.420-01",
    "title": "Justice Studies Capstone",
    "days": [
     "tuesday",
@@ -305,7 +305,7 @@
    "room": ""
   },
   {
-   "section": "CJS.420.02",
+   "section": "CJS.420-02",
    "title": "Justice Studies Capstone",
    "days": [
     "tuesday",
@@ -316,7 +316,7 @@
    "room": ""
   },
   {
-   "section": "CJS.427.01",
+   "section": "CJS.427-01",
    "title": "Youth Gangs",
    "days": [
     "tuesday",
@@ -327,7 +327,7 @@
    "room": ""
   },
   {
-   "section": "CJS.451.01",
+   "section": "CJS.451-01",
    "title": "Ethics in Criminal Justice",
    "days": [
     "monday",
@@ -339,7 +339,7 @@
    "room": ""
   },
   {
-   "section": "CJS.479.01",
+   "section": "CJS.479-01",
    "title": "SpTp: Reforming the CJS",
    "days": [
     "monday",
@@ -351,7 +351,7 @@
    "room": ""
   },
   {
-   "section": "CJS.509.31",
+   "section": "CJS.509-31",
    "title": "Crime & Public Policy",
    "days": [
     "tuesday"
@@ -361,7 +361,7 @@
    "room": ""
   },
   {
-   "section": "CJS.511.31",
+   "section": "CJS.511-31",
    "title": "Criminology Theory",
    "days": [
     "tuesday"
@@ -371,7 +371,7 @@
    "room": ""
   },
   {
-   "section": "CJS.513.31",
+   "section": "CJS.513-31",
    "title": "Analysis Crim Just Data",
    "days": [
     "thursday"
@@ -381,7 +381,7 @@
    "room": ""
   },
   {
-   "section": "CJS.547.01",
+   "section": "CJS.547-01",
    "title": "Crime Mapping",
    "days": [
     "monday"
@@ -391,7 +391,7 @@
    "room": ""
   },
   {
-   "section": "CJS.548.01",
+   "section": "CJS.548-01",
    "title": "Advanced Data Management",
    "days": [
     "wednesday"

@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "LS",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "LS.101.01",
+   "section": "LS.101-01",
    "title": "The American Legal System",
    "days": [
     "wednesday"
@@ -17,7 +17,7 @@
    "room": ""
   },
   {
-   "section": "LS.215.01",
+   "section": "LS.215-01",
    "title": "Legal Methods II",
    "days": [
     "thursday"
@@ -27,7 +27,7 @@
    "room": ""
   },
   {
-   "section": "LS.215.02",
+   "section": "LS.215-02",
    "title": "Legal Methods II",
    "days": [
     "tuesday"
@@ -37,7 +37,7 @@
    "room": ""
   },
   {
-   "section": "LS.279.01",
+   "section": "LS.279-01",
    "title": "SpTp:Law/Justce Inside Out Jv",
    "days": [
     "tuesday",
@@ -48,7 +48,7 @@
    "room": ""
   },
   {
-   "section": "LS.301.01",
+   "section": "LS.301-01",
    "title": "Legal Advocacy Clinic",
    "days": [
     "tuesday",

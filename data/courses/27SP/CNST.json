@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "CNST",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "CNST.116.01",
+   "section": "CNST.116-01",
    "title": "Computer Appl for Cnst",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": "School of Engineering 122"
   },
   {
-   "section": "CNST.116.02",
+   "section": "CNST.116-02",
    "title": "Computer Appl for Cnst",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": "School of Engineering 122"
   },
   {
-   "section": "CNST.116.03",
+   "section": "CNST.116-03",
    "title": "Computer Appl for Cnst",
    "days": [
     "tuesday",
@@ -40,7 +40,7 @@
    "room": "School of Engineering 122"
   },
   {
-   "section": "CNST.116.04",
+   "section": "CNST.116-04",
    "title": "Computer Appl for Cnst",
    "days": [
     "monday",
@@ -52,7 +52,7 @@
    "room": "School of Engineering 122"
   },
   {
-   "section": "CNST.116.05",
+   "section": "CNST.116-05",
    "title": "Computer Appl for Cnst",
    "days": [
     "wednesday"
@@ -62,7 +62,7 @@
    "room": "School of Engineering 122"
   },
   {
-   "section": "CNST.200.01",
+   "section": "CNST.200-01",
    "title": "Cnst Meth & Materials",
    "days": [
     "monday",
@@ -74,7 +74,7 @@
    "room": ""
   },
   {
-   "section": "CNST.200.02",
+   "section": "CNST.200-02",
    "title": "Cnst Meth & Materials",
    "days": [
     "monday",
@@ -86,7 +86,7 @@
    "room": ""
   },
   {
-   "section": "CNST.200.03",
+   "section": "CNST.200-03",
    "title": "Cnst Meth & Materials",
    "days": [
     "monday",
@@ -98,7 +98,7 @@
    "room": ""
   },
   {
-   "section": "CNST.200.04",
+   "section": "CNST.200-04",
    "title": "Cnst Meth & Materials",
    "days": [
     "monday",
@@ -110,7 +110,7 @@
    "room": ""
   },
   {
-   "section": "CNST.200L.51",
+   "section": "CNST.200L-51",
    "title": "Cnst Meth/Materials Lab",
    "days": [
     "monday"
@@ -120,7 +120,7 @@
    "room": "SECCM Labs 104"
   },
   {
-   "section": "CNST.200L.52",
+   "section": "CNST.200L-52",
    "title": "Cnst Meth/Materials Lab",
    "days": [
     "monday"
@@ -130,7 +130,7 @@
    "room": "SECCM Labs 104"
   },
   {
-   "section": "CNST.200L.53",
+   "section": "CNST.200L-53",
    "title": "Cnst Meth/Materials Lab",
    "days": [
     "tuesday"
@@ -140,7 +140,7 @@
    "room": "SECCM Labs 104"
   },
   {
-   "section": "CNST.200L.54",
+   "section": "CNST.200L-54",
    "title": "Cnst Meth/Materials Lab",
    "days": [
     "tuesday"
@@ -150,7 +150,7 @@
    "room": "SECCM Labs 104"
   },
   {
-   "section": "CNST.200L.55",
+   "section": "CNST.200L-55",
    "title": "Cnst Meth/Materials Lab",
    "days": [
     "wednesday"
@@ -160,7 +160,7 @@
    "room": "SECCM Labs 104"
   },
   {
-   "section": "CNST.200L.56",
+   "section": "CNST.200L-56",
    "title": "Cnst Meth/Materials Lab",
    "days": [
     "wednesday"
@@ -170,7 +170,7 @@
    "room": "SECCM Labs 104"
   },
   {
-   "section": "CNST.200L.57",
+   "section": "CNST.200L-57",
    "title": "Cnst Meth/Materials Lab",
    "days": [
     "thursday"
@@ -180,7 +180,7 @@
    "room": "SECCM Labs 104"
   },
   {
-   "section": "CNST.200L.58",
+   "section": "CNST.200L-58",
    "title": "Cnst Meth/Materials Lab",
    "days": [
     "thursday"
@@ -190,7 +190,7 @@
    "room": "SECCM Labs 104"
   },
   {
-   "section": "CNST.250.01",
+   "section": "CNST.250-01",
    "title": "Construction Equipment",
    "days": [
     "tuesday",
@@ -201,7 +201,7 @@
    "room": "School of Engineering 201"
   },
   {
-   "section": "CNST.250.02",
+   "section": "CNST.250-02",
    "title": "Construction Equipment",
    "days": [
     "monday",
@@ -212,7 +212,7 @@
    "room": ""
   },
   {
-   "section": "CNST.250.03",
+   "section": "CNST.250-03",
    "title": "Construction Equipment",
    "days": [
     "monday",
@@ -223,7 +223,18 @@
    "room": ""
   },
   {
-   "section": "CNST.260.01",
+   "section": "CNST.250-04",
+   "title": "Construction Equipment",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "09:30",
+   "end": "10:50",
+   "room": "SECCM Labs 200"
+  },
+  {
+   "section": "CNST.260-01",
    "title": "Cnst Estimating&Sched",
    "days": [
     "tuesday",
@@ -234,7 +245,7 @@
    "room": ""
   },
   {
-   "section": "CNST.260.02",
+   "section": "CNST.260-02",
    "title": "Cnst Estimating&Sched",
    "days": [
     "tuesday",
@@ -245,7 +256,7 @@
    "room": ""
   },
   {
-   "section": "CNST.260.03",
+   "section": "CNST.260-03",
    "title": "Cnst Estimating&Sched",
    "days": [
     "tuesday",
@@ -256,7 +267,7 @@
    "room": ""
   },
   {
-   "section": "CNST.260.04",
+   "section": "CNST.260-04",
    "title": "Cnst Estimating&Sched",
    "days": [
     "wednesday"
@@ -266,7 +277,7 @@
    "room": ""
   },
   {
-   "section": "CNST.302.01",
+   "section": "CNST.302-01",
    "title": "Surveying I",
    "days": [
     "tuesday",
@@ -277,7 +288,7 @@
    "room": "SECCM Labs 304"
   },
   {
-   "section": "CNST.302L.51",
+   "section": "CNST.302L-51",
    "title": "Surveying I Lab",
    "days": [
     "tuesday"
@@ -287,7 +298,7 @@
    "room": ""
   },
   {
-   "section": "CNST.302L.52",
+   "section": "CNST.302L-52",
    "title": "Surveying I Lab",
    "days": [
     "thursday"
@@ -297,7 +308,7 @@
    "room": ""
   },
   {
-   "section": "CNST.304.01",
+   "section": "CNST.304-01",
    "title": "Applied Structures",
    "days": [
     "monday",
@@ -309,7 +320,7 @@
    "room": ""
   },
   {
-   "section": "CNST.304.02",
+   "section": "CNST.304-02",
    "title": "Applied Structures",
    "days": [
     "monday",
@@ -321,7 +332,7 @@
    "room": ""
   },
   {
-   "section": "CNST.304.03",
+   "section": "CNST.304-03",
    "title": "Applied Structures",
    "days": [
     "monday",
@@ -333,7 +344,7 @@
    "room": ""
   },
   {
-   "section": "CNST.321.01",
+   "section": "CNST.321-01",
    "title": "Adv Building Estimating",
    "days": [
     "tuesday"
@@ -343,7 +354,7 @@
    "room": "College of Arts and Sciences 228"
   },
   {
-   "section": "CNST.350.01",
+   "section": "CNST.350-01",
    "title": "Heavy Civil Means and Methods",
    "days": [
     "monday",
@@ -355,7 +366,7 @@
    "room": "SECCM Labs 304"
   },
   {
-   "section": "CNST.450.01",
+   "section": "CNST.450-01",
    "title": "Cnst Planning/Scheduling",
    "days": [
     "monday",
@@ -367,7 +378,7 @@
    "room": "SECCM Labs 304"
   },
   {
-   "section": "CNST.450.02",
+   "section": "CNST.450-02",
    "title": "Cnst Planning/Scheduling",
    "days": [
     "monday",
@@ -379,7 +390,7 @@
    "room": "School of Engineering 125"
   },
   {
-   "section": "CNST.450.03",
+   "section": "CNST.450-03",
    "title": "Cnst Planning/Scheduling",
    "days": [
     "monday",
@@ -391,7 +402,7 @@
    "room": "School of Engineering 125"
   },
   {
-   "section": "CNST.455.01",
+   "section": "CNST.455-01",
    "title": "Building Systems",
    "days": [
     "tuesday",
@@ -402,7 +413,7 @@
    "room": "School of Engineering 125"
   },
   {
-   "section": "CNST.455.02",
+   "section": "CNST.455-02",
    "title": "Building Systems",
    "days": [
     "tuesday",
@@ -413,7 +424,7 @@
    "room": "School of Engineering 125"
   },
   {
-   "section": "CNST.455.03",
+   "section": "CNST.455-03",
    "title": "Building Systems",
    "days": [
     "tuesday",
@@ -424,7 +435,7 @@
    "room": "School of Engineering 125"
   },
   {
-   "section": "CNST.467.01",
+   "section": "CNST.467-01",
    "title": "Adv Timber in Res Construction",
    "days": [
     "tuesday"
@@ -434,7 +445,7 @@
    "room": ""
   },
   {
-   "section": "CNST.475.01",
+   "section": "CNST.475-01",
    "title": "Construction Project Control",
    "days": [
     "monday",
@@ -446,7 +457,7 @@
    "room": "School of Engineering 125"
   },
   {
-   "section": "CNST.476.01",
+   "section": "CNST.476-01",
    "title": "AI App in Const",
    "days": [
     "tuesday",
@@ -457,7 +468,7 @@
    "room": "SECCM Labs 304"
   },
   {
-   "section": "CNST.479.01",
+   "section": "CNST.479-01",
    "title": "SpTp:Construction Supervision",
    "days": [
     "tuesday",
@@ -468,7 +479,7 @@
    "room": "SECCM Labs 304"
   },
   {
-   "section": "CNST.480.01",
+   "section": "CNST.480-01",
    "title": "Capstone Project",
    "days": [
     "monday"
@@ -478,7 +489,7 @@
    "room": "School of Engineering 125"
   },
   {
-   "section": "CNST.480.02",
+   "section": "CNST.480-02",
    "title": "Capstone Project",
    "days": [
     "tuesday"
@@ -488,7 +499,7 @@
    "room": "School of Engineering 125"
   },
   {
-   "section": "CNST.480.03",
+   "section": "CNST.480-03",
    "title": "Capstone Project",
    "days": [
     "thursday"
@@ -496,6 +507,17 @@
    "start": "14:00",
    "end": "16:50",
    "room": "School of Engineering 125"
+  },
+  {
+   "section": "CNST.579-01",
+   "title": "SpTp:Construction Supervision",
+   "days": [
+    "tuesday",
+    "thursday"
+   ],
+   "start": "08:00",
+   "end": "09:20",
+   "room": "SECCM Labs 304"
   }
  ]
 }

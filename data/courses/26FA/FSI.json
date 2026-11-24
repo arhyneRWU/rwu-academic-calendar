@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "FSI",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "FSI.101.01",
+   "section": "FSI.101-01",
    "title": "Survey of Forensics",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": "College of Arts and Sciences 122"
   },
   {
-   "section": "FSI.101.02",
+   "section": "FSI.101-02",
    "title": "Survey of Forensics",
    "days": [
     "monday",
@@ -31,7 +31,7 @@
    "room": "College of Arts and Sciences 125"
   },
   {
-   "section": "FSI.226.01",
+   "section": "FSI.226-01",
    "title": "Forensic Science",
    "days": [
     "tuesday",
@@ -42,7 +42,7 @@
    "room": "School of Engineering 204"
   },
   {
-   "section": "FSI.226L.51",
+   "section": "FSI.226L-51",
    "title": "Forensic Science Lab",
    "days": [
     "wednesday"
@@ -52,7 +52,7 @@
    "room": "School of Engineering 204"
   },
   {
-   "section": "FSI.302.01",
+   "section": "FSI.302-01",
    "title": "Quality Assurance",
    "days": [
     "wednesday"
@@ -62,7 +62,7 @@
    "room": "School of Engineering 201"
   },
   {
-   "section": "FSI.303.01",
+   "section": "FSI.303-01",
    "title": "Forensic Pathology",
    "days": [
     "tuesday"
@@ -72,7 +72,7 @@
    "room": "College of Arts and Sciences 223"
   },
   {
-   "section": "FSI.401.01",
+   "section": "FSI.401-01",
    "title": "Forensic Science Capstone",
    "days": [
     "monday"
@@ -82,7 +82,7 @@
    "room": "School of Engineering 204"
   },
   {
-   "section": "FSI.479.01",
+   "section": "FSI.479-01",
    "title": "SpTp: Traces",
    "days": [
     "tuesday",

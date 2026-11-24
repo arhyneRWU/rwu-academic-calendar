@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "PLS",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "PLS.211.41C",
+   "section": "PLS.211-41C",
    "title": "Legal Rsrch & Wtng II",
    "days": [
     "thursday"
@@ -17,7 +17,7 @@
    "room": "One Empire Plaza 343"
   },
   {
-   "section": "PLS.250.31C",
+   "section": "PLS.250-31C",
    "title": "Workers' Compensation",
    "days": [
     "monday"
@@ -27,7 +27,7 @@
    "room": "One Empire Plaza 215"
   },
   {
-   "section": "PLS.311.31C",
+   "section": "PLS.311-31C",
    "title": "Litigation II",
    "days": [
     "wednesday"

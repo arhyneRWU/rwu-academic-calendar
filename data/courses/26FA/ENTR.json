@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "ENTR",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "ENTR.200.01",
+   "section": "ENTR.200-01",
    "title": "Principles of Entrepreneurship",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": "Humanities Building 107"
   },
   {
-   "section": "ENTR.250.01",
+   "section": "ENTR.250-01",
    "title": "Entrepreneurial Processes",
    "days": [
     "monday",
@@ -30,7 +30,7 @@
    "room": "Gabelli School of Business 208"
   },
   {
-   "section": "ENTR.320.01",
+   "section": "ENTR.320-01",
    "title": "Creativity and Innovation",
    "days": [
     "monday",

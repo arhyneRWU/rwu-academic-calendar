@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "SPN",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "SPN.101.01",
+   "section": "SPN.101-01",
    "title": "Elementary Spanish I",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": "Humanities Building 102"
   },
   {
-   "section": "SPN.201.01",
+   "section": "SPN.201-01",
    "title": "Interm Spnish I",
    "days": [
     "tuesday",
@@ -30,7 +30,7 @@
    "room": "Humanities Building 334"
   },
   {
-   "section": "SPN.310.01",
+   "section": "SPN.310-01",
    "title": "Adv Grammar/Composition",
    "days": [
     "tuesday",
@@ -41,7 +41,7 @@
    "room": "ELS 113"
   },
   {
-   "section": "SPN.350.01",
+   "section": "SPN.350-01",
    "title": "Adv SpTp:Cuba",
    "days": [
     "monday",

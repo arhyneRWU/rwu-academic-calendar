@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "VARTS",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "VARTS.101.01",
+   "section": "VARTS.101-01",
    "title": "Foundations of Drawing",
    "days": [
     "monday",
@@ -18,7 +18,7 @@
    "room": "Fine Arts 201"
   },
   {
-   "section": "VARTS.101.02",
+   "section": "VARTS.101-02",
    "title": "Foundations of Drawing",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": "Fine Arts 201"
   },
   {
-   "section": "VARTS.101.03",
+   "section": "VARTS.101-03",
    "title": "Foundations of Drawing",
    "days": [
     "monday",
@@ -40,7 +40,7 @@
    "room": "Fine Arts 201"
   },
   {
-   "section": "VARTS.101.04",
+   "section": "VARTS.101-04",
    "title": "Foundations of Drawing",
    "days": [
     "monday",
@@ -51,7 +51,7 @@
    "room": "Fine Arts 201"
   },
   {
-   "section": "VARTS.131.01",
+   "section": "VARTS.131-01",
    "title": "Foundations of Sculpture",
    "days": [
     "wednesday"
@@ -61,7 +61,7 @@
    "room": "Fine Arts 101"
   },
   {
-   "section": "VARTS.161.01",
+   "section": "VARTS.161-01",
    "title": "Foundations of Photography",
    "days": [
     "tuesday",
@@ -72,7 +72,7 @@
    "room": "North Campus Residence Hall 119"
   },
   {
-   "section": "VARTS.161.02",
+   "section": "VARTS.161-02",
    "title": "Foundations of Photography",
    "days": [
     "tuesday",
@@ -83,7 +83,7 @@
    "room": "North Campus Residence Hall 119"
   },
   {
-   "section": "VARTS.179.HON01",
+   "section": "VARTS.179-HON01",
    "title": "Honr Intro to Visual Arts",
    "days": [
     "wednesday"
@@ -93,7 +93,7 @@
    "room": "Fine Arts 201"
   },
   {
-   "section": "VARTS.181.01",
+   "section": "VARTS.181-01",
    "title": "Foundations of Painting",
    "days": [
     "monday",
@@ -104,7 +104,7 @@
    "room": "Fine Arts 201"
   },
   {
-   "section": "VARTS.181.02",
+   "section": "VARTS.181-02",
    "title": "Foundations of Painting",
    "days": [
     "tuesday",
@@ -115,7 +115,7 @@
    "room": "Fine Arts 201"
   },
   {
-   "section": "VARTS.233.01",
+   "section": "VARTS.233-01",
    "title": "Clay Studio:Handbuilding",
    "days": [
     "thursday"
@@ -125,7 +125,7 @@
    "room": "Clay Studio CLAYRM"
   },
   {
-   "section": "VARTS.234.01",
+   "section": "VARTS.234-01",
    "title": "Clay Studio: Wheel Throwing",
    "days": [
     "wednesday"
@@ -135,7 +135,7 @@
    "room": "Clay Studio CLAYRM"
   },
   {
-   "section": "VARTS.235.01",
+   "section": "VARTS.235-01",
    "title": "Intro to Jewelry &light Met",
    "days": [
     "tuesday"
@@ -145,7 +145,7 @@
    "room": "Fine Arts 101"
   },
   {
-   "section": "VARTS.241.01",
+   "section": "VARTS.241-01",
    "title": "Printmaking Relief",
    "days": [
     "friday"
@@ -155,7 +155,7 @@
    "room": "Fine Arts 201"
   },
   {
-   "section": "VARTS.262.01",
+   "section": "VARTS.262-01",
    "title": "Digital Tools and Methods",
    "days": [
     "monday",
@@ -166,7 +166,7 @@
    "room": "North Campus Residence Hall 119"
   },
   {
-   "section": "VARTS.279.01",
+   "section": "VARTS.279-01",
    "title": "SpTp: Authenticity and AI",
    "days": [
     "monday"
@@ -176,7 +176,7 @@
    "room": "North Campus Residence Hall 119"
   },
   {
-   "section": "VARTS.334.01",
+   "section": "VARTS.334-01",
    "title": "Intermediate Wheel Throwing",
    "days": [
     "wednesday"
@@ -186,7 +186,7 @@
    "room": "Clay Studio CLAYRM"
   },
   {
-   "section": "VARTS.335.01",
+   "section": "VARTS.335-01",
    "title": "Intermediate Hand Building",
    "days": [
     "thursday"
@@ -196,7 +196,7 @@
    "room": "Clay Studio CLAYRM"
   },
   {
-   "section": "VARTS.336.02",
+   "section": "VARTS.336-02",
    "title": "Interm Jewelry & Metals",
    "days": [
     "tuesday"
@@ -206,7 +206,7 @@
    "room": "Fine Arts 101"
   },
   {
-   "section": "VARTS.351.01",
+   "section": "VARTS.351-01",
    "title": "Intermediate Photography",
    "days": [
     "friday"
@@ -216,7 +216,7 @@
    "room": "North Campus Residence Hall 119"
   },
   {
-   "section": "VARTS.364.01",
+   "section": "VARTS.364-01",
    "title": "Film, Animation and Video",
    "days": [
     "monday",
@@ -227,7 +227,7 @@
    "room": "North Campus Residence Hall 119"
   },
   {
-   "section": "VARTS.392.01",
+   "section": "VARTS.392-01",
    "title": "Intermedia",
    "days": [
     "tuesday",
@@ -238,7 +238,7 @@
    "room": "Fine Arts 101"
   },
   {
-   "section": "VARTS.434.01",
+   "section": "VARTS.434-01",
    "title": "Advanced Clay Studio",
    "days": [
     "thursday"
@@ -248,7 +248,7 @@
    "room": "Clay Studio CLAYRM"
   },
   {
-   "section": "VARTS.452.01",
+   "section": "VARTS.452-01",
    "title": "Advanced Photography",
    "days": [
     "friday"
@@ -258,7 +258,7 @@
    "room": "North Campus Residence Hall 119"
   },
   {
-   "section": "VARTS.464.01",
+   "section": "VARTS.464-01",
    "title": "Adv Film Animation & Video",
    "days": [
     "monday",
@@ -269,7 +269,7 @@
    "room": "North Campus Residence Hall 119"
   },
   {
-   "section": "VARTS.471.01",
+   "section": "VARTS.471-01",
    "title": "Visual Arts Prof Prac",
    "days": [
     "thursday"

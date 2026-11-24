@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "HONR",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "HONR.110.01",
+   "section": "HONR.110-01",
    "title": "HONR:Kids These Days",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": "Gabelli School of Business 301"
   },
   {
-   "section": "HONR.110.02",
+   "section": "HONR.110-02",
    "title": "HONR:Kids These Days",
    "days": [
     "monday",
@@ -31,7 +31,7 @@
    "room": "Gabelli School of Business G13"
   },
   {
-   "section": "HONR.110.03",
+   "section": "HONR.110-03",
    "title": "HONR:The Role of Art in Scty",
    "days": [
     "tuesday",
@@ -42,7 +42,7 @@
    "room": "Stonewall 103"
   },
   {
-   "section": "HONR.110.04",
+   "section": "HONR.110-04",
    "title": "HONR:The Role of Art Scty",
    "days": [
     "tuesday",
@@ -53,7 +53,7 @@
    "room": "Stonewall 103"
   },
   {
-   "section": "HONR.110.05",
+   "section": "HONR.110-05",
    "title": "HONR:Curiosity Complex World",
    "days": [
     "monday",
@@ -64,7 +64,7 @@
    "room": "Gabelli School of Business G05"
   },
   {
-   "section": "HONR.110.06",
+   "section": "HONR.110-06",
    "title": "HONR:1st Byte:Decoding Digitl",
    "days": [
     "monday",
@@ -76,7 +76,7 @@
    "room": "School of Engineering 210"
   },
   {
-   "section": "HONR.110.07",
+   "section": "HONR.110-07",
    "title": "HONR:Kids These Days",
    "days": [
     "monday",
@@ -88,7 +88,7 @@
    "room": "Gabelli School of Business 301"
   },
   {
-   "section": "HONR.120.01",
+   "section": "HONR.120-01",
    "title": "Honors Creativity and the Arts",
    "days": [
     "wednesday"
@@ -98,7 +98,7 @@
    "room": "Fine Arts 201"
   },
   {
-   "section": "HONR.130.01",
+   "section": "HONR.130-01",
    "title": "Honr:Intro to Myth and Folklo",
    "days": [
     "tuesday",
@@ -109,7 +109,7 @@
    "room": "College of Arts and Sciences 227"
   },
   {
-   "section": "HONR.140.01",
+   "section": "HONR.140-01",
    "title": "Honors Systems Thinking",
    "days": [
     "tuesday",
@@ -120,7 +120,7 @@
    "room": "Stonewall 103"
   },
   {
-   "section": "HONR.150.01",
+   "section": "HONR.150-01",
    "title": "Hon Intro Communicatn Studies",
    "days": [
     "monday",
@@ -131,7 +131,7 @@
    "room": "Stonewall 103"
   },
   {
-   "section": "HONR.300.01",
+   "section": "HONR.300-01",
    "title": "Honors:Community Engagmnt Sem",
    "days": [
     "wednesday"

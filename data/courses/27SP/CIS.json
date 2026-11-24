@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "CIS",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "CIS.105.01",
+   "section": "CIS.105-01",
    "title": "Data Analys/Analys w Excel",
    "days": [
     "monday",
@@ -16,10 +16,10 @@
    ],
    "start": "09:00",
    "end": "09:50",
-   "room": ""
+   "room": "Gabelli School of Business G12"
   },
   {
-   "section": "CIS.105.02",
+   "section": "CIS.105-02",
    "title": "Data Analys/Analys w Excel",
    "days": [
     "monday",
@@ -30,7 +30,7 @@
    "room": ""
   },
   {
-   "section": "CIS.105.03",
+   "section": "CIS.105-03",
    "title": "Data Analys/Analys w Excel",
    "days": [
     "monday",
@@ -39,10 +39,10 @@
    ],
    "start": "08:00",
    "end": "08:50",
-   "room": ""
+   "room": "Gabelli School of Business G12"
   },
   {
-   "section": "CIS.105.04",
+   "section": "CIS.105-04",
    "title": "Data Analys/Analys w Excel",
    "days": [
     "monday",
@@ -50,10 +50,10 @@
    ],
    "start": "15:30",
    "end": "16:50",
-   "room": ""
+   "room": "Gabelli School of Business G12"
   },
   {
-   "section": "CIS.105.21C",
+   "section": "CIS.105-21C",
    "title": "Data Analys/Analys w Excel",
    "days": [
     "monday",
@@ -64,7 +64,7 @@
    "room": ""
   },
   {
-   "section": "CIS.335.01",
+   "section": "CIS.335-01",
    "title": "Database Management",
    "days": [
     "tuesday",
@@ -72,7 +72,7 @@
    ],
    "start": "08:00",
    "end": "09:20",
-   "room": ""
+   "room": "Gabelli School of Business G12"
   }
  ]
 }

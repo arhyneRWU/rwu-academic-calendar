@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "ARCH",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "ARCH.113.01",
+   "section": "ARCH.113-01",
    "title": "Arch Dsgn Core Studio I",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.114.01",
+   "section": "ARCH.114-01",
    "title": "Arch Dsgn Core Studio II",
    "days": [
     "monday",
@@ -31,7 +31,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.114.02",
+   "section": "ARCH.114-02",
    "title": "Arch Dsgn Core Studio II",
    "days": [
     "monday",
@@ -43,7 +43,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.114.03",
+   "section": "ARCH.114-03",
    "title": "Arch Dsgn Core Studio II",
    "days": [
     "monday",
@@ -55,7 +55,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.114.04",
+   "section": "ARCH.114-04",
    "title": "Arch Dsgn Core Studio II",
    "days": [
     "monday",
@@ -67,7 +67,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.114.05",
+   "section": "ARCH.114-05",
    "title": "Arch Dsgn Core Studio II",
    "days": [
     "monday",
@@ -79,7 +79,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.114.06",
+   "section": "ARCH.114-06",
    "title": "Arch Dsgn Core Studio II",
    "days": [
     "monday",
@@ -91,7 +91,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.114.07",
+   "section": "ARCH.114-07",
    "title": "Arch Dsgn Core Studio II",
    "days": [
     "monday",
@@ -103,7 +103,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.114.08",
+   "section": "ARCH.114-08",
    "title": "Arch Dsgn Core Studio II",
    "days": [
     "monday",
@@ -115,7 +115,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.114.09",
+   "section": "ARCH.114-09",
    "title": "Arch Dsgn Core Studio II",
    "days": [
     "monday",
@@ -127,7 +127,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.214.01",
+   "section": "ARCH.214-01",
    "title": "Arch Dsgn Core Std IV",
    "days": [
     "monday",
@@ -139,7 +139,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.214.02",
+   "section": "ARCH.214-02",
    "title": "Arch Dsgn Core Std IV",
    "days": [
     "monday",
@@ -151,7 +151,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.214.03",
+   "section": "ARCH.214-03",
    "title": "Arch Dsgn Core Std IV",
    "days": [
     "monday",
@@ -163,7 +163,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.214.04",
+   "section": "ARCH.214-04",
    "title": "Arch Dsgn Core Std IV",
    "days": [
     "monday",
@@ -175,7 +175,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.214.05",
+   "section": "ARCH.214-05",
    "title": "Arch Dsgn Core Std IV",
    "days": [
     "monday",
@@ -187,7 +187,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.214.06",
+   "section": "ARCH.214-06",
    "title": "Arch Dsgn Core Std IV",
    "days": [
     "monday",
@@ -199,7 +199,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.214.07",
+   "section": "ARCH.214-07",
    "title": "Arch Dsgn Core Std IV",
    "days": [
     "monday",
@@ -211,7 +211,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.214.08",
+   "section": "ARCH.214-08",
    "title": "Arch Dsgn Core Std IV",
    "days": [
     "monday",
@@ -223,7 +223,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.231.01",
+   "section": "ARCH.231-01",
    "title": "Cnst. Materials & Assemblies I",
    "days": [
     "tuesday",
@@ -234,7 +234,7 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "ARCH.281.01",
+   "section": "ARCH.281-01",
    "title": "Architectural Analysis I",
    "days": [
     "monday"
@@ -244,7 +244,7 @@
    "room": "Cummings School Architecture 205"
   },
   {
-   "section": "ARCH.281.02",
+   "section": "ARCH.281-02",
    "title": "Architectural Analysis I",
    "days": [
     "tuesday"
@@ -254,7 +254,7 @@
    "room": "Cummings School Architecture 205"
   },
   {
-   "section": "ARCH.281.03",
+   "section": "ARCH.281-03",
    "title": "Architectural Analysis I",
    "days": [
     "tuesday"
@@ -264,7 +264,7 @@
    "room": "Cummings School Architecture 205"
   },
   {
-   "section": "ARCH.281.04",
+   "section": "ARCH.281-04",
    "title": "Architectural Analysis I",
    "days": [
     "friday"
@@ -274,7 +274,7 @@
    "room": "Cummings School Architecture 205"
   },
   {
-   "section": "ARCH.281.05",
+   "section": "ARCH.281-05",
    "title": "Architectural Analysis I",
    "days": [
     "friday"
@@ -284,7 +284,7 @@
    "room": "Cummings School Architecture 205"
   },
   {
-   "section": "ARCH.282.01",
+   "section": "ARCH.282-01",
    "title": "Architectural Analysis II",
    "days": [
     "monday"
@@ -294,7 +294,7 @@
    "room": "Cummings School Architecture 205"
   },
   {
-   "section": "ARCH.313.01",
+   "section": "ARCH.313-01",
    "title": "Arch Dsgn Core Studio V",
    "days": [
     "tuesday",
@@ -306,7 +306,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.313.02",
+   "section": "ARCH.313-02",
    "title": "Arch Dsgn Core Studio V",
    "days": [
     "tuesday",
@@ -318,7 +318,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.313.03",
+   "section": "ARCH.313-03",
    "title": "Arch Dsgn Core Studio V",
    "days": [
     "tuesday",
@@ -330,7 +330,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.324.01",
+   "section": "ARCH.324-01",
    "title": "Evol of Urban Form",
    "days": [
     "tuesday",
@@ -341,7 +341,7 @@
    "room": "College of Arts and Sciences 157"
   },
   {
-   "section": "ARCH.325.01",
+   "section": "ARCH.325-01",
    "title": "History of Modern Arch",
    "days": [
     "tuesday",
@@ -352,7 +352,7 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "ARCH.325.02",
+   "section": "ARCH.325-02",
    "title": "History of Modern Arch",
    "days": [
     "tuesday",
@@ -363,7 +363,7 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "ARCH.333.01",
+   "section": "ARCH.333-01",
    "title": "Enironmental Systems I",
    "days": [
     "tuesday",
@@ -374,7 +374,7 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "ARCH.335.01",
+   "section": "ARCH.335-01",
    "title": "Structure Form and Order",
    "days": [
     "monday",
@@ -385,7 +385,7 @@
    "room": ""
   },
   {
-   "section": "ARCH.413.01",
+   "section": "ARCH.413-01",
    "title": "Adv Arch Design Studio",
    "days": [
     "tuesday",
@@ -396,7 +396,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.413.02",
+   "section": "ARCH.413-02",
    "title": "Adv Arch Design Studio",
    "days": [
     "tuesday",
@@ -407,7 +407,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.413.03",
+   "section": "ARCH.413-03",
    "title": "Adv Arch Design Studio",
    "days": [
     "tuesday",
@@ -418,7 +418,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.413.04",
+   "section": "ARCH.413-04",
    "title": "Adv Arch Design Studio",
    "days": [
     "tuesday",
@@ -429,7 +429,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.416.01",
+   "section": "ARCH.416-01",
    "title": "Adv Topical Dsgn Std:Urban",
    "days": [
     "tuesday",
@@ -440,7 +440,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.484.01",
+   "section": "ARCH.484-01",
    "title": "Cont Est & Scheduling",
    "days": [
     "tuesday",
@@ -451,7 +451,7 @@
    "room": ""
   },
   {
-   "section": "ARCH.484.02",
+   "section": "ARCH.484-02",
    "title": "Cont Est & Scheduling",
    "days": [
     "tuesday",
@@ -462,7 +462,7 @@
    "room": ""
   },
   {
-   "section": "ARCH.484.03",
+   "section": "ARCH.484-03",
    "title": "Cont Est & Scheduling",
    "days": [
     "tuesday",
@@ -473,7 +473,7 @@
    "room": ""
   },
   {
-   "section": "ARCH.484.04",
+   "section": "ARCH.484-04",
    "title": "Cont Est & Scheduling",
    "days": [
     "tuesday",
@@ -484,7 +484,7 @@
    "room": ""
   },
   {
-   "section": "ARCH.512.01",
+   "section": "ARCH.512-01",
    "title": "Grad Core Arch Dsgn Stu II:",
    "days": [
     "tuesday",
@@ -496,7 +496,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.513.01",
+   "section": "ARCH.513-01",
    "title": "Integrated Project Design Stud",
    "days": [
     "tuesday",
@@ -507,7 +507,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.513.02",
+   "section": "ARCH.513-02",
    "title": "Integrated Project Design Stud",
    "days": [
     "tuesday",
@@ -518,7 +518,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.515.01",
+   "section": "ARCH.515-01",
    "title": "Grad Arch Design Stud",
    "days": [
     "tuesday",
@@ -529,7 +529,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.515.02",
+   "section": "ARCH.515-02",
    "title": "Grad Arch Design Stud",
    "days": [
     "tuesday",
@@ -540,7 +540,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.515.03",
+   "section": "ARCH.515-03",
    "title": "Grad Arch Design Stud",
    "days": [
     "tuesday",
@@ -551,7 +551,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.516.01",
+   "section": "ARCH.516-01",
    "title": "Grad Topical Dsgn Stu:Urban",
    "days": [
     "tuesday",
@@ -562,7 +562,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.517.01",
+   "section": "ARCH.517-01",
    "title": "Collaborative Revitalization S",
    "days": [
     "tuesday",
@@ -573,7 +573,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.524.01",
+   "section": "ARCH.524-01",
    "title": "Evolution of Urban Form",
    "days": [
     "tuesday",
@@ -584,7 +584,7 @@
    "room": "College of Arts and Sciences 157"
   },
   {
-   "section": "ARCH.525.01",
+   "section": "ARCH.525-01",
    "title": "History of Modern Architecture",
    "days": [
     "tuesday",
@@ -595,7 +595,7 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "ARCH.525.02",
+   "section": "ARCH.525-02",
    "title": "History of Modern Architecture",
    "days": [
     "tuesday",
@@ -606,7 +606,7 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "ARCH.534.01",
+   "section": "ARCH.534-01",
    "title": "Cnst. Material & Assemblies I",
    "days": [
     "tuesday",
@@ -617,7 +617,7 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "ARCH.535.01",
+   "section": "ARCH.535-01",
    "title": "Cnst Materials & Assemblies II",
    "days": [
     "wednesday"
@@ -627,7 +627,7 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "ARCH.535.02",
+   "section": "ARCH.535-02",
    "title": "Cnst Materials & Assemblies II",
    "days": [
     "thursday"
@@ -637,7 +637,7 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "ARCH.536.01",
+   "section": "ARCH.536-01",
    "title": "Structure, Form and Order",
    "days": [
     "monday",
@@ -648,7 +648,7 @@
    "room": ""
   },
   {
-   "section": "ARCH.538.01",
+   "section": "ARCH.538-01",
    "title": "Design of Structures II",
    "days": [
     "wednesday"
@@ -658,7 +658,7 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "ARCH.538R.01",
+   "section": "ARCH.538R-01",
    "title": "Dsgn of Structures II-Recitat",
    "days": [
     "friday"
@@ -668,7 +668,7 @@
    "room": "Cummings School Architecture 105"
   },
   {
-   "section": "ARCH.538R.02",
+   "section": "ARCH.538R-02",
    "title": "Dsgn of Structures II-Recitat",
    "days": [
     "friday"
@@ -678,7 +678,7 @@
    "room": "Cummings School Architecture 105"
   },
   {
-   "section": "ARCH.538R.03",
+   "section": "ARCH.538R-03",
    "title": "Dsgn of Structures II-Recitat",
    "days": [
     "friday"
@@ -688,7 +688,7 @@
    "room": "Cummings School Architecture 105"
   },
   {
-   "section": "ARCH.540.01",
+   "section": "ARCH.540-01",
    "title": "Environmental Systems I",
    "days": [
     "tuesday",
@@ -699,7 +699,7 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "ARCH.541.01",
+   "section": "ARCH.541-01",
    "title": "Environmental Systems II",
    "days": [
     "tuesday"
@@ -709,7 +709,7 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "ARCH.541R.01",
+   "section": "ARCH.541R-01",
    "title": "Environmental Syst II Recitat",
    "days": [
     "friday"
@@ -719,7 +719,7 @@
    "room": "Cummings School Architecture 203"
   },
   {
-   "section": "ARCH.541R.02",
+   "section": "ARCH.541R-02",
    "title": "Environmental Syst II Recitat",
    "days": [
     "friday"
@@ -729,7 +729,7 @@
    "room": "Cummings School Architecture 203"
   },
   {
-   "section": "ARCH.544.01",
+   "section": "ARCH.544-01",
    "title": "Architectural Analysis I",
    "days": [
     "monday"
@@ -739,7 +739,7 @@
    "room": "Cummings School Architecture 205"
   },
   {
-   "section": "ARCH.544.02",
+   "section": "ARCH.544-02",
    "title": "Architectural Analysis I",
    "days": [
     "tuesday"
@@ -749,7 +749,7 @@
    "room": "Cummings School Architecture 205"
   },
   {
-   "section": "ARCH.545.01",
+   "section": "ARCH.545-01",
    "title": "Architectual Analysis II",
    "days": [
     "monday"
@@ -759,7 +759,7 @@
    "room": "Cummings School Architecture 205"
   },
   {
-   "section": "ARCH.579.01",
+   "section": "ARCH.579-01",
    "title": "SpTp:Avant-Garde Publication",
    "days": [
     "wednesday"
@@ -769,7 +769,7 @@
    "room": "Cummings School Architecture 206"
   },
   {
-   "section": "ARCH.579.02",
+   "section": "ARCH.579-02",
    "title": "SpTp:Arch for Entertainment",
    "days": [
     "tuesday"
@@ -779,7 +779,7 @@
    "room": "Cummings School Architecture 206"
   },
   {
-   "section": "ARCH.579.91",
+   "section": "ARCH.579-91",
    "title": "SpTp:The Vertical Metropolis",
    "days": [
     "friday"
@@ -789,7 +789,7 @@
    "room": ""
   },
   {
-   "section": "ARCH.586.01",
+   "section": "ARCH.586-01",
    "title": "Comp Apps for Prof Practice",
    "days": [
     "thursday"
@@ -799,7 +799,7 @@
    "room": "Cummings School Architecture 205"
   },
   {
-   "section": "ARCH.613.01",
+   "section": "ARCH.613-01",
    "title": "Grad Thesis Dsgn Std",
    "days": [
     "tuesday",
@@ -810,7 +810,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.613.02",
+   "section": "ARCH.613-02",
    "title": "Grad Thesis Dsgn Std",
    "days": [
     "tuesday",
@@ -821,7 +821,7 @@
    "room": "Cummings School Architecture 100"
   },
   {
-   "section": "ARCH.641.01",
+   "section": "ARCH.641-01",
    "title": "Gr Thesis Research Sem",
    "days": [
     "tuesday",

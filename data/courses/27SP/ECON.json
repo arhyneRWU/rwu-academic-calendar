@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "ECON",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "ECON.111.01",
+   "section": "ECON.111-01",
    "title": "Principles of Microeconomics",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": ""
   },
   {
-   "section": "ECON.112.01",
+   "section": "ECON.112-01",
    "title": "Principles of Macroeconomics",
    "days": [
     "monday",
@@ -31,7 +31,7 @@
    "room": ""
   },
   {
-   "section": "ECON.112.02",
+   "section": "ECON.112-02",
    "title": "Principles of Macroeconomics",
    "days": [
     "monday",
@@ -43,7 +43,7 @@
    "room": ""
   },
   {
-   "section": "ECON.112.03",
+   "section": "ECON.112-03",
    "title": "Principles of Macroeconomics",
    "days": [
     "tuesday",
@@ -54,7 +54,7 @@
    "room": ""
   },
   {
-   "section": "ECON.112.04",
+   "section": "ECON.112-04",
    "title": "Principles of Macroeconomics",
    "days": [
     "tuesday",
@@ -65,7 +65,7 @@
    "room": ""
   },
   {
-   "section": "ECON.112.05",
+   "section": "ECON.112-05",
    "title": "Principles of Macroeconomics",
    "days": [
     "tuesday",
@@ -76,7 +76,7 @@
    "room": ""
   },
   {
-   "section": "ECON.112.06",
+   "section": "ECON.112-06",
    "title": "Principles of Macroeconomics",
    "days": [
     "tuesday",
@@ -87,7 +87,7 @@
    "room": ""
   },
   {
-   "section": "ECON.112.HON01",
+   "section": "ECON.112-HON01",
    "title": "Honr:Principles of Macroecon",
    "days": [
     "tuesday",
@@ -98,7 +98,7 @@
    "room": "Stonewall 103"
   },
   {
-   "section": "ECON.212.01",
+   "section": "ECON.212-01",
    "title": "Intermediate Macroeconomics",
    "days": [
     "monday",
@@ -110,7 +110,7 @@
    "room": ""
   },
   {
-   "section": "ECON.212.02",
+   "section": "ECON.212-02",
    "title": "Intermediate Macroeconomics",
    "days": [
     "tuesday",
@@ -121,7 +121,7 @@
    "room": ""
   },
   {
-   "section": "ECON.310.01",
+   "section": "ECON.310-01",
    "title": "Monetary Economics",
    "days": [
     "monday",
@@ -133,7 +133,7 @@
    "room": ""
   },
   {
-   "section": "ECON.330.01",
+   "section": "ECON.330-01",
    "title": "Econ of Developing Countries",
    "days": [
     "tuesday",
@@ -144,7 +144,7 @@
    "room": ""
   },
   {
-   "section": "ECON.379.01",
+   "section": "ECON.379-01",
    "title": "SpTp:Urban Economics",
    "days": [
     "monday",

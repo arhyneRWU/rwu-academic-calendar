@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "POLSC",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "POLSC.100.01",
+   "section": "POLSC.100-01",
    "title": "Amer Govt & Politics",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.100.02",
+   "section": "POLSC.100-02",
    "title": "Amer Govt & Politics",
    "days": [
     "monday",
@@ -31,7 +31,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.100.03",
+   "section": "POLSC.100-03",
    "title": "Amer Govt & Politics",
    "days": [
     "tuesday",
@@ -42,7 +42,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.100.04",
+   "section": "POLSC.100-04",
    "title": "Amer Govt & Politics",
    "days": [
     "tuesday",
@@ -53,7 +53,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.100.05",
+   "section": "POLSC.100-05",
    "title": "Amer Govt & Politics",
    "days": [
     "tuesday",
@@ -64,7 +64,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.110.01",
+   "section": "POLSC.110-01",
    "title": "U.S. in World Affairs",
    "days": [
     "tuesday",
@@ -75,7 +75,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.110.02",
+   "section": "POLSC.110-02",
    "title": "U.S. in World Affairs",
    "days": [
     "tuesday",
@@ -86,7 +86,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.120.01",
+   "section": "POLSC.120-01",
    "title": "Comparative Politics",
    "days": [
     "tuesday",
@@ -97,7 +97,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.120.02",
+   "section": "POLSC.120-02",
    "title": "Comparative Politics",
    "days": [
     "tuesday",
@@ -108,7 +108,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.203.01",
+   "section": "POLSC.203-01",
    "title": "The American Presidency",
    "days": [
     "tuesday",
@@ -119,7 +119,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.260.01",
+   "section": "POLSC.260-01",
    "title": "Public Admin",
    "days": [
     "thursday"
@@ -129,7 +129,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.303.01",
+   "section": "POLSC.303-01",
    "title": "Politics and the Media",
    "days": [
     "tuesday",
@@ -140,7 +140,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.304.01",
+   "section": "POLSC.304-01",
    "title": "Public Opinion",
    "days": [
     "monday",
@@ -152,7 +152,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.330.01",
+   "section": "POLSC.330-01",
    "title": "Revol and Social Change",
    "days": [
     "tuesday",
@@ -163,7 +163,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.340.01",
+   "section": "POLSC.340-01",
    "title": "Int'l Political Economy",
    "days": [
     "monday",
@@ -174,7 +174,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.347.01",
+   "section": "POLSC.347-01",
    "title": "China Politics&Foreign Policy",
    "days": [
     "monday",
@@ -186,7 +186,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.361.01",
+   "section": "POLSC.361-01",
    "title": "State & Local Government",
    "days": [
     "monday",
@@ -198,7 +198,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.379.01",
+   "section": "POLSC.379-01",
    "title": "SpTp:Clean&Green Enrgy Policy",
    "days": [
     "monday",
@@ -210,7 +210,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.386.01",
+   "section": "POLSC.386-01",
    "title": "Int'l Law/Organiz",
    "days": [
     "monday",
@@ -222,7 +222,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.392.01",
+   "section": "POLSC.392-01",
    "title": "Global Food Politics",
    "days": [
     "tuesday",
@@ -233,7 +233,7 @@
    "room": ""
   },
   {
-   "section": "POLSC.442.01",
+   "section": "POLSC.442-01",
    "title": "Senior Research Seminar",
    "days": [
     "thursday"

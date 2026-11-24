@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "IB",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "IB.250.01",
+   "section": "IB.250-01",
    "title": "Int'l Business/EU",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": ""
   },
   {
-   "section": "IB.450.01",
+   "section": "IB.450-01",
    "title": "Multinatl Corps/European Union",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": ""
   },
   {
-   "section": "IB.540.01",
+   "section": "IB.540-01",
    "title": "Global Business",
    "days": [
     "tuesday"

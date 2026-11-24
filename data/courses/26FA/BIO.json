@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "BIO",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "BIO.101.01",
+   "section": "BIO.101-01",
    "title": "Biological Investigations W/La",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": "Marine & Natural Sciences Bldg 210"
   },
   {
-   "section": "BIO.101.02",
+   "section": "BIO.101-02",
    "title": "Biological Investigations W/La",
    "days": [
     "monday",
@@ -31,7 +31,7 @@
    "room": "Marine & Natural Sciences Bldg 210"
   },
   {
-   "section": "BIO.101L.51",
+   "section": "BIO.101L-51",
    "title": "Biological Investigations Lab",
    "days": [
     "wednesday"
@@ -41,7 +41,7 @@
    "room": "Marine & Natural Sciences Bldg 207"
   },
   {
-   "section": "BIO.101L.61",
+   "section": "BIO.101L-61",
    "title": "Biological Investigations Lab",
    "days": [
     "wednesday"
@@ -51,7 +51,7 @@
    "room": "Marine & Natural Sciences Bldg 207"
   },
   {
-   "section": "BIO.101L.62",
+   "section": "BIO.101L-62",
    "title": "Biological Investigations Lab",
    "days": [
     "thursday"
@@ -61,7 +61,7 @@
    "room": "Marine & Natural Sciences Bldg 207"
   },
   {
-   "section": "BIO.103.01",
+   "section": "BIO.103-01",
    "title": "Intro to Molec & Cell Biology",
    "days": [
     "tuesday",
@@ -72,7 +72,7 @@
    "room": "Marine & Natural Sciences Bldg 210"
   },
   {
-   "section": "BIO.103.02",
+   "section": "BIO.103-02",
    "title": "Intro to Molec & Cell Biology",
    "days": [
     "tuesday",
@@ -83,7 +83,7 @@
    "room": "Marine & Natural Sciences Bldg 200"
   },
   {
-   "section": "BIO.103.03",
+   "section": "BIO.103-03",
    "title": "Intro to Molec & Cell Biology",
    "days": [
     "tuesday",
@@ -94,7 +94,7 @@
    "room": "Marine & Natural Sciences Bldg 200"
   },
   {
-   "section": "BIO.103.04",
+   "section": "BIO.103-04",
    "title": "Intro to Molec & Cell Biology",
    "days": [
     "monday",
@@ -106,7 +106,7 @@
    "room": "School of Law 033"
   },
   {
-   "section": "BIO.103.05",
+   "section": "BIO.103-05",
    "title": "Intro to Molec & Cell Biology",
    "days": [
     "monday",
@@ -118,7 +118,7 @@
    "room": "Marine & Natural Sciences Bldg 200"
   },
   {
-   "section": "BIO.103L.51",
+   "section": "BIO.103L-51",
    "title": "Intro to Molec & Cell Bio Lab",
    "days": [
     "monday"
@@ -128,7 +128,7 @@
    "room": "Marine & Natural Sciences Bldg 103"
   },
   {
-   "section": "BIO.103L.52",
+   "section": "BIO.103L-52",
    "title": "Intro to Molec & Cell Bio Lab",
    "days": [
     "monday"
@@ -138,7 +138,7 @@
    "room": "Marine & Natural Sciences Bldg 103"
   },
   {
-   "section": "BIO.103L.53",
+   "section": "BIO.103L-53",
    "title": "Intro to Molec & Cell Bio Lab",
    "days": [
     "tuesday"
@@ -148,7 +148,7 @@
    "room": "Marine & Natural Sciences Bldg 103"
   },
   {
-   "section": "BIO.103L.54",
+   "section": "BIO.103L-54",
    "title": "Intro to Molec & Cell Bio Lab",
    "days": [
     "monday"
@@ -158,7 +158,7 @@
    "room": "Marine & Natural Sciences Bldg 103"
   },
   {
-   "section": "BIO.103L.55",
+   "section": "BIO.103L-55",
    "title": "Intro to Molec & Cell Bio Lab",
    "days": [
     "tuesday"
@@ -168,7 +168,7 @@
    "room": "Marine & Natural Sciences Bldg 103"
   },
   {
-   "section": "BIO.103L.61",
+   "section": "BIO.103L-61",
    "title": "Intro to Molec & Cell Bio Lab",
    "days": [
     "tuesday"
@@ -178,7 +178,7 @@
    "room": "Marine & Natural Sciences Bldg 103"
   },
   {
-   "section": "BIO.103L.62",
+   "section": "BIO.103L-62",
    "title": "Intro to Molec & Cell Bio Lab",
    "days": [
     "wednesday"
@@ -188,7 +188,7 @@
    "room": "Marine & Natural Sciences Bldg 103"
   },
   {
-   "section": "BIO.103L.64",
+   "section": "BIO.103L-64",
    "title": "Intro to Molec & Cell Bio Lab",
    "days": [
     "wednesday"
@@ -198,7 +198,7 @@
    "room": "Marine & Natural Sciences Bldg 103"
   },
   {
-   "section": "BIO.103L.65",
+   "section": "BIO.103L-65",
    "title": "Intro to Molec & Cell Bio Lab",
    "days": [
     "tuesday"
@@ -208,7 +208,7 @@
    "room": "Marine & Natural Sciences Bldg 103"
   },
   {
-   "section": "BIO.105.01",
+   "section": "BIO.105-01",
    "title": "Life Science for Elem Ed",
    "days": [
     "monday",
@@ -219,7 +219,7 @@
    "room": "Marine & Natural Sciences Bldg 213"
   },
   {
-   "section": "BIO.105L.52",
+   "section": "BIO.105L-52",
    "title": "Life Sci for Elem Educ Lab",
    "days": [
     "wednesday"
@@ -229,7 +229,7 @@
    "room": "Marine & Natural Sciences Bldg 103"
   },
   {
-   "section": "BIO.200.01",
+   "section": "BIO.200-01",
    "title": "Genetics",
    "days": [
     "monday",
@@ -241,7 +241,7 @@
    "room": "Gabelli School of Business 105"
   },
   {
-   "section": "BIO.200L.51",
+   "section": "BIO.200L-51",
    "title": "Genetics Lab",
    "days": [
     "tuesday"
@@ -251,7 +251,7 @@
    "room": "Marine & Natural Sciences Bldg 207"
   },
   {
-   "section": "BIO.200L.61",
+   "section": "BIO.200L-61",
    "title": "Genetics Lab",
    "days": [
     "tuesday"
@@ -261,7 +261,7 @@
    "room": "Marine & Natural Sciences Bldg 207"
   },
   {
-   "section": "BIO.204.02",
+   "section": "BIO.204-02",
    "title": "Intro to Marine Biology",
    "days": [
     "tuesday",
@@ -272,7 +272,7 @@
    "room": "Marine & Natural Sciences Bldg 200"
   },
   {
-   "section": "BIO.215.01",
+   "section": "BIO.215-01",
    "title": "Human Anat & Phys I",
    "days": [
     "monday",
@@ -284,7 +284,7 @@
    "room": "Marine & Natural Sciences Bldg 200"
   },
   {
-   "section": "BIO.215L.51",
+   "section": "BIO.215L-51",
    "title": "Human Anat & Phys I Lab",
    "days": [
     "monday"
@@ -294,7 +294,7 @@
    "room": "Marine & Natural Sciences Bldg 207"
   },
   {
-   "section": "BIO.215L.52",
+   "section": "BIO.215L-52",
    "title": "Human Anat & Phys I Lab",
    "days": [
     "tuesday"
@@ -304,7 +304,7 @@
    "room": "Marine & Natural Sciences Bldg 207"
   },
   {
-   "section": "BIO.220.01",
+   "section": "BIO.220-01",
    "title": "Marine Vertebrate Zoo",
    "days": [
     "monday",
@@ -316,7 +316,7 @@
    "room": "Marine & Natural Sciences Bldg 213"
   },
   {
-   "section": "BIO.220L.51",
+   "section": "BIO.220L-51",
    "title": "Marine Vert Zoo Lab",
    "days": [
     "tuesday"
@@ -326,7 +326,7 @@
    "room": "Marine & Natural Sciences Bldg 107"
   },
   {
-   "section": "BIO.230.01",
+   "section": "BIO.230-01",
    "title": "Microbiology and Lab",
    "days": [
     "tuesday",
@@ -337,7 +337,7 @@
    "room": "Marine & Natural Sciences Bldg 210"
   },
   {
-   "section": "BIO.230L.51",
+   "section": "BIO.230L-51",
    "title": "Microbiology Lab",
    "days": [
     "thursday"
@@ -347,7 +347,7 @@
    "room": "Marine & Natural Sciences Bldg 207"
   },
   {
-   "section": "BIO.230L.52",
+   "section": "BIO.230L-52",
    "title": "Microbiology Lab",
    "days": [
     "thursday"
@@ -357,7 +357,7 @@
    "room": "Marine & Natural Sciences Bldg 207"
   },
   {
-   "section": "BIO.320.01",
+   "section": "BIO.320-01",
    "title": "Marine Ecology",
    "days": [
     "monday",
@@ -368,7 +368,7 @@
    "room": "Marine & Natural Sciences Bldg 213"
   },
   {
-   "section": "BIO.320L.51",
+   "section": "BIO.320L-51",
    "title": "Marine Ecology Lab",
    "days": [
     "thursday"
@@ -378,7 +378,7 @@
    "room": "Marine & Natural Sciences Bldg 107"
   },
   {
-   "section": "BIO.332.01",
+   "section": "BIO.332-01",
    "title": "Fisheries Science",
    "days": [
     "monday",
@@ -390,7 +390,7 @@
    "room": "College of Arts and Sciences 125"
   },
   {
-   "section": "BIO.340.01",
+   "section": "BIO.340-01",
    "title": "Biotechnology",
    "days": [
     "tuesday",
@@ -401,7 +401,7 @@
    "room": "ELS 112"
   },
   {
-   "section": "BIO.340L.51",
+   "section": "BIO.340L-51",
    "title": "Biotechnology Lab",
    "days": [
     "friday"
@@ -411,7 +411,7 @@
    "room": "Marine & Natural Sciences Bldg 207"
   },
   {
-   "section": "BIO.345.01",
+   "section": "BIO.345-01",
    "title": "Aquaculture",
    "days": [
     "tuesday",
@@ -422,7 +422,7 @@
    "room": "Marine & Natural Sciences Bldg 210"
   },
   {
-   "section": "BIO.355.01",
+   "section": "BIO.355-01",
    "title": "Marine Phycology",
    "days": [
     "monday",
@@ -434,7 +434,7 @@
    "room": "College of Arts and Sciences 162"
   },
   {
-   "section": "BIO.355L.51",
+   "section": "BIO.355L-51",
    "title": "Marine Phycology Lab",
    "days": [
     "tuesday"
@@ -444,7 +444,7 @@
    "room": "Marine & Natural Sciences Bldg 107"
   },
   {
-   "section": "BIO.355L.52",
+   "section": "BIO.355L-52",
    "title": "Marine Phycology Lab",
    "days": [
     "thursday"
@@ -454,7 +454,7 @@
    "room": "Marine & Natural Sciences Bldg 107"
   },
   {
-   "section": "BIO.362.01",
+   "section": "BIO.362-01",
    "title": "Animal Behavior",
    "days": [
     "monday",
@@ -466,7 +466,7 @@
    "room": "College of Arts and Sciences 222"
   },
   {
-   "section": "BIO.375.01",
+   "section": "BIO.375-01",
    "title": "Soil Ecology",
    "days": [
     "monday",
@@ -478,7 +478,7 @@
    "room": "Marine & Natural Sciences Bldg 212"
   },
   {
-   "section": "BIO.375L.51",
+   "section": "BIO.375L-51",
    "title": "Soil Ecology Lab",
    "days": [
     "monday"
@@ -488,7 +488,7 @@
    "room": "Marine & Natural Sciences Bldg 107"
   },
   {
-   "section": "BIO.379.01",
+   "section": "BIO.379-01",
    "title": "SpTp:Ocean Acidification",
    "days": [
     "tuesday",
@@ -499,7 +499,7 @@
    "room": "Marine & Natural Sciences Bldg 212"
   },
   {
-   "section": "BIO.390.01",
+   "section": "BIO.390-01",
    "title": "Biochemistry",
    "days": [
     "monday",
@@ -511,7 +511,7 @@
    "room": "Marine & Natural Sciences Bldg 213"
   },
   {
-   "section": "BIO.390L.51",
+   "section": "BIO.390L-51",
    "title": "Biochemistry Lab",
    "days": [
     "friday"

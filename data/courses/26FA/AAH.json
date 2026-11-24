@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "AAH",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "AAH.121.01",
+   "section": "AAH.121-01",
    "title": "Hist of Art/Arch I",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": "College of Arts and Sciences 157"
   },
   {
-   "section": "AAH.121.02",
+   "section": "AAH.121-02",
    "title": "Hist of Art/Arch I",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": "College of Arts and Sciences 157"
   },
   {
-   "section": "AAH.121.03",
+   "section": "AAH.121-03",
    "title": "Hist of Art/Arch I",
    "days": [
     "tuesday",
@@ -40,7 +40,7 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "AAH.121.04",
+   "section": "AAH.121-04",
    "title": "Hist of Art/Arch I",
    "days": [
     "tuesday",
@@ -51,7 +51,7 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "AAH.121.05",
+   "section": "AAH.121-05",
    "title": "Hist of Art/Arch I",
    "days": [
     "tuesday",
@@ -62,7 +62,7 @@
    "room": "College of Arts and Sciences 157"
   },
   {
-   "section": "AAH.121.06",
+   "section": "AAH.121-06",
    "title": "Hist of Art/Arch I",
    "days": [
     "tuesday",
@@ -73,7 +73,7 @@
    "room": "College of Arts and Sciences 157"
   },
   {
-   "section": "AAH.122.01",
+   "section": "AAH.122-01",
    "title": "Hist of Art/Arch II",
    "days": [
     "tuesday",
@@ -84,7 +84,7 @@
    "room": "College of Arts and Sciences 157"
   },
   {
-   "section": "AAH.122.02",
+   "section": "AAH.122-02",
    "title": "Hist of Art/Arch II",
    "days": [
     "tuesday",
@@ -95,7 +95,7 @@
    "room": "College of Arts and Sciences 157"
   },
   {
-   "section": "AAH.122.03",
+   "section": "AAH.122-03",
    "title": "Hist of Art/Arch II",
    "days": [
     "tuesday",
@@ -106,7 +106,7 @@
    "room": "Cummings School Architecture 132"
   },
   {
-   "section": "AAH.322.01",
+   "section": "AAH.322-01",
    "title": "Art/Arch Medieval World",
    "days": [
     "monday",

@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "CW",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "CW.110.01",
+   "section": "CW.110-01",
    "title": "Form in Poetry",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": ""
   },
   {
-   "section": "CW.110.02",
+   "section": "CW.110-02",
    "title": "Form in Poetry",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": ""
   },
   {
-   "section": "CW.120.01",
+   "section": "CW.120-01",
    "title": "Narrative in Prose",
    "days": [
     "monday",
@@ -40,7 +40,7 @@
    "room": ""
   },
   {
-   "section": "CW.120.91",
+   "section": "CW.120-91",
    "title": "Narrative in Prose",
    "days": [
     "monday",
@@ -52,7 +52,7 @@
    "room": ""
   },
   {
-   "section": "CW.220.01",
+   "section": "CW.220-01",
    "title": "Fiction Seminar",
    "days": [
     "wednesday"
@@ -62,7 +62,7 @@
    "room": ""
   },
   {
-   "section": "CW.310.01",
+   "section": "CW.310-01",
    "title": "Poetry Studio",
    "days": [
     "thursday"
@@ -72,7 +72,7 @@
    "room": ""
   },
   {
-   "section": "CW.330.01",
+   "section": "CW.330-01",
    "title": "Nonfiction Studio",
    "days": [
     "monday",
@@ -83,7 +83,7 @@
    "room": ""
   },
   {
-   "section": "CW.480.01",
+   "section": "CW.480-01",
    "title": "Creative Wtng Capstone",
    "days": [
     "tuesday"

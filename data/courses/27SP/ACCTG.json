@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "ACCTG",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "ACCTG.201.01",
+   "section": "ACCTG.201-01",
    "title": "Acctg I:Financial",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": ""
   },
   {
-   "section": "ACCTG.201.02",
+   "section": "ACCTG.201-02",
    "title": "Acctg I:Financial",
    "days": [
     "monday",
@@ -31,7 +31,7 @@
    "room": ""
   },
   {
-   "section": "ACCTG.201.03",
+   "section": "ACCTG.201-03",
    "title": "Acctg I:Financial",
    "days": [
     "monday",
@@ -43,7 +43,7 @@
    "room": ""
   },
   {
-   "section": "ACCTG.202.01",
+   "section": "ACCTG.202-01",
    "title": "Acctg II:Managerial",
    "days": [
     "tuesday",
@@ -54,7 +54,7 @@
    "room": ""
   },
   {
-   "section": "ACCTG.202.02",
+   "section": "ACCTG.202-02",
    "title": "Acctg II:Managerial",
    "days": [
     "tuesday",
@@ -65,7 +65,7 @@
    "room": ""
   },
   {
-   "section": "ACCTG.202.03",
+   "section": "ACCTG.202-03",
    "title": "Acctg II:Managerial",
    "days": [
     "tuesday",
@@ -76,7 +76,7 @@
    "room": ""
   },
   {
-   "section": "ACCTG.202.04",
+   "section": "ACCTG.202-04",
    "title": "Acctg II:Managerial",
    "days": [
     "tuesday",
@@ -87,7 +87,7 @@
    "room": ""
   },
   {
-   "section": "ACCTG.202.05",
+   "section": "ACCTG.202-05",
    "title": "Acctg II:Managerial",
    "days": [
     "tuesday",
@@ -98,7 +98,7 @@
    "room": ""
   },
   {
-   "section": "ACCTG.305.01",
+   "section": "ACCTG.305-01",
    "title": "Interm Accounting II",
    "days": [
     "monday",
@@ -110,7 +110,7 @@
    "room": ""
   },
   {
-   "section": "ACCTG.405.01",
+   "section": "ACCTG.405-01",
    "title": "Auditing",
    "days": [
     "tuesday",
@@ -121,7 +121,7 @@
    "room": ""
   },
   {
-   "section": "ACCTG.479.01",
+   "section": "ACCTG.479-01",
    "title": "SpTp:AI in Accounting",
    "days": [
     "tuesday",
@@ -132,7 +132,7 @@
    "room": ""
   },
   {
-   "section": "ACCTG.479.02",
+   "section": "ACCTG.479-02",
    "title": "SpTp:CPA Exam ACCTG",
    "days": [
     "monday",

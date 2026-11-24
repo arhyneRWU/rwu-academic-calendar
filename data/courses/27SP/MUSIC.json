@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "MUSIC",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "MUSIC.110.01",
+   "section": "MUSIC.110-01",
    "title": "Intro to Theory & Musicianship",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": "College of Arts and Sciences 152"
   },
   {
-   "section": "MUSIC.110.02",
+   "section": "MUSIC.110-02",
    "title": "Intro to Theory & Musicianship",
    "days": [
     "monday",
@@ -31,17 +31,17 @@
    "room": "College of Arts and Sciences 152"
   },
   {
-   "section": "MUSIC.115.01",
+   "section": "MUSIC.115-01",
    "title": "Beginning Guitar",
    "days": [
     "wednesday"
    ],
    "start": "17:30",
    "end": "18:50",
-   "room": ""
+   "room": "College of Arts and Sciences 152"
   },
   {
-   "section": "MUSIC.130.01",
+   "section": "MUSIC.130-01",
    "title": "Performance Studio",
    "days": [
     "wednesday"
@@ -51,7 +51,7 @@
    "room": "College of Arts and Sciences 152"
   },
   {
-   "section": "MUSIC.141.01",
+   "section": "MUSIC.141-01",
    "title": "Chorus",
    "days": [
     "tuesday"
@@ -61,7 +61,7 @@
    "room": "College of Arts and Sciences 152"
   },
   {
-   "section": "MUSIC.151.01",
+   "section": "MUSIC.151-01",
    "title": "Instrumental Ensemble",
    "days": [
     "monday"
@@ -71,7 +71,7 @@
    "room": "College of Arts and Sciences 152"
   },
   {
-   "section": "MUSIC.151.02",
+   "section": "MUSIC.151-02",
    "title": "Instrumental Ensemble",
    "days": [
     "wednesday"
@@ -81,7 +81,7 @@
    "room": "College of Arts and Sciences 152"
   },
   {
-   "section": "MUSIC.170.01",
+   "section": "MUSIC.170-01",
    "title": "Music Theory & Comp I",
    "days": [
     "monday",
@@ -93,7 +93,7 @@
    "room": "College of Arts and Sciences 152"
   },
   {
-   "section": "MUSIC.171.01",
+   "section": "MUSIC.171-01",
    "title": "Aural Skills I",
    "days": [
     "thursday"
@@ -103,7 +103,7 @@
    "room": "College of Arts and Sciences 152"
   },
   {
-   "section": "MUSIC.213.01",
+   "section": "MUSIC.213-01",
    "title": "Music - 20th Century & Beyond",
    "days": [
     "monday",
@@ -115,7 +115,7 @@
    "room": "College of Arts and Sciences 152"
   },
   {
-   "section": "MUSIC.220.01",
+   "section": "MUSIC.220-01",
    "title": "Intro to Ele Dig & Comp Music",
    "days": [
     "monday",
@@ -127,17 +127,17 @@
    "room": "College of Arts and Sciences 128"
   },
   {
-   "section": "MUSIC.313.01",
+   "section": "MUSIC.313-01",
    "title": "Music of India & Middle East",
    "days": [
     "thursday"
    ],
    "start": "19:00",
    "end": "22:00",
-   "room": ""
+   "room": "College of Arts and Sciences 152"
   },
   {
-   "section": "MUSIC.370.01",
+   "section": "MUSIC.370-01",
    "title": "Music Theory & Comp III",
    "days": [
     "monday",
@@ -149,7 +149,7 @@
    "room": "College of Arts and Sciences 152"
   },
   {
-   "section": "MUSIC.371.01",
+   "section": "MUSIC.371-01",
    "title": "Aural Skills III",
    "days": [
     "thursday"
@@ -159,7 +159,7 @@
    "room": "College of Arts and Sciences 152"
   },
   {
-   "section": "MUSIC.420.01",
+   "section": "MUSIC.420-01",
    "title": "Computer Music Programming",
    "days": [
     "tuesday",

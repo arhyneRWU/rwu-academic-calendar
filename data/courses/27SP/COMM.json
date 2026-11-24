@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "COMM",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "COMM.100.01",
+   "section": "COMM.100-01",
    "title": "Intro to Communication",
    "days": [
     "monday",
@@ -18,7 +18,7 @@
    "room": ""
   },
   {
-   "section": "COMM.100.02",
+   "section": "COMM.100-02",
    "title": "Intro to Communication",
    "days": [
     "monday",
@@ -29,7 +29,7 @@
    "room": ""
   },
   {
-   "section": "COMM.101.01",
+   "section": "COMM.101-01",
    "title": "Intro to Mass Media",
    "days": [
     "tuesday",
@@ -40,7 +40,7 @@
    "room": ""
   },
   {
-   "section": "COMM.101.03",
+   "section": "COMM.101-03",
    "title": "Intro to Mass Media",
    "days": [
     "monday",
@@ -52,7 +52,7 @@
    "room": ""
   },
   {
-   "section": "COMM.201.01",
+   "section": "COMM.201-01",
    "title": "Concepts in Communication",
    "days": [
     "monday",
@@ -64,7 +64,7 @@
    "room": ""
   },
   {
-   "section": "COMM.210.01",
+   "section": "COMM.210-01",
    "title": "Intro to Public Speaking",
    "days": [
     "wednesday"
@@ -74,7 +74,7 @@
    "room": ""
   },
   {
-   "section": "COMM.210.02",
+   "section": "COMM.210-02",
    "title": "Intro to Public Speaking",
    "days": [
     "tuesday",
@@ -85,7 +85,7 @@
    "room": ""
   },
   {
-   "section": "COMM.210.03",
+   "section": "COMM.210-03",
    "title": "Intro to Public Speaking",
    "days": [
     "tuesday",
@@ -96,7 +96,7 @@
    "room": ""
   },
   {
-   "section": "COMM.210.04",
+   "section": "COMM.210-04",
    "title": "Intro to Public Speaking",
    "days": [
     "monday"
@@ -106,7 +106,7 @@
    "room": ""
   },
   {
-   "section": "COMM.210.05",
+   "section": "COMM.210-05",
    "title": "Intro to Public Speaking",
    "days": [
     "monday",
@@ -118,7 +118,7 @@
    "room": ""
   },
   {
-   "section": "COMM.210.06",
+   "section": "COMM.210-06",
    "title": "Intro to Public Speaking",
    "days": [
     "monday",
@@ -130,7 +130,7 @@
    "room": ""
   },
   {
-   "section": "COMM.210.07",
+   "section": "COMM.210-07",
    "title": "Intro to Public Speaking",
    "days": [
     "monday",
@@ -142,7 +142,7 @@
    "room": ""
   },
   {
-   "section": "COMM.210.08",
+   "section": "COMM.210-08",
    "title": "Intro to Public Speaking",
    "days": [
     "monday",
@@ -154,7 +154,7 @@
    "room": ""
   },
   {
-   "section": "COMM.250.01",
+   "section": "COMM.250-01",
    "title": "Intercultural Communication",
    "days": [
     "tuesday",
@@ -165,7 +165,7 @@
    "room": ""
   },
   {
-   "section": "COMM.295.01",
+   "section": "COMM.295-01",
    "title": "Mass Comm Theory & Criticism",
    "days": [
     "monday",
@@ -176,7 +176,7 @@
    "room": ""
   },
   {
-   "section": "COMM.310.01",
+   "section": "COMM.310-01",
    "title": "Media Law and Ethics",
    "days": [
     "tuesday",
@@ -187,7 +187,7 @@
    "room": ""
   },
   {
-   "section": "COMM.312.01",
+   "section": "COMM.312-01",
    "title": "Personal Branding",
    "days": [
     "monday",
@@ -198,7 +198,7 @@
    "room": ""
   },
   {
-   "section": "COMM.375.01",
+   "section": "COMM.375-01",
    "title": "Global Audiences/Consumers",
    "days": [
     "tuesday",
@@ -209,7 +209,7 @@
    "room": ""
   },
   {
-   "section": "COMM.390.01",
+   "section": "COMM.390-01",
    "title": "Qualitative Rsrch Meth Comm",
    "days": [
     "tuesday",
@@ -220,7 +220,7 @@
    "room": ""
   },
   {
-   "section": "COMM.395.01",
+   "section": "COMM.395-01",
    "title": "Race, Ethnicity, and Media",
    "days": [
     "tuesday",

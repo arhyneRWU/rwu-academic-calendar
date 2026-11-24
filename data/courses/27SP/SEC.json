@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "SEC",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "SEC.105.01",
+   "section": "SEC.105-01",
    "title": "Cyber Security for Everyone",
    "days": [
     "tuesday"
@@ -17,7 +17,7 @@
    "room": ""
   },
   {
-   "section": "SEC.207.01",
+   "section": "SEC.207-01",
    "title": "Python Programming",
    "days": [
     "thursday"
@@ -27,7 +27,7 @@
    "room": "School of Engineering 210"
   },
   {
-   "section": "SEC.220.01",
+   "section": "SEC.220-01",
    "title": "Database Design and Implementa",
    "days": [
     "tuesday",
@@ -38,7 +38,7 @@
    "room": "School of Engineering 210"
   },
   {
-   "section": "SEC.230.01",
+   "section": "SEC.230-01",
    "title": "Routing and Switching",
    "days": [
     "tuesday",
@@ -49,7 +49,7 @@
    "room": "School of Engineering 210"
   },
   {
-   "section": "SEC.340.91",
+   "section": "SEC.340-91",
    "title": "Introduction to Cryptography",
    "days": [
     "wednesday"
@@ -59,7 +59,7 @@
    "room": ""
   },
   {
-   "section": "SEC.405.01",
+   "section": "SEC.405-01",
    "title": "Firewalls & Defense in Depth",
    "days": [
     "tuesday"
@@ -69,7 +69,7 @@
    "room": "School of Engineering 210"
   },
   {
-   "section": "SEC.429.01",
+   "section": "SEC.429-01",
    "title": "Cybersecurity Tools and Apps",
    "days": [
     "thursday"
@@ -79,7 +79,7 @@
    "room": "School of Engineering 210"
   },
   {
-   "section": "SEC.479.91",
+   "section": "SEC.479-91",
    "title": "SpTp:Appld AI for Cybersecrty",
    "days": [
     "tuesday",
@@ -90,7 +90,7 @@
    "room": ""
   },
   {
-   "section": "SEC.498.91",
+   "section": "SEC.498-91",
    "title": "Cybersecurity Capstone",
    "days": [
     "friday"

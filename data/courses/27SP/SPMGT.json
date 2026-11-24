@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "SPMGT",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "SPMGT.370.01",
+   "section": "SPMGT.370-01",
    "title": "Sports Management Principles",
    "days": [
     "tuesday"
@@ -17,7 +17,7 @@
    "room": ""
   },
   {
-   "section": "SPMGT.373.01",
+   "section": "SPMGT.373-01",
    "title": "Sport Facility and Event Mgmt",
    "days": [
     "tuesday",
@@ -28,7 +28,7 @@
    "room": ""
   },
   {
-   "section": "SPMGT.430.01",
+   "section": "SPMGT.430-01",
    "title": "Global Sport Management",
    "days": [
     "tuesday",

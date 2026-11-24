@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "THEAT",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "THEAT.110.01",
+   "section": "THEAT.110-01",
    "title": "Acting I",
    "days": [
     "monday",
@@ -18,7 +18,7 @@
    "room": "Performing Arts Annex 106"
   },
   {
-   "section": "THEAT.123.01",
+   "section": "THEAT.123-01",
    "title": "Design for the Theatre",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": "Gabelli School of Business G01"
   },
   {
-   "section": "THEAT.130.01",
+   "section": "THEAT.130-01",
    "title": "The Art of the Theatre",
    "days": [
     "tuesday",
@@ -40,7 +40,7 @@
    "room": "Gabelli School of Business G01"
   },
   {
-   "section": "THEAT.140.01",
+   "section": "THEAT.140-01",
    "title": "Musical Theatre Wkshp",
    "days": [
     "tuesday",
@@ -51,7 +51,7 @@
    "room": "Humanities Building 316"
   },
   {
-   "section": "THEAT.142.01",
+   "section": "THEAT.142-01",
    "title": "Musical Theatre Workshop",
    "days": [
     "tuesday",
@@ -62,7 +62,7 @@
    "room": "Humanities Building 316"
   },
   {
-   "section": "THEAT.150.01",
+   "section": "THEAT.150-01",
    "title": "The American Musical",
    "days": [
     "tuesday",

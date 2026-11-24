@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "SUST",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "SUST.101.01",
+   "section": "SUST.101-01",
    "title": "Intro Sustainability Studies",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": ""
   },
   {
-   "section": "SUST.101.02",
+   "section": "SUST.101-02",
    "title": "Intro Sustainability Studies",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": ""
   },
   {
-   "section": "SUST.201.01",
+   "section": "SUST.201-01",
    "title": "The Sustainability Revolution",
    "days": [
     "monday",
@@ -41,7 +41,7 @@
    "room": ""
   },
   {
-   "section": "SUST.301.02",
+   "section": "SUST.301-02",
    "title": "Analysis&DecMkg/Sustainabilit",
    "days": [
     "tuesday",
@@ -52,7 +52,7 @@
    "room": ""
   },
   {
-   "section": "SUST.401.01",
+   "section": "SUST.401-01",
    "title": "Working Toward Sustainability",
    "days": [
     "monday"
@@ -62,7 +62,7 @@
    "room": ""
   },
   {
-   "section": "SUST.401.02",
+   "section": "SUST.401-02",
    "title": "Working Toward Sustainability",
    "days": [
     "tuesday"
@@ -72,7 +72,7 @@
    "room": ""
   },
   {
-   "section": "SUST.402.01",
+   "section": "SUST.402-01",
    "title": "Environmental Citizenship",
    "days": [
     "tuesday",

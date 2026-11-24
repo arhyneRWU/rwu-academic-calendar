@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "SEC",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "SEC.100.01",
+   "section": "SEC.100-01",
    "title": "Computer Hardware and Software",
    "days": [
     "thursday"
@@ -17,7 +17,7 @@
    "room": "School of Engineering 127"
   },
   {
-   "section": "SEC.201.01",
+   "section": "SEC.201-01",
    "title": "Intro to Computer Networks",
    "days": [
     "tuesday",
@@ -28,7 +28,7 @@
    "room": "School of Engineering 210"
   },
   {
-   "section": "SEC.203.01",
+   "section": "SEC.203-01",
    "title": "Cybersecurity Fundamentals",
    "days": [
     "wednesday"
@@ -38,7 +38,7 @@
    "room": "School of Engineering 210"
   },
   {
-   "section": "SEC.206.01",
+   "section": "SEC.206-01",
    "title": "Digital Detective",
    "days": [
     "monday"
@@ -48,7 +48,7 @@
    "room": "School of Engineering 122"
   },
   {
-   "section": "SEC.215.01",
+   "section": "SEC.215-01",
    "title": "Cloud Computing Fundamentals",
    "days": [
     "monday",
@@ -60,7 +60,7 @@
    "room": "School of Engineering 210"
   },
   {
-   "section": "SEC.275.01",
+   "section": "SEC.275-01",
    "title": "Servers Admin & Security",
    "days": [
     "tuesday"
@@ -70,7 +70,7 @@
    "room": "School of Engineering 210"
   },
   {
-   "section": "SEC.404.01",
+   "section": "SEC.404-01",
    "title": "Applied Cyber Defense",
    "days": [
     "wednesday"
@@ -80,7 +80,7 @@
    "room": "School of Engineering 122"
   },
   {
-   "section": "SEC.409.01",
+   "section": "SEC.409-01",
    "title": "Linux Scripting and Automation",
    "days": [
     "tuesday"
@@ -90,7 +90,7 @@
    "room": "School of Engineering 122"
   },
   {
-   "section": "SEC.415.01",
+   "section": "SEC.415-01",
    "title": "Intrusion Detection System",
    "days": [
     "tuesday",
@@ -101,7 +101,7 @@
    "room": "School of Engineering 210"
   },
   {
-   "section": "SEC.430.91",
+   "section": "SEC.430-91",
    "title": "Principles of CyberIntellige",
    "days": [
     "thursday"
@@ -111,7 +111,7 @@
    "room": ""
   },
   {
-   "section": "SEC.431.01",
+   "section": "SEC.431-01",
    "title": "Penetration Testing",
    "days": [
     "thursday"

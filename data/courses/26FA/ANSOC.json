@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "ANSOC",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "ANSOC.100.01",
+   "section": "ANSOC.100-01",
    "title": "Intro to Cultural Anth",
    "days": [
     "monday",
@@ -19,7 +19,7 @@
    "room": "College of Arts and Sciences 220"
   },
   {
-   "section": "ANSOC.100.02",
+   "section": "ANSOC.100-02",
    "title": "Intro to Cultural Anth",
    "days": [
     "monday",
@@ -31,7 +31,7 @@
    "room": "College of Arts and Sciences 220"
   },
   {
-   "section": "ANSOC.100.03",
+   "section": "ANSOC.100-03",
    "title": "Intro to Cultural Anth",
    "days": [
     "tuesday",
@@ -42,7 +42,7 @@
    "room": "College of Arts and Sciences 120"
   },
   {
-   "section": "ANSOC.105.01",
+   "section": "ANSOC.105-01",
    "title": "Introduction to Sociology",
    "days": [
     "tuesday",
@@ -53,7 +53,7 @@
    "room": "College of Arts and Sciences 152"
   },
   {
-   "section": "ANSOC.105.02",
+   "section": "ANSOC.105-02",
    "title": "Introduction to Sociology",
    "days": [
     "monday",
@@ -65,7 +65,7 @@
    "room": "School of Engineering 125"
   },
   {
-   "section": "ANSOC.105.03",
+   "section": "ANSOC.105-03",
    "title": "Introduction to Sociology",
    "days": [
     "monday",
@@ -77,7 +77,7 @@
    "room": "School of Engineering 125"
   },
   {
-   "section": "ANSOC.105.04",
+   "section": "ANSOC.105-04",
    "title": "Introduction to Sociology",
    "days": [
     "monday",
@@ -89,7 +89,7 @@
    "room": "School of Engineering 125"
   },
   {
-   "section": "ANSOC.255.01",
+   "section": "ANSOC.255-01",
    "title": "Soc Persp Social Problems",
    "days": [
     "tuesday",
@@ -100,7 +100,7 @@
    "room": "College of Arts and Sciences 152"
   },
   {
-   "section": "ANSOC.279.01",
+   "section": "ANSOC.279-01",
    "title": "SpTp: Popular Culture & Media",
    "days": [
     "tuesday",
@@ -111,7 +111,7 @@
    "room": "College of Arts and Sciences 125"
   },
   {
-   "section": "ANSOC.300.01",
+   "section": "ANSOC.300-01",
    "title": "Qualitative Methods",
    "days": [
     "monday",
@@ -123,7 +123,7 @@
    "room": "College of Arts and Sciences 123"
   },
   {
-   "section": "ANSOC.310.01",
+   "section": "ANSOC.310-01",
    "title": "Applied Anthropology",
    "days": [
     "monday",

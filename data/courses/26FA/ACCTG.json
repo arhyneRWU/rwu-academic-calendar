@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "ACCTG",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "ACCTG.201.01",
+   "section": "ACCTG.201-01",
    "title": "Acctg I:Financial",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": "Gabelli School of Business 106"
   },
   {
-   "section": "ACCTG.201.02",
+   "section": "ACCTG.201-02",
    "title": "Acctg I:Financial",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": "Gabelli School of Business 106"
   },
   {
-   "section": "ACCTG.201.03",
+   "section": "ACCTG.201-03",
    "title": "Acctg I:Financial",
    "days": [
     "tuesday",
@@ -40,7 +40,7 @@
    "room": "Gabelli School of Business 205"
   },
   {
-   "section": "ACCTG.201.04",
+   "section": "ACCTG.201-04",
    "title": "Acctg I:Financial",
    "days": [
     "tuesday",
@@ -51,7 +51,7 @@
    "room": "Gabelli School of Business 205"
   },
   {
-   "section": "ACCTG.201.05",
+   "section": "ACCTG.201-05",
    "title": "Acctg I:Financial",
    "days": [
     "monday",
@@ -63,7 +63,7 @@
    "room": "Gabelli School of Business G01"
   },
   {
-   "section": "ACCTG.202.01",
+   "section": "ACCTG.202-01",
    "title": "Acctg II:Managerial",
    "days": [
     "monday",
@@ -75,7 +75,7 @@
    "room": "Gabelli School of Business 206"
   },
   {
-   "section": "ACCTG.304.01",
+   "section": "ACCTG.304-01",
    "title": "Interm Accounting I",
    "days": [
     "tuesday",
@@ -86,7 +86,7 @@
    "room": "Gabelli School of Business 206"
   },
   {
-   "section": "ACCTG.307.01",
+   "section": "ACCTG.307-01",
    "title": "Accounting Info Sys",
    "days": [
     "monday",
@@ -98,7 +98,7 @@
    "room": "Gabelli School of Business 206"
   },
   {
-   "section": "ACCTG.308.02",
+   "section": "ACCTG.308-02",
    "title": "Federal Income Tax I",
    "days": [
     "tuesday",
@@ -109,7 +109,7 @@
    "room": "Gabelli School of Business 106"
   },
   {
-   "section": "ACCTG.406.01",
+   "section": "ACCTG.406-01",
    "title": "Advanced Accounting",
    "days": [
     "monday",
@@ -121,7 +121,7 @@
    "room": "Gabelli School of Business G01"
   },
   {
-   "section": "ACCTG.505.01",
+   "section": "ACCTG.505-01",
    "title": "Financial and Managerial Acctg",
    "days": [
     "tuesday"

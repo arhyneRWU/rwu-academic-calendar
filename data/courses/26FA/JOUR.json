@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "JOUR",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "JOUR.170.01",
+   "section": "JOUR.170-01",
    "title": "Writing & Editing for Media",
    "days": [
     "wednesday"
@@ -17,7 +17,7 @@
    "room": "Humanities Building 104"
   },
   {
-   "section": "JOUR.230.01",
+   "section": "JOUR.230-01",
    "title": "Civic Media Community Engage I",
    "days": [
     "tuesday",
@@ -28,7 +28,7 @@
    "room": "Humanities Building 104"
   },
   {
-   "section": "JOUR.230L.51",
+   "section": "JOUR.230L-51",
    "title": "Civic Media &comm Engage Lab",
    "days": [
     "friday"
@@ -38,7 +38,7 @@
    "room": "Humanities Building 104"
   },
   {
-   "section": "JOUR.255.01",
+   "section": "JOUR.255-01",
    "title": "Visual Storytelling",
    "days": [
     "tuesday",
@@ -49,7 +49,7 @@
    "room": "North Campus Residence Hall 119"
   },
   {
-   "section": "JOUR.330.01",
+   "section": "JOUR.330-01",
    "title": "Civic Media Community Engage 2",
    "days": [
     "tuesday",
@@ -60,7 +60,7 @@
    "room": "Humanities Building 104"
   },
   {
-   "section": "JOUR.330L.51",
+   "section": "JOUR.330L-51",
    "title": "Civic Media & Comm Engage Lab",
    "days": [
     "friday"
@@ -70,7 +70,7 @@
    "room": "Humanities Building 104"
   },
   {
-   "section": "JOUR.355.01",
+   "section": "JOUR.355-01",
    "title": "Interact Storytelling I + Lab",
    "days": [
     "monday",
@@ -81,7 +81,7 @@
    "room": "Humanities Building 104"
   },
   {
-   "section": "JOUR.355L.51",
+   "section": "JOUR.355L-51",
    "title": "Interactive Storytelling Lab",
    "days": [
     "tuesday"
@@ -91,7 +91,7 @@
    "room": "Humanities Building 104"
   },
   {
-   "section": "JOUR.370.01",
+   "section": "JOUR.370-01",
    "title": "NewsII:Adv Journalism",
    "days": [
     "tuesday",
@@ -102,7 +102,7 @@
    "room": "Humanities Building 104"
   },
   {
-   "section": "JOUR.370L.51",
+   "section": "JOUR.370L-51",
    "title": "NewsII:Adv Journalism Lab",
    "days": [
     "tuesday"

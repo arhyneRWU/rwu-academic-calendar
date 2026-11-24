@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "PLAN",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "PLAN.301.01",
+   "section": "PLAN.301-01",
    "title": "Intro to Urb & Regnl Plannin",
    "days": [
     "thursday"
@@ -17,7 +17,7 @@
    "room": "Cummings School Architecture 203"
   },
   {
-   "section": "PLAN.501.01",
+   "section": "PLAN.501-01",
    "title": "Intro to Urb & Regnl Plannin",
    "days": [
     "thursday"

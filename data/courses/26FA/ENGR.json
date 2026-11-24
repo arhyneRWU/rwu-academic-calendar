@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "26/FA",
  "subject": "ENGR",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "ENGR.110.01",
+   "section": "ENGR.110-01",
    "title": "Engr Graphics & Design",
    "days": [
     "tuesday",
@@ -18,7 +18,7 @@
    "room": "School of Engineering 206"
   },
   {
-   "section": "ENGR.110.02",
+   "section": "ENGR.110-02",
    "title": "Engr Graphics & Design",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": "School of Engineering 206"
   },
   {
-   "section": "ENGR.110.03",
+   "section": "ENGR.110-03",
    "title": "Engr Graphics & Design",
    "days": [
     "tuesday",
@@ -40,7 +40,7 @@
    "room": "School of Engineering 206"
   },
   {
-   "section": "ENGR.110.04",
+   "section": "ENGR.110-04",
    "title": "Engr Graphics & Design",
    "days": [
     "tuesday",
@@ -51,7 +51,7 @@
    "room": "School of Engineering 206"
   },
   {
-   "section": "ENGR.110.05",
+   "section": "ENGR.110-05",
    "title": "Engr Graphics & Design",
    "days": [
     "monday",
@@ -62,7 +62,7 @@
    "room": "School of Engineering 206"
   },
   {
-   "section": "ENGR.210.01",
+   "section": "ENGR.210-01",
    "title": "Engineering Statics",
    "days": [
     "tuesday",
@@ -73,7 +73,7 @@
    "room": "School of Engineering 201"
   },
   {
-   "section": "ENGR.210.02",
+   "section": "ENGR.210-02",
    "title": "Engineering Statics",
    "days": [
     "tuesday",
@@ -84,7 +84,7 @@
    "room": "College of Arts and Sciences 126"
   },
   {
-   "section": "ENGR.210.03",
+   "section": "ENGR.210-03",
    "title": "Engineering Statics",
    "days": [
     "tuesday",
@@ -95,7 +95,7 @@
    "room": "College of Arts and Sciences 126"
   },
   {
-   "section": "ENGR.240.01",
+   "section": "ENGR.240-01",
    "title": "Circuit Theory",
    "days": [
     "monday",
@@ -107,7 +107,7 @@
    "room": "School of Engineering 201"
   },
   {
-   "section": "ENGR.240.02",
+   "section": "ENGR.240-02",
    "title": "Circuit Theory",
    "days": [
     "monday",
@@ -119,7 +119,7 @@
    "room": "School of Engineering 201"
   },
   {
-   "section": "ENGR.240.03",
+   "section": "ENGR.240-03",
    "title": "Circuit Theory",
    "days": [
     "monday",
@@ -131,7 +131,7 @@
    "room": "School of Engineering 201"
   },
   {
-   "section": "ENGR.240L.51",
+   "section": "ENGR.240L-51",
    "title": "Circuit Theory Lab",
    "days": [
     "monday"
@@ -141,7 +141,7 @@
    "room": "SECCM Labs 205"
   },
   {
-   "section": "ENGR.240L.52",
+   "section": "ENGR.240L-52",
    "title": "Circuit Theory Lab",
    "days": [
     "tuesday"
@@ -151,7 +151,7 @@
    "room": "SECCM Labs 205"
   },
   {
-   "section": "ENGR.240L.53",
+   "section": "ENGR.240L-53",
    "title": "Circuit Theory Lab",
    "days": [
     "wednesday"
@@ -161,7 +161,7 @@
    "room": "SECCM Labs 205"
   },
   {
-   "section": "ENGR.313.01",
+   "section": "ENGR.313-01",
    "title": "Structural Analysis",
    "days": [
     "tuesday",
@@ -172,7 +172,7 @@
    "room": "School of Engineering 121"
   },
   {
-   "section": "ENGR.314.01",
+   "section": "ENGR.314-01",
    "title": "Soil Mechanics",
    "days": [
     "monday",
@@ -184,7 +184,7 @@
    "room": "School of Engineering 201"
   },
   {
-   "section": "ENGR.314L.51",
+   "section": "ENGR.314L-51",
    "title": "Soil Mechanics Laboratory",
    "days": [
     "monday"
@@ -194,7 +194,7 @@
    "room": "School of Engineering 202"
   },
   {
-   "section": "ENGR.330.02",
+   "section": "ENGR.330-02",
    "title": "Thermodynamics",
    "days": [
     "tuesday",
@@ -205,7 +205,7 @@
    "room": "SECCM Labs 200"
   },
   {
-   "section": "ENGR.330.03",
+   "section": "ENGR.330-03",
    "title": "Thermodynamics",
    "days": [
     "tuesday",
@@ -216,7 +216,7 @@
    "room": "SECCM Labs 200"
   },
   {
-   "section": "ENGR.332.01",
+   "section": "ENGR.332-01",
    "title": "Machine Design",
    "days": [
     "tuesday",
@@ -227,7 +227,7 @@
    "room": "School of Engineering 201"
   },
   {
-   "section": "ENGR.335.01",
+   "section": "ENGR.335-01",
    "title": "Engr Economic Analysis",
    "days": [
     "monday",
@@ -239,7 +239,7 @@
    "room": "College of Arts and Sciences 162"
   },
   {
-   "section": "ENGR.350.01",
+   "section": "ENGR.350-01",
    "title": "Theory/Dsgn Mech Measurements",
    "days": [
     "monday",
@@ -251,7 +251,7 @@
    "room": "SECCM Labs 200"
   },
   {
-   "section": "ENGR.350.02",
+   "section": "ENGR.350-02",
    "title": "Theory/Dsgn Mech Measurements",
    "days": [
     "monday",
@@ -263,7 +263,7 @@
    "room": "SECCM Labs 200"
   },
   {
-   "section": "ENGR.365.01",
+   "section": "ENGR.365-01",
    "title": "Digital Sys Design",
    "days": [
     "tuesday",
@@ -274,7 +274,7 @@
    "room": "SECCM Labs 200"
   },
   {
-   "section": "ENGR.365L.51",
+   "section": "ENGR.365L-51",
    "title": "Digital Systems Lab",
    "days": [
     "thursday"
@@ -284,7 +284,7 @@
    "room": "SECCM Labs 205"
   },
   {
-   "section": "ENGR.401.01",
+   "section": "ENGR.401-01",
    "title": "Engr Senior Seminar",
    "days": [
     "monday"
@@ -294,7 +294,7 @@
    "room": "College of Arts and Sciences 162"
   },
   {
-   "section": "ENGR.403.01",
+   "section": "ENGR.403-01",
    "title": "Engineering Hydrology",
    "days": [
     "tuesday",
@@ -305,7 +305,7 @@
    "room": "School of Engineering 201"
   },
   {
-   "section": "ENGR.403.01",
+   "section": "ENGR.403-01",
    "title": "Engineering Hydrology",
    "days": [
     "tuesday",
@@ -316,7 +316,7 @@
    "room": "School of Engineering 202"
   },
   {
-   "section": "ENGR.419.01",
+   "section": "ENGR.419-01",
    "title": "Highway Bridge Design",
    "days": [
     "tuesday",
@@ -327,7 +327,7 @@
    "room": "School of Engineering 121"
   },
   {
-   "section": "ENGR.431.01",
+   "section": "ENGR.431-01",
    "title": "Mechanical Vibrations",
    "days": [
     "monday",
@@ -339,7 +339,7 @@
    "room": "SECCM Labs 300"
   },
   {
-   "section": "ENGR.432.01",
+   "section": "ENGR.432-01",
    "title": "Manufacturing and Assembly",
    "days": [
     "monday",
@@ -350,7 +350,7 @@
    "room": "SECCM Labs 200"
   },
   {
-   "section": "ENGR.448.01",
+   "section": "ENGR.448-01",
    "title": "Ocean Hydrodynamics",
    "days": [
     "monday",
@@ -362,7 +362,7 @@
    "room": "School of Engineering 121"
   },
   {
-   "section": "ENGR.450.01",
+   "section": "ENGR.450-01",
    "title": "Mechatronics",
    "days": [
     "tuesday",
@@ -373,7 +373,7 @@
    "room": "SECCM Labs 205"
   },
   {
-   "section": "ENGR.460.01",
+   "section": "ENGR.460-01",
    "title": "Electromagnetic Theory",
    "days": [
     "monday",
@@ -385,7 +385,7 @@
    "room": "School of Engineering 128"
   },
   {
-   "section": "ENGR.479.01",
+   "section": "ENGR.479-01",
    "title": "SpTp:Optical Engineering",
    "days": [
     "monday",
@@ -397,7 +397,7 @@
    "room": "School of Engineering 119"
   },
   {
-   "section": "ENGR.490.01",
+   "section": "ENGR.490-01",
    "title": "Engineering Design I",
    "days": [
     "wednesday"

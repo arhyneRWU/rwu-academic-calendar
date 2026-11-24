@@ -3,11 +3,11 @@
  "source": "https://collselfsrvprod.rwu.edu/Student/Courses",
  "term": "27/SP",
  "subject": "ENG",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-24",
  "note": "Meeting patterns only. Instructor names, seat counts and enrolment are deliberately not collected.",
  "sections": [
   {
-   "section": "ENG.105.01",
+   "section": "ENG.105-01",
    "title": "The Bible As Literature",
    "days": [
     "monday",
@@ -18,7 +18,7 @@
    "room": ""
   },
   {
-   "section": "ENG.105.HON01",
+   "section": "ENG.105-HON01",
    "title": "Honors Bible as Literature",
    "days": [
     "tuesday",
@@ -29,7 +29,7 @@
    "room": ""
   },
   {
-   "section": "ENG.220.01",
+   "section": "ENG.220-01",
    "title": "Reading Like a Pro",
    "days": [
     "monday",
@@ -40,7 +40,7 @@
    "room": ""
   },
   {
-   "section": "ENG.250.01",
+   "section": "ENG.250-01",
    "title": "Girls on Fire",
    "days": [
     "tuesday",
@@ -51,7 +51,7 @@
    "room": ""
   },
   {
-   "section": "ENG.280.01",
+   "section": "ENG.280-01",
    "title": "Modern Love",
    "days": [
     "tuesday",
@@ -62,7 +62,7 @@
    "room": ""
   },
   {
-   "section": "ENG.480.01",
+   "section": "ENG.480-01",
    "title": "Senior Thesis I",
    "days": [
     "tuesday"
