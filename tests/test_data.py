@@ -83,11 +83,12 @@ def test_reading_day_falls_outside_the_teaching_span(terms):
 
 def test_all_terms_present(years):
     ids = {t.id for ay in years for t in ay.terms}
-    assert len(ids) == 15, sorted(ids)
+    assert len(ids) == 16, sorted(ids)
 
 
 def test_known_source_errors_are_reported_not_swallowed(years):
     """RWU's page prints a weekday beside each date, which is a free checksum.
-    Seven of them disagree with the actual weekday as of 2026-08-16."""
+    Six of them disagree with the actual weekday as of 2026-11-24. It was
+    seven until RWU corrected Spring 2027's 25 March row."""
     src = [p for p in validate.check_weekdays(years) if p.level == 'source']
-    assert len(src) == 7
+    assert len(src) == 6

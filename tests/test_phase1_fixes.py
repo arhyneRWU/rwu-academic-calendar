@@ -113,7 +113,10 @@ class TestSummerSessionsAreNotOneTerm:
 
     def test_single_session_terms_keep_their_plain_id(self, years):
         ay = next(a for a in years if a.academic_year == '2026-2027')
-        assert set(emit.meeting_grid(ay)) == {'fall-2026', 'winter-2027', 'spring-2027'}
+        grid = emit.meeting_grid(ay)
+        plain = {k for k in grid if not k.startswith('summer-')}
+        assert plain == {'fall-2026', 'winter-2027', 'spring-2027'}
+        assert all('::' in k for k in set(grid) - plain), 'summer is per session'
 
 
 class TestOfficesClosedCoverage:
@@ -133,8 +136,8 @@ class TestOfficesClosedCoverage:
         Spring Break, Reading Day and SASH simply do not say."""
         nc = [e for ay in years for t in ay.terms for e in t.events if e.no_classes]
         unknown = [e for e in nc if e.offices_closed is None]
-        assert len(nc) == 92
-        assert len(unknown) == 33
+        assert len(nc) == 100
+        assert len(unknown) == 34
 
     def test_the_gap_is_reported_rather_than_hidden(self, years):
         problems = validate.check_offices_coverage(years)

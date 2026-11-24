@@ -4,7 +4,7 @@
 academic_year: 2026-2027
 unofficial: true
 source_url: https://www.rwu.edu/academics/resources-units/academic-calendar
-retrieved: '2026-08-16'
+retrieved: '2026-11-24'
 terms:
 - id: fall-2026
   term: fall
@@ -445,16 +445,22 @@ terms:
     - other
     source_text: MAR 22
     stated_day: MON
+  - date: 2027-03-24
+    label: Last Day to Drop a Spring Course With the "W" (withdrawal) Grade
+    kinds:
+    - add_drop
+    source_text: MAR 24
+    stated_day: WED
+  - date: 2027-03-24
+    label: Warning Grades Due to Registrar's Office
+    kinds:
+    - grades
+    source_text: MAR 24
+    stated_day: WED
   - date: 2027-03-25
     label: Degree Application Due in Registrar's Office for Juniors graduating next Spring
     kinds:
     - other
-    source_text: MAR 25
-    stated_day: WED
-  - date: 2027-03-25
-    label: Warning Grades Due to Registrar's Office
-    kinds:
-    - grades
     source_text: MAR 25
     stated_day: THU
   - date: 2027-03-26
@@ -503,21 +509,21 @@ terms:
     label: 'Final Examinations: Day & Evening Classes'
     kinds:
     - finals
-    span_id: 20262027-spring-24
+    span_id: 20262027-spring-25
     source_text: MAY 10-12
     stated_day: MON-WED
   - date: 2027-05-11
     label: 'Final Examinations: Day & Evening Classes'
     kinds:
     - finals
-    span_id: 20262027-spring-24
+    span_id: 20262027-spring-25
     source_text: MAY 10-12
     stated_day: MON-WED
   - date: 2027-05-12
     label: 'Final Examinations: Day & Evening Classes'
     kinds:
     - finals
-    span_id: 20262027-spring-24
+    span_id: 20262027-spring-25
     source_text: MAY 10-12
     stated_day: MON-WED
   - date: 2027-05-12
@@ -556,3 +562,337 @@ terms:
     - other
     source_text: MAY 19
     stated_day: WED
+- id: summer-2027
+  term: summer
+  classes_begin: &id007 2027-05-19
+  classes_end: &id008 2027-08-13
+  events:
+  - date: *id007
+    label: First Day of Classes
+    kinds:
+    - term_start
+    source_text: 19-May
+    session: 4 Week Session, May 19, 2027 TO June 11, 2027
+  - date: 2027-05-19
+    label: First Day of Classes
+    kinds:
+    - term_start
+    source_text: 19-May
+    session: 5 Week Session, May 19, 2027 - June 21, 2027
+  - date: 2027-05-19
+    label: First Day of Classes
+    kinds:
+    - term_start
+    source_text: 19-May
+    session: 8 Week Session, May 19, 2027 - July 09, 2027
+  - date: 2027-05-19
+    label: First Day of Classes
+    kinds:
+    - term_start
+    source_text: 19-May
+    session: 10 Week Session, May 19, 2027 - July 23, 2027
+  - date: 2027-05-28
+    label: Last Day to Add a course Without Instructor's Permission
+    kinds:
+    - add_drop
+    source_text: 28-May
+    session: 4 Week Session, May 19, 2027 TO June 11, 2027
+  - date: 2027-05-28
+    label: Last Day to Add a course Without Instructor's Permission
+    kinds:
+    - add_drop
+    source_text: 28-May
+    session: 5 Week Session, May 19, 2027 - June 21, 2027
+  - date: 2027-05-28
+    label: Last Day to Add a course Without Instructor's Permission
+    kinds:
+    - add_drop
+    source_text: 28-May
+    session: 8 Week Session, May 19, 2027 - July 09, 2027
+  - date: 2027-05-28
+    label: Last Day to Add a course Without Instructor's Permission
+    kinds:
+    - add_drop
+    source_text: 28-May
+    session: 10 Week Session, May 19, 2027 - July 23, 2027
+  - date: 2027-05-31
+    label: 'MEMORIAL Holiday: No Classes - All University Offices Closed'
+    kinds:
+    - no_classes
+    - holiday
+    no_classes: true
+    offices_closed: true
+    source_text: 31-May
+    session: 4 Week Session, May 19, 2027 TO June 11, 2027
+  - date: 2027-05-31
+    label: 'MEMORIAL Holiday: No Classes - All University Offices Closed'
+    kinds:
+    - no_classes
+    - holiday
+    no_classes: true
+    offices_closed: true
+    source_text: 31-May
+    session: 5 Week Session, May 19, 2027 - June 21, 2027
+  - date: 2027-05-31
+    label: 'MEMORIAL Holiday: No Classes - All University Offices Closed'
+    kinds:
+    - no_classes
+    - holiday
+    no_classes: true
+    offices_closed: true
+    source_text: 31-May
+    session: 8 Week Session, May 19, 2027 - July 09, 2027
+  - date: 2027-05-31
+    label: 'MEMORIAL Holiday: No Classes - All University Offices Closed'
+    kinds:
+    - no_classes
+    - holiday
+    no_classes: true
+    offices_closed: true
+    source_text: 31-May
+    session: 10 Week Session, May 19, 2027 - July 23, 2027
+  - date: 2027-06-01
+    label: Last day to Add a Course with Intructor's permission
+    kinds:
+    - add_drop
+    source_text: 1-Jun
+    session: 4 Week Session, May 19, 2027 TO June 11, 2027
+  - date: 2027-06-01
+    label: Last day to Add a Course with Intructor's permission
+    kinds:
+    - add_drop
+    source_text: 1-Jun
+    session: 5 Week Session, May 19, 2027 - June 21, 2027
+  - date: 2027-06-01
+    label: Last day to Add a Course with Intructor's permission
+    kinds:
+    - add_drop
+    source_text: 1-Jun
+    session: 8 Week Session, May 19, 2027 - July 09, 2027
+  - date: 2027-06-01
+    label: Last day to Add a Course with Intructor's permission
+    kinds:
+    - add_drop
+    source_text: 1-Jun
+    session: 10 Week Session, May 19, 2027 - July 23, 2027
+  - date: 2027-06-04
+    label: Last Day to Drop a Course without a 'W'
+    kinds:
+    - add_drop
+    source_text: 4-Jun
+    session: 4 Week Session, May 19, 2027 TO June 11, 2027
+  - date: 2027-06-04
+    label: Last Day to Drop a Course without a 'W'
+    kinds:
+    - add_drop
+    source_text: 4-Jun
+    session: 5 Week Session, May 19, 2027 - June 21, 2027
+  - date: 2027-06-04
+    label: Last Day to Drop a Course without a 'W'
+    kinds:
+    - add_drop
+    source_text: 4-Jun
+    session: 8 Week Session, May 19, 2027 - July 09, 2027
+  - date: 2027-06-04
+    label: Last Day to Drop a Course without a 'W'
+    kinds:
+    - add_drop
+    source_text: 4-Jun
+    session: 10 Week Session, May 19, 2027 - July 23, 2027
+  - date: 2027-06-09
+    label: Last Day to Drop a Course with a 'W'
+    kinds:
+    - add_drop
+    source_text: 9-Jun
+    session: 4 Week Session, May 19, 2027 TO June 11, 2027
+  - date: 2027-06-09
+    label: Last Day to Drop a Course with a 'W'
+    kinds:
+    - add_drop
+    source_text: 9-Jun
+    session: 5 Week Session, May 19, 2027 - June 21, 2027
+  - date: 2027-06-09
+    label: Last Day to Drop a Course with a 'W'
+    kinds:
+    - add_drop
+    source_text: 9-Jun
+    session: 8 Week Session, May 19, 2027 - July 09, 2027
+  - date: 2027-06-09
+    label: Last Day to Drop a Course with a 'W'
+    kinds:
+    - add_drop
+    source_text: 9-Jun
+    session: 10 Week Session, May 19, 2027 - July 23, 2027
+  - date: 2027-06-11
+    label: Lat day of classes - All final Exams Held
+    kinds:
+    - term_end
+    - finals
+    source_text: 11-Jun
+    session: 4 Week Session, May 19, 2027 TO June 11, 2027
+  - date: 2027-06-18
+    label: 'Juneteenth Holiday: No Classes - All University Offices Closed'
+    kinds:
+    - no_classes
+    - holiday
+    no_classes: true
+    offices_closed: true
+    source_text: 18-Jun
+    session: 5 Week Session, May 19, 2027 - June 21, 2027
+  - date: 2027-06-18
+    label: 'Juneteenth Holiday: No Classes - All University Offices Closed'
+    kinds:
+    - no_classes
+    - holiday
+    no_classes: true
+    offices_closed: true
+    source_text: 18-Jun
+    session: 8 Week Session, May 19, 2027 - July 09, 2027
+  - date: 2027-06-18
+    label: 'Juneteenth Holiday: No Classes - All University Offices Closed'
+    kinds:
+    - no_classes
+    - holiday
+    no_classes: true
+    offices_closed: true
+    source_text: 18-Jun
+    session: 10 Week Session, May 19, 2027 - July 23, 2027
+  - date: 2027-06-21
+    label: Lat day of classes - All final Exams Held
+    kinds:
+    - term_end
+    - finals
+    source_text: 21-Jun
+    session: 5 Week Session, May 19, 2027 - June 21, 2027
+  - date: 2027-07-05
+    label: 4th of July Holiday Observed
+    kinds:
+    - no_classes
+    - holiday
+    no_classes: true
+    source_text: 5-Jul
+    session: 10 Week Session, May 19, 2027 - July 23, 2027
+  - date: 2027-07-09
+    label: Last day of classes - All final Exams Held
+    kinds:
+    - term_end
+    - finals
+    source_text: 9-Jul
+    session: 8 Week Session, May 19, 2027 - July 09, 2027
+  - date: 2027-07-12
+    label: First Day of Classes
+    kinds:
+    - term_start
+    source_text: 12-Jul
+    session: 4 Week Session, July 12, 2027 - August 06, 2027
+  - date: 2027-07-12
+    label: First Day of Classes
+    kinds:
+    - term_start
+    source_text: 12-Jul
+    session: 5 Week Session, July 12, 2027 - August 13, 2027
+  - date: 2027-07-19
+    label: Last Day to Add a course Without Instructor's Permission
+    kinds:
+    - add_drop
+    source_text: 19-Jul
+    session: 4 Week Session, July 12, 2027 - August 06, 2027
+  - date: 2027-07-19
+    label: Last Day to Add a course Without Instructor's Permission
+    kinds:
+    - add_drop
+    source_text: 19-Jul
+    session: 5 Week Session, July 12, 2027 - August 13, 2027
+  - date: 2027-07-21
+    label: Last day to Add a Course with Intructor's permission
+    kinds:
+    - add_drop
+    source_text: 21-Jul
+    session: 4 Week Session, July 12, 2027 - August 06, 2027
+  - date: 2027-07-21
+    label: Last day to Add a cCourse with Intructor's permission
+    kinds:
+    - add_drop
+    source_text: 21-Jul
+    session: 5 Week Session, July 12, 2027 - August 13, 2027
+  - date: 2027-07-23
+    label: Last day of classes - All final Exams Held
+    kinds:
+    - term_end
+    - finals
+    source_text: 23-Jul
+    session: 10 Week Session, May 19, 2027 - July 23, 2027
+  - date: 2027-07-28
+    label: Final Grades due to Registrar's office
+    kinds:
+    - grades
+    source_text: 28-Jul
+    session: 4 Week Session, May 19, 2027 TO June 11, 2027
+  - date: 2027-07-28
+    label: Final Grades due to Registrar's office
+    kinds:
+    - grades
+    source_text: 28-Jul
+    session: 5 Week Session, May 19, 2027 - June 21, 2027
+  - date: 2027-07-28
+    label: Final Grades due to Registrar's office
+    kinds:
+    - grades
+    source_text: 28-Jul
+    session: 8 Week Session, May 19, 2027 - July 09, 2027
+  - date: 2027-07-28
+    label: Final Grades due to Registrar's office
+    kinds:
+    - grades
+    source_text: 28-Jul
+    session: 10 Week Session, May 19, 2027 - July 23, 2027
+  - date: 2027-07-30
+    label: Last Day to Drop a Course without a 'W'
+    kinds:
+    - add_drop
+    source_text: 30-Jul
+    session: 4 Week Session, July 12, 2027 - August 06, 2027
+  - date: 2027-07-30
+    label: Last Day to Drop a Course without a 'W'
+    kinds:
+    - add_drop
+    source_text: 30-Jul
+    session: 5 Week Session, July 12, 2027 - August 13, 2027
+  - date: 2027-08-03
+    label: Last Day to Drop a Course with a 'W'
+    kinds:
+    - add_drop
+    source_text: 3-Aug
+    session: 4 Week Session, July 12, 2027 - August 06, 2027
+  - date: 2027-08-03
+    label: Last Day to Drop a Course with a 'W'
+    kinds:
+    - add_drop
+    source_text: 3-Aug
+    session: 5 Week Session, July 12, 2027 - August 13, 2027
+  - date: 2027-08-06
+    label: Last day of classes - All final Exams Held
+    kinds:
+    - term_end
+    - finals
+    source_text: 6-Aug
+    session: 4 Week Session, July 12, 2027 - August 06, 2027
+  - date: *id008
+    label: Last day of classes - All final Exams Held
+    kinds:
+    - term_end
+    - finals
+    source_text: 13-Aug
+    session: 5 Week Session, July 12, 2027 - August 13, 2027
+  - date: 2027-08-18
+    label: Final Grades due Registrar's Office
+    kinds:
+    - grades
+    source_text: 18-Aug
+    session: 4 Week Session, July 12, 2027 - August 06, 2027
+  - date: 2027-08-18
+    label: Final Grades due Registrar's Office
+    kinds:
+    - grades
+    source_text: 18-Aug
+    session: 5 Week Session, July 12, 2027 - August 13, 2027

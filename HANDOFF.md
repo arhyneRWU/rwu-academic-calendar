@@ -19,8 +19,8 @@ course catalog.
 | Calendar source | RWU's [academic calendar page](https://www.rwu.edu/academics/resources-units/academic-calendar) — HTML tables, no ICS, no API |
 | Course source | [Roger Central](https://collselfsrvprod.rwu.edu/Student/Courses) — Ellucian Colleague Self-Service, public, JSON behind a JS front end |
 
-**State:** 18 commits, 330 tests, CI green, deployed. 4 academic years, 15
-terms, 468 calendar events. 1,112 course meeting patterns across 69 subjects
+**State:** 18 commits, 330 tests, CI green, deployed. 4 academic years, 16
+terms, 519 calendar events. 1,112 course meeting patterns across 69 subjects
 for Fall 2026. `validate` reports 0 errors and 17 source inconsistencies —
 RWU's own, not ours.
 
@@ -91,7 +91,7 @@ pattern-match the prose; use `Term.effective_weekday()` or the grid.
 
 ## Things that will bite you
 
-**1. `offices_closed` is unknown on 33 of 92 no-class days.** Every Spring Break
+**1. `offices_closed` is unknown on 34 of 100 no-class days.** Every Spring Break
 day, Reading Day, SASH day. Absent means *the page didn't say*, **not** "offices
 were open". There is no safe default. This is why the staff/admin meeting type
 was cut. `validate` reports the gap per term.

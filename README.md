@@ -120,7 +120,7 @@ weekday whose timetable actually runs, or `None` if no class meets.
 
 ## What's in it
 
-Four academic years, 15 terms, 468 events.
+Four academic years, 16 terms, 519 events.
 
 | Term | Classes begin | Classes end | No-class | **Class days** |
 |---|---|---|---|---|
@@ -188,7 +188,7 @@ some dates belong to two of them:
   Independence Day row. That is reported, not invented — see `LEDGER.md`.
 
 `offices_closed` deserves a specific warning: it is only set where RWU's own
-label says so. **33 of 92 no-class days never state office status** — every
+label says so. **34 of 100 no-class days never state office status** — every
 Spring Break day, every Reading Day, every SASH day. Absent means *the page
 did not say*, not *offices were open*. `rwu-calendar validate` reports the
 gap per term. Do not build a rule on this field without handling the unknowns.

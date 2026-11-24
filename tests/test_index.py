@@ -370,7 +370,8 @@ class TestPerTermFeeds:
         uids = lambda n: {str(c['uid']) for c in
                           Calendar.from_ical((tmp_path / n).read_bytes()).walk('VEVENT')}
         year = uids('2026-2027.ics')
-        parts = {t: uids(f'{t}.ics') for t in ('fall-2026', 'winter-2027', 'spring-2027')}
+        parts = {t: uids(f'{t}.ics') for t in ('fall-2026', 'winter-2027', 'spring-2027',
+                                               'summer-2027')}
         assert set().union(*parts.values()) == year, 'a term feed invented a UID'
         shared = parts['winter-2027'] & parts['spring-2027']
         assert len(shared) == 1, 'exactly one borrowed holiday (MLK Day)'

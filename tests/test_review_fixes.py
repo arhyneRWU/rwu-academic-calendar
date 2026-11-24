@@ -331,13 +331,28 @@ class TestUnpublishedTermsAreNamed:
     three options and no explanation, so someone planning a summer course
     found a silent absence instead of an answer."""
 
-    def test_summer_2027_is_identified_as_missing(self, years):
-        ay = emit.pick_current(years, TODAY)
+    @pytest.fixture(scope='class')
+    @staticmethod
+    def partial():
+        """The data as it stood from August to November 2026: Summer 2027 not
+        yet on RWU's page. Loaded fresh so the shared fixture is not mutated."""
+        years = serialize.load_dir(DATA)
+        ay = next(a for a in years if a.academic_year == '2026-2027')
+        ay.terms = [t for t in ay.terms if t.term != 'summer']
+        link(ay)
+        return years
+
+    def test_summer_2027_is_identified_as_missing(self, partial):
+        ay = emit.pick_current(partial, TODAY)
         assert emit.missing_terms(ay) == ['Summer 2027']
 
-    def test_the_page_says_so(self, page):
+    def test_the_page_says_so(self, partial):
+        page = emit.to_index_html(partial, TODAY).decode()
         assert 'Summer 2027</strong> has not been published by RWU yet' in page
         assert 'Nothing is broken' in page
+
+    def test_the_page_stops_saying_so_once_rwu_publishes(self, page):
+        assert 'has not been published by RWU yet' not in page
 
     def test_the_academic_year_maps_to_the_right_calendar_year(self, years):
         """Fall 2026 and Summer 2027 both live in academic year 2026-2027."""
@@ -350,8 +365,8 @@ class TestUnpublishedTermsAreNamed:
         assert emit.missing_terms(ay) == []
         assert emit._missing_note(ay) == ''
 
-    def test_the_wording_agrees_with_itself_for_one_and_for_many(self, years):
-        one = emit._missing_note(emit.pick_current(years, TODAY))
+    def test_the_wording_agrees_with_itself_for_one_and_for_many(self, partial):
+        one = emit._missing_note(emit.pick_current(partial, TODAY))
         assert 'has not been published' in one and 'it is not listed' in one
         many = emit._missing_note(AcademicYear('2026-2027', 'u', 'r'))
         assert 'have not been published' in many and 'they are not listed' in many
